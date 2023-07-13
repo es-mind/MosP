@@ -1,0 +1,97 @@
+@CHARSET "UTF-8";
+/*
+ * MosP - Mind Open Source Project    http://www.mosp.jp/
+ * Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+ * 
+ * This program is free software: you can redistribute it and/or
+ * modify it under the terms of the GNU Affero General Public License
+ * as published by the Free Software Foundation, either version 3
+ * of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+/* ************************************************************************** */
+/* === ルート適用一覧画面のスタイル === */
+/* ************************************************************************** */
+
+/**
+ * 編集欄項目名称欄幅。
+ */
+.InputTable .TitleTd  {
+	width: 120px;
+}
+
+/**
+ * 編集欄項目内容欄幅。
+ */
+.InputTable .InputTd {
+	width: 300px;
+}
+
+/**
+ * 選択ボタンヘッダ幅。
+ */
+.LeftListTable #thButton {
+	width: 50px;
+}
+
+/**
+ * 開始日ヘッダ幅。
+ */
+.LeftListTable #thStartDate {
+	width: 85px;
+}
+
+/**
+ * 終了日ヘッダ幅。
+ */
+.LeftListTable #thEndDate {
+	width: 85px;
+}
+
+/**
+ * フロー区分ヘッダ幅。
+ */
+.LeftListTable #thFlowType {
+	width: 50px;
+}
+/**
+ * 代理人社員コードヘッダ幅。
+ */
+.LeftListTable #thEmployeeCode {
+	width: 140px;
+}
+
+/**
+ * 代理人氏名ヘッダ幅。
+ */
+.LeftListTable #thEmployeeName {
+	width: 200px;
+}
+
+/**
+ * 代理人所属ヘッダ幅。
+ */
+.LeftListTable #thSection {
+	width: 230px;
+}
+
+/**
+ * 有効/無効ヘッダ幅。
+ */
+.LeftListTable #thInactivate {
+	width: 60px;
+}
+
+/**
+ * 選択チェックボックスヘッダ幅。
+ */
+.LeftListTable #thSelect {
+	width: 20px;
+}

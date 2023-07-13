@@ -1,0 +1,217 @@
+﻿@CHARSET "UTF-8";
+/*
+ * MosP - Mind Open Source Project    http://www.mosp.jp/
+ * Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+ * 
+ * This program is free software: you can redistribute it and/or
+ * modify it under the terms of the GNU Affero General Public License
+ * as published by the Free Software Foundation, either version 3
+ * of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+/* ************************************************************************** */
+/* === 承認履歴参照画面のスタイル === */
+/* ************************************************************************** */
+
+/**
+ * ヘッダ幅(日付)。
+ */
+.ListTable #thDate {
+	width: 95px;
+}
+
+/**
+ * ヘッダ幅(1文字)。
+ */
+.ListTable #th1 {
+	width: 20px;
+}
+
+/**
+ * ヘッダ幅(2文字)。
+ */
+.ListTable #th2 {
+	width: 35px;
+}
+
+/**
+ * ヘッダ幅(4文字)。
+ */
+.ListTable #th3 {
+	width: 50px;
+}
+
+/**
+ * ヘッダ幅(4文字)。
+ */
+.ListTable #th4 {
+	width: 60px;
+}
+
+/**
+ * 勤務形態ヘッダ幅。
+ */
+.ListTable #thWorkType {
+	width: 40px;
+}
+
+/**
+ * 勤怠状態ヘッダ幅。
+ */
+.ListTable #thAttendanceState {
+	width: 40px;
+}
+
+/**
+ * 承認者ヘッダ幅。
+ */
+.ListTable #thName {
+	width: 100px;
+}
+
+/**
+ * 時間範囲ヘッダ幅。
+ */
+.ListTable #thTime {
+	width: 80px;
+}
+
+/**
+ * 承認段階ヘッダ幅。
+ */
+.ListTable #thState {
+	width: 70px;
+}
+
+/**
+ * コメントヘッダ幅。
+ */
+.ListTable #thComment {
+	width: 480px;
+}
+
+/**
+ * 承認日時ヘッダ幅。
+ */
+.ListTable #thDateTime {
+	width: 150px;
+}
+
+/**
+ * 勤怠備考ヘッダ幅。
+ */
+.ListTable #thAttendanceRemark {
+	width: 250px;
+}
+
+/**
+ * 承認履歴欄ヘッダ幅。
+ */
+
+#divHistory #thApprovalDate {
+	width: 150px;
+}
+
+#divHistory #thApprovalApprover {
+	width: 100px;
+}
+
+#divHistory #thApprovalResult {
+	width: 60px;
+}
+
+#divHistory #thApprovalState {
+	width: 60px;
+}
+
+#divHistory #thApprovalComment {
+	width: 560px;
+}
+
+/**
+ * 残業申請情報欄ヘッダ幅。
+ */
+
+.ListTable #thOvertimeDate {
+	width: 95px;
+}
+
+.ListTable #thOvertimeType {
+	width: 50px;
+}
+
+.ListTable #thOvertimeResult {
+	width: 50px;
+}
+
+.ListTable #thOvertimeReason {
+	width: 525px;
+}
+
+.ListTable #thOvertimeState {
+	width: 45px;
+}
+
+.ListTable #thOvertimeApprover {
+	width: 100px;
+}
+
+/**
+ * 休暇申請情報欄ヘッダ幅。
+ */
+
+.ListTable #thHolidayDate {
+	width: 210px;
+}
+
+.ListTable #thHolidayType {
+	width: 90px;
+}
+
+.ListTable #thHolidayRange {
+	width: 85px;
+}
+
+.ListTable #thHolidayReason {
+	width: 410px;
+}
+
+.ListTable #thHolidayState {
+	width: 50px;
+}
+
+.ListTable #thHolidayApprover {
+	width: 80px;
+}
+
+/**
+ * 休日出勤申請情報欄ヘッダ幅。
+ */
+.ListTable #thSubstituteDate {
+	width: 130px;
+}
+
+.ListTable #thSubstituteReason {
+	width: 300px;
+}
+
+/**
+ * 代休申請情報欄ヘッダ幅。
+ */
+.ListTable #thSubHolidayDate {
+	width: 350px;
+}
+
+/**
+ * 時差出勤申請情報欄ヘッダ幅。
+ */
+.ListTable #thDifferenceReason {
+	width: 400px;
+}

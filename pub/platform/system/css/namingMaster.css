@@ -1,0 +1,74 @@
+@CHARSET "UTF-8";
+/*
+ * MosP - Mind Open Source Project    http://www.mosp.jp/
+ * Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+ * 
+ * This program is free software: you can redistribute it and/or
+ * modify it under the terms of the GNU Affero General Public License
+ * as published by the Free Software Foundation, either version 3
+ * of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+/* ************************************************************************** */
+/* === 名称区分項目マスタ画面のスタイル === */
+/* ************************************************************************** */
+/**
+ * 項目名称表示欄。
+ */
+.TitleTd {
+	width: 120px;	
+}
+
+/**
+ * 一覧表示ヘッダ(選択ボタン)。
+ */
+.LeftListTable #thButton {
+	width: 60px;
+}
+
+/**
+ * 一覧表示ヘッダ(有効日)。
+ */
+.LeftListTable #thActivateDate {
+	width: 100px;
+}
+
+/**
+ * 一覧表示ヘッダ(有効/無効)。
+ */
+.LeftListTable #thInactivate {
+	width: 90px;
+}
+
+/**
+ * 一覧表示ヘッダ(選択チェックボックス)。
+ */
+.LeftListTable #thSelect {
+	width: 30px;
+}
+
+/**
+ * 一覧表示ヘッダ(名称項目コード)。
+ */
+.LeftListTable #thNamingItemCode {
+	width: 150px;
+}
+/**
+ * 一覧表示ヘッダ(名称項目名称)。
+ */
+.LeftListTable #thNamingItemName {
+	width: 300px;
+}
+/**
+ * 一覧表示ヘッダ(名称項目略称)。
+ */
+.LeftListTable #thNamingItemAbbr {
+	width: 180px;
+}

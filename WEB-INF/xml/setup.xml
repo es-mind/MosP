@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MosP>
+<!--
+MosP - Mind Open Source Project    http://www.mosp.jp/
+Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+
+This program is free software: you can redistribute it and/or
+modify it under the terms of the GNU Affero General Public License
+as published by the Free Software Foundation, either version 3
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<MosP>
+
+	<Model key="InitialAccountCreate">
+		jp.mosp.setup.bean.impl.InitialAccountCreateBean
+	</Model>
+
+	<!-- スーパユーザ情報 -->
+	<Application key="DatabaseUrlPattern">
+		jdbc:postgresql://{0}:{1}/
+	</Application>
+	<Application key="DefaultServerName">
+		localhost
+	</Application>
+	<Application key="DefaultPort">
+		5432
+	</Application>
+	<Application key="PostgresDataBase">
+		postgres
+	</Application>
+	<Application key="SuperUserName">
+		postgres
+	</Application>
+	<Application key="SuperUserPassword">
+		postgres
+	</Application>
+	<Application key="DefaultDbName">
+		mospv4
+	</Application>
+	<Application key="DefaultDbUser">
+		usermosp
+	</Application>
+	<Application key="DefaultDbPassword">
+		passmosp
+	</Application>
+
+	<!-- Controller -->
+	<Controller key="SU100*">
+		<ActionClass>jp.mosp.setup.action.DbConfirmAction</ActionClass>
+		<NeedSession>unnecessary</NeedSession>
+		<NeedProcSeq>ignore</NeedProcSeq>
+	</Controller>
+	<Controller key="SU200*">
+		<ActionClass>jp.mosp.setup.action.DbCreateAction</ActionClass>
+		<NeedSession>unnecessary</NeedSession>
+		<NeedProcSeq>ignore</NeedProcSeq>
+	</Controller>
+	<Controller key="SU300*">
+		<ActionClass>jp.mosp.setup.action.FirstUserAction</ActionClass>
+		<NeedSession>unnecessary</NeedSession>
+		<NeedProcSeq>ignore</NeedProcSeq>
+	</Controller>
+	<Controller key="SU400*">
+		<ActionClass>jp.mosp.setup.action.SetupFinishAction</ActionClass>
+		<NeedSession>unnecessary</NeedSession>
+		<NeedProcSeq>ignore</NeedProcSeq>
+	</Controller>
+	<Controller key="SU500*">
+		<ActionClass>jp.mosp.setup.action.XmlCreateAction</ActionClass>
+		<NeedSession>unnecessary</NeedSession>
+		<NeedProcSeq>ignore</NeedProcSeq>
+	</Controller>
+	
+	<!-- Message -->
+	<Message key="SUE001">
+		<MessageBody>接続できませんでした。項目を確認してください。</MessageBody>
+	</Message>
+	<Message key="SUE002">
+		<MessageBody>SQL文を流す際に、エラーが発生しました。</MessageBody>
+	</Message>
+	<Message key="SUE003">
+		<MessageBody>%1%が作成できませんでした。</MessageBody>
+	</Message>
+	<Message key="SUE004">
+		<MessageBody>DBユーザ名に「user」、「role」を使用しないで下さい。</MessageBody>
+	</Message>
+	<Message key="SUE005">
+		<MessageBody>%1%が既に存在しています。別の%1%を入力してください。</MessageBody>
+	</Message>
+	<Message key="SUE006">
+		<MessageBody>セッションがタイムアウトしました。初めからやり直してください。</MessageBody>
+	</Message>
+	<Message key="SUE007">
+		<MessageBody>user_connection.xmlファイルの作成に失敗しました。確認してください。</MessageBody>
+	</Message>
+	<Message key="SUW001">
+		<MessageBody>%1%の頭は英文字でお願いします。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="SUW002">
+		<MessageBody>%1%に利用出来ない文字が含まれています</MessageBody>
+	</Message>
+	
+	<!-- Naming -->
+	<Naming key="jp.mosp.setup.vo.DbConfirmVo">
+		セットアップ
+	</Naming>
+	
+	<Naming key="Db">
+		データベース
+	</Naming>
+	<Naming key="DbConfirm">
+		DBに接続します。
+	</Naming>
+	<Naming key="Server">
+		サーバ
+	</Naming>
+	<Naming key="PortNumber">
+		ポート番号
+	</Naming>	
+	<Naming key="PosgrePass">
+		Postgresパスワード
+	</Naming>	
+	<Naming key="DbConfirmButton">
+		DB接続
+	</Naming>	
+	<Naming key="DbCreate">
+		DB・ROLE作成
+	</Naming>
+	<Naming key="DbName">
+		MosPで使用するDB名
+	</Naming>
+	<Naming key="RoleName">
+		DBユーザ名
+	</Naming>
+	<Naming key="RolePass">
+		DBパスワード
+	</Naming>	
+	<Naming key="DbCreateButton">
+		作成
+	</Naming>		
+	<Naming key="FirstUserCard">
+		初期ユーザ登録
+	</Naming>		
+	<Naming key="SetupFinish">
+		セットアップ完了
+	</Naming>	
+	<Naming key="MospLoginUser">
+		MosPログインユーザID
+	</Naming>
+	<Naming key="MospLoginPass">
+		MosPログインパスワード
+	</Naming>	
+	<Naming key="GoMosp">
+		MosPへGO！
+	</Naming>
+	<Naming key="DbConfirmM1">
+		この画面ではDBに接続します。
+	</Naming>
+	<Naming key="CreateDbMessage">
+		作成ボタンを押下すると、DB作成・DBユーザ作成・MosPで使用するDBテーブルのSQL文の実行を行い、
+	</Naming>
+	<Naming key="CreateDbMessage2">
+		DBユーザなど指定するXMLファイル・アプリケーションの設定の上書きを行います。
+	</Naming>
+	<Naming key="CreateWait">
+		時間がかかります。しばらくお待ちください。
+	</Naming>
+	<Naming key="CardMessage">
+		新規ユーザを登録します。後ほどMosP内で変更できます。
+	</Naming>
+	<Naming key="SetupMessage">
+		これでセットアップは完了しました。"MosPへGO！"ボタン押下してMosPにログインしてください。
+	</Naming>
+	<Naming key="XmlCreate">
+		XML設定ファイル作成
+	</Naming>
+	
+	<!-- 初期アカウントデフォルトロールコード -->
+	<Application key="InitUserRoleCode">
+		90
+	</Application>
+	
+</MosP>

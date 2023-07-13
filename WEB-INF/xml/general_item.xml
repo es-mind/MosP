@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MosP>
+<!--
+MosP - Mind Open Source Project    http://www.mosp.jp/
+Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+
+This program is free software: you can redistribute it and/or
+modify it under the terms of the GNU Affero General Public License
+as published by the Free Software Foundation, either version 3
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<MosP>
+
+	<!--人事汎用項目設定-->
+	<Convention key="Default">
+		<!--ラベル表示名称-->
+		<Item key="Label" type="label" />
+		<Item key="RequiredLabel" type="label">
+			<FixedValue>*</FixedValue>
+			<Css>RequiredLabel</Css>
+		</Item>
+		<Item key="Hyphen" type="label">
+			<FixedValue>-</FixedValue>
+		</Item>
+		<Item key="Year" type="label">
+			<FixedValue>年</FixedValue>
+		</Item>
+		<Item key="Month" type="label">
+			<FixedValue>月</FixedValue>
+		</Item>
+		<Item key="Day" type="label">
+			<FixedValue>日</FixedValue>
+		</Item>
+		<Item key="Type" type="label">
+			<FixedValue>型</FixedValue>
+		</Item>
+		<Item key="Age" type="label">
+			<FixedValue>歳</FixedValue>
+		</Item>
+		<Item key="Meet" type="label">
+			<FixedValue>会場</FixedValue>
+		</Item>
+		<Item key="Class" type="label">
+			<FixedValue>等級</FixedValue>
+		</Item>
+		<Item key="Height" type="label">
+			<FixedValue>㎝</FixedValue>
+		</Item>
+		<Item key="Weight" type="label">
+			<FixedValue>㎏</FixedValue>
+		</Item>
+		<Item key="Right" type="label">
+			<FixedValue>右：</FixedValue>
+		</Item>
+		<Item key="Left" type="label">
+			<FixedValue>左：</FixedValue>
+		</Item>
+		<Item key="Health4High" type="label">
+			<FixedValue>最高血圧：</FixedValue>
+		</Item>
+		<Item key="Health4Low" type="label">
+			<FixedValue>最低血圧：</FixedValue>
+		</Item>
+		<Item key="Time" type="label">
+			<FixedValue>時間</FixedValue>
+		</Item>
+		<Item key="Hour" type="label">
+			<FixedValue>時</FixedValue>
+		</Item>
+		<Item key="Minute" type="label">
+			<FixedValue>分</FixedValue>
+		</Item>
+		<Item key="Yen" type="label">
+			<FixedValue>円</FixedValue>
+		</Item>
+		<Item key="Kara" type="label">
+			<FixedValue>～</FixedValue>
+		</Item>
+		<Item key="Km" type="label">
+			<FixedValue>km</FixedValue>
+		</Item>
+		<Item key="Monthly" type="label">
+			<FixedValue>ヶ月</FixedValue>
+		</Item>
+		<Item key="Work" type="label">
+			<FixedValue>徒歩：</FixedValue>
+		</Item>
+		
+		<!-- バイナリファイルボックス -->
+		<Item key="Binary" type="file">
+			<Css>FileTextBox</Css>
+		</Item>
+		
+		<!--テキストボックス-->
+		<Item key="TextYear" type="text">
+			<Css>Number4TextBox</Css>
+		</Item>
+		<Item key="TextMonth" type="text">
+			<Css>Number2TextBox</Css>
+		</Item>
+		<Item key="TextDay" type="text">
+			<Css>Number2TextBox</Css>
+		</Item>
+		<Item key="Number2RequiredTextBox" type="text">
+			<Css>Number2RequiredTextBox</Css>
+		</Item>
+		<Item key="PhoneArea" type="text">
+			<Css>Number5TextBox</Css>
+		</Item>
+		<Item key="PhoneLocal" type="text">
+			<Css>Number4TextBox</Css>
+		</Item>
+		<Item key="PhoneSubscriber" type="text">
+			<Css>Number4TextBox</Css>
+		</Item>
+		<Item key="Code10TextBox" type="text">
+			<Css>Code10TextBox</Css>
+		</Item>
+		<Item key="Name5RequiredTextBox" type="text">
+			<Css>Name5RequiredTextBox</Css>
+		</Item>
+		<Item key="Name5TextBox" type="text">
+			<Css>Name5TextBox</Css>
+		</Item>
+		<Item key="Name10RequiredTextBox" type="text">
+			<Css>Name10RequiredTextBox</Css>
+		</Item>
+		<Item key="Name10-30RequiredTextBox" type="text">
+			<Css>Name10-30RequiredTextBox</Css>
+		</Item>
+		<Item key="Name10TextBox" type="text">
+			<Css>Name10TextBox</Css>
+		</Item>
+		<Item key="Name10-30TextBox" type="text">
+			<Css>Name10-30TextBox</Css>
+		</Item>
+		<Item key="Name12TextBox" type="text">
+			<Css>Name12TextBox</Css>
+		</Item>
+		<Item key="Name12RequiredTextBox" type="text">
+			<Css>Name12RequiredTextBox</Css>
+		</Item>
+		
+		<Item key="Name15RequiredTextBox" type="text">
+			<Css>Name15RequiredTextBox</Css>
+		</Item>
+		<Item key="Name15TextBox" type="text">
+			<Css>Name15TextBox</Css>
+		</Item>
+		
+		
+		<Item key="Name25TextBox" type="text">
+			<Css>Name25TextBox</Css>
+		</Item>
+		<Item key="Name40TextBox" type="text">
+			<Css>Name40TextBox</Css>
+		</Item>
+		<Item key="Name15-40TextBox" type="text">
+			<Css>Name15-40TextBox</Css>
+		</Item>
+		<Item key="Name50TextBox" type="text">
+			<Css>Name50TextBox</Css>
+		</Item>
+		<Item key="Name10-50TextBox" type="text">
+			<Css>Name10-50TextBox</Css>
+		</Item>
+		<Item key="Name21-50TextBox" type="text">
+			<Css>Name21-50TextBox</Css>
+		</Item>
+		<Item key="Name21-50RequiredTextBox" type="text">
+			<Css>Name21-50TextBox</Css>
+		</Item>
+		<Item key="Name25-50TextBox" type="text">
+			<Css>Name25-50TextBox</Css>
+		</Item>
+		<Item key="Name25-50RequiredTextBox" type="text">
+			<Css>Name25-50RequiredTextBox</Css>
+		</Item>
+		<Item key="Name250TextBox" type="textarea">
+			<Css>Name250TextBox</Css>
+		</Item>
+		<Item key="Kana10TextBox" type="text">
+			<Css>Kana10TextBox</Css>
+		</Item>
+		<Item key="Number1RequiredTextBox" type="text">
+			<Css>Number1RequiredTextBox</Css>
+		</Item>
+		<Item key="Number1TextBox" type="text">
+			<Css>Number1TextBox</Css>
+		</Item>
+
+
+		<Item key="Number2TextBox" type="text">
+			<Css>Number2TextBox</Css>
+		</Item>
+		<Item key="Number3TextBox" type="text">
+			<Css>Number3TextBox</Css>
+		</Item>
+		<Item key="Number3RequiredTextBox" type="text">
+			<Css>Number3RequiredTextBox</Css>
+		</Item>
+		
+		<Item key="Number4TextBox" type="text">
+			<Css>Number4TextBox</Css>
+		</Item>
+		<Item key="Number6TextBox" type="text">
+			<Css>Number6TextBox</Css>
+		</Item>
+		<Item key="Number9TextBox" type="text">
+			<Css>Number9TextBox</Css>
+		</Item>
+		<Item key="Number10TextBox" type="text">
+			<Css>Number10TextBox</Css>
+		</Item>
+		
+		<Item key="MailAddressTextBox" type="text">
+			<Css>MailAddressTextBox</Css>
+		</Item>
+		
+		<Item key="Numeric5TextBox" type="text">
+			<Css>Numeric5TextBox</Css>
+		</Item>
+		
+		<!--プルダウン-->
+		<Item key="PrefecturePulldown" type="select">
+			<CodeKey>Prefecture</CodeKey>
+		</Item>
+		<Item key="GenderPulldown" type="select">
+			<CodeKey>Gender</CodeKey>
+		</Item>
+		<Item key="BloodTypePulldown" type="select">
+			<CodeKey>BloodType</CodeKey>
+		</Item>
+		<Item key="PhoneTypePulldown" type="select">
+			<CodeKey>PhonePlace</CodeKey>
+		</Item>
+		<Item key="InOutPulldown" type="select">
+			<CodeKey>InOut</CodeKey>
+		</Item>
+		<Item key="ResultPulldown" type="select">
+			<CodeKey>Result</CodeKey>
+		</Item>
+		<Item key="RewardPulldown" type="select">
+			<CodeKey>Reward</CodeKey>
+		</Item>
+		<Item key="HumanReceiptPulldown" type="select">
+			<CodeKey>HumanReceiptType</CodeKey>
+		</Item>
+		<Item key="EducationalBackgroundStatusPulldown" type="select">
+			<CodeKey>EducationalBackgroundStatusType</CodeKey>
+		</Item>
+		<Item key="MaritalStatusTypePulldown" type="select">
+			<CodeKey>MaritalStatusType</CodeKey>
+		</Item>
+		
+		
+		<!--コード変換表示ラベル-->
+		<Item key="PrefectureLabel" type="label">
+			<CodeKey>Prefecture</CodeKey>
+		</Item>
+		<Item key="GenderLabel" type="label">
+			<CodeKey>Gender</CodeKey>
+		</Item>
+		<Item key="BloodTypeLabel" type="label">
+			<CodeKey>BloodType</CodeKey>
+		</Item>
+		<Item key="PhoneTypeLabel" type="label">
+			<CodeKey>PhonePlace</CodeKey>
+		</Item>	
+		<Item key="InOutLabel" type="label">
+			<CodeKey>InOut</CodeKey>
+		</Item>		
+		<Item key="HumanReceiptLabel" type="label">
+			<CodeKey>HumanReceiptType</CodeKey>
+		</Item>	
+		<Item key="PostPulldownLabel" type="label">
+			<NamingKey>post</NamingKey>
+		</Item>
+		
+		
+		
+		<!--結合表示/検索用ラベル-->
+		<Item key="DateLabel" type="label">
+			<Format>yyyy/MM/dd</Format>
+			<DataType>Date</DataType>
+		</Item>
+		<Item key="JapaneseDateLabel" type="label">
+			<Format>yyyy年MM月dd日</Format>
+			<DataType>Date</DataType>
+		</Item>
+		<Item key="AgeLabel" type="label">
+			<Format>yyyy年MM月dd日</Format>
+			<DataType>Age</DataType>
+		</Item>
+		<Item key="PhoneLabel" type="label">
+			<Format>%1%-%2%-%3%</Format>
+			<DataType>Phone</DataType>
+		</Item>
+		<Item key="ConcatenatedLabel" type="label">
+			<DataType>Concatenate</DataType>
+		</Item>
+		<Item key="HandicappedLabel" type="label">
+			<Format> %1% [ %2% 級]</Format>
+			<DataType>Format</DataType>
+		</Item>
+		<Item key="BloodTypeFormat" type="label">
+			<Format> %1% 型</Format>
+			<DataType>Format</DataType>
+		</Item>
+		<Item key="HeightLabel" type="label">
+			<Format> %1% ㎝</Format>
+			<DataType>Format</DataType>
+		</Item>
+		<Item key="WeightLabel" type="label">
+			<Format> %1% ㎏</Format>
+			<DataType>Format</DataType>
+		</Item>
+		<Item key="HealthLabel" type="label">
+			<Format> 右：%1%　左：%2%</Format>
+			<DataType>Format</DataType>
+		</Item>
+		<Item key="Health4Label" type="label">
+			<Format> 最低：%1%　最高：%2%</Format>
+			<DataType>Format</DataType>
+		</Item>
+		<Item key="PostalCodeFormat" type="label">
+			<Format>%1%-%2%</Format>
+			<DataType>Format</DataType>
+		</Item>
+		<Item key="HyphenFormat" type="label">
+			<Format>%1%-%2%-%3%</Format>
+			<DataType>Format</DataType>
+		</Item>
+		<Item key="TimeMinuteFormat" type="label">
+			<Format> %1%時間%2%分</Format>
+			<DataType>Format</DataType>
+		</Item>
+		<Item key="HourMinuteFormat" type="label">
+			<Format> %1%時%2%分</Format>
+			<DataType>Format</DataType>
+		</Item>
+		<Item key="YenFormat" type="label">
+			<Format> %1%円</Format>
+			<DataType>Format</DataType>
+		</Item>
+		<Item key="MonthlyYenFormat" type="label">
+			<Format>%1%ヶ月：%2%円</Format>
+			<DataType>Format</DataType>
+		</Item>
+		<Item key="KmFormat" type="label">
+			<Format> %1%Km</Format>
+			<DataType>Format</DataType>
+		</Item>
+		<Item key="KmTimeMinuteFormat" type="label">
+			<Format>%1%Km 徒歩：%2%時間%3%分</Format>
+			<DataType>Format</DataType>
+		</Item>
+		<Item key="KaraFormat" type="label">
+			<Format> %1% ～ %2%</Format>
+			<DataType>Format</DataType>
+		</Item>
+		<Item key="ResultLabel" type="label">
+			<CodeKey>Result</CodeKey>
+		</Item>
+		<Item key="RewardLabel" type="label">
+			<CodeKey>Reward</CodeKey>
+		</Item>
+		<Item key="DateKaraDateFormat" type="label">
+			<Format> %1%年%2%月%3%日 ～ %4%年%5%月%6%日 </Format>
+			<DataType>Format</DataType>
+		</Item>
+		<Item key="PostPulldown" type="select">
+			<NamingKey>post</NamingKey>
+		</Item>
+		<Item key="PostPulldownLabel" type="label">
+			<NamingKey>post</NamingKey>
+		</Item>
+		<Item key="EducationalBackgroundStatusLabel" type="label">
+			<CodeKey>EducationalBackgroundStatusType</CodeKey>
+		</Item>
+		<Item key="MaritalStatusTypeLabel" type="label">
+			<CodeKey>MaritalStatusType</CodeKey>
+		</Item>
+		
+		<Item key="TimeFormat" type="label">
+			<Format> %1%時間</Format>
+			<DataType>Format</DataType>
+		</Item>
+		<Item key="DaysFormat" type="label">
+			<Format> %1%日</Format>
+			<DataType>Format</DataType>
+		</Item>
+		
+		
+	</Convention>
+	
+</MosP>

@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MosP>
+<!--
+MosP - Mind Open Source Project    http://www.mosp.jp/
+Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+
+This program is free software: you can redistribute it and/or
+modify it under the terms of the GNU Affero General Public License
+as published by the Free Software Foundation, either version 3
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<MosP>
+	<Role key="10">
+		<Menu key="AttendanceList">
+			<Index>1110</Index>
+		</Menu>
+		<Menu key="AttendanceCard">
+			<Index>1120</Index>
+		</Menu>
+		<Menu key="ScheduleReference">
+			<Index>1130</Index>
+		</Menu>
+		<Menu key="OvertimeRequest">
+			<Index>1140</Index>
+		</Menu>
+		<Menu key="HolidayRequest">
+			<Index>1150</Index>
+		</Menu>
+		<Menu key="WorkOnHolidayRequest">
+			<Index>1160</Index>
+		</Menu>
+		<Menu key="SubHolidayRequest">
+			<Index>1170</Index>
+		</Menu>
+		<Menu key="WorkTypeChangeRequest">
+			<Index>1180</Index>
+		</Menu>
+		<Menu key="CancellationRequest">
+			<Index>1190</Index>
+		</Menu>
+	</Role>
+	<Role key="20">
+		<Menu key="AttendanceList">
+			<Index>1110</Index>
+		</Menu>
+		<Menu key="AttendanceCard">
+			<Index>1120</Index>
+		</Menu>
+		<Menu key="ScheduleReference">
+			<Index>1130</Index>
+		</Menu>
+		<Menu key="OvertimeRequest">
+			<Index>1140</Index>
+		</Menu>
+		<Menu key="HolidayRequest">
+			<Index>1150</Index>
+		</Menu>
+		<Menu key="WorkOnHolidayRequest">
+			<Index>1160</Index>
+		</Menu>
+		<Menu key="SubHolidayRequest">
+			<Index>1170</Index>
+		</Menu>
+		<Menu key="WorkTypeChangeRequest">
+			<Index>1180</Index>
+		</Menu>
+		<Menu key="CancellationRequest">
+			<Index>1190</Index>
+		</Menu>
+		<Menu key="SubordinateList">
+			<Index>1210</Index>
+			<Range key="1">
+				<Position>RangeMyself</Position>
+				<Section>RangeMyself</Section>
+			</Range>
+		</Menu>
+		<Menu key="RequestList">
+			<Index>1220</Index>
+			<Range key="1">
+				<Position>RangeMyself</Position>
+				<Section>RangeMyself</Section>
+			</Range>
+		</Menu>
+		<Menu key="ApprovalList">
+			<Index>1230</Index>
+		</Menu>
+		<Menu key="AttendanceHumanList">
+			<Index>1240</Index>
+			<Range key="1">
+				<Position>RangeMyself</Position>
+				<Section>RangeMyself</Section>
+			</Range>
+		</Menu>
+		<Menu key="SubordinateFiscalList">
+			<Index>1245</Index>
+			<Range key="1">
+				<Position>RangeMyself</Position>
+				<Section>RangeMyself</Section>
+			</Range>
+		</Menu>
+		<Menu key="SubstitutionSetting">
+			<Index>1250</Index>
+		</Menu>
+	</Role>
+	<Role key="30">
+		<Menu key="AttendanceList">
+			<Index>1110</Index>
+		</Menu>
+		<Menu key="AttendanceCard">
+			<Index>1120</Index>
+		</Menu>
+		<Menu key="ScheduleReference">
+			<Index>1130</Index>
+		</Menu>
+		<Menu key="OvertimeRequest">
+			<Index>1140</Index>
+		</Menu>
+		<Menu key="HolidayRequest">
+			<Index>1150</Index>
+		</Menu>
+		<Menu key="WorkOnHolidayRequest">
+			<Index>1160</Index>
+		</Menu>
+		<Menu key="SubHolidayRequest">
+			<Index>1170</Index>
+		</Menu>
+		<Menu key="WorkTypeChangeRequest">
+			<Index>1180</Index>
+		</Menu>
+		<Menu key="CancellationRequest">
+			<Index>1190</Index>
+		</Menu>
+		<Menu key="SubordinateList">
+			<Index>1210</Index>
+		</Menu>
+		<Menu key="RequestList">
+			<Index>1220</Index>
+		</Menu>
+		<Menu key="ApprovalList">
+			<Index>1230</Index>
+		</Menu>
+		<Menu key="AttendanceHumanList">
+			<Index>1240</Index>
+		</Menu>
+		<Menu key="SubordinateFiscalList">
+			<Index>1245</Index>
+		</Menu>
+		<Menu key="SubstitutionSetting">
+			<Index>1250</Index>
+		</Menu>
+		<Menu key="TotalTime">
+			<Index>1310</Index>
+		</Menu>
+		<Menu key="TimeImportList">
+			<Index>1320</Index>
+		</Menu>
+		<Menu key="TimeExportList">
+			<Index>1330</Index>
+		</Menu>
+		<Menu key="HolidayMaster">
+			<Index>1410</Index>
+		</Menu>
+		<Menu key="SpecialHolidayManagement">
+			<Index>1420</Index>
+		</Menu>
+		<Menu key="OtherHolidayManagement">
+			<Index>1430</Index>
+		</Menu>
+		<Menu key="PaidHolidayManagement">
+			<Index>1440</Index>
+		</Menu>
+		<Menu key="PaidHolidayDataGrantList">
+			<Index>1450</Index>
+		</Menu>
+		<Menu key="TimeSettingList">
+			<Index>1510</Index>
+		</Menu>
+		<Menu key="WorkTypeList">
+			<Index>1520</Index>
+		</Menu>
+		<Menu key="PaidHolidayList">
+			<Index>1530</Index>
+		</Menu>
+		<Menu key="ScheduleList">
+			<Index>1540</Index>
+		</Menu>
+		<Menu key="CutoffMaster">
+			<Index>1550</Index>
+		</Menu>
+		<Menu key="ApplicationList">
+			<Index>1560</Index>
+		</Menu>
+		<Menu key="ApplicationReference">
+			<Index>1570</Index>
+		</Menu>
+		<Menu key="WorkTypePatternList">
+			<Index>1580</Index>
+		</Menu>
+	</Role>
+	<Role key="40">
+		<Menu key="AttendanceList">
+			<Index>1110</Index>
+		</Menu>
+		<Menu key="AttendanceCard">
+			<Index>1120</Index>
+		</Menu>
+		<Menu key="ScheduleReference">
+			<Index>1130</Index>
+		</Menu>
+		<Menu key="OvertimeRequest">
+			<Index>1140</Index>
+		</Menu>
+		<Menu key="HolidayRequest">
+			<Index>1150</Index>
+		</Menu>
+		<Menu key="WorkOnHolidayRequest">
+			<Index>1160</Index>
+		</Menu>
+		<Menu key="SubHolidayRequest">
+			<Index>1170</Index>
+		</Menu>
+		<Menu key="WorkTypeChangeRequest">
+			<Index>1180</Index>
+		</Menu>
+		<Menu key="CancellationRequest">
+			<Index>1190</Index>
+		</Menu>
+		<Menu key="SubordinateList">
+			<Index>1210</Index>
+			<Range key="1">
+				<Position>RangeMyself</Position>
+				<Section>RangeMyself</Section>
+			</Range>
+		</Menu>
+		<Menu key="RequestList">
+			<Index>1220</Index>
+			<Range key="1">
+				<Position>RangeMyself</Position>
+				<Section>RangeMyself</Section>
+			</Range>
+		</Menu>
+		<Menu key="ApprovalList">
+			<Index>1230</Index>
+		</Menu>
+		<Menu key="AttendanceHumanList">
+			<Index>1240</Index>
+			<Range key="1">
+				<Position>RangeMyself</Position>
+				<Section>RangeMyself</Section>
+			</Range>
+		</Menu>
+		<Menu key="SubordinateFiscalList">
+			<Index>1245</Index>
+			<Range key="1">
+				<Position>RangeMyself</Position>
+				<Section>RangeMyself</Section>
+			</Range>
+		</Menu>
+		<Menu key="SubstitutionSetting">
+			<Index>1250</Index>
+		</Menu>
+	</Role>
+	<Role key="50">
+		<Menu key="AttendanceList">
+			<Index>1110</Index>
+		</Menu>
+		<Menu key="AttendanceCard">
+			<Index>1120</Index>
+		</Menu>
+		<Menu key="ScheduleReference">
+			<Index>1130</Index>
+		</Menu>
+		<Menu key="OvertimeRequest">
+			<Index>1140</Index>
+		</Menu>
+		<Menu key="HolidayRequest">
+			<Index>1150</Index>
+		</Menu>
+		<Menu key="WorkOnHolidayRequest">
+			<Index>1160</Index>
+		</Menu>
+		<Menu key="SubHolidayRequest">
+			<Index>1170</Index>
+		</Menu>
+		<Menu key="WorkTypeChangeRequest">
+			<Index>1180</Index>
+		</Menu>
+		<Menu key="CancellationRequest">
+			<Index>1190</Index>
+		</Menu>
+		<Menu key="SubordinateList">
+			<Index>1210</Index>
+		</Menu>
+		<Menu key="RequestList">
+			<Index>1220</Index>
+		</Menu>
+		<Menu key="ApprovalList">
+			<Index>1230</Index>
+		</Menu>
+		<Menu key="AttendanceHumanList">
+			<Index>1240</Index>
+		</Menu>
+		<Menu key="SubordinateFiscalList">
+			<Index>1245</Index>
+		</Menu>
+		<Menu key="SubstitutionSetting">
+			<Index>1250</Index>
+		</Menu>
+		<Menu key="TotalTime">
+			<Index>1310</Index>
+		</Menu>
+		<Menu key="TimeImportList">
+			<Index>1320</Index>
+		</Menu>
+		<Menu key="TimeExportList">
+			<Index>1330</Index>
+		</Menu>
+		<Menu key="HolidayMaster">
+			<Index>1410</Index>
+		</Menu>
+		<Menu key="SpecialHolidayManagement">
+			<Index>1420</Index>
+		</Menu>
+		<Menu key="OtherHolidayManagement">
+			<Index>1430</Index>
+		</Menu>
+		<Menu key="PaidHolidayManagement">
+			<Index>1440</Index>
+		</Menu>
+		<Menu key="PaidHolidayDataGrantList">
+			<Index>1450</Index>
+		</Menu>
+		<Menu key="TimeSettingList">
+			<Index>1510</Index>
+		</Menu>
+		<Menu key="WorkTypeList">
+			<Index>1520</Index>
+		</Menu>
+		<Menu key="PaidHolidayList">
+			<Index>1530</Index>
+		</Menu>
+		<Menu key="ScheduleList">
+			<Index>1540</Index>
+		</Menu>
+		<Menu key="CutoffMaster">
+			<Index>1550</Index>
+		</Menu>
+		<Menu key="ApplicationList">
+			<Index>1560</Index>
+		</Menu>
+		<Menu key="ApplicationReference">
+			<Index>1570</Index>
+		</Menu>
+		<Menu key="WorkTypePatternList">
+			<Index>1580</Index>
+		</Menu>
+	</Role>
+	<Role key="90">
+		<Menu key="AttendanceList">
+			<Index>1110</Index>
+		</Menu>
+		<Menu key="AttendanceCard">
+			<Index>1120</Index>
+		</Menu>
+		<Menu key="ScheduleReference">
+			<Index>1130</Index>
+		</Menu>
+		<Menu key="OvertimeRequest">
+			<Index>1140</Index>
+		</Menu>
+		<Menu key="HolidayRequest">
+			<Index>1150</Index>
+		</Menu>
+		<Menu key="WorkOnHolidayRequest">
+			<Index>1160</Index>
+		</Menu>
+		<Menu key="SubHolidayRequest">
+			<Index>1170</Index>
+		</Menu>
+		<Menu key="WorkTypeChangeRequest">
+			<Index>1180</Index>
+		</Menu>
+		<Menu key="CancellationRequest">
+			<Index>1190</Index>
+		</Menu>
+		<Menu key="SubordinateList">
+			<Index>1210</Index>
+		</Menu>
+		<Menu key="RequestList">
+			<Index>1220</Index>
+		</Menu>
+		<Menu key="ApprovalList">
+			<Index>1230</Index>
+		</Menu>
+		<Menu key="AttendanceHumanList">
+			<Index>1240</Index>
+		</Menu>
+		<Menu key="SubordinateFiscalList">
+			<Index>1245</Index>
+		</Menu>
+		<Menu key="SubstitutionSetting">
+			<Index>1250</Index>
+		</Menu>
+		<Menu key="TotalTime">
+			<Index>1310</Index>
+		</Menu>
+		<Menu key="TimeImportList">
+			<Index>1320</Index>
+		</Menu>
+		<Menu key="TimeExportList">
+			<Index>1330</Index>
+		</Menu>
+		<Menu key="HolidayMaster">
+			<Index>1410</Index>
+		</Menu>
+		<Menu key="SpecialHolidayManagement">
+			<Index>1420</Index>
+		</Menu>
+		<Menu key="OtherHolidayManagement">
+			<Index>1430</Index>
+		</Menu>
+		<Menu key="PaidHolidayManagement">
+			<Index>1440</Index>
+		</Menu>
+		<Menu key="PaidHolidayDataGrantList">
+			<Index>1450</Index>
+		</Menu>
+		<Menu key="TimeSettingList">
+			<Index>1510</Index>
+		</Menu>
+		<Menu key="WorkTypeList">
+			<Index>1520</Index>
+		</Menu>
+		<Menu key="PaidHolidayList">
+			<Index>1530</Index>
+		</Menu>
+		<Menu key="ScheduleList">
+			<Index>1540</Index>
+		</Menu>
+		<Menu key="CutoffMaster">
+			<Index>1550</Index>
+		</Menu>
+		<Menu key="ApplicationList">
+			<Index>1560</Index>
+		</Menu>
+		<Menu key="ApplicationReference">
+			<Index>1570</Index>
+		</Menu>
+		<Menu key="WorkTypePatternList">
+			<Index>1580</Index>
+		</Menu>
+	</Role>
+</MosP>

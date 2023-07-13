@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE MosP>
+<!--
+MosP - Mind Open Source Project    http://www.mosp.jp/
+Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+
+This program is free software: you can redistribute it and/or
+modify it under the terms of the GNU Affero General Public License
+as published by the Free Software Foundation, either version 3
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<MosP>
+
+	<!-- コントローラ初期化ログ出力クラス(カンマ区切で複数設定可能) -->
+	<Application key="LogTypeControllerInit">
+		jp.mosp.framework.log.MospLogger
+	</Application>
+	
+	<!-- アクセスログ出力クラス(カンマ区切で複数設定可能) -->
+	<Application key="LogTypeAccess">
+		jp.mosp.framework.log.MospLogger
+	</Application>
+	
+	<!-- アクション開始ログ出力クラス(カンマ区切で複数設定可能) -->
+	<Application key="LogTypeActionStart">
+		jp.mosp.framework.log.MospLogger
+	</Application>
+	
+	<!-- アクション終了ログ出力クラス(カンマ区切で複数設定可能) -->
+	<Application key="LogTypeActionEnd">
+		jp.mosp.framework.log.MospLogger
+	</Application>
+	
+	<!-- DB接続ログ出力クラス(カンマ区切で複数設定可能) -->
+	<Application key="LogTypeDbConnect">
+		jp.mosp.framework.log.MospLogger
+	</Application>
+	
+	<!-- パラメータログ出力クラス(カンマ区切で複数設定可能) -->
+	<Application key="LogTypeParameter">
+		jp.mosp.framework.log.MospLogger
+	</Application>
+	
+	<!-- 参照SQLログ出力クラス(カンマ区切で複数設定可能) -->
+	<Application key="LogTypeSqlSelect">
+		jp.mosp.framework.log.MospLogger
+	</Application>
+	
+	<!-- 登録SQLログ出力クラス(カンマ区切で複数設定可能) -->
+	<Application key="LogTypeSqlRegist">
+		jp.mosp.framework.log.MospLogger
+	</Application>
+	
+	<!-- 内部統制ログ出力クラス(カンマ区切で複数設定可能) -->
+	<Application key="LogTypeInternalControl">
+		jp.mosp.framework.log.MospLogger
+	</Application>
+	
+	<!-- エラーログ出力クラス(カンマ区切で複数設定可能) -->
+	<Application key="LogTypeError">
+		jp.mosp.framework.log.MospLogger
+	</Application>
+	
+	<!-- デバッグログ出力クラス(カンマ区切で複数設定可能) -->
+	<Application key="LogTypeDebug">
+		jp.mosp.framework.log.MospLogger
+	</Application>
+	
+	<!-- アプリケーションログ出力クラス(カンマ区切で複数設定可能) -->
+	<Application key="LogTypeApplication">
+		jp.mosp.framework.log.MospLogger
+	</Application>
+	
+	<!-- 汎用ログ出力クラス(カンマ区切で複数設定可能) -->
+	<Application key="LogTypeGeneral">
+		jp.mosp.framework.log.MospLogger
+	</Application>
+	
+	<!-- コントローラ初期化ログレベル(700：CONFIG) -->
+	<Application key="LogLevelControllerInit">
+		700
+	</Application>
+	
+	<!-- アクセスログレベル(300：FINEST) -->
+	<Application key="LogLevelAccess">
+		300
+	</Application>
+	
+	<!-- アクション開始ログレベル(400：FINER) -->
+	<Application key="LogLevelActionStart">
+		400
+	</Application>
+	
+	<!-- アクション終了ログレベル(400：FINER) -->
+	<Application key="LogLevelActionEnd">
+		400
+	</Application>
+	
+	<!-- DB接続ログレベル(500：FINE) -->
+	<Application key="LogLevelDbConnect">
+		500
+	</Application>
+	
+	<!-- パラメータログレベル(500：FINE) -->
+	<Application key="LogLevelParameter">500</Application>
+	
+	<!-- 参照SQLログレベル(500：FINE) -->
+	<Application key="LogLevelSqlSelect">500</Application>
+	
+	<!-- 登録SQLログレベル(500：FINE) -->
+	<Application key="LogLevelSqlRegist">500</Application>
+	
+	<!-- 内部統制ログレベル(900：WARNING) -->
+	<Application key="LogLevelInternalControl">
+		900
+	</Application>
+	
+	<!-- エラーログレベル(1000：SEVERE) -->
+	<Application key="LogLevelError">
+		1000
+	</Application>
+	
+	<!-- アプリケーションログレベル(800：INFO) -->
+	<Application key="LogLevelApplication">
+		800
+	</Application>
+	
+	<!-- デバッグログレベル(800：INFO) -->
+	<Application key="LogLevelDebug">
+		0
+	</Application>
+	
+	<!-- ログエンコーディング -->
+	<Application key="LogEncoding">
+		UTF-8
+	</Application>
+	
+	<!-- ログ区切文字 -->
+	<Application key="LogSeparator">
+		：
+	</Application>
+	
+	<!-- ログパターン(MosPログ出力クラス使用時) -->
+	<Application key="LogPattern">
+		/logs/mosp%g.log
+	</Application>
+	
+	<!-- ログファイル最大バイト数(MosPログ出力クラス使用時) -->
+	<Application key="LogLimit">
+		100000000
+	</Application>
+	
+	<!-- ログローテーション数(MosPログ出力クラス使用時) -->
+	<Application key="LogCount">5</Application>
+	
+	<!-- ログレベル(MosPログ出力クラス使用時) -->
+	<Application key="LogLevel">
+		300
+	</Application>
+	
+</MosP>

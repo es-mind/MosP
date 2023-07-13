@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE MosP>
+<!--
+MosP - Mind Open Source Project    http://www.mosp.jp/
+Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+
+This program is free software: you can redistribute it and/or
+modify it under the terms of the GNU Affero General Public License
+as published by the Free Software Foundation, either version 3
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<MosP>
+	<MainMenu key="menuTop">
+		<Menu key="Top">
+			<Command>PF0040</Command>
+			<VoClass>jp.mosp.platform.portal.vo.PortalVo</VoClass>
+		</Menu>
+	</MainMenu>
+	<MainMenu key="menuHumanManage">
+		<Menu key="HumanList">
+			<Command>PF1110</Command>
+			<VoClass>jp.mosp.platform.human.vo.HumanListVo</VoClass>
+		</Menu>
+		<Menu key="BasicNewCard">
+			<Command>PF1210</Command>
+			<VoClass>jp.mosp.platform.human.vo.BasicNewCardVo</VoClass>
+		</Menu>
+		<Menu key="ImportList">
+			<Command>PF1310</Command>
+			<VoClass>jp.mosp.platform.file.vo.ImportListVo</VoClass>
+		</Menu>
+		<Menu key="ExportList">
+			<Command>PF1410</Command>
+			<VoClass>jp.mosp.platform.file.vo.HumanExportListVo</VoClass>
+		</Menu>
+	</MainMenu>
+	<MainMenu key="menuBaseSetting">
+		<Menu key="EmploymentMaster">
+			<Command>PF2100</Command>
+			<VoClass>jp.mosp.platform.system.vo.EmploymentMasterVo</VoClass>
+		</Menu>
+		<Menu key="SectionMaster">
+			<Command>PF2200</Command>
+			<VoClass>jp.mosp.platform.system.vo.SectionMasterVo</VoClass>
+		</Menu>
+		<Menu key="PositionMaster">
+			<Command>PF2300</Command>
+			<VoClass>jp.mosp.platform.system.vo.PositionMasterVo</VoClass>
+		</Menu>
+		<Menu key="AccountMaster">
+			<Command>PF2400</Command>
+			<VoClass>jp.mosp.platform.system.vo.AccountMasterVo</VoClass>
+		</Menu>
+		<Menu key="WorkPlaceMaster">
+			<Command>PF2500</Command>
+			<VoClass>jp.mosp.platform.system.vo.WorkPlaceMasterVo</VoClass>
+		</Menu>
+		<Menu key="SystemManagement">
+			<Command>PFSM2900</Command>
+			<VoClass>jp.mosp.platform.system.vo.SystemManagementVo</VoClass>
+		</Menu>
+	</MainMenu>
+	<MainMenu key="menuWorkflowManage">
+		<Menu key="UnitList">
+			<Command>PF3110</Command>
+			<VoClass>jp.mosp.platform.workflow.vo.UnitListVo</VoClass>
+		</Menu>
+		<Menu key="RouteList">
+			<Command>PF3210</Command>
+			<VoClass>jp.mosp.platform.workflow.vo.RouteListVo</VoClass>
+		</Menu>
+		<Menu key="RouteApplicationList">
+			<Command>PF3310</Command>
+			<VoClass>jp.mosp.platform.workflow.vo.RouteApplicationListVo</VoClass>
+		</Menu>
+		<Menu key="RouteApplicationReference">
+			<Command>PF3500</Command>
+			<VoClass>jp.mosp.platform.workflow.vo.RouteApplicationReferenceVo</VoClass>
+		</Menu>
+	</MainMenu>
+	<MainMenu key="menuMessageSetting">
+		<Menu key="MessageList">
+			<Command>PF4110</Command>
+			<VoClass>jp.mosp.platform.message.vo.MessageListVo</VoClass>
+		</Menu>
+	</MainMenu>
+	<MainMenu key="menuIndividualSetting">
+		<Menu key="PasswordChange">
+			<Command>PF9116</Command>
+			<VoClass>jp.mosp.platform.portal.vo.PasswordChangeVo</VoClass>
+		</Menu>
+	</MainMenu>
+</MosP>

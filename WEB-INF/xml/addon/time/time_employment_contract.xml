@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE MosP>
+<!--
+MosP - Mind Open Source Project    http://www.mosp.jp/
+Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+
+This program is free software: you can redistribute it and/or
+modify it under the terms of the GNU Affero General Public License
+as published by the Free Software Foundation, either version 3
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<MosP>
+	
+	<!--雇用契約情報設定-->
+	<ViewConfig key="EmploymentContract" type="History">
+		<View key="HumanInfo">
+			<ViewTable key="LabelTable" title="EmploymentContractInfoTitle"/>
+		</View>
+		<View key="HistoryList">
+			<ViewTable key="LabelTable"/>
+		</View>
+		<View key="HistoryCard">
+			<ViewTable key="InputTable" title="EmploymentContractCardTitle" />
+		</View>
+		<View key="HumanSearch">
+			<ViewTable key="SearchTable" />
+		</View>
+		<View key="HumanExport">
+			<ViewTable key="ExportTable" />
+		</View>
+		<View key="HumanImport">
+			<ViewTable key="ImportTable" />
+		</View>
+		<ViewTable key="InputTable" type="CardTable" pair="3">
+			<TableItem key="prescribedWeeklyWorkingHours">
+				<Item key="Numeric5TextBox" name="prescribedWeeklyWorkingHours" />
+				<Item key="Time"  />
+			</TableItem>
+			<TableItem key="prescribedWeeklyWorkingDays">
+				<Item key="Number1TextBox" name="prescribedWeeklyWorkingDays" />
+				<Item key="Day"  />
+			</TableItem>
+			<TableItem key="prescribedAnnualWorkingDays">
+				<Item key="Number3TextBox" name="prescribedAnnualWorkingDays" />
+				<Item key="Day"  />
+			</TableItem>
+		</ViewTable>
+		<ViewTable key="LabelTable" type="CardTable"  pair="3">	
+			<TableItem key="prescribedWeeklyWorkingHours">
+				<Item key="TimeFormat" name="prescribedWeeklyWorkingHours" labelKey="Label" />
+			</TableItem>
+			<TableItem key="prescribedWeeklyWorkingDays">
+				<Item key="DaysFormat" name="prescribedWeeklyWorkingDays"  labelKey="Label" />
+			</TableItem>
+			<TableItem key="prescribedAnnualWorkingDays">
+				<Item key="DaysFormat" name="prescribedAnnualWorkingDays"  labelKey="Label" />
+			</TableItem>
+		</ViewTable>
+		<ViewTable key="SearchTable" type="FreeWordType" >
+			<TableItem key="prescribedWeeklyWorkingHours">
+				<Item key="Label" name="prescribedWeeklyWorkingHours" />
+			</TableItem>
+			<TableItem key="prescribedWeeklyWorkingDays">
+				<Item key="Label" name="prescribedWeeklyWorkingDays" />
+			</TableItem>
+			<TableItem key="prescribedAnnualWorkingDays">
+				<Item key="Label" name="prescribedAnnualWorkingDays" />
+			</TableItem>
+		</ViewTable>
+		<ViewTable key="ExportTable" type="CardTable" >
+			<TableItem key="ActivateDate">
+				<Item key="ActivateDate" name="prescribedWeeklyWorkingHours" />
+			</TableItem>
+			<TableItem key="prescribedWeeklyWorkingHours">
+				<Item key="Label" name="prescribedWeeklyWorkingHours" />
+			</TableItem>
+			<TableItem key="prescribedWeeklyWorkingDays">
+				<Item key="Label" name="prescribedWeeklyWorkingDays" />
+			</TableItem>
+			<TableItem key="prescribedAnnualWorkingDays">
+				<Item key="Label" name="prescribedAnnualWorkingDays" />
+			</TableItem>
+		</ViewTable>
+		<ViewTable key="ImportTable" type="CardTable" >
+			<TableItem key="ActivateDate" />
+			<TableItem key="prescribedWeeklyWorkingHours"/>
+			<TableItem key="prescribedWeeklyWorkingDays"/>
+			<TableItem key="prescribedAnnualWorkingDays"/>
+		</ViewTable>
+		<CheckConfig>
+			<CheckItem key="checkNumeric">prescribedWeeklyWorkingHours,"prescribedWeeklyWorkingHours",'数値'</CheckItem>
+			<CheckItem key="checkNumber">prescribedWeeklyWorkingDays,"prescribedWeeklyWorkingDays",'数値'</CheckItem>
+			<CheckItem key="checkNumber">prescribedAnnualWorkingDays,"prescribedAnnualWorkingDays",'数値'</CheckItem>
+			<CheckItem key="checkLength">prescribedWeeklyWorkingHours,'5',"prescribedWeeklyWorkingHours"</CheckItem>
+			<CheckItem key="checkLength">prescribedWeeklyWorkingDays,'1',"prescribedWeeklyWorkingDays"</CheckItem>
+			<CheckItem key="checkLength">prescribedAnnualWorkingDays,'3',"prescribedAnnualWorkingDays"</CheckItem>
+		</CheckConfig>
+	</ViewConfig>
+	
+	<!--画面機能名称-->
+	<Naming key="EmploymentContract">
+		雇用契約
+	</Naming>
+	<Naming key="EmploymentContractInfoTitle">
+		雇用契約情報
+	</Naming>
+	<Naming key="EmploymentContractCardTitle">
+		雇用契約情報編集
+	</Naming>
+	
+	<!--個別項目名称-->
+	<Naming key="prescribedWeeklyWorkingHours">
+		週所定労働時間
+	</Naming>
+	<Naming key="prescribedWeeklyWorkingDays">
+		週所定労働日数
+	</Naming>
+	<Naming key="prescribedAnnualWorkingDays">
+		年所定労働日数
+	</Naming>
+	
+	<!-- コード(検索ワード) -->
+	<Code key="FreeWordType">
+		<CodeItem key="EmploymentContract">
+			<ItemName>雇用契約情報</ItemName>
+			<ViewIndex>14</ViewIndex>
+		</CodeItem>
+	</Code>
+	
+</MosP>

@@ -1,0 +1,77 @@
+@CHARSET "UTF-8";
+/*
+ * MosP - Mind Open Source Project    http://www.mosp.jp/
+ * Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+ * 
+ * This program is free software: you can redistribute it and/or
+ * modify it under the terms of the GNU Affero General Public License
+ * as published by the Free Software Foundation, either version 3
+ * of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+/* ************************************************************************** */
+/* === 有給休暇設定詳細画面のスタイル === */
+/* ************************************************************************** */
+
+/**
+ * 基本情報項目名称表示欄(td)
+ */
+#tblBasic .TitleTd {
+	width: 100px;
+}
+
+/**
+ * ストック休暇情報項目名称表示欄(td)
+ */
+#tblStock .TitleTd {
+	width: 150px;
+}
+
+/**
+ * 番号欄幅(th)
+ */
+.ListTable #thNumber {
+	width: 20px;
+}
+
+/**
+ * 基本情報有効日入力欄幅
+ */
+.ListTable #tdActivateDate {
+	width: 270px;
+}
+
+/**
+ * 自動付与(基準日)項目名称幅
+ */
+.ListTable #thTimes {
+	width: 145px;
+}
+
+/**
+ * 自動付与(基準日)日数幅
+ */
+#AutomaticGivingNorm .NumberTd {
+	width: 60px;
+}
+
+/**
+ * ストック休暇設定項目名称欄
+ */
+#tblStock .TitleTd {
+	width: 150px;
+}
+
+/**
+ * ストック休暇設定項目内容欄
+ */
+#tblStock .InputTd {
+	width: 160px;
+}

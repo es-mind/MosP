@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+                         "http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app>
+
+	<servlet>
+		<servlet-name>Controller</servlet-name>
+		<servlet-class>jp.mosp.framework.base.Controller</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Controller</servlet-name>
+		<url-pattern>/srv/*</url-pattern>
+	</servlet-mapping>
+	
+	<welcome-file-list>
+		<welcome-file>common/html/index.html</welcome-file>
+	</welcome-file-list>
+	
+	<error-page>
+		<error-code>400</error-code>
+		<location>/pub/common/html/index.html</location>
+	</error-page>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/pub/common/html/index.html</location>
+	</error-page>
+	
+	<error-page>
+		<error-code>401</error-code>
+		<location>/jsp/common/error.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>403</error-code>
+		<location>/jsp/common/error.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/jsp/common/error.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>503</error-code>
+		<location>/jsp/common/error.jsp</location>
+	</error-page>
+
+</web-app>

@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE MosP>
+<!--
+MosP - Mind Open Source Project    http://www.mosp.jp/
+Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+
+This program is free software: you can redistribute it and/or
+modify it under the terms of the GNU Affero General Public License
+as published by the Free Software Foundation, either version 3
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<MosP>
+	
+	<!-- ログイン画面追加JSPパス -->
+	<Application key="LoginExtraJsp">
+	</Application>
+	
+	<!-- 勤怠詳細項目JSPパス -->
+	<Application key="AttendanceCardItemJsp">
+		/jsp/time/input/attendanceCardWorkInfo.jsp,
+		/jsp/time/input/attendanceCardRestInfo.jsp,
+		/jsp/time/input/attendanceCardLateInfo.jsp,
+		/jsp/time/input/attendanceCardOvertimeInfo.jsp
+	</Application>
+	
+	<!-- 未承認詳細項目JSPパス -->
+	<Application key="ApprovalCardItemJsp">
+		/jsp/time/management/approvalCardWorkInfo.jsp,
+		/jsp/time/management/approvalCardRestInfo.jsp,
+		/jsp/time/management/approvalCardLateInfo.jsp,
+		/jsp/time/management/approvalCardOvertimeInfo.jsp
+	</Application>
+	
+	<!-- 勤怠一覧項目JSPパス -->
+	<Application key="AttendanceListItemJsp">
+		/jsp/time/input/attendanceListInfo.jsp
+	</Application>
+	
+	<!-- 勤怠一覧項目JSPパス -->
+	<Application key="ScheduleReferenceItemJsp">
+		/jsp/time/input/scheduleReferenceInfo.jsp
+	</Application>
+	
+	<!-- ポータルBeanクラス群 -->
+	<Application key="PortalBeans">
+		jp.mosp.time.portal.bean.impl.PortalTimeCardBean,
+		jp.mosp.platform.bean.portal.impl.PortalMessageBean,
+		jp.mosp.time.portal.bean.impl.PortalAttendanceListBean,
+		jp.mosp.time.portal.bean.impl.PortalApprovalListBean
+	</Application>
+	
+	<!-- 出勤簿テンプレート -->
+	<Application key="attendanceBook.pdf">
+		/template/attendanceBook.jasper
+	</Application>
+	
+	<!-- 人事基本情報履歴削除追加クラス -->
+	<Application key="HistoryBasicDeleteBeans">
+		<Value>jp.mosp.time.bean.impl.TimeHumanDeleteBean</Value>
+		<AddValue>true</AddValue>
+	</Application>
+	
+	<!-- 勤怠申請(0：勤怠申請期限なし、1-28：日単位以降勤怠申請できない、101-112：月単位以降勤怠申請できない -->
+	<Application key="ApplicableLimitAttendance">
+		0
+	</Application>
+	
+	<!-- エクスポート時間フォーマット(0:分単位、1：10進、2:H:MM、3:H.MM) -->
+	<Application key="ExportTimeFormat">
+		0
+	</Application>
+	
+	<!-- 予定一覧申請適用設定(true：申請適用、false：予定のみ) -->
+	<Application key="ScheduleApplyRequest">
+		true
+	</Application>
+	
+	<!-- 申請情報詳細表示順序 -->
+	<Application key="AttendanceInfo">
+		 WorkTypeAbbr
+		,DifferenceType
+		,DirectStart
+		,DirectEnd
+		,StartWorkAndEndWork
+		,PrivateGoingOut
+		,Tardiness
+		,LeaveEarly
+		,HolidayTime
+		,Overtime
+		,Midnight
+		,TimeComment
+		,Remarks
+	</Application>
+	
+	<!-- ユニット承認者対象設定 -->
+	<Application key="UseTargetApprovalUnit">
+		false
+	</Application>
+	
+	<!-- 時短機能 -->
+	<Application key="UseShortUnpaid">
+		false
+	</Application>
+	
+	<!-- 有給休暇申請理由必須設定(true：必須、false：任意) -->
+	<Application key="PaidHolidayReasonRequired">
+		true
+	</Application>
+	
+	<!-- ストック休暇出勤率計算扱い(1：出勤扱い、2：欠勤扱い、3：対象外) -->
+	<Application key="StockHolidayAttendance">
+		1
+	</Application>
+	
+	<!-- ポータル時刻表示機能 -->
+	<Application key="ViewPortalTime">
+		true
+	</Application>
+	
+	<!-- 統計情報（季節休暇） -->
+	<Application key="SeasonHolidayCode">
+		99
+	</Application>
+	
+	<!-- 消化すべき有給休暇日数 -->
+	<Application key="PaidHolidayUseDay">
+		5
+	</Application>
+	
+</MosP>

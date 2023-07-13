@@ -1,0 +1,97 @@
+@CHARSET "UTF-8";
+/*
+ * MosP - Mind Open Source Project    http://www.mosp.jp/
+ * Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+ * 
+ * This program is free software: you can redistribute it and/or
+ * modify it under the terms of the GNU Affero General Public License
+ * as published by the Free Software Foundation, either version 3
+ * of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+/* ************************************************************************** */
+/* === 勤務地マスタ画面のスタイル === */
+/* ************************************************************************** */
+/**
+ * 名称15文字(入力必須)用テキストボックス。
+ */
+.Name15RequiredTextBox {
+	width: 205px;
+}
+
+/**
+ * 名称15文字用テキストボックス。
+ */
+.Name15TextBox {
+	width: 205px;
+}
+
+/**
+ * 一覧表示ヘッダ(選択ボタン)。
+ */
+.LeftListTable #thButton {
+	width: 60px;
+}
+
+/**
+ * 一覧表示ヘッダ(有効日)。
+ */
+.LeftListTable #thActivateDate {
+	width: 80px;
+}
+
+/**
+ * 一覧表示ヘッダ(有効/無効)。
+ */
+.LeftListTable #thInactivate {
+	width: 70px;
+}
+
+/**
+ * 一覧表示ヘッダ(選択チェックボックス)。
+ */
+.LeftListTable #thSelect {
+	width: 30px;
+}
+
+/**
+ * 一覧表示ヘッダ(勤務地コード)。
+ */
+.LeftListTable #thWorkPlaceCode {
+	width: 106px;
+}
+
+/**
+ * 一覧表示ヘッダ(勤務地名称)。
+ */
+.LeftListTable #thWorkPlaceName {
+	width: 275px;
+}
+
+/**
+ * 一覧表示ヘッダ(勤務地略称)。
+ */
+.LeftListTable #thWorkPlaceAbbr {
+	width: 93px;
+}
+
+/**
+ * 一覧表示ヘッダ(郵便番号)。
+ */
+.LeftListTable #thPostalCode {
+	width: 80px;
+}
+
+/**
+ * 一覧表示ヘッダ(電話番号)。
+ */
+.LeftListTable #thPhoneNumber {
+	width: 100px;
+}

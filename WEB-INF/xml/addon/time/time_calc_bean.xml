@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE MosP>
+<!--
+MosP - Mind Open Source Project    http://www.mosp.jp/
+Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+
+This program is free software: you can redistribute it and/or
+modify it under the terms of the GNU Affero General Public License
+as published by the Free Software Foundation, either version 3
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<MosP>
+<!-- 
+勤怠計算(日々)処理設定。
+
+AttendanceCalcSwitchBeanで、勤怠計算(日々)処理を切り替えたり
+追加処理をするための設定。
+
+切替により決定した基本となる勤怠計算(日々)処理(1つのみ)を実行した後に、
+追加処理(複数も可)を行う。
+
+********
+切替に関する設定値(AttendCalcSwitch)の内容は、次の通り。
+
+・CodeItem：勤怠計算(日々)処理切替条件クラス名
+　当クラスで切替判定をし、切替と判定された場合、ItemNameで指定された
+　Beanを用いて勤怠計算(日々)処理を行う。
+　CodeItemとItemNameが同じ値である場合は、無条件で切替と判定する。
+
+・ItemName：勤怠計算(日々)実行処理クラス名
+　CodeItemで切替と判定された場合、当クラスで勤怠計算(日々)処理を行う。
+
+・ItemIndex：勤怠計算(日々)処理切替判定順序
+　この値が小さい順から切替判定を行い、最初に切替と判定されたクラスで
+　勤怠計算(日々)処理を行う。
+　切替と判定された場合、以降の切替判定は行われない。
+
+・Model key="AttendanceCalcExecute"：デフォルト勤怠計算(日々)実行処理
+　一つも切替と判定されなかった場合、当Beanで勤怠計算(日々)処理を行う。
+
+********
+事前処理(AttendCalcBefore)に関する設定値の内容は、次の通り。
+
+・CodeItem：勤怠計算(日々)事前処理条件クラス名
+　当クラスで実行判定をし、実行と判定された場合、ItemNameで指定された
+　Beanを用いて勤怠計算(日々)事前処理を行う。
+　CodeItemとItemNameが同じ値である場合は、無条件で実行と判定する。
+
+・ItemName：勤怠計算(日々)事前処理クラス名
+　CodeItemで実行と判定された場合、当クラスで勤怠計算(日々)事前処理を行う。
+
+・ItemIndex：勤怠計算(日々)事前処理追実行順序
+　この値が小さい順から勤怠計算(日々)事前処理を行う。
+　複数確認処理がある場合は、順次実行する。
+
+********
+事後処理(AttendCalcAfter)に関する設定値の内容は、次の通り。
+
+・CodeItem：勤怠計算(日々)事後処理条件クラス名
+　当クラスで実行判定をし、実行と判定された場合、ItemNameで指定された
+　Beanを用いて勤怠計算(日々)事後処理を行う。
+　CodeItemとItemNameが同じ値である場合は、無条件で実行と判定する。
+
+・ItemName：勤怠計算(日々)処理クラス名
+　CodeItemで実行と判定された場合、当クラスで勤怠計算(日々)事後処理を行う。
+
+・ItemIndex：勤怠計算(日々)事後処理実行順序
+　この値が小さい順から勤怠計算(日々)事後処理を行う。
+　複数追加処理がある場合は、順次実行する。
+
+********
+実行時事前処理(AttendCalcExecuteBefore)に関する設定値の内容は、次の通り。
+
+・CodeItem：勤怠計算(日々)実行時事前処理クラス名
+	当クラスで勤怠計算(日々)実行時事前処理を行う。
+	勤怠計算(日々)エンティティを引数として、追加処理を行う。
+
+・ItemName：利用しない
+
+・ItemIndex：勤怠計算(日々)実行時事前処理実行順序
+　この値が小さい順から勤怠計算(日々)実行時事前処理を行う。
+
+********
+実行時事後処理(AttendCalcExecuteAfter)に関する設定値の内容は、次の通り。
+
+・CodeItem：勤怠計算(日々)実行時事後処理クラス名
+	当クラスで勤怠計算(日々)実行事後処理を行う。
+	勤怠計算(日々)エンティティを引数として、追加処理を行う。
+
+・ItemName：利用しない
+
+・ItemIndex：勤怠計算(日々)実行時事後処理実行順序
+　この値が小さい順から勤怠計算(日々)実行時事後処理を行う。
+
+********
+-->
+	
+	<!-- 勤怠計算(日々)処理(デフォルト) -->
+	<Model key="AttendCalcExecute">
+		jp.mosp.time.bean.impl.AttendCalcExecuteBean
+	</Model>
+	
+	<!-- 勤怠計算(日々)処理切替設定 -->
+	<!--
+	<Code key="AttendCalcSwitch">
+		<CodeItem key="">
+			<ItemName></ItemName>
+			<ViewIndex></ViewIndex>
+		</CodeItem>
+	</Code>
+	-->
+	
+	<!-- 勤怠計算(日々)事前処理設定 -->
+	<Code key="AttendCalcBefore">
+		<CodeItem key="jp.mosp.time.bean.impl.AttendCalcCheckSettingsBean">
+			<ItemName>jp.mosp.time.bean.impl.AttendCalcCheckSettingsBean</ItemName>
+			<ViewIndex>1000</ViewIndex>
+		</CodeItem>
+	</Code>
+	
+	<!-- 勤怠計算(日々)事後処理設定 -->
+	<!-- 
+	<Code key="AttendCalcAfter">
+		<CodeItem key="">
+			<ItemName></ItemName>
+			<ViewIndex></ViewIndex>
+		</CodeItem>
+	</Code>
+	-->
+	
+	<!-- 勤怠計算(日々)実行時事前処理設定 -->
+	<!-- 
+	<Code key="AttendCalcExecuteBefore">
+		<CodeItem key="">
+			<ViewIndex></ViewIndex>
+		</CodeItem>
+	</Code>
+	-->
+	
+	<!-- 勤怠計算(日々)実行時事後処理設定 -->
+	<Code key="AttendCalcExecuteAfter">
+		<CodeItem key="jp.mosp.time.bean.impl.AttendCalcCheckRestBean">
+			<ViewIndex>1000</ViewIndex>
+		</CodeItem>
+	</Code>
+	
+</MosP>

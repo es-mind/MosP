@@ -1,0 +1,106 @@
+@CHARSET "UTF-8";
+/*
+ * MosP - Mind Open Source Project    http://www.mosp.jp/
+ * Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+ * 
+ * This program is free software: you can redistribute it and/or
+ * modify it under the terms of the GNU Affero General Public License
+ * as published by the Free Software Foundation, either version 3
+ * of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+/* ************************************************************************** */
+/* === 代休申請画面のスタイル === */
+/* ************************************************************************** */
+
+/**
+ * 出勤日表示プルダウン。
+ */
+#pltEditWorkDate {
+	width: 225px;
+	font-family: "ＭＳ Ｐゴシック", "Takao Pゴシック", sans-serif;
+}
+
+/**
+ * 各種項目名称表示欄。
+ */
+.TitleTd {
+	width: 100px;
+}
+
+/**
+ * 申請欄代休日プルダウン欄。
+ */
+.UnderInputTable #tdRequestDate {
+	width: 380px;
+}
+
+/**
+ * 申請欄出勤日プルダウン欄。
+ */
+.UnderInputTable #tdWorkDate {
+	width: 250px;
+}
+
+/**
+ * 検索欄テーブル。
+ */
+.List #subHolidayRequest_tblSearch {
+	margin-top: 20px;
+}
+
+/**
+ * 検索ボタン表示テーブル。
+ */
+.List #tblSearchButton {
+	margin-top: 15px;
+}
+
+/**
+ * 選択ボタンヘッダ幅。
+ */
+.LeftListTable #thButton {
+	width: 50px;
+}
+
+/**
+ * 休暇日付ヘッダ幅。
+ */
+.LeftListTable #thRequestDate {
+	width: 340px;
+}
+
+/**
+ * 休暇日曜日ヘッダ幅。
+ */
+.LeftListTable #thWorkDate {
+	width: 340px;
+}
+
+/**
+ * 承認状況ヘッダ幅。
+ */
+.LeftListTable #thState {
+	width: 70px;
+}
+
+/**
+ * 承認者ヘッダ幅。
+ */
+.LeftListTable #thApprover {
+	width: 100px;
+}
+
+/**
+ * 選択チェックボックスヘッダ幅。
+ */
+.LeftListTable #thSelect {
+	width: 20px;
+}

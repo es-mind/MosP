@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE MosP>
+<!--
+MosP - Mind Open Source Project    http://www.mosp.jp/
+Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+
+This program is free software: you can redistribute it and/or
+modify it under the terms of the GNU Affero General Public License
+as published by the Free Software Foundation, either version 3
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<MosP>
+
+<!-- jp.mosp.time.dao.settings -->
+
+	<Model key="HolidayDataDao">
+		jp.mosp.time.dao.settings.impl.TmdHolidayDataDao
+	</Model>
+	<Model key="HolidayRequestDao">
+		jp.mosp.time.dao.settings.impl.TmdHolidayRequestDao
+	</Model>
+	<Model key="PaidHolidayDataDao">
+		jp.mosp.time.dao.settings.impl.TmdPaidHolidayDao
+	</Model>
+	<Model key="PaidHolidayTransactionDao">
+		jp.mosp.time.dao.settings.impl.TmtPaidHolidayDao
+	</Model>
+	<Model key="PaidHolidayGrantDao">
+		jp.mosp.time.dao.settings.impl.TmtPaidHolidayGrantDao
+	</Model>
+	<Model key="StockHolidayDataDao">
+		jp.mosp.time.dao.settings.impl.TmdStockHolidayDao
+	</Model>
+	<Model key="StockHolidayTransactionDao">
+		jp.mosp.time.dao.settings.impl.TmtStockHolidayDao
+	</Model>
+	<Model key="WorkTypeDao">
+		jp.mosp.time.dao.settings.impl.TmmWorkTypeDao
+	</Model>
+	<Model key="WorkTypeItemDao">
+		jp.mosp.time.dao.settings.impl.TmmWorkTypeItemDao
+	</Model>
+	<Model key="WorkTypePatternDao">
+		jp.mosp.time.dao.settings.impl.TmmWorkTypePatternDao
+	</Model>
+	<Model key="WorkTypePatternItemDao">
+		jp.mosp.time.dao.settings.impl.TmaWorkTypePatternItemDao
+	</Model>
+	<Model key="PaidHolidayDao">
+		jp.mosp.time.dao.settings.impl.TmmPaidHolidayDao
+	</Model>
+	<Model key="PaidHolidayProportionallyDao">
+		jp.mosp.time.dao.settings.impl.TmmPaidHolidayProportionallyDao
+	</Model>
+	<Model key="PaidHolidayFirstYearDao">
+		jp.mosp.time.dao.settings.impl.TmmPaidHolidayFirstYearDao
+	</Model>
+	<Model key="PaidHolidayPointDateDao">
+		jp.mosp.time.dao.settings.impl.TmmPaidHolidayPointDateDao
+	</Model>
+	<Model key="PaidHolidayEntranceDateDao">
+		jp.mosp.time.dao.settings.impl.TmmPaidHolidayEntranceDateDao
+	</Model>
+	<Model key="StockHolidayDao">
+		jp.mosp.time.dao.settings.impl.TmmStockHolidayDao
+	</Model>
+	<Model key="ScheduleDao">
+		jp.mosp.time.dao.settings.impl.TmmScheduleDao
+	</Model>
+	<Model key="ScheduleDateDao">
+		jp.mosp.time.dao.settings.impl.TmmScheduleDateDao
+	</Model>
+	<Model key="CutoffDao">
+		jp.mosp.time.dao.settings.impl.TmmCutoffDao
+	</Model>
+	<Model key="TimeSettingDao">
+		jp.mosp.time.dao.settings.impl.TmmTimeSettingDao
+	</Model>
+	<Model key="HolidayDao">
+		jp.mosp.time.dao.settings.impl.TmmHolidayDao
+	</Model>
+	<Model key="LimitStandardDao">
+		jp.mosp.time.dao.settings.impl.TmmLimitStandardDao
+	</Model>
+	<Model key="ApplicationDao">
+		jp.mosp.time.dao.settings.impl.TmmApplicationDao
+	</Model>
+	<Model key="AttendanceDao">
+		jp.mosp.time.dao.settings.impl.TmdAttendanceDao
+	</Model>
+	<Model key="OvertimeRequestDao">
+		jp.mosp.time.dao.settings.impl.TmdOvertimeRequestDao
+	</Model>
+	<Model key="HolidayRequestDao">
+		jp.mosp.time.dao.settings.impl.TmdHolidayRequestDao
+	</Model>
+	<Model key="WorkOnHolidayRequestDao">
+		jp.mosp.time.dao.settings.impl.TmdWorkOnHolidayRequestDao
+	</Model>
+	<Model key="SubHolidayRequestDao">
+		jp.mosp.time.dao.settings.impl.TmdSubHolidayRequestDao
+	</Model>
+	<Model key="SubHolidayDao">
+		jp.mosp.time.dao.settings.impl.TmdSubHolidayDao
+	</Model>
+	<Model key="WorkTypeChangeRequestDao">
+		jp.mosp.time.dao.settings.impl.TmdWorkTypeChangeRequestDao
+	</Model>
+	<Model key="DifferenceRequestDao">
+		jp.mosp.time.dao.settings.impl.TmdDifferenceRequestDao
+	</Model>
+	<Model key="TotalTimeDao">
+		jp.mosp.time.dao.settings.impl.TmtTotalTimeDao
+	</Model>
+	<Model key="TotalTimeEmployeeDao">
+		jp.mosp.time.dao.settings.impl.TmtTotalTimeEmployeeDao
+	</Model>
+	<Model key="TotalTimeDataDao">
+		jp.mosp.time.dao.settings.impl.TmdTotalTimeDao
+	</Model>
+	<Model key="TotalTimeCorrectionDao">
+		jp.mosp.time.dao.settings.impl.TmdTotalTimeCorrectionDao
+	</Model>
+	<Model key="TotalLeaveDao">
+		jp.mosp.time.dao.settings.impl.TmdTotalLeaveDao
+	</Model>
+	<Model key="TotalOtherVacationDao">
+		jp.mosp.time.dao.settings.impl.TmdTotalOtherVacationDao
+	</Model>
+	<Model key="TotalAbsenceDao">
+		jp.mosp.time.dao.settings.impl.TmdTotalAbsenceDao
+	</Model>
+	<Model key="TotalAllowanceDao">
+		jp.mosp.time.dao.settings.impl.TmdTotalAllowanceDao
+	</Model>
+	<Model key="AttendanceCorrectionDao">
+		jp.mosp.time.dao.settings.impl.TmdAttendanceCorrectionDao
+	</Model>
+	<Model key="AllowanceDao">
+		jp.mosp.time.dao.settings.impl.TmdAllowanceDao
+	</Model>	
+	<Model key="RestDao">
+		jp.mosp.time.dao.settings.impl.TmdRestDao
+	</Model>
+	<Model key="AttendanceTransactionDao">
+		jp.mosp.time.dao.settings.impl.TmtAttendanceDao
+	</Model>
+	<Model key="GoOutDao">
+		jp.mosp.time.dao.settings.impl.TmdGoOutDao
+	</Model>
+	<Model key="ExportDataDao">
+		jp.mosp.time.dao.settings.impl.ExportDataDao
+	</Model>
+	<Model key="SubstituteDao">
+		jp.mosp.time.dao.settings.impl.TmdSubstituteDao
+	</Model>
+	<Model key="TimeRecordDao">
+		jp.mosp.time.dao.settings.impl.TmdTimeRecordDao
+	</Model>
+
+</MosP>

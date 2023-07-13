@@ -1,0 +1,128 @@
+@CHARSET "UTF-8";
+/*
+ * MosP - Mind Open Source Project    http://www.mosp.jp/
+ * Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+ * 
+ * This program is free software: you can redistribute it and/or
+ * modify it under the terms of the GNU Affero General Public License
+ * as published by the Free Software Foundation, either version 3
+ * of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+/* ************************************************************************** */
+/* === エクスポートマスタ詳細画面のスタイル === */
+/* ************************************************************************** */
+
+/**
+ * 項目名称表示欄(div)。
+ */
+.ListTable .TitleTd {
+	width: 140px;
+}
+
+/**
+ * 項目選択スペース(div)。
+ */
+.Select {
+	width: 980px;
+	height: 500px;
+	margin: 10px auto;
+	float: left;
+	text-align: center;
+	border: 1px solid black;
+	background-color: #EEEEEE;
+}
+
+/**
+ * 項目選択項目表示欄(div)。
+ */
+.SelectLeft {
+	width: 400px;
+	margin: 15px auto;
+	float: left;
+	text-align: center;
+}
+
+/**
+ * 項目選択項目表示欄(div)。
+ */
+.SelectButton {
+	width: 160px;
+	margin: 15px auto;
+	float: left;
+	text-align: center;
+	margin-left: 10px;
+}
+
+/**
+ * 項目選択項目選択欄(div)。
+ */
+.SelectRight {
+	width: 400px;
+	margin: 15px auto;
+	float: right;
+	text-align: center;
+}
+
+/**
+ * 項目選択プルダウン(select)。
+ */
+.Select span {
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.SelectLabel {
+	height: 30px;
+	vertical-align: top;
+}
+
+/**
+ * 項目選択プルダウン(select)。
+ */
+.Select select {
+	width: 340px;
+	height: 440px;
+}
+
+/**
+ * 全選択ボタン(button)。
+ */
+#btnAllSelect {
+	margin-top: 80px;
+}
+
+/**
+ * 選択ボタン(button)。
+ */
+#btnSelect {
+	margin-top: 30px;
+}
+
+/**
+ * 解除ボタン(button)。
+ */
+#btnCancel {
+	margin-top: 160px;
+}
+
+/**
+ * 全解除ボタン(button)。
+ */
+#btnAllCancel {
+	margin-top: 30px;
+}
+
+/**
+ * ボタン表示スペース(div)。
+ */
+.Button {
+	margin: 20px auto 10px;
+}

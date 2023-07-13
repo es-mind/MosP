@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE MosP>
+<!--
+MosP - Mind Open Source Project    http://www.mosp.jp/
+Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+
+This program is free software: you can redistribute it and/or
+modify it under the terms of the GNU Affero General Public License
+as published by the Free Software Foundation, either version 3
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<MosP>
+<!--
+LDAP関連機能アドオン設定ファイル。
+アドオン有効フラグ(AddonValid)をtrueにすることで、
+アドオン設定情報以下に設定した情報が読み込まれる。
+
+当アドオンでは、以下の機能を提供する。
+・LDAPを用いた認証機能
+
+LDAPを用いた認証機能の利用方法：
+・認証クラス(Application key="Auth")を変更する。
+・パスワード有効期限(Application key="PasswordPeriod")を期限無しとする。
+・パスワード確認(Application key="CheckPassword")を確認無しとする。
+・パスワード変更画面(Menu key="PasswordChange")を利用不可とする。
+・システム設定画面(Menu key="SystemManagement")を利用不可とする。
+-->
+	<!-- アドオン設定情報 -->
+	<Addon key="Ldap">
+		<AddonName>LDAP関連機能</AddonName>
+		<AddonValid>false</AddonValid>
+	</Addon>
+	
+	<!-- 認証クラス変更 -->
+	<Model key="Auth">
+		jp.mosp.addon.ldap.bean.impl.LdapAuthBean
+	</Model>
+	
+	<!-- パスワード有効期限無し -->
+	<Application key="PasswordPeriod">
+	</Application>
+	
+	<!-- パスワード確認無し -->
+	<Application key="CheckPassword">
+	</Application>
+	
+	<!-- パスワード変更画面利用不可 -->
+	<MainMenu key="menuIndividualSetting">
+		<Menu key="PasswordChange">
+			<MenuValid>false</MenuValid>
+		</Menu>
+	</MainMenu>
+	
+	<!-- システム設定画面利用不可 -->
+	<MainMenu key="menuBaseSetting">
+		<Menu key="SystemManagement">
+			<MenuValid>false</MenuValid>
+		</Menu>
+	</MainMenu>
+	
+	<!-- パスワード初期化可否 -->
+	<Application key="InitPasswordImpossible">
+		true
+	</Application>
+	
+	<!-- 文言 -->
+	<Naming key="ldapAuthFailed">
+		LDAP認証失敗
+	</Naming>
+	
+	<!-- LDAPプロバイダURL -->
+	<Application key="LdapProviderUrl">
+		ldap://192.168.1.1:389
+	</Application>
+	
+	<!-- LDAPディレクトリ名 -->
+	<Application key="LdapDirName">
+		uid=%,ou=People,dc=mosp,dc=jp
+	</Application>
+	
+	<!-- LDAPバインドDN(ActiveDirectoryAuthBean用) -->
+	<Application key="LdapBindDN">
+		%@mosp.jp
+	</Application>
+	
+	<!-- LDAP検索用ユーザID(ActiveDirectoryAuthBean用) -->
+	<Application key="LdapSearchUser">
+		userldap
+	</Application>
+	
+	<!-- LDAP検索用パスワード(ActiveDirectoryAuthBean用) -->
+	<Application key="LdapSearchPass">
+		passldap
+	</Application>
+	
+	<!-- LDAPユーザID接尾辞 -->
+	<Application key="SuffixUserId">
+	</Application>
+	
+</MosP>

@@ -1,0 +1,218 @@
+@CHARSET "UTF-8";
+/*
+ * MosP - Mind Open Source Project    http://www.mosp.jp/
+ * Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+ * 
+ * This program is free software: you can redistribute it and/or
+ * modify it under the terms of the GNU Affero General Public License
+ * as published by the Free Software Foundation, either version 3
+ * of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+/* ************************************************************************** */
+/* === 人事情報一覧画面のスタイル === */
+/* ************************************************************************** */
+
+/**
+ * 項目名称表示欄。
+ */
+.TitleTd {
+	/*width: 130px;*/
+}
+
+/**
+ * 項目内容表示欄。
+ */
+.InputTd {
+	/*width: 260px;*/
+	
+}
+
+/**
+ * 個人基本情報欄項目内容表示欄。
+ */
+#tblBasicInfomation .InputTd {
+	width: 300px;
+}
+
+/**
+ * 社員コード表示ラベル(table)。
+ */
+.Search #tblEmployeeCodeLabel {
+	margin-left: 0px;
+	margin: 5px 0px;
+	width: 700px;
+}
+
+/**
+ * 参照有効日表示・入力欄(td)。
+ */
+#tblEmployeeCodeLabel .NowDateTd {
+	width: 320px;
+	text-align: center;
+}
+
+/**
+ * 一覧表示テーブルヘッダ(番号)。
+ */
+.List #thListNumber {
+	width: 30px;
+}
+
+/**
+ * 一覧表示テーブルヘッダ(選択)。
+ */
+.List #thListSelect {
+	width: 35px;
+	cursor: defalt;
+}
+
+/**
+ * 一覧表示テーブルヘッダ(日付)。
+ */
+.List #thListDate {
+	width: 120px;
+}
+
+/**
+ * 入力欄一覧表示テーブルヘッダ(日付)。
+ */
+.List #thCardDate {
+	width: 150px;
+}
+
+/**
+ * 一覧表示ヘッダ(選択ボタン)。
+ */
+.List #thButton {
+	width: 60px;
+}
+
+/**
+ * 一覧表示ヘッダ(有効日)。
+ */
+.ListTable #thActivateDate {
+	width: 100px;
+}
+
+/**
+ * 一覧表示ヘッダ(有効/無効)。
+ */
+.ListTable #thInactivate {
+	width: 90px;
+}
+/**
+ * 一覧表示ヘッダ(選択チェックボックス)。
+ */
+.ListTable #thSelect {
+	width: 40px;
+}
+
+/**
+ * 入社情報（InputTd）
+ */
+#tblEntrance .InputTd {
+	width: 300px;
+}
+
+/**
+ * 休職情報（理由）
+ */
+.List #thSuspensionReason {
+	width: 540px;
+}
+
+/**
+ * 休職情報（理由）
+ */
+.List #tdSuspensionReason {
+	width: 540px;
+}
+
+/**
+ * 退職情報（理由）
+ */
+.List #thRetirementReason {
+	width: 240px;
+}
+
+/**
+ * 退職情報（理由）
+ */
+.List #tdRetirementReason {
+	width: 240px;
+}
+
+/**
+ * 退職情報（理由詳細）
+ */
+.List #thRetirementDetail {
+	width: 590px;
+}
+
+/**
+ * 退職情報（理由詳細）
+ */
+.List #lblRetirementDetail {
+	white-space: normal;
+	width: 590px;
+	word-break: break-all; /*IE用*/
+}
+
+/**
+ * 兼務情報(所属略称)。
+ */
+.List #thSectionAbbr {
+	width: 120px;
+}
+
+/**
+ * 兼務情報(職位略称)。
+ */
+.List #thPositionAbbr {
+	width: 120px;
+}
+
+/**
+ * 兼務情報(備考)。
+ */
+.List #thRemark {
+	width: 415px;
+}
+
+/**
+ * 兼務情報(備考)。
+ */
+.List #tdConcurrentRemark {
+	white-space: normal;
+	width: 415px;
+	word-break: break-all; /*IE用*/
+}
+
+/**
+ * 画面上部遷移リンク(div)。
+ */
+.MoveUpLink {
+	margin-top: 20px;
+}
+
+/**
+ * 各種情報表示欄(table)。
+ */
+.UnderTable {
+	table-layout: fixed;
+}
+
+/**
+ * 備考内容表示欄。
+ */
+#tdFileRemark {
+	white-space: normal;
+}

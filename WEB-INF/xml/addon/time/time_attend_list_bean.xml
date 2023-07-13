@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE MosP>
+<!--
+MosP - Mind Open Source Project    http://www.mosp.jp/
+Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+
+This program is free software: you can redistribute it and/or
+modify it under the terms of the GNU Affero General Public License
+as published by the Free Software Foundation, either version 3
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<MosP>
+<!-- 
+勤怠一覧表示処理設定。
+
+勤怠一覧表示処理の設定を行う。
+********
+備考に関する設定値(Add_AttendListRemarks)の内容は、次の通り。
+
+・CodeItem：勤怠一覧情報備考設定処理クラス名
+　AttendListReferRemarkBaseBeanを継承したBeanを用いて、
+　勤怠一覧情報に備考を設定する。
+
+・ItemName：利用しない
+
+・ItemIndex：勤怠一覧情報備考設定順序
+　この値が小さい順から勤怠一覧情報に備考を設定する。
+
+後処理に関する設定値(Add_AttendListAfter)は、
+アドオンで使うことを想定している。
+・CodeItem：勤怠一覧情報後処理クラス名
+・ItemName：利用しない
+・ItemIndex：勤怠一覧情報後処理順序
+********
+-->
+	
+	<!-- 勤怠一覧参照処理(デフォルト) -->
+	<Model key="AttendanceListReference">
+		jp.mosp.time.bean.impl.AttendListReferenceBean
+	</Model>
+	
+	<!-- 勤怠一覧チェックボックス要否設定処理 -->
+	<Model key="AttendListCheckBox">
+		jp.mosp.time.bean.impl.AttendListCheckBoxBean
+	</Model>
+	
+	<!-- 勤怠一覧情報備考設定処理 -->
+	<Code key="Add_AttendListRemarks">
+		<CodeItem key="jp.mosp.time.bean.impl.AttendListReferRemarkSuspensionBean">
+			<ViewIndex>1000</ViewIndex>
+		</CodeItem>
+		<CodeItem key="jp.mosp.time.bean.impl.AttendListReferRemarkAttendanceBean">
+			<ViewIndex>2000</ViewIndex>
+		</CodeItem>
+		<CodeItem key="jp.mosp.time.bean.impl.AttendListReferRemarkWorkTypeChangeBean">
+			<ViewIndex>4000</ViewIndex>
+		</CodeItem>
+		<CodeItem key="jp.mosp.time.bean.impl.AttendListReferRemarkHolidayBean">
+			<ViewIndex>4100</ViewIndex>
+		</CodeItem>
+		<CodeItem key="jp.mosp.time.bean.impl.AttendListReferRemarkWorkOnHolidayBean">
+			<ViewIndex>4200</ViewIndex>
+		</CodeItem>
+		<CodeItem key="jp.mosp.time.bean.impl.AttendListReferRemarkSubstituteBean">
+			<ViewIndex>4300</ViewIndex>
+		</CodeItem>
+		<CodeItem key="jp.mosp.time.bean.impl.AttendListReferRemarkSubHolidayBean">
+			<ViewIndex>4400</ViewIndex>
+		</CodeItem>
+		<CodeItem key="jp.mosp.time.bean.impl.AttendListReferRemarkOvertimeBean">
+			<ViewIndex>4500</ViewIndex>
+		</CodeItem>
+		<CodeItem key="jp.mosp.time.bean.impl.AttendListReferRemarkDifferenceBean">
+			<ViewIndex>4600</ViewIndex>
+		</CodeItem>
+		<CodeItem key="jp.mosp.time.bean.impl.AttendListReferRemarkScheduleBean">
+			<ViewIndex>9000</ViewIndex>
+		</CodeItem>
+	</Code>
+	
+	<!-- 勤怠一覧情報後処理 -->
+	<!--
+	<Code key="Add_AttendListAfter">
+	</Code>
+	-->
+	
+</MosP>

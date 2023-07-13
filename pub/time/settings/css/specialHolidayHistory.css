@@ -1,0 +1,71 @@
+@CHARSET "UTF-8";
+/*
+ * MosP - Mind Open Source Project    http://www.mosp.jp/
+ * Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+ * 
+ * This program is free software: you can redistribute it and/or
+ * modify it under the terms of the GNU Affero General Public License
+ * as published by the Free Software Foundation, either version 3
+ * of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+/* ************************************************************************** */
+/* === 特別休暇付与画面のスタイル === */
+/* ************************************************************************** */
+
+/* === ボタン表示テーブル === */
+.List #tblRegistButton {
+	margin-top: 0px;	
+}
+
+/* === 一覧テーブル === */
+.List #list {
+	table-layout: fixed;	
+}
+
+/* === 編集欄項目名称表示欄 === */
+.UnderInputTable .TitleTd {
+	width: 90px;	
+}
+
+/* === 編集欄項目内容表示欄 === */
+.UnderInputTable .InputTd {
+	width: 190px;	
+}
+
+/* === 一覧ソート欄ヘッダ幅 === */
+.LeftListTable .ListSortTh {
+	width: 110px;
+}
+
+/* === 一覧ボタン欄ヘッダ幅 === */
+.LeftListTable #thButton {
+	width: 50px
+}
+
+/* === 一覧有効日欄ヘッダ幅 === */
+.LeftListTable #thActivateDate {
+	width: 100px;
+}
+
+/* === 一覧社員名欄ヘッダ幅 === */
+.LeftListTable #thEmployeeName {
+	width: 200px;
+}
+
+/* === 一覧有効/無効欄ヘッダ幅 === */
+.LeftListTable #thInactivate {
+	width: 80px;
+}
+
+/* === 一覧選択チェックボックス欄ヘッダ幅 === */
+.LeftListTable #thSelect {
+	width: 20px;
+}

@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE MosP>
+<!--
+MosP - Mind Open Source Project    http://www.mosp.jp/
+Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+
+This program is free software: you can redistribute it and/or
+modify it under the terms of the GNU Affero General Public License
+as published by the Free Software Foundation, either version 3
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<MosP>
+	<Message key="PFW0101">
+		<MessageBody>入力された%1%に誤りがあります。</MessageBody>
+	</Message>
+	<Message key="PFW0102">
+		<MessageBody>%1%を正しく入力してください。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="PFW0103">
+		<MessageBody>必ず一件はチェックボックスを選択してください。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="PFW0104">
+		<MessageBody>%1%は正しい日付を入力してください。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="PFW0105">
+		<MessageBody>%1%には%2%を入力してください。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="PFW0106">
+		<MessageBody>%1%には%2%桁で入力してください。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="PFW0107">
+		<MessageBody>有効日を決定してください。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="PFW0108">
+		<MessageBody>クライアントエラーが発生しました。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="PFW0109">
+		<MessageBody>入力してください。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="PFW0110">
+		<MessageBody>半角英数字を入力してください。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="PFW0111">
+		<MessageBody>%1%には半角英数字を入力してください。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="PFW0112">
+		<MessageBody>数字を入力してください。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="PFW0113">
+		<MessageBody>%1%には数字を入力してください。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="PFW0114">
+		<MessageBody>正しい形式の値を入力してください。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="PFW0115">
+		<MessageBody>%1%には正しい形式の値を入力してください。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="PFW0116">
+		<MessageBody>正しい日付を入力してください。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="PFW0117">
+		<MessageBody>年は%1%以上を入力してください。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="PFW0118">
+		<MessageBody>月は1--12を入力してください。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="PFW0119">
+		<MessageBody>日は1--%1%を入力してください。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="PFW0120">
+		<MessageBody>日は1以上を入力してください。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="PFW0121">
+		<MessageBody>正しい時間を入力してください。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="PFW0122">
+		<MessageBody>%1%は%2%文字以上を入力してください。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="PFW0123">
+		<MessageBody>%1%は%2%文字以内で入力してください。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="PFW0124">
+		<MessageBody>半角英数字又は記号( _ . - @ )を入力してください。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="PFW0125">
+		<MessageBody>%1%には半角英数字又は記号( _ . - @ )を入力してください。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="PFW0126">
+		<MessageBody>%1%は全角%2%桁または半角%3%桁以内で入力してください。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="PFW0127">
+		<MessageBody>%1%には、0か1を入力してください。</MessageBody>
+	</Message>
+	<Message key="PFW0128">
+		<MessageBody>%1%には、%2%以上を入力してください。</MessageBody>
+	</Message>
+	<Message key="PFW0129">
+		<MessageBody>%1%には、%2%以下を入力してください。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="PFW0130">
+		<MessageBody>%1%は、整数部%2%桁以内、小数部%3%桁以内で入力してください。</MessageBody>
+	</Message>
+	<Message key="PFW0131">
+		<MessageBody>メールアドレスの形式が不正です。半角英数字又は記号( _ . - @ )や@ .を含めて入力してください。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="PFW0132">
+		<MessageBody>%1%には存在する日付を正しい形式(例：2017/04/01)で入力してください。</MessageBody>
+	</Message>
+	<Message key="PFW0140">
+		<MessageBody>%1%は%2%桁以内で入力してください。</MessageBody>
+	</Message>
+	<Message key="PFW0201">
+		<MessageBody>該当する%1%が存在しません。</MessageBody>
+	</Message>
+	<Message key="PFW0202">
+		<MessageBody>該当する社員は%1%しています。</MessageBody>
+	</Message>
+	<Message key="PFW0203">
+		<MessageBody>該当する社員は%1%していません。</MessageBody>
+	</Message>
+	<Message key="PFW0204">
+		<MessageBody>そのコードは既に存在しているため、別のコードを入力してください。</MessageBody>
+	</Message>
+	<Message key="PFW0205">
+		<MessageBody>その有効日における履歴が既に存在しているため、別の有効日を入力してください。</MessageBody>
+	</Message>
+	<Message key="PFW0206">
+		<MessageBody>その情報は他のユーザによって更新されました。再度検索して、確認してください。</MessageBody>
+	</Message>
+	<Message key="PFW0207">
+		<MessageBody>コード：%1%は、社員：%2%が使用しています。社員情報を変更してください。</MessageBody>
+	</Message>
+	<Message key="PFW0208">
+		<MessageBody>コード：%1%は、所属：%2%が経路として使用しています。所属：%2%の上位所属を変更してください。</MessageBody>
+	</Message>
+	<Message key="PFW0209">
+		<MessageBody>自らを経路に含めることはできません。上位所属を変更してください。</MessageBody>
+	</Message>
+	<Message key="PFW0210">
+		<MessageBody>コード：%1%は、有効日以前の情報が存在しないため、一括更新できません。個別に履歴追加をしてください。</MessageBody>
+	</Message>
+	<Message key="PFW0211">
+		<MessageBody>%1%時点で、必須ロールコード：%2%を設定しているユーザが、存在しなくなってしまいます。</MessageBody>
+	</Message>
+	<Message key="PFW0212">
+		<MessageBody>社員コード：%1%は入社日が登録されていないため、アカウントを作成できません。</MessageBody>
+	</Message>
+	<Message key="PFW0213">
+		<MessageBody>%1%：%2%は%3%時点で無効となります。</MessageBody>
+	</Message>
+	<Message key="PFW0214">
+		<MessageBody>%1%：%2%は存在しないため、登録できません。</MessageBody>
+	</Message>
+	<Message key="PFW0215">
+		<MessageBody>%1%：%2%は既に存在しているため、登録できません。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="PFW0216">
+		<MessageBody>該当する社員は既に退職しているため、入社情報を削除できません。</MessageBody>
+	</Message>
+	<Message key="PFW0217">
+		<MessageBody>%1%は%2%より後となるようにしてください。</MessageBody>
+	</Message>
+	<Message key="PFW0218">
+		<MessageBody>%1%期間が重複しないように入力してください。</MessageBody>
+	</Message>
+	<Message key="PFW0219">
+		<MessageBody>%1%における社員コード：%2%の履歴情報は存在しません。</MessageBody>
+	</Message>
+	<Message key="PFW0220">
+		<MessageBody>有効な%1%が存在しません。</MessageBody>
+	</Message>
+	<Message key="PFW0221">
+		<MessageBody>%1%が重複しないように入力してください。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="PFW0222">
+		<MessageBody>コード：%1%は、ルート：%2%が使用しています。ルート：%2%のルート設定を変更してください。</MessageBody>
+	</Message>
+	<Message key="PFW0223">
+		<MessageBody>コード：%1%は、ルート適用：%2%が使用しています。ルート適用：%2%のルートを変更してください。</MessageBody>
+	</Message>
+	<Message key="PFW0224">
+		<MessageBody>その社員コード：%1%は既に設定されています。コード：%2%を履歴編集、または履歴追加して設定してください。</MessageBody>
+	</Message>
+	<Message key="PFW0225">
+		<MessageBody>その適用範囲は、既に設定されています。コード：%1%より、履歴を追加して設定してください。</MessageBody>
+	</Message>
+	<Message key="PFW0226">
+		<MessageBody>%1%における社員コード：%2%の情報を%3%する権限がありません。</MessageBody>
+	</Message>
+	<Message key="PFW0227">
+		<MessageBody>%1%を取得できませんでした。%2%を変更してください。</MessageBody>
+	</Message>
+	<Message key="PFW0228">
+		<MessageBody>ユニットコード：%1%は、%2%時点で承認者が存在しません。</MessageBody>
+	</Message>
+	<Message key="PFW0229">
+		<MessageBody>ワークフロー処理に失敗しました。ワークフローを確認してください。</MessageBody>
+	</Message>
+	<Message key="PFW0230">
+		<MessageBody>%1%時点では社員コード：%2%は入社していません。日付または社員コードを選択し直してください。</MessageBody>
+	</Message>
+	<Message key="PFW0231">
+		<MessageBody>%1%時点では社員コード：%2%は退職しています。日付または社員コードを選択し直してください。</MessageBody>
+	</Message>
+	<Message key="PFW0232">
+		<MessageBody>%1%における%2%の履歴情報は存在しません。</MessageBody>
+	</Message>
+	<Message key="PFW0233">
+		<MessageBody>%1%は%2%状態のみを選択してください。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="PFW0234">
+		<MessageBody>検索条件を指定してください。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="PFW0235">
+		<MessageBody>ユーザ情報が取得できないため、ログアウトしました。</MessageBody>
+	</Message>
+	<Message key="PFW0236">
+		<MessageBody>%1%は異なる申請により登録された%2%が存在するため、操作できません。</MessageBody>
+	</Message>
+	<Message key="PFW0237">
+		<MessageBody>有効日：%1%時点で社員コード：%2%の%3%は登録されていません。</MessageBody>
+	</Message>
+	<Message key="PFW0238">
+		<MessageBody>%1%と%2%の組み合わせが、正しくありません。</MessageBody>
+	</Message>
+	<Message key="PFW0239">
+		<MessageBody>%1%のロールを付加されたユーザ数が上限値(%2%)を超えないようにしてください。</MessageBody>
+	</Message>
+	<Message key="PFW0240">
+		<MessageBody>%1%：%2%には、正しい形式の値を設定してください。</MessageBody>
+	</Message>
+	<Message key="PFW9111">
+		<MessageBody>ユーザIDあるいはパスワードに誤りがあります。</MessageBody>
+	</Message>
+	<Message key="PFW9112">
+		<MessageBody>パスワードは前回入力値と違うものを入力してください。</MessageBody>
+	</Message>
+	<Message key="PFW9113">
+		<MessageBody>パスワードの有効期限が切れています。パスワードを更新してください。</MessageBody>
+	</Message>
+	<Message key="PFW9114">
+		<MessageBody>現在のパスワードに誤りがあります。</MessageBody>
+	</Message>
+	<Message key="PFW9115">
+		<MessageBody>新しいパスワードとパスワード入力確認が異なります。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="PFW9116">
+		<MessageBody>パスワードは英字と数字を組み合わせたものを設定してください。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="PFW9117">
+		<MessageBody>パスワードは初期パスワードと異なるものを設定してください。</MessageBody>
+	</Message>
+	<Message key="PFW9118">
+		<MessageBody>社員コード：%1%には%2%が設定されているため、削除することは出来ません。</MessageBody>
+	</Message>
+	<Message key="PFI0001">
+		<MessageBody>%1%しました。</MessageBody>
+	</Message>
+	<Message key="PFI0002">
+		<MessageBody>%1%できませんでした。エラー内容を確認の上、再度処理を行ってください。</MessageBody>
+	</Message>
+	<Message key="PFI0003">
+		<MessageBody>履歴を%1%件、削除しました。</MessageBody>
+	</Message>
+	<Message key="PFI0004">
+		<MessageBody>%1%件、登録しました。</MessageBody>
+	</Message>
+	<Message key="PFI0005">
+		<MessageBody>エラー内容を確認の上、再度処理を行ってください。</MessageBody>
+	</Message>
+	<Message key="PFI0006">
+		<MessageBody>%1%できませんでした。エラー内容を確認ください。</MessageBody>
+	</Message>
+	<Message key="PFI0102">
+		<MessageBody>対象データが存在しません。</MessageBody>
+	</Message>
+	<Message key="PFQ1001">
+		<MessageBody>%1%します。よろしいですか。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="PFQ1002">
+		<MessageBody>%1%します。本当によろしいですか。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="PFQ1003">
+		<MessageBody>編集中の内容は破棄されます。よろしいですか。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="PFQ1004">
+		<MessageBody>複製モードに切り替えます。よろしいですか。\n（複製モードはコードを変更することで現在のレコードを複製して新たに登録する事ができます。）</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="PFQ1005">
+		<MessageBody>複製モードに切り替えます。よろしいですか。\n（複製モードでは現在のレコードを複製して登録する事ができます。Noは登録時に新たな番号が自動で割り振られます。）</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="PFQ1006">
+		<MessageBody>実行すると該当する社員に関する情報が全て削除されます。本当によろしいですか。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="PFQ1007">
+		<MessageBody>その%1%は既に存在します。編集しますか。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="PFQ9111">
+		<MessageBody>パスワードを初期化します。よろしいですか。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="FWI0001">
+		<MessageBody>ログアウトしました。</MessageBody>
+	</Message>
+	<Message key="FWW0001">
+		<MessageBody>セッションがタイムアウトしました。</MessageBody>
+	</Message>
+	<Message key="FWW0011">
+		<MessageBody>不正な処理シーケンスを受け取りました。</MessageBody>
+	</Message>
+	<Message key="FWW0101">
+		<MessageBody>存在しないデータに対するリクエストを受け取りました。</MessageBody>
+	</Message>
+	<Message key="FWW0102">
+		<MessageBody>権限の無い操作を実行しました。</MessageBody>
+	</Message>
+	<Message key="FWE9101">
+		<MessageBody>クラス名が入力されていないため、インスタンスを生成できませんでした。</MessageBody>
+	</Message>
+	<Message key="FWE9102">
+		<MessageBody>クラス%1%が見つからないため、インスタンスを生成できませんでした。</MessageBody>
+	</Message>
+	<Message key="FWE9103">
+		<MessageBody>インスタンスの生成に失敗しました。</MessageBody>
+	</Message>
+	<Message key="FWE9104">
+		<MessageBody>モデルキー：%1%のモデルクラス名取得に失敗しました。</MessageBody>
+	</Message>
+	<Message key="FWE9105">
+		<MessageBody>セッションに必要な情報が含まれていません。</MessageBody>
+	</Message>
+	<Message key="FWE9111">
+		<MessageBody>アクション：%1%には、コマンド：%2%の処理が実装されていません。</MessageBody>
+	</Message>
+	<Message key="FWE9112">
+		<MessageBody>コマンド：%1%は、コマンド設定情報に登録されていません。</MessageBody>
+	</Message>
+	<Message key="FWE9113">
+		<MessageBody>コマンド：%1%で許可されないHTTPメソッドを受け取りました。</MessageBody>
+	</Message>
+	<Message key="FWE9121">
+		<MessageBody>ファイル出力処理に失敗しました。</MessageBody>
+	</Message>
+	<Message key="FWE9122">
+		<MessageBody>ファイル入力処理に失敗しました。</MessageBody>
+	</Message>
+	<Message key="FWE9123">
+		<MessageBody>MultiPartフォームデータの取得に失敗しました。</MessageBody>
+	</Message>
+	<Message key="FWE9124">
+		<MessageBody>文字エンコーディング：%1%は、サポートされていません。</MessageBody>
+	</Message>
+	<Message key="FWE9125">
+		<MessageBody>URL：%1%へのフォワード処理に失敗しました。</MessageBody>
+	</Message>
+	<Message key="FWE9211">
+		<MessageBody>RDBMSが不明なため、RDBMS依存クエリーを実行できません。</MessageBody>
+	</Message>
+	<Message key="FWE9212">
+		<MessageBody>DBコネクションの取得に失敗しました。</MessageBody>
+	</Message>
+	<Message key="FWE9213">
+		<MessageBody>データソース(%1%)の取得に失敗しました。</MessageBody>
+	</Message>
+	<Message key="FWE9221">
+		<MessageBody>DBへの挿入処理に失敗しました。</MessageBody>
+	</Message>
+	<Message key="FWE9222">
+		<MessageBody>DBへの更新処理に失敗しました。</MessageBody>
+	</Message>
+	<Message key="FWE9223">
+		<MessageBody>DBへの削除処理に失敗しました。</MessageBody>
+	</Message>
+	<Message key="FWE9251">
+		<MessageBody>メールの送信に失敗しました。メールサーバの設定を確認してください。</MessageBody>
+	</Message>
+	<Message key="FWE9999">
+		<MessageBody>実行時例外が発生しました。</MessageBody>
+	</Message>
+</MosP>

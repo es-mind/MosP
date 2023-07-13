@@ -1,0 +1,108 @@
+@CHARSET "UTF-8";
+/*
+ * MosP - Mind Open Source Project    http://www.mosp.jp/
+ * Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+ * 
+ * This program is free software: you can redistribute it and/or
+ * modify it under the terms of the GNU Affero General Public License
+ * as published by the Free Software Foundation, either version 3
+ * of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+/* ************************************************************************** */
+/* === インポートマスタ一覧画面 === */
+/* ************************************************************************** */
+
+/**
+ * データ区分入力欄(div)。
+ */
+.InputTable #tdTableInput {
+	width: 250px;
+}
+
+/**
+ * 項目名称表示欄(div)。
+ */
+.InputTable .TitleTd {
+	width: 130px;
+}
+
+/**
+ * ファイル選択欄(input)。
+ */
+.FileTextBox {
+	vertical-align: middle;
+	border: 1px solid #003366;
+	background-color: #FFFFFF;
+}
+
+/**
+ * インポートマスタ一覧フッタ(td)。
+ */
+.LeftListTable #tdFooter {
+	text-align: left;
+	white-space: normal;
+}
+
+/**
+ * マスタ一覧ヘッダ幅(ボタン)。
+ */
+.LeftListTable #thButton {
+	width: 50px;
+}
+
+/**
+ * マスタ一覧ヘッダ幅(コード)。
+ */
+.LeftListTable #thCode {
+	width: 80px;
+}
+
+/**
+ * マスタ一覧ヘッダ幅(名称)。
+ */
+.LeftListTable #thName {
+	width: 250px;
+}
+
+/**
+ * マスタ一覧ヘッダ幅(データ区分)。
+ */
+.LeftListTable #thTable {
+	width: 200px;
+}
+
+/**
+ * マスタ一覧ヘッダ幅(データ型)。
+ */
+.LeftListTable #thType {
+	width: 100px;
+}
+
+/**
+ * マスタ一覧ヘッダ幅(ヘッダ)。
+ */
+.LeftListTable #thHeader {
+	width: 80px;
+}
+
+/**
+ * マスタ一覧ヘッダ幅(有効/無効)。
+ */
+.LeftListTable #thInactivate {
+	width: 80px;
+}
+
+/**
+ * マスタ一覧ヘッダ幅(選択チェックボックス)。
+ */
+.LeftListTable #thSelect {
+	width: 30px;
+}

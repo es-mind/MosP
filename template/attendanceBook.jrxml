@@ -1,0 +1,1816 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="attendanceBook" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a6f32548-5c76-4067-9c5e-21e46ed6a89f">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="absenceDays" class="java.lang.Float">
+		<fieldDescription><![CDATA[absenceDays]]></fieldDescription>
+	</field>
+	<field name="absenceDaysString" class="java.lang.String">
+		<fieldDescription><![CDATA[absenceDaysString]]></fieldDescription>
+	</field>
+	<field name="alert" class="java.lang.String">
+		<fieldDescription><![CDATA[alert]]></fieldDescription>
+	</field>
+	<field name="applicationInfo" class="java.lang.String">
+		<fieldDescription><![CDATA[applicationInfo]]></fieldDescription>
+	</field>
+	<field name="birthLegalSubHoliday" class="java.lang.Float">
+		<fieldDescription><![CDATA[birthLegalSubHoliday]]></fieldDescription>
+	</field>
+	<field name="birthLegalSubHolidayString" class="java.lang.String">
+		<fieldDescription><![CDATA[birthLegalSubHolidayString]]></fieldDescription>
+	</field>
+	<field name="birthMidnightSubHoliday" class="java.lang.Float">
+		<fieldDescription><![CDATA[birthMidnightSubHoliday]]></fieldDescription>
+	</field>
+	<field name="birthMidnightSubHolidayString" class="java.lang.String">
+		<fieldDescription><![CDATA[birthMidnightSubHolidayString]]></fieldDescription>
+	</field>
+	<field name="birthPrescribedSubHoliday" class="java.lang.Float">
+		<fieldDescription><![CDATA[birthPrescribedSubHoliday]]></fieldDescription>
+	</field>
+	<field name="birthPrescribedSubHolidayString" class="java.lang.String">
+		<fieldDescription><![CDATA[birthPrescribedSubHolidayString]]></fieldDescription>
+	</field>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="correctionInfo" class="java.lang.String">
+		<fieldDescription><![CDATA[correctionInfo]]></fieldDescription>
+	</field>
+	<field name="deleteFlag" class="java.lang.Integer">
+		<fieldDescription><![CDATA[deleteFlag]]></fieldDescription>
+	</field>
+	<field name="employeeCode" class="java.lang.String">
+		<fieldDescription><![CDATA[employeeCode]]></fieldDescription>
+	</field>
+	<field name="employeeCodeTitle" class="java.lang.String">
+		<fieldDescription><![CDATA[employeeCodeTitle]]></fieldDescription>
+	</field>
+	<field name="employeeName" class="java.lang.String">
+		<fieldDescription><![CDATA[employeeName]]></fieldDescription>
+	</field>
+	<field name="endRecordTime" class="java.util.Date">
+		<fieldDescription><![CDATA[endRecordTime]]></fieldDescription>
+	</field>
+	<field name="endRecordTimeString" class="java.lang.String">
+		<fieldDescription><![CDATA[endRecordTimeString]]></fieldDescription>
+	</field>
+	<field name="endTime" class="java.util.Date">
+		<fieldDescription><![CDATA[endTime]]></fieldDescription>
+	</field>
+	<field name="endTimeString" class="java.lang.String">
+		<fieldDescription><![CDATA[endTimeString]]></fieldDescription>
+	</field>
+	<field name="endTimeStyle" class="java.lang.String">
+		<fieldDescription><![CDATA[endTimeStyle]]></fieldDescription>
+	</field>
+	<field name="goingWork" class="java.lang.Integer">
+		<fieldDescription><![CDATA[goingWork]]></fieldDescription>
+	</field>
+	<field name="holidayString" class="java.lang.String">
+		<fieldDescription><![CDATA[holidayString]]></fieldDescription>
+	</field>
+	<field name="holidayWorkDays" class="java.lang.Integer">
+		<fieldDescription><![CDATA[holidayWorkDays]]></fieldDescription>
+	</field>
+	<field name="holidayWorkDaysString" class="java.lang.String">
+		<fieldDescription><![CDATA[holidayWorkDaysString]]></fieldDescription>
+	</field>
+	<field name="holidayWorkTime" class="java.lang.Integer">
+		<fieldDescription><![CDATA[holidayWorkTime]]></fieldDescription>
+	</field>
+	<field name="holidayWorkTimeString" class="java.lang.String">
+		<fieldDescription><![CDATA[holidayWorkTimeString]]></fieldDescription>
+	</field>
+	<field name="holidayWorkTimeTotal" class="java.lang.Integer">
+		<fieldDescription><![CDATA[holidayWorkTimeTotal]]></fieldDescription>
+	</field>
+	<field name="holidayWorkTimeTotalString" class="java.lang.String">
+		<fieldDescription><![CDATA[holidayWorkTimeTotalString]]></fieldDescription>
+	</field>
+	<field name="holidays" class="java.lang.Integer">
+		<fieldDescription><![CDATA[holidays]]></fieldDescription>
+	</field>
+	<field name="hourlyPaidHolidayValid" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[hourlyPaidHolidayValid]]></fieldDescription>
+	</field>
+	<field name="lateDays" class="java.lang.Integer">
+		<fieldDescription><![CDATA[lateDays]]></fieldDescription>
+	</field>
+	<field name="lateDaysString" class="java.lang.String">
+		<fieldDescription><![CDATA[lateDaysString]]></fieldDescription>
+	</field>
+	<field name="lateLeaveEarlyTime" class="java.lang.Integer">
+		<fieldDescription><![CDATA[lateLeaveEarlyTime]]></fieldDescription>
+	</field>
+	<field name="lateLeaveEarlyTimeString" class="java.lang.String">
+		<fieldDescription><![CDATA[lateLeaveEarlyTimeString]]></fieldDescription>
+	</field>
+	<field name="lateLeaveEarlyTimeTotal" class="java.lang.Integer">
+		<fieldDescription><![CDATA[lateLeaveEarlyTimeTotal]]></fieldDescription>
+	</field>
+	<field name="lateLeaveEarlyTimeTotalString" class="java.lang.String">
+		<fieldDescription><![CDATA[lateLeaveEarlyTimeTotalString]]></fieldDescription>
+	</field>
+	<field name="lateNightDays" class="java.lang.Integer">
+		<fieldDescription><![CDATA[lateNightDays]]></fieldDescription>
+	</field>
+	<field name="lateNightDaysString" class="java.lang.String">
+		<fieldDescription><![CDATA[lateNightDaysString]]></fieldDescription>
+	</field>
+	<field name="lateNightTime" class="java.lang.Integer">
+		<fieldDescription><![CDATA[lateNightTime]]></fieldDescription>
+	</field>
+	<field name="lateNightTimeString" class="java.lang.String">
+		<fieldDescription><![CDATA[lateNightTimeString]]></fieldDescription>
+	</field>
+	<field name="lateNightTimeTotal" class="java.lang.Integer">
+		<fieldDescription><![CDATA[lateNightTimeTotal]]></fieldDescription>
+	</field>
+	<field name="lateNightTimeTotalString" class="java.lang.String">
+		<fieldDescription><![CDATA[lateNightTimeTotalString]]></fieldDescription>
+	</field>
+	<field name="lateTime" class="java.lang.Integer">
+		<fieldDescription><![CDATA[lateTime]]></fieldDescription>
+	</field>
+	<field name="lateTimeString" class="java.lang.String">
+		<fieldDescription><![CDATA[lateTimeString]]></fieldDescription>
+	</field>
+	<field name="lateTimeTotal" class="java.lang.Integer">
+		<fieldDescription><![CDATA[lateTimeTotal]]></fieldDescription>
+	</field>
+	<field name="lateTimeTotalString" class="java.lang.String">
+		<fieldDescription><![CDATA[lateTimeTotalString]]></fieldDescription>
+	</field>
+	<field name="leaveEarlyDays" class="java.lang.Integer">
+		<fieldDescription><![CDATA[leaveEarlyDays]]></fieldDescription>
+	</field>
+	<field name="leaveEarlyDaysString" class="java.lang.String">
+		<fieldDescription><![CDATA[leaveEarlyDaysString]]></fieldDescription>
+	</field>
+	<field name="leaveEarlyTime" class="java.lang.Integer">
+		<fieldDescription><![CDATA[leaveEarlyTime]]></fieldDescription>
+	</field>
+	<field name="leaveEarlyTimeString" class="java.lang.String">
+		<fieldDescription><![CDATA[leaveEarlyTimeString]]></fieldDescription>
+	</field>
+	<field name="leaveEarlyTimeTotal" class="java.lang.Integer">
+		<fieldDescription><![CDATA[leaveEarlyTimeTotal]]></fieldDescription>
+	</field>
+	<field name="leaveEarlyTimeTotalString" class="java.lang.String">
+		<fieldDescription><![CDATA[leaveEarlyTimeTotalString]]></fieldDescription>
+	</field>
+	<field name="legalHolidays" class="java.lang.Integer">
+		<fieldDescription><![CDATA[legalHolidays]]></fieldDescription>
+	</field>
+	<field name="legalHolidaysString" class="java.lang.String">
+		<fieldDescription><![CDATA[legalHolidaysString]]></fieldDescription>
+	</field>
+	<field name="minutelyHolidayA" class="java.lang.Integer">
+		<fieldDescription><![CDATA[minutelyHolidayA]]></fieldDescription>
+	</field>
+	<field name="minutelyHolidayATime" class="java.lang.Integer">
+		<fieldDescription><![CDATA[minutelyHolidayATime]]></fieldDescription>
+	</field>
+	<field name="minutelyHolidayATimeString" class="java.lang.String">
+		<fieldDescription><![CDATA[minutelyHolidayATimeString]]></fieldDescription>
+	</field>
+	<field name="minutelyHolidayATimeTotal" class="java.lang.Integer">
+		<fieldDescription><![CDATA[minutelyHolidayATimeTotal]]></fieldDescription>
+	</field>
+	<field name="minutelyHolidayATitle" class="java.lang.String">
+		<fieldDescription><![CDATA[minutelyHolidayATitle]]></fieldDescription>
+	</field>
+	<field name="minutelyHolidayB" class="java.lang.Integer">
+		<fieldDescription><![CDATA[minutelyHolidayB]]></fieldDescription>
+	</field>
+	<field name="minutelyHolidayBTime" class="java.lang.Integer">
+		<fieldDescription><![CDATA[minutelyHolidayBTime]]></fieldDescription>
+	</field>
+	<field name="minutelyHolidayBTimeString" class="java.lang.String">
+		<fieldDescription><![CDATA[minutelyHolidayBTimeString]]></fieldDescription>
+	</field>
+	<field name="minutelyHolidayBTimeTotal" class="java.lang.Integer">
+		<fieldDescription><![CDATA[minutelyHolidayBTimeTotal]]></fieldDescription>
+	</field>
+	<field name="minutelyHolidayBTitle" class="java.lang.String">
+		<fieldDescription><![CDATA[minutelyHolidayBTitle]]></fieldDescription>
+	</field>
+	<field name="needCheckbox" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[needCheckbox]]></fieldDescription>
+	</field>
+	<field name="needStatusLink" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[needStatusLink]]></fieldDescription>
+	</field>
+	<field name="otherHolidays" class="java.lang.Float">
+		<fieldDescription><![CDATA[otherHolidays]]></fieldDescription>
+	</field>
+	<field name="otherHolidaysString" class="java.lang.String">
+		<fieldDescription><![CDATA[otherHolidaysString]]></fieldDescription>
+	</field>
+	<field name="overtime" class="java.lang.Integer">
+		<fieldDescription><![CDATA[overtime]]></fieldDescription>
+	</field>
+	<field name="overtimeDays" class="java.lang.Integer">
+		<fieldDescription><![CDATA[overtimeDays]]></fieldDescription>
+	</field>
+	<field name="overtimeDaysString" class="java.lang.String">
+		<fieldDescription><![CDATA[overtimeDaysString]]></fieldDescription>
+	</field>
+	<field name="overtimeIn" class="java.lang.Integer">
+		<fieldDescription><![CDATA[overtimeIn]]></fieldDescription>
+	</field>
+	<field name="overtimeInString" class="java.lang.String">
+		<fieldDescription><![CDATA[overtimeInString]]></fieldDescription>
+	</field>
+	<field name="overtimeInTotal" class="java.lang.Integer">
+		<fieldDescription><![CDATA[overtimeInTotal]]></fieldDescription>
+	</field>
+	<field name="overtimeInTotalString" class="java.lang.String">
+		<fieldDescription><![CDATA[overtimeInTotalString]]></fieldDescription>
+	</field>
+	<field name="overtimeOut" class="java.lang.Integer">
+		<fieldDescription><![CDATA[overtimeOut]]></fieldDescription>
+	</field>
+	<field name="overtimeOutString" class="java.lang.String">
+		<fieldDescription><![CDATA[overtimeOutString]]></fieldDescription>
+	</field>
+	<field name="overtimeOutTotal" class="java.lang.Integer">
+		<fieldDescription><![CDATA[overtimeOutTotal]]></fieldDescription>
+	</field>
+	<field name="overtimeOutTotalString" class="java.lang.String">
+		<fieldDescription><![CDATA[overtimeOutTotalString]]></fieldDescription>
+	</field>
+	<field name="overtimeString" class="java.lang.String">
+		<fieldDescription><![CDATA[overtimeString]]></fieldDescription>
+	</field>
+	<field name="overtimeStyle" class="java.lang.String">
+		<fieldDescription><![CDATA[overtimeStyle]]></fieldDescription>
+	</field>
+	<field name="overtimeTitle" class="java.lang.String">
+		<fieldDescription><![CDATA[overtimeTitle]]></fieldDescription>
+	</field>
+	<field name="overtimeTotal" class="java.lang.Integer">
+		<fieldDescription><![CDATA[overtimeTotal]]></fieldDescription>
+	</field>
+	<field name="overtimeTotalString" class="java.lang.String">
+		<fieldDescription><![CDATA[overtimeTotalString]]></fieldDescription>
+	</field>
+	<field name="paidHolidayTime" class="java.lang.Float">
+		<fieldDescription><![CDATA[paidHolidayTime]]></fieldDescription>
+	</field>
+	<field name="paidHolidayTimeString" class="java.lang.String">
+		<fieldDescription><![CDATA[paidHolidayTimeString]]></fieldDescription>
+	</field>
+	<field name="paidHolidays" class="java.lang.Float">
+		<fieldDescription><![CDATA[paidHolidays]]></fieldDescription>
+	</field>
+	<field name="paidHolidaysString" class="java.lang.String">
+		<fieldDescription><![CDATA[paidHolidaysString]]></fieldDescription>
+	</field>
+	<field name="personalId" class="java.lang.String">
+		<fieldDescription><![CDATA[personalId]]></fieldDescription>
+	</field>
+	<field name="prescribedHolidays" class="java.lang.Integer">
+		<fieldDescription><![CDATA[prescribedHolidays]]></fieldDescription>
+	</field>
+	<field name="prescribedHolidaysString" class="java.lang.String">
+		<fieldDescription><![CDATA[prescribedHolidaysString]]></fieldDescription>
+	</field>
+	<field name="privateTime" class="java.lang.Integer">
+		<fieldDescription><![CDATA[privateTime]]></fieldDescription>
+	</field>
+	<field name="privateTimeString" class="java.lang.String">
+		<fieldDescription><![CDATA[privateTimeString]]></fieldDescription>
+	</field>
+	<field name="privateTimeTotal" class="java.lang.Integer">
+		<fieldDescription><![CDATA[privateTimeTotal]]></fieldDescription>
+	</field>
+	<field name="privateTimeTotalString" class="java.lang.String">
+		<fieldDescription><![CDATA[privateTimeTotalString]]></fieldDescription>
+	</field>
+	<field name="publicTime" class="java.lang.Integer">
+		<fieldDescription><![CDATA[publicTime]]></fieldDescription>
+	</field>
+	<field name="publicTimeString" class="java.lang.String">
+		<fieldDescription><![CDATA[publicTimeString]]></fieldDescription>
+	</field>
+	<field name="publicTimeTotal" class="java.lang.Integer">
+		<fieldDescription><![CDATA[publicTimeTotal]]></fieldDescription>
+	</field>
+	<field name="publicTimeTotalString" class="java.lang.String">
+		<fieldDescription><![CDATA[publicTimeTotalString]]></fieldDescription>
+	</field>
+	<field name="remark" class="java.lang.String">
+		<fieldDescription><![CDATA[remark]]></fieldDescription>
+	</field>
+	<field name="restTime" class="java.lang.Integer">
+		<fieldDescription><![CDATA[restTime]]></fieldDescription>
+	</field>
+	<field name="restTimeString" class="java.lang.String">
+		<fieldDescription><![CDATA[restTimeString]]></fieldDescription>
+	</field>
+	<field name="restTimeTotal" class="java.lang.Integer">
+		<fieldDescription><![CDATA[restTimeTotal]]></fieldDescription>
+	</field>
+	<field name="restTimeTotalString" class="java.lang.String">
+		<fieldDescription><![CDATA[restTimeTotalString]]></fieldDescription>
+	</field>
+	<field name="sealBoxAvailable" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[sealBoxAvailable]]></fieldDescription>
+	</field>
+	<field name="sectionName" class="java.lang.String">
+		<fieldDescription><![CDATA[sectionName]]></fieldDescription>
+	</field>
+	<field name="extra" class="java.lang.String">
+		<fieldDescription><![CDATA[extra]]></fieldDescription>
+	</field>
+	<field name="shortUnpaid" class="java.lang.Integer">
+		<fieldDescription><![CDATA[shortUnpaid]]></fieldDescription>
+	</field>
+	<field name="shortUnpaidString" class="java.lang.String">
+		<fieldDescription><![CDATA[shortUnpaidString]]></fieldDescription>
+	</field>
+	<field name="shortUnpaidTotal" class="java.lang.Integer">
+		<fieldDescription><![CDATA[shortUnpaidTotal]]></fieldDescription>
+	</field>
+	<field name="shortUnpaidTotalString" class="java.lang.String">
+		<fieldDescription><![CDATA[shortUnpaidTotalString]]></fieldDescription>
+	</field>
+	<field name="specialHolidays" class="java.lang.Float">
+		<fieldDescription><![CDATA[specialHolidays]]></fieldDescription>
+	</field>
+	<field name="specialHolidaysString" class="java.lang.String">
+		<fieldDescription><![CDATA[specialHolidaysString]]></fieldDescription>
+	</field>
+	<field name="specialHolidaysTitle" class="java.lang.String">
+		<fieldDescription><![CDATA[specialHolidaysTitle]]></fieldDescription>
+	</field>
+	<field name="startRecordTime" class="java.util.Date">
+		<fieldDescription><![CDATA[startRecordTime]]></fieldDescription>
+	</field>
+	<field name="startRecordTimeString" class="java.lang.String">
+		<fieldDescription><![CDATA[startRecordTimeString]]></fieldDescription>
+	</field>
+	<field name="startTime" class="java.util.Date">
+		<fieldDescription><![CDATA[startTime]]></fieldDescription>
+	</field>
+	<field name="startTimeString" class="java.lang.String">
+		<fieldDescription><![CDATA[startTimeString]]></fieldDescription>
+	</field>
+	<field name="startTimeStyle" class="java.lang.String">
+		<fieldDescription><![CDATA[startTimeStyle]]></fieldDescription>
+	</field>
+	<field name="subHolidayRequestValid" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[subHolidayRequestValid]]></fieldDescription>
+	</field>
+	<field name="subHolidays" class="java.lang.Float">
+		<fieldDescription><![CDATA[subHolidays]]></fieldDescription>
+	</field>
+	<field name="subHolidaysString" class="java.lang.String">
+		<fieldDescription><![CDATA[subHolidaysString]]></fieldDescription>
+	</field>
+	<field name="substituteHolidays" class="java.lang.Float">
+		<fieldDescription><![CDATA[substituteHolidays]]></fieldDescription>
+	</field>
+	<field name="substituteHolidaysString" class="java.lang.String">
+		<fieldDescription><![CDATA[substituteHolidaysString]]></fieldDescription>
+	</field>
+	<field name="targetYear" class="java.lang.Integer">
+		<fieldDescription><![CDATA[targetYear]]></fieldDescription>
+	</field>
+	<field name="targetMonth" class="java.lang.Integer">
+		<fieldDescription><![CDATA[targetMonth]]></fieldDescription>
+	</field>
+	<field name="timeComment" class="java.lang.String">
+		<fieldDescription><![CDATA[timeComment]]></fieldDescription>
+	</field>
+	<field name="title" class="java.lang.String">
+		<fieldDescription><![CDATA[title]]></fieldDescription>
+	</field>
+	<field name="workDate" class="java.util.Date">
+		<fieldDescription><![CDATA[workDate]]></fieldDescription>
+	</field>
+	<field name="workDateString" class="java.lang.String">
+		<fieldDescription><![CDATA[workDateString]]></fieldDescription>
+	</field>
+	<field name="workDayOfWeek" class="java.lang.String">
+		<fieldDescription><![CDATA[workDayOfWeek]]></fieldDescription>
+	</field>
+	<field name="workDayOfWeekStyle" class="java.lang.String">
+		<fieldDescription><![CDATA[workDayOfWeekStyle]]></fieldDescription>
+	</field>
+	<field name="workDays" class="java.lang.Integer">
+		<fieldDescription><![CDATA[workDays]]></fieldDescription>
+	</field>
+	<field name="workDaysString" class="java.lang.String">
+		<fieldDescription><![CDATA[workDaysString]]></fieldDescription>
+	</field>
+	<field name="workTime" class="java.lang.Integer">
+		<fieldDescription><![CDATA[workTime]]></fieldDescription>
+	</field>
+	<field name="workTimeString" class="java.lang.String">
+		<fieldDescription><![CDATA[workTimeString]]></fieldDescription>
+	</field>
+	<field name="workTimeTotal" class="java.lang.Integer">
+		<fieldDescription><![CDATA[workTimeTotal]]></fieldDescription>
+	</field>
+	<field name="workTimeTotalString" class="java.lang.String">
+		<fieldDescription><![CDATA[workTimeTotalString]]></fieldDescription>
+	</field>
+	<field name="workTypeAbbr" class="java.lang.String">
+		<fieldDescription><![CDATA[workTypeAbbr]]></fieldDescription>
+	</field>
+	<field name="workTypeAnteAbbr" class="java.lang.String">
+		<fieldDescription><![CDATA[workTypeAnteAbbr]]></fieldDescription>
+	</field>
+	<field name="workTypeCode" class="java.lang.String">
+		<fieldDescription><![CDATA[workTypeCode]]></fieldDescription>
+	</field>
+	<field name="workTypePostAbbr" class="java.lang.String">
+		<fieldDescription><![CDATA[workTypePostAbbr]]></fieldDescription>
+	</field>
+	<field name="workflow" class="java.lang.Long">
+		<fieldDescription><![CDATA[workflow]]></fieldDescription>
+	</field>
+	<group name="PersonalId" isStartNewPage="true">
+		<groupExpression><![CDATA[$F{personalId}]]></groupExpression>
+		<groupHeader>
+			<band height="40">
+				<staticText>
+					<reportElement x="365" y="0" width="30" height="20" uuid="397989b1-6851-4fac-b8dd-9686175660b6"/>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[所属：]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="0" y="0" width="75" height="20" uuid="dd1d79a6-0842-4aa7-8fef-6a37b27889d2"/>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{targetYear} + "年 " + $F{targetMonth} + "月 分"]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="395" y="0" width="160" height="40" backcolor="#FFFFFF" uuid="ada05b2a-cbee-4e2a-94b5-d856f665b233">
+						<printWhenExpression><![CDATA[$F{hourlyPaidHolidayValid}.booleanValue()]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{sectionName}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="235" y="0" width="30" height="20" uuid="216cabb3-f940-42a2-92e9-36620c0a2c8f"/>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[氏名：]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="265" y="0" width="100" height="40" uuid="7b02f817-abc7-4566-9d62-2a9bc5236f27"/>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{employeeName}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="75" y="0" width="60" height="20" uuid="aed75c98-a47e-4944-b60f-9cd04cadd332"/>
+					<textElement markup="none">
+						<font fontName="Monospaced" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{employeeCodeTitle} + "："]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="135" y="0" width="100" height="20" uuid="669cc60a-a1da-4014-8511-cc2e5063e954"/>
+					<textElement>
+						<font fontName="Monospaced" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{employeeCode}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="0" y="20" width="265" height="20" uuid="6e80206c-715a-42cd-a353-072d5be8367c">
+						<printWhenExpression><![CDATA[$F{extra} != null]]></printWhenExpression>
+					</reportElement>
+					<textElement>
+						<font fontName="Monospaced" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{extra}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="ATTENDANCES">
+		<groupHeader>
+			<band height="40">
+				<staticText>
+					<reportElement mode="Opaque" x="0" y="0" width="35" height="40" forecolor="#000000" backcolor="#CCFFFF" uuid="2f0c1e4e-d4bb-47f7-8ae5-4fec89f7b6c8"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[日(曜)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="90" y="0" width="30" height="40" forecolor="#000000" backcolor="#CCFFFF" uuid="f4d17e3b-9ac1-4395-90b2-a3b771525268"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[始業]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="120" y="0" width="30" height="40" forecolor="#000000" backcolor="#CCFFFF" uuid="9a98ba20-c2a8-48b9-93e9-f84cfce4e758"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[終業]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="150" y="0" width="35" height="40" forecolor="#000000" backcolor="#CCFFFF" uuid="e09d74a2-ce36-4292-b5bf-c68cc155ab4f"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[勤時]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="185" y="0" width="35" height="40" forecolor="#000000" backcolor="#CCFFFF" uuid="15a56471-a621-455d-aac7-5ff2bbe01438"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[休憩]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="220" y="0" width="35" height="40" forecolor="#000000" backcolor="#CCFFFF" uuid="a5dc829a-c339-4a63-ba64-cf3ff9868fa3"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[外出]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="255" y="0" width="35" height="40" forecolor="#000000" backcolor="#CCFFFF" uuid="ec1eacdf-6682-477a-948d-15184879be98"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[遅早]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="290" y="0" width="35" height="40" forecolor="#000000" backcolor="#CCFFFF" uuid="cf104129-94b0-4c42-9933-b337139d187f"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[内残]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement mode="Opaque" x="325" y="0" width="35" height="40" forecolor="#000000" backcolor="#CCFFFF" uuid="77dc5cc0-e79c-4e06-b9c4-141d7c9a1988"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+						<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{overtimeTitle}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement mode="Opaque" x="395" y="0" width="35" height="40" forecolor="#000000" backcolor="#CCFFFF" uuid="1e6dd9fb-1e63-4644-ae3d-4dfbd434b8a9"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[深夜]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="35" y="0" width="55" height="40" forecolor="#000000" backcolor="#CCFFFF" uuid="b8db8567-3eb4-48cb-8ae9-90ef1a64dd24"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[形態]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="430" y="0" width="105" height="40" forecolor="#000000" backcolor="#CCFFFF" uuid="0b7fb9b4-0364-448a-879f-e8d881042ea4"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[備考]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="535" y="0" width="20" height="40" forecolor="#000000" backcolor="#CCFFFF" uuid="01a00f45-0661-4ca2-8431-9877939de185"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[修]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="360" y="0" width="35" height="40" forecolor="#000000" backcolor="#CCFFFF" uuid="6612ba81-a42a-48bd-8bca-671075b05a4d"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[休出]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="100">
+				<textField isBlankWhenNull="true">
+					<reportElement x="150" y="0" width="35" height="20" uuid="1e368112-52a6-4352-b018-ea2332204cb3"/>
+					<box rightPadding="2">
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="8" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{workTimeTotalString}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement mode="Opaque" x="0" y="0" width="150" height="20" forecolor="#000000" backcolor="#CCFFFF" uuid="dbb431a7-312c-4a7e-b2a6-d0a12eaad237"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[合計]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="35" y="46" width="35" height="18" uuid="f1e86ef7-182a-4668-88d1-f9df5e396f0c"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="8" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{workDaysString}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="185" y="0" width="35" height="20" uuid="a483858d-555e-4969-95db-5d42db62c70e"/>
+					<box rightPadding="2">
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="8" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{restTimeTotalString}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="220" y="0" width="35" height="20" uuid="f9eb66bc-f9f7-4f42-814d-b8f984bd4606"/>
+					<box rightPadding="2">
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="8" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{privateTimeTotalString}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="255" y="0" width="35" height="20" uuid="b0180e53-2e24-4bf3-a032-652f17872483"/>
+					<box rightPadding="2">
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="8" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{lateLeaveEarlyTimeTotalString}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="290" y="0" width="35" height="20" uuid="528dc53f-b2df-405b-a242-f5cc4a0a78fb"/>
+					<box rightPadding="2">
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="8" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{overtimeInTotalString}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="325" y="0" width="35" height="20" uuid="de4f3c48-6a39-4539-a7cc-faabb4c47ebd"/>
+					<box rightPadding="2">
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="8" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{overtimeOutTotalString}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="360" y="0" width="35" height="20" uuid="cb2eedd4-06b2-493d-ba4f-5eb0cef8db78"/>
+					<box rightPadding="2">
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="8" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{holidayWorkTimeTotalString}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="395" y="0" width="35" height="20" uuid="7ef0879b-9e45-4975-bbab-9601bfbe66d7"/>
+					<box rightPadding="2">
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="8" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{lateNightTimeTotalString}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement mode="Opaque" x="0" y="28" width="35" height="36" forecolor="#000000" backcolor="#CCFFFF" uuid="6a3cf350-32a8-4ad2-bbb9-8acedaa68940"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[回数]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="35" y="28" width="35" height="18" forecolor="#000000" backcolor="#CCFFFF" uuid="38347261-1cfa-464b-9659-6085630aaddf"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[出勤]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="70" y="28" width="35" height="18" forecolor="#000000" backcolor="#CCFFFF" uuid="41f14993-2795-4602-9752-c7ea4bc8cf0c"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[遅刻]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="105" y="28" width="35" height="18" forecolor="#000000" backcolor="#CCFFFF" uuid="0e39fa86-fc65-4855-98f9-53df18cd628d"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[早退]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="140" y="28" width="35" height="18" forecolor="#000000" backcolor="#CCFFFF" uuid="ce964fd5-957b-4ccd-a3e0-7837d881efa6"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[残業]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="70" y="46" width="35" height="18" uuid="9543bbeb-74a1-4d0d-954f-828ff5f7c917"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="8" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{lateDaysString}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="105" y="46" width="35" height="18" uuid="7ca0a687-e3a1-418b-9b71-4e04892f37e6"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="8" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{leaveEarlyDaysString}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="140" y="46" width="35" height="18" uuid="8886e6c9-35ed-4151-a7ba-dc43e4de2b8d"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="8" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{overtimeDaysString}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement mode="Opaque" x="175" y="28" width="35" height="18" forecolor="#000000" backcolor="#CCFFFF" uuid="1210d921-1f2e-4466-80da-8876e683963a"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[休出]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="175" y="46" width="35" height="18" uuid="fb051610-1ab1-438a-b9a8-20dd9a09a26a"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="8" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{holidayWorkDaysString}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement mode="Opaque" x="0" y="64" width="35" height="36" forecolor="#000000" backcolor="#CCFFFF" uuid="6c260646-7f56-4c0b-a52f-a6c560b42d7c"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[休日]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="105" y="82" width="35" height="18" uuid="6e382f7f-0e12-4bd3-bc4e-d0ae676ac844"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="8" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{substituteHolidaysString}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement mode="Opaque" x="70" y="64" width="35" height="18" forecolor="#000000" backcolor="#CCFFFF" uuid="8dc8ac9c-6ab3-4a9c-8407-564fd407e922"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[所定]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="35" y="82" width="35" height="18" uuid="85caf638-490d-4c2a-af90-119ae40f4bd7"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="8" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{legalHolidaysString}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="70" y="82" width="35" height="18" uuid="4291416e-79be-46c4-b37b-27ce58cc8849"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="8" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{prescribedHolidaysString}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement mode="Opaque" x="105" y="64" width="35" height="18" forecolor="#000000" backcolor="#CCFFFF" uuid="429aa2b2-236a-4ecc-9d13-159647bf9cb1"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[振休]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="35" y="64" width="35" height="18" forecolor="#000000" backcolor="#CCFFFF" uuid="cf8787f5-4f0b-4499-9368-a51879dda5a6"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[法定]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="175" y="64" width="35" height="18" forecolor="#000000" backcolor="#CCFFFF" uuid="363e1ff8-41f6-40cc-b041-494edff59ac8"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[有休]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="245" y="82" width="35" height="18" uuid="ca5cc43f-34ee-4599-8184-530e3ddbfb99"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="8" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{specialHolidaysString}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="210" y="82" width="35" height="18" uuid="4fe405d7-16ac-4678-9e75-b6f850302f2a">
+						<printWhenExpression><![CDATA[$F{hourlyPaidHolidayValid}.booleanValue()]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="8" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{paidHolidayTimeString}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement mode="Opaque" x="140" y="64" width="35" height="36" forecolor="#000000" backcolor="#CCFFFF" uuid="62fca008-5671-4ac5-8e48-6f7f1050f416"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[休暇]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="210" y="64" width="35" height="18" forecolor="#000000" backcolor="#CCFFFF" uuid="172019ec-e5f2-45ba-b3be-692c01a471ef">
+						<printWhenExpression><![CDATA[$F{hourlyPaidHolidayValid}.booleanValue()]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[有時]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="175" y="82" width="35" height="18" uuid="2f5af2f2-f925-44d6-881a-f201d32c4669"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="8" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{paidHolidaysString}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement mode="Opaque" x="315" y="64" width="35" height="18" forecolor="#000000" backcolor="#CCFFFF" uuid="c93e2066-6212-4664-8db8-bb280c100263">
+						<printWhenExpression><![CDATA[$F{subHolidayRequestValid}]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[代休]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="280" y="64" width="35" height="18" forecolor="#000000" backcolor="#CCFFFF" uuid="e7aa7cee-f811-4880-ab16-3ab88626bf51"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[その他]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="350" y="82" width="35" height="18" uuid="5054789f-d85e-421c-8e9b-e0af6defae52"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="8" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{absenceDaysString}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="280" y="82" width="35" height="18" uuid="9d3c6afc-0ecd-48f2-a2d3-14a4569a3527"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="8" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{otherHolidaysString}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement mode="Opaque" x="350" y="64" width="35" height="18" forecolor="#000000" backcolor="#CCFFFF" uuid="300f395c-5d9e-4a50-b038-a75a9559745e"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[欠勤]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="315" y="82" width="35" height="18" uuid="3689cb7a-1aac-47bf-8bea-26a3525b8af7">
+						<printWhenExpression><![CDATA[$F{subHolidayRequestValid}]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="8" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{subHolidaysString}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement mode="Opaque" x="385" y="64" width="35" height="36" forecolor="#000000" backcolor="#CCFFFF" uuid="c48e8c20-69e6-47b9-9234-4ddada9b0823">
+						<printWhenExpression><![CDATA[$F{subHolidayRequestValid}]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[代休
+発生]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="420" y="64" width="35" height="18" forecolor="#000000" backcolor="#CCFFFF" uuid="3f1cf173-8ea3-4681-a20c-664c49157215">
+						<printWhenExpression><![CDATA[$F{subHolidayRequestValid}]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[法定]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="455" y="64" width="35" height="18" forecolor="#000000" backcolor="#CCFFFF" uuid="6ad12da4-ddb2-4824-a083-0e0460149ca8">
+						<printWhenExpression><![CDATA[$F{subHolidayRequestValid}]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[所定]]></text>
+				</staticText>
+				<textField isBlankWhenNull="false">
+					<reportElement x="420" y="82" width="35" height="18" uuid="209dfce8-6f7e-4ec4-a3a3-15d265db3e7e">
+						<printWhenExpression><![CDATA[$F{subHolidayRequestValid}]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="8" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{birthLegalSubHolidayString}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="455" y="82" width="35" height="18" uuid="ffede1a7-d0dd-46e7-9986-892e5d434ae9">
+						<printWhenExpression><![CDATA[$F{subHolidayRequestValid}]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="8" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{birthPrescribedSubHolidayString}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement mode="Opaque" x="490" y="64" width="35" height="18" forecolor="#000000" backcolor="#CCFFFF" uuid="eebe7c5b-a585-4e7d-86ca-e15c73067a98">
+						<printWhenExpression><![CDATA[$F{birthMidnightSubHolidayString}.equals("0.0") == false]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[深夜]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="490" y="82" width="35" height="18" uuid="857276cd-019a-4c53-853c-81642640104a">
+						<printWhenExpression><![CDATA[$F{birthMidnightSubHolidayString}.equals("0.0")==false]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="8" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{birthMidnightSubHolidayString}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement mode="Opaque" x="210" y="28" width="35" height="36" forecolor="#000000" backcolor="#CCFFFF" uuid="fcf49fb5-e256-4a75-abf9-8e001a79830c">
+						<printWhenExpression><![CDATA[$F{minutelyHolidayATitle} != null || $F{minutelyHolidayBTitle} != null]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[休暇]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="245" y="46" width="35" height="18" uuid="8bf40f36-7e71-48e7-bf47-72b8be698843">
+						<printWhenExpression><![CDATA[$F{minutelyHolidayATitle} != null]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="8" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{minutelyHolidayATimeString}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="280" y="46" width="35" height="18" uuid="cb35a8cd-33e6-4bd8-93ee-c0663877807d">
+						<printWhenExpression><![CDATA[$F{minutelyHolidayBTitle} != null]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="8" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{minutelyHolidayBTimeString}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement mode="Opaque" x="245" y="28" width="35" height="18" forecolor="#000000" backcolor="#CCFFFF" uuid="afcb071a-4a77-466d-92d1-65449cb682e1">
+						<printWhenExpression><![CDATA[$F{minutelyHolidayATitle} != null]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+						<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{minutelyHolidayATitle}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement mode="Opaque" x="280" y="28" width="35" height="18" forecolor="#000000" backcolor="#CCFFFF" uuid="6c9b7348-f5a2-43bd-b0b6-3e8dc2d2561a">
+						<printWhenExpression><![CDATA[$F{minutelyHolidayBTitle} != null]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+						<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{minutelyHolidayBTitle}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement mode="Opaque" x="245" y="64" width="35" height="18" forecolor="#000000" backcolor="#CCFFFF" uuid="9f5155aa-4c59-4d48-8383-396555bec622"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+						<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{specialHolidaysTitle}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="60">
+			<textField>
+				<reportElement x="210" y="0" width="120" height="40" uuid="60b580af-610b-4504-b927-419fadfbe8af"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Monospaced" size="18" isUnderline="true" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["　" + $F{title} + "　"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="405" y="0" width="50" height="18" forecolor="#000000" backcolor="#CCFFFF" uuid="f2860306-191f-43c3-9dda-efc07765bcb0">
+					<printWhenExpression><![CDATA[$F{sealBoxAvailable}]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[承認者]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="405" y="18" width="50" height="35" uuid="b2d530f3-d0f4-46e4-94e0-4cf4c8fdc8e1">
+					<printWhenExpression><![CDATA[$F{sealBoxAvailable}]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="455" y="0" width="50" height="18" forecolor="#000000" backcolor="#CCFFFF" uuid="086ca1cf-35e0-4c6b-984b-8d838aca1303">
+					<printWhenExpression><![CDATA[$F{sealBoxAvailable}]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[承認者]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="18" width="50" height="35" uuid="0f59e83c-ddc5-4ab6-8244-b6bd64ebe954">
+					<printWhenExpression><![CDATA[$F{sealBoxAvailable}]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="505" y="0" width="50" height="18" forecolor="#000000" backcolor="#CCFFFF" uuid="8fca2afc-9a70-4066-a2df-388e6116680c">
+					<printWhenExpression><![CDATA[$F{sealBoxAvailable}]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[本人]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="505" y="18" width="50" height="35" uuid="b984a6f6-e3bb-463d-ba37-cee345d17485">
+					<printWhenExpression><![CDATA[$F{sealBoxAvailable}]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Monospaced" size="10" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField pattern="yyyy/MM/dd HH:mm">
+				<reportElement x="0" y="0" width="90" height="20" uuid="39362a0b-d8fe-4c9d-8363-f925da74e471"/>
+				<textElement>
+					<font fontName="Monospaced" size="8" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="330" y="0" width="75" height="40" forecolor="#FF0000" uuid="8d37babe-0bbc-44ce-bc9a-065ddcf11aa1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Monospaced" size="18" isUnderline="false" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{alert}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="18" splitType="Stretch">
+			<textField pattern="dd(EEE)" isBlankWhenNull="true">
+				<reportElement x="0" y="0" width="35" height="18" uuid="1ba78b98-65ab-4fce-ae9a-85b16ccb7eb0"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced" size="8" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{workDate}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="90" y="0" width="30" height="18" uuid="69fc4c60-c960-462b-8d6f-a50bf6d0ece4"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced" size="8" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{startTimeString}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="120" y="0" width="30" height="18" uuid="a3fa488f-4677-4915-a3da-295b22bf312d"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced" size="8" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{endTimeString}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="185" y="0" width="35" height="18" uuid="75145f2d-a610-4c58-a848-236332461f62"/>
+				<box rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced" size="8" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{restTimeString}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="220" y="0" width="35" height="18" uuid="2f02c8e0-ee3d-4f96-a06c-4913f5381f6a"/>
+				<box rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced" size="8" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{privateTimeString}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="255" y="0" width="35" height="18" uuid="f82dbc46-b542-4bd6-a70e-57ee91a6e1ca"/>
+				<box rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced" size="8" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lateLeaveEarlyTimeString}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="290" y="0" width="35" height="18" uuid="4d0cef80-d26b-45a9-a594-3912f1c02b84"/>
+				<box rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced" size="8" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{overtimeInString}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="325" y="0" width="35" height="18" uuid="4c835ccf-222d-40d8-accd-ad7e10b99bf2"/>
+				<box rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced" size="8" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{overtimeOutString}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="395" y="0" width="35" height="18" uuid="167fb96a-b278-4523-9f36-127c6ed6c5ee"/>
+				<box rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced" size="8" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lateNightTimeString}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="35" y="0" width="55" height="18" uuid="6186aecb-34e9-46cc-9382-777c62dbbb38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced" size="8" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{workTypeAbbr}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="430" y="0" width="105" height="11" uuid="a7f736e5-5dab-4784-b0a8-7ec807ca588a"/>
+				<box leftPadding="3" rightPadding="3">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Monospaced" size="6" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{remark}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="535" y="0" width="20" height="18" forecolor="#000000" backcolor="#FFFFFF" uuid="d490deaa-89ff-48d9-b206-fe1fe6cb9896"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced" size="8" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{correctionInfo}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="360" y="0" width="35" height="18" uuid="54f4dca1-e326-4b94-a6c3-671678fee13d"/>
+				<box rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced" size="8" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{holidayWorkTimeString}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="150" y="0" width="35" height="18" uuid="85ac2654-906b-4215-b0f7-d7f9f3fbc22b"/>
+				<box rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced" size="8" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{workTimeString}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="430" y="7" width="105" height="11" uuid="1747e92c-970b-4230-854a-eadc820c10b9"/>
+				<box leftPadding="3" rightPadding="3">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Monospaced" size="6" pdfFontName="HeiseiMin-W3" pdfEncoding="UniJIS-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{timeComment}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

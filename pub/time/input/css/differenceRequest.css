@@ -1,0 +1,99 @@
+﻿@CHARSET "UTF-8";
+/*
+ * MosP - Mind Open Source Project    http://www.mosp.jp/
+ * Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+ * 
+ * This program is free software: you can redistribute it and/or
+ * modify it under the terms of the GNU Affero General Public License
+ * as published by the Free Software Foundation, either version 3
+ * of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+/* ************************************************************************** */
+/* === 時差出勤申請画面のスタイル === */
+/* ************************************************************************** */
+
+/**
+ * 時差出勤区分プルダウン。
+ */
+.List .DifferencePullDown {
+	width: 140px;
+}
+
+/**
+ * 検索結果一覧テーブル。
+ */
+.List #list {
+	table-layout: fixed;
+}
+
+/**
+ * 申請欄項目名称表示欄。
+ */
+.InputTable .TitleTd {
+	width: 110px;
+}
+
+/**
+ * 選択ボタンヘッダ幅。
+ */
+.LeftListTable #thButton {
+	width: 50px;
+}
+
+/**
+ * 申請日ヘッダ幅。
+ */
+.LeftListTable #thRequestDate {
+	width: 95px;
+}
+
+/**
+ * 区分ヘッダ幅。
+ */
+.LeftListTable #thRequestType {
+	width: 45px;
+}
+
+/**
+ * 時刻ヘッダ幅。
+ */
+.LeftListTable #thRequestTime {
+	width: 80px;
+}
+
+/**
+ * 申請理由ヘッダ幅。
+ */
+.LeftListTable #thRequestReason {
+	width: 390px;
+}
+
+/**
+ * 承認状況ヘッダ幅。
+ */
+.LeftListTable #thState {
+	width: 65px;
+}
+
+/**
+ * 承認者ヘッダ幅。
+ */
+.LeftListTable #thApprover {
+	width: 100px;
+}
+
+/**
+ * 選択チェックボックスヘッダ幅。
+ */
+.LeftListTable #thSelect {
+	width: 20px;
+}
+/* ************************************************************************** */

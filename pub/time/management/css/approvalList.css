@@ -1,0 +1,86 @@
+@CHARSET "UTF-8";
+/*
+ * MosP - Mind Open Source Project    http://www.mosp.jp/
+ * Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+ * 
+ * This program is free software: you can redistribute it and/or
+ * modify it under the terms of the GNU Affero General Public License
+ * as published by the Free Software Foundation, either version 3
+ * of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+/* ***************************************************** */
+/* === 未承認管理一覧画面のスタイル === */
+/* ***************************************************** */
+
+/* === テーブル区切用td === */
+.List .Divider {
+	width: 5px;
+	border-top: none;
+	border-bottom: none;
+	border-left:none;
+	border-right:none;
+	background-color: #F8F8F8;
+}
+
+/* === ヘッダ全般幅 === */
+.LeftListTable .ListSelectTh {
+	width: 100px;
+}
+
+/* === ボタンヘッダ幅 === */
+.LeftListTable #thButton {
+	width: 50px;
+}
+
+/* === 社員コードヘッダ幅 === */
+.LeftListTable #thEmployeeCode {
+	width: 85px;
+}
+
+/* === 社員名ヘッダ幅 === */
+.LeftListTable #thEmployeeName {
+	width: 90px;
+}
+
+/* === 所属ヘッダ幅 === */
+.LeftListTable #thSection {
+	width: 45px;
+}
+
+/* === 申請カテゴリヘッダ幅 === */
+.LeftListTable #thApprovalType {
+	width: 45px;
+}
+
+/* === 日付ヘッダ幅 === */
+.LeftListTable #thApprovalDate {
+	width: 95px;
+}
+
+/* === 申請情報ヘッダ幅 === */
+.LeftListTable #thRequestInfo {
+	width: 410px;
+}
+
+/* === 状態ヘッダ幅 === */
+.LeftListTable #thState {
+	width: 50px;
+}
+
+/* === 選択チェックボックスヘッダ幅 === */
+.LeftListTable #thSingle {
+	width: 20px;
+}
+
+/* === 未承認 === */
+.LeftListTable #linkRamApprovalHistory {
+	color: #ff0000;
+}

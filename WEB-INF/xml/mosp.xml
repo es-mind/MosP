@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE MosP>
+<!--
+MosP - Mind Open Source Project    http://www.mosp.jp/
+Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+
+This program is free software: you can redistribute it and/or
+modify it under the terms of the GNU Affero General Public License
+as published by the Free Software Foundation, either version 3
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<MosP>
+	<!-- タイトル -->
+	<Application key="Title">
+		プラットフォーム
+	</Application>
+	
+	<!-- バージョン -->
+	<Application key="Version">
+		v4.6.7
+	</Application>
+	
+	<!-- パスワード有効期限(日)(デフォルト値：システム管理で設定可能) -->
+	<Application key="PasswordPeriod">
+		30
+	</Application>
+	
+	<!-- 認証時ユーザ確認(Entrance：入社確認、Retirement：退社確認、Suspension：休職確認) -->
+	<Application key="CheckUser">
+		Entrance,Retirement,Suspension
+	</Application>
+	
+	<!-- パスワード確認 -->
+	<Application key="CheckPassword">
+		initPasswordInvalid
+	</Application>
+	
+	<!-- 変更時パスワード文字種 -->
+	<Application key="CharPassword">
+		.*[a-zA-Z].*[0-9].*|.*[0-9].*[a-zA-Z].*
+	</Application>
+	
+	<!-- 変更時パスワード最低文字数 -->
+	<Application key="MinPassword">
+		5
+	</Application>
+	
+	<!-- 初期パスワード(UserId：ユーザID、その他：入力文字列) -->
+	<Application key="InitialPassword">
+		UserId
+	</Application>
+	
+	<!-- パスワード初期化不能 -->
+	<Application key="InitPasswordImpossible">
+		false
+	</Application>
+
+	<!-- ログイン画面パスワード初期化利用可否 -->
+	<Application key="LoginInitializePassword">
+		false
+	</Application>
+	
+	<!-- 一覧表示件数 -->
+	<Application key="ListLength">
+		100
+	</Application>
+	
+	<!-- セッション保持時間(秒) -->
+	<Application key="SessionInterval">
+		3600
+	</Application>
+	
+	<!-- 文字コード -->
+	<Application key="CharacterEncoding">
+		UTF-8
+	</Application>
+	
+	<!-- レスポンスヘッダ：リソースの有効期限 -->
+	<Application key="Expires">
+		0
+	</Application>
+	
+	<!-- レスポンスヘッダ：リソースのキャッシュ設定 -->
+	<Application key="Pragma">
+		no-cache
+	</Application>
+	
+	<!-- レスポンスヘッダ：リソースのキャッシュ操作 -->
+	<Application key="Cache-Control">
+		no-cache,no-store
+	</Application>
+	
+	<!-- レスポンスヘッダ：コンテンツのファイル名 -->
+	<Application key="Content-Disposition">
+		attachment; filename=
+	</Application>
+	
+	<!-- レスポンスコンテンツタイプ(HTTP) -->
+	<Application key="ContentType-Html">
+		text/html; charset=UTF-8
+	</Application>
+	
+	<!-- レスポンスコンテンツタイプ(デフォルト) -->
+	<Application key="ContentType-File">
+		application/octet-stream; charset=UTF-8
+	</Application>
+	
+	<!-- テンプレートJSPファイルパス -->
+	<Application key="TemplateJsp">
+		/jsp/platform/base/template.jsp
+	</Application>
+	
+	<!-- ナビJSPファイルパス -->
+	<Application key="NaviJsp">
+		/jsp/platform/base/navi.jsp
+	</Application>
+	
+	<!-- 標準JSPファイルパス(テンプレートJSPで読み込むJSPファイルパス群) -->
+	<Application key="BaseJspFiles">
+		/jsp/platform/base/directJs.jsp,
+		/jsp/platform/base/header.jsp,
+		/jsp/platform/base/footer.jsp
+	</Application>
+	
+	<!-- 標準CSSファイルパス -->
+	<Application key="BaseCssFiles">
+		/pub/common/css/mosp.css,
+		/pub/common/css/class.css,
+		/pub/common/css/color.css,
+		/pub/common/css/calendar.css
+	</Application>
+	
+	<!-- 標準JSファイルパス -->
+	<Application key="BaseJsFiles">
+		/pub/common/js/mosp.js,
+		/pub/common/js/message.js,
+		/pub/common/js/calendar.js,
+		/pub/platform/portal/js/time.js,
+		/pub/platform/base/js/platform.js
+	</Application>
+	
+	<!-- 追加HTMLメタ情報 -->
+	<Application key="ExtraHtmlMeta">
+		<Value>
+			&lt;meta http-equiv=&quot;content-language&quot; content=&quot;ja&quot;&gt;
+		</Value>
+		<AddValue>true</AddValue>
+	</Application>
+	
+	<!-- エラー画面HTMLパス -->
+	<Application key="PathErrorView">
+		/jsp/platform/base/errorView.jsp
+	</Application>
+	
+	<!-- 初期表示URL -->
+	<Application key="UrlIndex">
+		/pub/common/html/index.html
+	</Application>
+	
+	<!-- 初期表示コマンド -->
+	<Application key="CommandIndex">
+		PF0010
+	</Application>
+	
+	<!-- ログアウトコマンド -->
+	<Application key="CommandLogout">
+		PF0030
+	</Application>
+	
+	<!-- ポータル表示コマンド -->
+	<Application key="CommandPortal">
+		PF0040
+	</Application>
+	
+	<!-- MosPプラットフォーム人事管理共通JSPファイルパス -->
+	<Application key="HumanCommonInfoJsp">
+		/jsp/platform/human/humanCommonInfo.jsp
+	</Application>
+	
+	<!-- 個人基本情報履歴削除ボタン表示可否 -->
+	<Application key="HistoryBasicDeleteButton">
+		true
+	</Application>
+	
+	<!-- 社員コード変更機能 -->
+	<Application key="ChangeEmployCode">
+		false
+	</Application>
+	
+	<!-- 役職(個人基本情報)利用可否設定 -->
+	<Application key="UsePost">
+		false
+	</Application>
+	
+	<!-- 検索条件必須設定(true：必須、false：任意) -->
+	<Application key="SearchConditionRequired">
+		false
+	</Application>
+	
+	<!-- String出力クラス -->
+	<Application key="Exporter-java.lang.String">
+		jp.mosp.framework.exporter.TextExporter
+	</Application>
+	<Application key="Exporter-jp.mosp.framework.exporter.TextContents">
+		jp.mosp.framework.exporter.TextExporter
+	</Application>
+	
+	<!-- BufferedInputStream出力クラス -->
+	<Application key="Exporter-java.io.BufferedInputStream">
+		jp.mosp.framework.exporter.FileExporter
+	</Application>
+	
+	<!-- JasperReport出力クラス -->
+	<Application key="Exporter-net.sf.jasperreports.engine.JasperPrint">
+		jp.mosp.jasperreport.JasperReportExporter
+	</Application>
+	<Application key="Exporter-net.sf.jasperreports.engine.JRExporter">
+		jp.mosp.jasperreport.JasperReportExporter
+	</Application>
+	<!-- JasperReport中間クラス -->
+	<Application key="Exporter-jp.mosp.jasperreport.JasperReportIntermediate">
+		jp.mosp.jasperreport.JasperReportExporter
+	</Application>
+	
+	<!-- humanBinaryImage出力クラス -->
+	<Application key="Exporter-jp.mosp.framework.exporter.ImageContents">
+		jp.mosp.framework.exporter.HumanBinaryExporter
+	</Application>
+
+	<!-- OrangeSignalCSV出力クラス -->
+	<Application key="Exporter-jp.mosp.orangesignal.OrangeSignalParams">
+		jp.mosp.orangesignal.OrangeSignalExporter
+	</Application>
+	
+	<!-- ポータルBeanクラス群 -->
+	<Application key="PortalBeans">
+		jp.mosp.platform.bean.portal.impl.PortalMessageBean
+	</Application>
+	
+	<!-- ログイン後ポータルBeanクラス群 -->
+	<Application key="AfterAuthPortalBeans">
+	</Application>
+	
+	<!-- ポータルメッセージ表示件数 -->
+	<Application key="PortalMessageCount">
+		10
+	</Application>
+	
+	<!-- ポータルメッセージ比較クラス群 -->
+	<Application key="PortalMessageComparators">
+		jp.mosp.platform.comparator.message.MessageNoComparator,
+		jp.mosp.platform.comparator.message.MessageImportanceComparator,
+		jp.mosp.platform.comparator.base.ActivateDateComparator
+	</Application>
+	
+	<!-- favicon -->
+	<Application key="FaviconImage">
+		../pub/images/favicon.ico
+	</Application>
+	
+	<!-- ロゴイメージ -->
+	<Application key="LogoImage">
+		../pub/images/mosp.png
+	</Application>
+	
+	<!-- タイトル接頭辞 -->
+	<Application key="TitlePrefix">
+	</Application>
+	
+	<!-- 年月指定時の基準日(0：末日、1-28：日数、101-115：翌月日数) -->
+	<Application key="YearMonthTargetDate">
+		0
+	</Application>
+	
+	<!-- 年月指定時の期間の最終日(0：末日、1-28：日数、101-115：翌月日数) -->
+	<Application key="YearMonthTerm">
+		0
+	</Application>
+	
+	<!-- 年度の開始月 -->
+	<Application key="FiscalStartMonth">
+		4
+	</Application>
+	
+	<!--人事汎用管理区分設定-->
+	<Application key="HumanGeneralDivisions">
+		MailAddress
+	</Application>
+	
+	<!-- ログ出力対象外パラメータ -->
+	<Application key="LogExcludeParams">
+		txtPassWord,hdnConfirmPassword,hdnOldPassword,hdnNewPassword,
+		txtPostgresPass,txtRolePw,pw
+	</Application>
+	
+	<!-- 一度に取得する個人情報の最大数 -->
+	<Application key="PersonalIdsMaxIndex">
+		5000
+	</Application>
+	
+	<!-- ユーザアカウント情報登録後確認Beanクラス群(クラス名) -->
+	<Application key="BeansCheckAfterRegistUser">
+		<Value>jp.mosp.platform.bean.system.impl.CheckNeededRoleBean</Value>
+		<AddValue>true</AddValue>
+	</Application>
+	
+</MosP>

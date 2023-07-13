@@ -1,0 +1,190 @@
+@CHARSET "UTF-8";
+/*
+ * MosP - Mind Open Source Project    http://www.mosp.jp/
+ * Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+ * 
+ * This program is free software: you can redistribute it and/or
+ * modify it under the terms of the GNU Affero General Public License
+ * as published by the Free Software Foundation, either version 3
+ * of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+/* ***************************************************** */
+/* === 勤怠詳細画面のスタイル === */
+/* ***************************************************** */
+/* === 項目内容表示・入力欄(InputTd) === */
+.Name200TextArea {
+	width: 760px;
+	height: 50px;
+	font-size: 13px;
+	border: 1px solid #003366;
+	ime-mode: active;
+}
+
+/* === 幅固定欄ヘッダ(th) === */
+.FixList th {
+	white-space: normal;
+}
+
+/* === 入力用ヘッダ単体欄(table) === */
+.HeaderInputTable {
+	width: 900px;
+	float: left;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	border-bottom: none;
+}
+
+/* === 入力用幅固定表示欄(table) === */
+.FixInputTable {
+	width: 900px;
+	float: left;
+	table-layout: fixed;
+	margin-top: 0px;
+	margin-bottom: 10px;
+	border-top: none;
+}
+
+/* === 入力用幅固定欄(th) === */
+.FixInputTable td {
+	border-top: none;
+}
+
+/* === ボタン用テーブル === */
+.List .ButtonTable {
+	margin-top: 0px;
+}
+
+/* === 項目名表示欄(TitleTd) === */
+.FixList .TitleTd {
+	width: 150px;
+}
+
+/* === 項目名表示欄(InputTd) === */
+.FixList .InputTd {
+	width: 150px;
+}
+
+/* === 承認者設定テーブル項目名称 === */
+#tblApproverSelect td {
+	border-top: none;
+}
+
+/* === 修正情報テーブル項目名称 === */
+#attendanceCard_tblCorrection .TitleTd {
+	width: 200px;
+}
+
+/* === 修正情報テーブル項目内容 === */
+#attendanceCard_tblCorrection .InputTd {
+	width: 680px;
+}
+
+/* === 勤怠情報テーブル項目名称 === */
+#attendanceCard_tblAttendance .TitleTd {
+	width: 105px;
+}
+
+/* === 勤怠情報テーブル項目内容 === */
+#attendanceCard_tblAttendance .InputTd {
+	width: 170px;
+}
+
+/* === 休憩情報テーブル項目名称 === */
+#attendanceCard_tblRest .TitleTd {
+	width: 120px;
+}
+
+/* === 休憩情報テーブル項目内容 === */
+#attendanceCard_tblRest .InputTd {
+	width: 230px;
+}
+
+/* === 休憩情報テーブル項目名称 === */
+#attendanceCard_tblRest #tdRestTitle1 {
+	width: 85px;
+}
+
+/* === 休憩情報テーブル項目名称 === */
+#attendanceCard_tblRest #tdRestTitle2 {
+	width: 85px;
+}
+
+/* === 休憩情報テーブル項目内容 === */
+#attendanceCard_tblRest #tdRestInput {
+	width: 85px;
+}
+
+/* === 休憩情報テーブル項目内容 === */
+#tdPublicGoingOutTitle {
+	border-top: 1px solid black;
+}
+
+/* === 休憩情報テーブル項目内容 === */
+#tdPublicGoingOutInput {
+	border-top: 1px solid black;
+}
+
+/* === 遅刻早退情報テーブル項目名称 === */
+#attendanceCard_tblLateEarly .TitleTd {
+	width: 110px;
+}
+
+/* === 遅刻早退情報テーブル項目内容 === */
+#attendanceCard_tblLateEarly .InputTd {
+	width: 170px;
+}
+
+/* === 遅刻早退情報テーブルコメント入力欄 === */
+#attendanceCard_tblLateEarly #tdLateEarlyComment {
+	width: 650px;
+}
+
+/* === 割増情報テーブル項目名称 === */
+#attendanceCard_tblOverTime .TitleTd {
+	width: 150px;
+}
+
+/* === 割増情報テーブル項目内容 === */
+#attendanceCard_tblOverTime .InputTd {
+	width: 130px;
+}
+
+/* === 手当情報テーブル項目名称 === */
+#tblAllowance .TitleTd {
+	width: 80px;
+}
+
+/* === 手当情報テーブル項目内容 === */
+#tblAllowance .InputTd {
+	width: 80px;
+}
+
+/* === 各種承認項目コメント・理由表示欄 === */
+#tdApprovalComment {
+	width: 450px;
+}
+
+/* === 各種承認項目コメント・理由表示欄 === */
+#attendanceCard_tblAttendance #tdAttendanceComment {
+	width: 770px;
+	white-space: normal;
+	word-break: break-all; /*IE用*/
+}
+
+/* === 各種承認項目コメント・理由表示欄 === */
+#attendanceCard_tblAttendance .Blank {
+	border-bottom: 1px solid black;
+}
+
+/* === 追加項目･タイトル欄 === */
+.TitleTd {
+	width: 140px;
+}

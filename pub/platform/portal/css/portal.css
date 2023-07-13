@@ -1,0 +1,264 @@
+@CHARSET "UTF-8";
+/*
+ * MosP - Mind Open Source Project    http://www.mosp.jp/
+ * Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+ * 
+ * This program is free software: you can redistribute it and/or
+ * modify it under the terms of the GNU Affero General Public License
+ * as published by the Free Software Foundation, either version 3
+ * of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+/* ************************************************************************** */
+/* === 全般 === */
+/* ************************************************************************** */
+/**
+ * ポータル画面テーブルヘッダ用
+ */
+.PortalTableTh {
+	text-align: left;
+	background-color: #FFE4B5;
+}
+
+
+
+/**
+ * 空白部分(LeftListTable)。
+ */
+.LeftListNonUpperTable .Blank {
+	border: medium none;
+	background-color: #F8F8F8;
+}
+
+/**
+ * パンくずリスト下側空白
+ */
+.Navi {
+	margin-bottom: 0px;
+}
+
+/* ************************************************************************** */
+/* === 打刻欄のスタイル === */
+/* ************************************************************************** */
+/**
+ * ボタン(打刻ボタン)
+ */
+.TimeCardButton {
+	width: 100px;
+	font-weight: bold;
+	font-size: 15px;
+	height: 40px;
+	margin: 1px 1px;
+	color: black;
+}
+
+/**
+ * 空白欄(td)
+ */
+#divTimeCard  .TimeCardDateTd {
+	font-size:15px;
+}
+
+#divTimeCard .TimeCardTimeTd {
+	font-size: 55px;
+}
+
+/* ************************************************************************** */
+/* === メッセージ欄のスタイル === */
+/* ************************************************************************** */
+/**
+ * メッセージ(td)のスタイルを定義する。
+ */
+.MessageTimeTable td {
+	text-align: center;
+	font-size: 15px;
+}
+
+/**
+ * メッセージ欄(table)
+ */
+#divInformation #tblMessage {
+	table-layout: fixed;
+	margin-top: 0px;
+	background-color: #FFFFFF;
+}
+
+/**
+ * メッセージ重要度表示欄
+ */
+#divInformation .MessageImportance {
+	width: 13px;
+	border-right: none;
+	border-bottom: none;
+}
+
+/**
+ * メッセージ日付表示欄
+ */
+#divInformation .MessageDate {
+	width: 107px;
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
+}
+
+/**
+ * メッセージタイトル表示欄
+ */
+#divInformation .MessageTitle {
+	width: 832px;
+	border-bottom: none;
+	border-left: none;
+}
+
+#divInformation .MessageBlank {
+	border-top: none;
+	border-right: none;
+}
+
+/**
+ * メッセージ本文スペース
+ */
+#divInformation .MessageBody {
+	width: 832px;
+	border-top: none;
+	border-left: none;
+	white-space: pre-wrap;
+}
+
+/**
+ * 該当メッセージ未登録時表示欄(td)
+ */
+.ListTable #tdNoMessage {
+	border-left: 1px solid black;
+}
+
+/* ************************************************************************** */
+/* === スケジュール欄のスタイル === */
+/* ************************************************************************** */
+.List #list {
+	table-layout: fixed;
+}
+
+.ListTable #thButton {
+	width: 50px;
+}
+
+.ListTable #thDate {
+	width: 50px;
+}
+
+.ListTable #thType {
+	width: 50px;
+}
+
+.ListTable #thTime {
+	width: 35px;
+}
+
+.ListTable #thSingle {
+	width: 20px;
+}
+
+.ListTable #thStatus {
+	width: 60px;
+}
+
+.ListTable #thApproval {
+	width: 60px;
+}
+
+.ListTable #thTotalTime {
+	width: 50px;
+}
+
+.ListTable #thHoliday {
+	width: 150px;
+}
+
+.ListTable #thRemark {
+	width: 265px;
+}
+
+/* ************************************************************************** */
+/* === 未承認一覧欄のスタイル === */
+/* ************************************************************************** */
+
+/**
+ * 左寄せ一覧表示欄(table)。
+ */
+.LeftListNonUpperTable {
+	float:left;
+	width:980px;
+}
+
+/**
+ * 未承認一覧空白欄(td)
+ */
+#divApprovalList .Divider {
+	width: 5px;
+	border-top: none;
+	border-bottom: none;
+	border-left:none;
+	border-right:none;
+	background-color: #F8F8F8;
+}
+#divApprovalList  .SelectTitleTd {
+	border: 1px solid;
+	text-align:center;
+	background-color: #FFFFFF;	
+	width:270px;
+
+}
+#divApprovalList  .EditSelectTh {
+	width:280px;
+}
+
+#divApprovalList  .SelectTd {
+	width:120px;
+		
+}
+
+#divApprovalList  .NonTopBottomSelectTd {
+	width:150px;
+	border-top: none;
+	border-bottom: none;
+	border-left:1px solid;;
+	border-right:1px solid;
+	text-align:center;
+	background-color: #F8F8F8;	
+
+}
+
+#divApprovalList  .NonSelectTd {
+	width:150px;
+	border:1px solid;
+	text-align:center;
+	background-color: #F8F8F8;	
+
+}
+
+#divApprovalList  .ButtonTd {
+	width:150px;
+	border: 1px solid;
+	border_left: 0px solid;
+	text-align:center;
+	background-color: #FFFFFF;
+
+}
+#divApprovalList  .TitleTd {
+	font-weight: bold;
+	font-size: 15px;
+	width:200px;
+
+}
+
+
+

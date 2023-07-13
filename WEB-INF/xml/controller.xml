@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE MosP>
+<!--
+MosP - Mind Open Source Project    http://www.mosp.jp/
+Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+
+This program is free software: you can redistribute it and/or
+modify it under the terms of the GNU Affero General Public License
+as published by the Free Software Foundation, either version 3
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<MosP>
+	<Controller key="PF0010">
+		<ActionClass>jp.mosp.platform.portal.action.IndexAction</ActionClass>
+		<NeedSession>unnecessary</NeedSession>
+	</Controller>
+	<Controller key="PF002*">
+		<ActionClass>jp.mosp.platform.portal.action.AuthAction</ActionClass>
+		<NeedSession>unnecessary</NeedSession>
+		<NeedProcSeq>zeroAcceptable</NeedProcSeq>
+	</Controller>
+	<Controller key="PF003*">
+		<ActionClass>jp.mosp.platform.portal.action.LogoutAction</ActionClass>
+		<NeedSession>unnecessary</NeedSession>
+	</Controller>
+	<Controller key="PF004*">
+		<ActionClass>jp.mosp.platform.portal.action.PortalAction</ActionClass>
+	</Controller>
+	<Controller key="PF0041">
+		<ActionClass>jp.mosp.platform.portal.action.PortalAction</ActionClass>
+		<NeedProcSeq>unnecessary</NeedProcSeq>
+	</Controller>
+	<Controller key="PF111*">
+		<ActionClass>jp.mosp.platform.human.action.HumanListAction</ActionClass>
+	</Controller>
+	<Controller key="PF112*">
+		<ActionClass>jp.mosp.platform.human.action.HumanInfoAction</ActionClass>
+	</Controller>
+	<Controller key="PF113*">
+		<ActionClass>jp.mosp.platform.human.action.BasicCardAction</ActionClass>
+	</Controller>
+	<Controller key="PF114*">
+		<ActionClass>jp.mosp.platform.human.action.BasicListAction</ActionClass>
+	</Controller>
+	<Controller key="PF115*">
+		<ActionClass>jp.mosp.platform.human.action.BasicCardAction</ActionClass>
+	</Controller>
+	<Controller key="PF116*">
+		<ActionClass>jp.mosp.platform.human.action.SuspensionCardAction</ActionClass>
+	</Controller>
+	<Controller key="PF117*">
+		<ActionClass>jp.mosp.platform.human.action.RetirementCardAction</ActionClass>
+	</Controller>
+	<Controller key="PF118*">
+		<ActionClass>jp.mosp.platform.human.action.ConcurrentCardAction</ActionClass>
+	</Controller>
+	<Controller key="PF119*">
+		<ActionClass>jp.mosp.platform.human.action.EntranceCardAction</ActionClass>
+	</Controller>
+	<Controller key="PF121*">
+		<ActionClass>jp.mosp.platform.human.action.BasicNewCardAction</ActionClass>
+	</Controller>
+	<Controller key="PF131*">
+		<ActionClass>jp.mosp.platform.file.action.HumanImportListAction</ActionClass>
+	</Controller>
+	<Controller key="PF1386">
+		<ActionClass>jp.mosp.platform.file.action.HumanImportListAction</ActionClass>
+		<NeedProcSeq>unnecessary</NeedProcSeq>
+	</Controller>
+	<Controller key="PF132*">
+		<ActionClass>jp.mosp.platform.file.action.ImportCardAction</ActionClass>
+	</Controller>
+	<Controller key="PF137*">
+		<ActionClass>jp.mosp.platform.file.action.ImportCardAction</ActionClass>
+	</Controller>
+	<Controller key="PF141*">
+		<ActionClass>jp.mosp.platform.file.action.HumanExportListAction</ActionClass>
+	</Controller>
+	<Controller key="PF1415">
+		<ActionClass>jp.mosp.platform.file.action.HumanExportListAction</ActionClass>
+		<NeedProcSeq>unnecessary</NeedProcSeq>
+	</Controller>
+	<Controller key="PF148*">
+		<ActionClass>jp.mosp.platform.file.action.HumanExportListAction</ActionClass>
+	</Controller>
+	<Controller key="PF142*">
+		<ActionClass>jp.mosp.platform.file.action.ExportCardAction</ActionClass>
+	</Controller>
+	<Controller key="PF147*">
+		<ActionClass>jp.mosp.platform.file.action.ExportCardAction</ActionClass>
+	</Controller>
+	<Controller key="PF151*">
+		<ActionClass>jp.mosp.platform.human.action.HumanNormalCardAction</ActionClass>
+	</Controller>
+	<Controller key="PF152*">
+		<ActionClass>jp.mosp.platform.human.action.HumanArrayCardAction</ActionClass>
+	</Controller>
+	<Controller key="PF153*">
+		<ActionClass>jp.mosp.platform.human.action.HumanHistoryCardAction</ActionClass>
+	</Controller>
+	<Controller key="PF154*">
+		<ActionClass>jp.mosp.platform.human.action.HumanHistoryListAction</ActionClass>
+	</Controller>
+	<Controller key="PF155*">
+		<ActionClass>jp.mosp.platform.human.action.HumanBinaryNormalCardAction</ActionClass>
+	</Controller>
+	<Controller key="PF156*">
+		<ActionClass>jp.mosp.platform.human.action.HumanBinaryArrayCardAction</ActionClass>
+	</Controller>
+	<Controller key="PF157*">
+		<ActionClass>jp.mosp.platform.human.action.HumanBinaryHistoryCardAction</ActionClass>
+	</Controller>
+	<Controller key="PF158*">
+		<ActionClass>jp.mosp.platform.human.action.HumanBinaryHistoryListAction</ActionClass>
+	</Controller>
+	<Controller key="PF159*">
+		<ActionClass>jp.mosp.platform.human.action.HumanBinaryOutputImageAction</ActionClass>
+		<AcceptMethod>GET</AcceptMethod>
+		<NeedProcSeq>ignore</NeedProcSeq>
+	</Controller>
+	<Controller key="PF160*">
+		<ActionClass>jp.mosp.platform.human.action.HumanBinaryOutputFileAction</ActionClass>
+		<NeedProcSeq>unnecessary</NeedProcSeq>
+	</Controller>
+	
+	<Controller key="PF210*">
+		<ActionClass>jp.mosp.platform.system.action.EmploymentMasterAction</ActionClass>
+	</Controller>
+	<Controller key="PF211*">
+		<ActionClass>jp.mosp.platform.system.action.EmploymentMasterAction</ActionClass>
+	</Controller>
+	<Controller key="PF220*">
+		<ActionClass>jp.mosp.platform.system.action.SectionMasterAction</ActionClass>
+	</Controller>
+	<Controller key="PF221*">
+		<ActionClass>jp.mosp.platform.system.action.SectionMasterAction</ActionClass>
+	</Controller>
+	<Controller key="PF230*">
+		<ActionClass>jp.mosp.platform.system.action.PositionMasterAction</ActionClass>
+	</Controller>
+	<Controller key="PF231*">
+		<ActionClass>jp.mosp.platform.system.action.PositionMasterAction</ActionClass>
+	</Controller>
+	<Controller key="PF240*">
+		<ActionClass>jp.mosp.platform.system.action.AccountMasterAction</ActionClass>
+	</Controller>
+	<Controller key="PF241*">
+		<ActionClass>jp.mosp.platform.system.action.AccountMasterAction</ActionClass>
+	</Controller>
+	<Controller key="PF250*">
+		<ActionClass>jp.mosp.platform.system.action.WorkPlaceMasterAction</ActionClass>
+	</Controller>
+	<Controller key="PF251*">
+		<ActionClass>jp.mosp.platform.system.action.WorkPlaceMasterAction</ActionClass>
+	</Controller>
+	<Controller key="PF261*">
+		<ActionClass>jp.mosp.platform.system.action.NamingTypeListAction</ActionClass>
+	</Controller>
+	<Controller key="PF262*">
+		<ActionClass>jp.mosp.platform.system.action.NamingMasterAction</ActionClass>
+	</Controller>
+	<Controller key="PF263*">
+		<ActionClass>jp.mosp.platform.system.action.NamingMasterAction</ActionClass>
+	</Controller>
+	<Controller key="PFSM290*">
+		<ActionClass>jp.mosp.platform.system.action.SystemManagementAction</ActionClass>
+	</Controller>
+	
+	<Controller key="PF311*">
+		<ActionClass>jp.mosp.platform.workflow.action.UnitListAction</ActionClass>
+	</Controller>
+	<Controller key="PF318*">
+		<ActionClass>jp.mosp.platform.workflow.action.UnitListAction</ActionClass>
+	</Controller>
+	<Controller key="PF312*">
+		<ActionClass>jp.mosp.platform.workflow.action.UnitCardAction</ActionClass>
+	</Controller>
+	<Controller key="PF317*">
+		<ActionClass>jp.mosp.platform.workflow.action.UnitCardAction</ActionClass>
+	</Controller>
+	<Controller key="PF321*">
+		<ActionClass>jp.mosp.platform.workflow.action.RouteListAction</ActionClass>
+	</Controller>
+	<Controller key="PF328*">
+		<ActionClass>jp.mosp.platform.workflow.action.RouteListAction</ActionClass>
+	</Controller>
+	<Controller key="PF322*">
+		<ActionClass>jp.mosp.platform.workflow.action.RouteCardAction</ActionClass>
+	</Controller>
+	<Controller key="PF327*">
+		<ActionClass>jp.mosp.platform.workflow.action.RouteCardAction</ActionClass>
+	</Controller>
+	<Controller key="PF331*">
+		<ActionClass>jp.mosp.platform.workflow.action.RouteApplicationListAction</ActionClass>
+	</Controller>
+	<Controller key="PF338*">
+		<ActionClass>jp.mosp.platform.workflow.action.RouteApplicationListAction</ActionClass>
+	</Controller>
+	<Controller key="PF341*">
+		<ActionClass>jp.mosp.platform.workflow.action.RouteApplicationListAction</ActionClass>
+	</Controller>
+	<Controller key="PF332*">
+		<ActionClass>jp.mosp.platform.workflow.action.RouteApplicationCardAction</ActionClass>
+	</Controller>
+	<Controller key="PF337*">
+		<ActionClass>jp.mosp.platform.workflow.action.RouteApplicationCardAction</ActionClass>
+	</Controller>
+	<Controller key="PF342*">
+		<ActionClass>jp.mosp.platform.workflow.action.RouteApplicationCardAction</ActionClass>
+	</Controller>
+	<Controller key="PF350*">
+		<ActionClass>jp.mosp.platform.workflow.action.RouteApplicationReferenceAction</ActionClass>
+	</Controller>
+	<Controller key="PF411*">
+		<ActionClass>jp.mosp.platform.message.action.MessageListAction</ActionClass>
+	</Controller>
+	<Controller key="PF418*">
+		<ActionClass>jp.mosp.platform.message.action.MessageListAction</ActionClass>
+	</Controller>
+	<Controller key="PF412*">
+		<ActionClass>jp.mosp.platform.message.action.MessageCardAction</ActionClass>
+	</Controller>
+	<Controller key="PF417*">
+		<ActionClass>jp.mosp.platform.message.action.MessageCardAction</ActionClass>
+	</Controller>
+	<Controller key="PF911*">
+		<ActionClass>jp.mosp.platform.portal.action.PasswordChangeAction</ActionClass>
+	</Controller>
+	<Controller key="PF9110">
+		<ActionClass>jp.mosp.platform.portal.action.PasswordChangeAction</ActionClass>
+		<NeedProcSeq>unnecessary</NeedProcSeq>
+	</Controller>
+</MosP>

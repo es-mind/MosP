@@ -1,0 +1,61 @@
+@CHARSET "UTF-8";
+/*
+ * MosP - Mind Open Source Project    http://www.mosp.jp/
+ * Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+ * 
+ * This program is free software: you can redistribute it and/or
+ * modify it under the terms of the GNU Affero General Public License
+ * as published by the Free Software Foundation, either version 3
+ * of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+/* ************************************************************************** */
+/* === 予定確認画面のスタイル === */
+/* ************************************************************************** */
+
+/* === 適用中カレンダ表示テーブル === */
+.ListHeader .ShortLabelTable {
+	float: left;
+}
+
+/* === 一覧ボタン欄幅 === */
+.ListTable #thButton {
+	width: 50px;
+}
+
+/* === 一覧各種時間欄幅 === */
+.ListTable #thTime {
+	width: 35px;
+}
+
+/* === 一覧一文字欄幅 === */
+.ListTable #thSingle {
+	width: 20px;
+}
+
+/* === 一覧状態欄幅 === */
+.ListTable #thState {
+	width: 60px;
+}
+
+/* === 合計時間欄幅 === */
+.ListTable #thTotalTime {
+	width: 50px;
+}
+
+/* === 一覧備考欄 === */
+.ListTable #thRemark {
+	width: 230px;
+}
+
+/* === 合計値表示欄 === */
+#thTotalTime {
+	width: 50px;
+}

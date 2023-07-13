@@ -1,0 +1,138 @@
+@CHARSET "UTF-8";
+/*
+ * MosP - Mind Open Source Project    http://www.mosp.jp/
+ * Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+ * 
+ * This program is free software: you can redistribute it and/or
+ * modify it under the terms of the GNU Affero General Public License
+ * as published by the Free Software Foundation, either version 3
+ * of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+/* ************************************************************************** */
+/* === 休暇申請画面のスタイル === */
+/* ************************************************************************** */
+
+
+
+.List .Divider {
+	border: none;
+	width: 5px;
+	background-color: #F8F8F8;
+}
+
+.LeftTable {
+	float: left;
+}
+
+.RightTable {
+	float: right;
+	width: 445px;
+}
+
+.RightTable .Blank {
+	border: medium none;
+	background-color: #F8F8F8;
+}
+
+#thFiscalYear {
+	width: 120px;
+}
+
+#thTotal {
+	width: 50px;
+}
+
+#thGrantDate {
+	width: 100px;
+}
+
+#thExpirationDate {
+	width: 100px;
+}
+
+#thGrantDays {
+	width: 160px;
+}
+
+#thPaidLeaveAutomatic {
+	width: 130px;
+}
+
+#thPaidLeaveManual {
+	width: 130px;
+}
+
+#thPaidLeaveByHour {
+	width: 130px;
+}
+
+/* === 各種項目名称表示欄。 === */
+.TitleTd {
+	width: 100px;
+}
+
+/* === 有休・特別・その他情報表示欄(table)。 === */
+#divRemainder .ListTable {
+	table-layout: fixed;
+}
+
+/* === 有休・特別・その他情報表示欄(th)。 === */
+#holidayRequest_tblPaidHoliday .ListSelectTh {
+	width: 130px;
+}
+
+/* === 有休・特別・その他情報表示欄(th)。 === */
+#holidayRequest_tblSpecialHoliday .ListSelectTh {
+	width: 170px;
+}
+
+/* === 特別・その他休暇名称表示欄(th)。 === */
+#holidayRequest_tblSpecialHoliday #tdVacationName {
+	width: 250px;
+}
+
+/* === 各種休暇残日数表示欄。 === */
+.ListTable .ListSelectTh {
+	width: 80px;
+}
+
+/* === 一覧幅。 === */
+.LeftListTable #thButton {
+	width: 50px;
+}
+
+.LeftListTable #thHolidayDate {
+	width: 210px;
+}
+
+.LeftListTable #thHolidayType {
+	width: 90px;
+}
+
+.LeftListTable #thHolidayRange {
+	width: 85px;
+}
+
+.LeftListTable #thHolidayReason {
+	width: 320px;
+}
+
+.LeftListTable #thHolidayState {
+	width: 50px;
+}
+
+.LeftListTable #thHolidayApprover {
+	width: 80px;
+}
+
+.LeftListTable #thSelect {
+	width: 20px;
+}

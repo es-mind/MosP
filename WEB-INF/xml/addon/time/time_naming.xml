@@ -1,0 +1,1257 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE MosP>
+<!--
+MosP - Mind Open Source Project    http://www.mosp.jp/
+Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+
+This program is free software: you can redistribute it and/or
+modify it under the terms of the GNU Affero General Public License
+as published by the Free Software Foundation, either version 3
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<MosP>
+	<Naming key="menuTimeInput">
+		勤怠報告
+	</Naming>
+	<Naming key="menuTimeManagement">
+		勤怠管理
+	</Naming>
+	<Naming key="menuTimeCalculation">
+		勤怠計算
+	</Naming>
+	<Naming key="menuTimeHoliday">
+		休暇管理
+	</Naming>
+	<Naming key="menuTimeSettings">
+		勤怠設定
+	</Naming>
+	<Naming key="jp.mosp.time.input.vo.AttendanceListVo">
+		勤怠一覧
+	</Naming>
+	<Naming key="jp.mosp.time.input.vo.AttendanceCardVo">
+		勤怠詳細
+	</Naming>
+	<Naming key="jp.mosp.time.input.vo.AttendanceHistoryVo">
+		勤怠修正履歴参照
+	</Naming>
+	<Naming key="jp.mosp.time.input.vo.ScheduleReferenceVo">
+		予定確認
+	</Naming>
+	<Naming key="jp.mosp.time.input.vo.OvertimeRequestVo">
+		残業申請
+	</Naming>
+	<Naming key="jp.mosp.time.input.vo.HolidayRequestVo">
+		休暇申請
+	</Naming>
+	<Naming key="jp.mosp.time.input.vo.WorkOnHolidayRequestVo">
+		振出・休出申請
+	</Naming>
+	<Naming key="jp.mosp.time.input.vo.SubHolidayRequestVo">
+		代休申請
+	</Naming>
+	<Naming key="jp.mosp.time.input.vo.WorkTypeChangeRequestVo">
+		勤務形態変更申請
+	</Naming>
+	<Naming key="jp.mosp.time.input.vo.CancellationRequestVo">
+		承認解除申請
+	</Naming>
+	<Naming key="jp.mosp.time.input.vo.DifferenceRequestVo">
+		時差出勤申請
+	</Naming>
+	<Naming key="jp.mosp.time.input.vo.ApprovalHistoryVo">
+		承認履歴参照
+	</Naming>
+	<Naming key="jp.mosp.time.management.vo.SubordinateListVo">
+		部下一覧
+	</Naming>
+	<Naming key="jp.mosp.time.management.vo.SubordinateFiscalListVo">
+		統計情報一覧
+	</Naming>
+	<Naming key="jp.mosp.time.management.vo.RequestListVo">
+		申請確認
+	</Naming>
+	<Naming key="jp.mosp.time.management.vo.SubordinateFiscalReferenceVo">
+		統計情報詳細
+	</Naming>
+	<Naming key="jp.mosp.time.management.vo.ApprovalListVo">
+		未承認管理一覧
+	</Naming>
+	<Naming key="jp.mosp.time.management.vo.ApprovalCardVo">
+		未承認管理詳細
+	</Naming>
+	<Naming key="jp.mosp.time.calculation.vo.TotalTimeVo">
+		勤怠集計管理
+	</Naming>
+	<Naming key="jp.mosp.time.calculation.vo.TotalTimeListVo">
+		勤怠集計結果一覧
+	</Naming>
+	<Naming key="jp.mosp.time.calculation.vo.TotalTimeCardVo">
+		勤怠修正
+	</Naming>
+	<Naming key="jp.mosp.time.calculation.vo.CutoffErrorListVo">
+		集計時エラー内容参照
+	</Naming>
+	<Naming key="jp.mosp.time.calculation.vo.TimeImportListVo">
+		インポートマスタ一覧
+	</Naming>
+	<Naming key="jp.mosp.time.file.vo.TimeExportListVo">
+		エクスポートマスタ一覧
+	</Naming>
+	<Naming key="jp.mosp.time.settings.vo.HolidayMasterVo">
+		休暇種別管理
+	</Naming>
+	<Naming key="jp.mosp.time.settings.vo.SpecialHolidayManagementVo">
+		特別休暇確認
+	</Naming>
+	<Naming key="jp.mosp.time.settings.vo.SpecialHolidayHistoryVo">
+		特別休暇付与
+	</Naming>
+	<Naming key="jp.mosp.time.settings.vo.OtherHolidayManagementVo">
+		その他休暇確認
+	</Naming>
+	<Naming key="jp.mosp.time.settings.vo.OtherHolidayHistoryVo">
+		その他休暇付与
+	</Naming>
+	<Naming key="jp.mosp.time.settings.vo.PaidHolidayManagementVo">
+		有給休暇確認
+	</Naming>
+	<Naming key="jp.mosp.time.settings.vo.PaidHolidayDataGrantListVo">
+		有給休暇付与
+	</Naming>
+	<Naming key="jp.mosp.time.settings.vo.PaidHolidayDataGrantCardVo">
+		有給休暇付与修正
+	</Naming>
+	<Naming key="jp.mosp.time.settings.vo.PaidHolidayHistoryVo">
+		有給休暇手動付与
+	</Naming>
+	<Naming key="jp.mosp.time.settings.vo.PaidHolidayReferenceVo">
+		個別有給休暇確認
+	</Naming>
+	<Naming key="jp.mosp.time.settings.vo.TimeSettingListVo">
+		勤怠設定一覧
+	</Naming>
+	<Naming key="jp.mosp.time.settings.vo.TimeSettingCardVo">
+		勤怠設定詳細
+	</Naming>
+	<Naming key="jp.mosp.time.settings.vo.WorkTypeListVo">
+		勤務形態管理一覧
+	</Naming>
+	<Naming key="jp.mosp.time.settings.vo.WorkTypeCardVo">
+		勤務形態管理詳細
+	</Naming>
+	<Naming key="jp.mosp.time.settings.vo.PaidHolidayListVo">
+		有給休暇設定一覧
+	</Naming>
+	<Naming key="jp.mosp.time.settings.vo.PaidHolidayCardVo">
+		有給休暇設定詳細
+	</Naming>
+	<Naming key="jp.mosp.time.settings.vo.ScheduleListVo">
+		カレンダ管理一覧
+	</Naming>
+	<Naming key="jp.mosp.time.settings.vo.ScheduleCardVo">
+		カレンダ管理詳細
+	</Naming>
+	<Naming key="jp.mosp.time.settings.vo.CutoffMasterVo">
+		締日管理
+	</Naming>
+	<Naming key="jp.mosp.time.settings.vo.ApplicationListVo">
+		設定適用管理一覧
+	</Naming>
+	<Naming key="jp.mosp.time.settings.vo.ApplicationCardVo">
+		設定適用管理詳細
+	</Naming>
+	<Naming key="jp.mosp.time.settings.vo.ApplicationReferenceVo">
+		設定適用参照
+	</Naming>
+	<Naming key="jp.mosp.time.settings.vo.WorkTypePatternListVo">
+		勤務形態パターン一覧
+	</Naming>
+	<Naming key="jp.mosp.time.settings.vo.WorkTypePatternCardVo">
+		勤務形態パターン詳細
+	</Naming>
+	<Naming key="AttendanceHumanList">
+		社員別勤怠承認
+	</Naming>
+	<Naming key="AttendanceApprovalListVo">
+		勤怠承認一覧
+	</Naming>
+	<Naming key="RequestCardVo">
+		申請確認詳細
+	</Naming>
+	<Naming key="Cutoff">
+		締
+	</Naming>
+	<Naming key="CutoffDate">
+		締日
+	</Naming>
+	<Naming key="Calendar">
+		カレンダ
+	</Naming>
+	<Naming key="FiscalYear">
+		年度
+	</Naming>
+	<Naming key="PaidHolidayType">
+		付与区分
+	</Naming>
+	<Naming key="PaidVacation">
+		有給休暇
+	</Naming>
+	<Naming key="Situation">
+		状況
+	</Naming>
+	<Naming key="Form">
+		形態
+	</Naming>
+	<Naming key="WorkTime">
+		勤時
+	</Naming>
+	<Naming key="RestTime">
+		休憩
+	</Naming>
+	<Naming key="FrontTime">
+		前休
+	</Naming>
+	<Naming key="BackTime">
+		後休
+	</Naming>
+	<Naming key="HalfTime">
+		半休
+	</Naming>
+	<Naming key="HourTime">
+		時休
+	</Naming>
+	<Naming key="Moment">
+		時刻
+	</Naming>
+	<Naming key="BeforeHalfHoliday">
+		前半休
+	</Naming>
+	<Naming key="LateHoliday">
+		後半休
+	</Naming>
+	<Naming key="Per">
+		につき
+	</Naming>
+	<Naming key="Within">
+		のうち
+	</Naming>
+	<Naming key="ManualOperation">
+		手動
+	</Naming>
+	<Naming key="Giving">
+		付与
+	</Naming>
+	<Naming key="PreviousYear">
+		前年
+	</Naming>
+	<Naming key="Times">
+		度
+	</Naming>
+	<Naming key="Remainder">
+		残
+	</Naming>
+	<Naming key="Days">
+		日数
+	</Naming>
+	<Naming key="ThisYear">
+		今年
+	</Naming>
+	<Naming key="Provision">
+		支給
+	</Naming>
+	<Naming key="Abandonment">
+		廃棄
+	</Naming>
+	<Naming key="Use">
+		利用
+	</Naming>
+	<Naming key="Another">
+		別
+	</Naming>
+	<Naming key="Ahead">
+		前
+	</Naming>
+	<Naming key="Now">
+		今
+	</Naming>
+	<Naming key="Limit">
+		限度
+	</Naming>
+	<Naming key="Outside">
+		外
+	</Naming>
+	<Naming key="GoingOut">
+		外出
+	</Naming>
+	<Naming key="Warning">
+		警告
+	</Naming>
+	<Naming key="Caution">
+		注意
+	</Naming>
+	<Naming key="Months">
+		ヶ月
+	</Naming>
+	<Naming key="DayOfTheWeek">
+		曜日
+	</Naming>
+	<Naming key="Week">
+		週間
+	</Naming>
+	<Naming key="StartDayOfTheWeek">
+		週の起算曜日
+	</Naming>
+	<Naming key="Norm">
+		基準
+	</Naming>
+	<Naming key="Tardiness">
+		遅刻
+	</Naming>
+	<Naming key="Private">
+		私用
+	</Naming>
+	<Naming key="Official">
+		公用
+	</Naming>
+	<Naming key="LeaveEarly">
+		早退
+	</Naming>
+	<Naming key="LateLeaveEarly">
+		遅早
+	</Naming>
+	<Naming key="Rounding">
+		丸め
+	</Naming>
+	<Naming key="Birth">
+		発生
+	</Naming>
+	<Naming key="Unit">
+		単位
+	</Naming>
+	<Naming key="Interval">
+		間隔
+	</Naming>
+	<Naming key="Into">
+		入り
+	</Naming>
+	<Naming key="Return">
+		戻り
+	</Naming>
+	<Naming key="Reduced">
+		減額
+	</Naming>
+	<Naming key="StartYear">
+		年の起算月
+	</Naming>
+	<Naming key="AllDays">
+		全日
+	</Naming>
+	<Naming key="HalfDay">
+		半日
+	</Naming>
+	<Naming key="YearsPaidHoliday">
+		年休
+	</Naming>
+	<Naming key="Function">
+		機能
+	</Naming>
+	<Naming key="StartDayTime">
+		一日の起算時刻
+	</Naming>
+	<Naming key="Prescribed">
+		所定
+	</Naming>
+	<Naming key="Labor">
+		労働
+	</Naming>
+	<Naming key="Management">
+		管理
+	</Naming>
+	<Naming key="Daily">
+		日々
+	</Naming>
+	<Naming key="Holiday">
+		休暇
+	</Naming>
+	<Naming key="Acquisition">
+		取得
+	</Naming>
+	<Naming key="Continuousness">
+		連続
+	</Naming>
+	<Naming key="SalaryDivision">
+		給区
+	</Naming>
+	<Naming key="Standard">
+		標準
+	</Naming>
+	<Naming key="Salary">
+		給与
+	</Naming>
+	<Naming key="Specially">
+		特別
+	</Naming>
+	<Naming key="Others">
+		その他
+	</Naming>
+	<Naming key="ApplicationManagementMessage1">
+		マスタの組合せ、または個人(社員コード)で指定
+	</Naming>
+	<Naming key="SpecialLeave">
+		特休
+	</Naming>
+	<Naming key="Absence">
+		欠勤
+	</Naming>
+	<Naming key="Inside">
+		内
+	</Naming>
+	<Naming key="WorkingHoliday">
+		休出
+	</Naming>
+	<Naming key="Midnight">
+		深夜
+	</Naming>
+	<Naming key="UnApproval">
+		未承
+	</Naming>
+	<Naming key="UnTotal">
+		未集
+	</Naming>
+	<Naming key="SelfCorrectionAbbr">
+		本
+	</Naming>
+	<Naming key="Ram">
+		未
+	</Naming>
+	<Naming key="Total">
+		集計
+	</Naming>
+	<Naming key="AttendanceBook">
+		出勤簿
+	</Naming>
+	<Naming key="ScheduleBook">
+		予定簿
+	</Naming>
+	<Naming key="All">
+		全
+	</Naming>
+	<Naming key="Release">
+		解除
+	</Naming>
+	<Naming key="Rate">
+		率
+	</Naming>
+	<Naming key="GrantDate">
+		付与日
+	</Naming>
+	<Naming key="Provisional">
+		仮
+	</Naming>
+	<Naming key="Percent">
+		%
+	</Naming>
+	<Naming key="Over">
+		以上
+	</Naming>
+	<Naming key="From">
+		より
+	</Naming>
+	<Naming key="Maximum">
+		最大
+	</Naming>
+	<Naming key="BroughtForward">
+		繰越
+	</Naming>
+	<Naming key="SumTotal">
+		合計
+	</Naming>
+	<Naming key="NumberOfYears">
+		年数
+	</Naming>
+	<Naming key="FirstYear">
+		初年度
+	</Naming>
+	<Naming key="January">
+		1月
+	</Naming>
+	<Naming key="February">
+		2月
+	</Naming>
+	<Naming key="March">
+		3月
+	</Naming>
+	<Naming key="April">
+		4月
+	</Naming>
+	<Naming key="May">
+		5月
+	</Naming>
+	<Naming key="June">
+		6月
+	</Naming>
+	<Naming key="July">
+		7月
+	</Naming>
+	<Naming key="August">
+		8月
+	</Naming>
+	<Naming key="September">
+		9月
+	</Naming>
+	<Naming key="October">
+		10月
+	</Naming>
+	<Naming key="November">
+		11月
+	</Naming>
+	<Naming key="December">
+		12月
+	</Naming>
+	<Naming key="Automatic">
+		自動
+	</Naming>
+	<Naming key="Course">
+		経過
+	</Naming>
+	<Naming key="Frequency">
+		回数
+	</Naming>
+	<Naming key="Continuity">
+		継続
+	</Naming>
+	<Naming key="Stock">
+		ストック
+	</Naming>
+	<Naming key="Reserve">
+		積立
+	</Naming>
+	<Naming key="Years">
+		年間
+	</Naming>
+	<Naming key="Later">
+		後
+	</Naming>
+	<Naming key="CountNum">
+		回
+	</Naming>
+	<Naming key="Every">
+		毎
+	</Naming>
+	<Naming key="In">
+		に
+	</Naming>
+	<Naming key="Until">
+		まで
+	</Naming>
+	<Naming key="Possession">
+		保有
+	</Naming>
+	<Naming key="PaidHolidayCardMessage1">
+		登録情報最大まで経過後は、基準日毎に
+	</Naming>
+	<Naming key="PaidHolidayCardMessage2">
+		日を自動付与
+	</Naming>
+	<Naming key="PaidHolidayCardMessage3">
+		登録情報最大まで経過後は
+	</Naming>
+	<Naming key="Error">
+		エラー
+	</Naming>
+	<Naming key="Content">
+		内容
+	</Naming>
+	<Naming key="Date">
+		日付
+	</Naming>
+	<Naming key="TheWeek">
+		曜
+	</Naming>
+	<Naming key="State">
+		状態
+	</Naming>
+	<Naming key="AttendanceCorrection">
+		修
+	</Naming>
+	<Naming key="Place">
+		箇所
+	</Naming>
+	<Naming key="Comment">
+		コメント
+	</Naming>
+	<Naming key="TheRemaining">
+		内残
+	</Naming>
+	<Naming key="LeftOut">
+		外残
+	</Naming>
+	<Naming key="Performance">
+		実績
+	</Naming>
+	<Naming key="DayOff">
+		休日
+	</Naming>
+	<Naming key="Legal">
+		法定
+	</Naming>
+	<Naming key="PrescribedHoliday">
+		所定休日
+	</Naming>
+	<Naming key="LegalHoliday">
+		法定休日
+	</Naming>
+	<Naming key="ClosedVibration">
+		振休
+	</Naming>
+	<Naming key="OvertimeWork">
+		残業
+	</Naming>
+	<Naming key="CompensatoryHoliday">
+		代休
+	</Naming>
+	<Naming key="Allowance">
+		手当
+	</Naming>
+	<Naming key="Given">
+		指定
+	</Naming>
+	<Naming key="Monday">
+		月曜
+	</Naming>
+	<Naming key="Tuesday">
+		火曜
+	</Naming>
+	<Naming key="Wednesday">
+		水曜
+	</Naming>
+	<Naming key="Thursday">
+		木曜
+	</Naming>
+	<Naming key="Friday">
+		金曜
+	</Naming>
+	<Naming key="Saturday">
+		土曜
+	</Naming>
+	<Naming key="Sunday">
+		日曜
+	</Naming>
+	<Naming key="NationalHoliday">
+		祝日
+	</Naming>
+	<Naming key="ScheduleCardMessage1">
+		祝日に所定休日を適用
+	</Naming>
+	<Naming key="ScheduleCardMessage2">
+		下記チェックの入った日付に適用
+	</Naming>
+	<Naming key="Reflection">
+		反映
+	</Naming>
+	<Naming key="Various">
+		各種
+	</Naming>
+	<Naming key="Plan">
+		予
+	</Naming>
+	<Naming key="Fact">
+		実
+	</Naming>
+	<Naming key="Possible">
+		可能
+	</Naming>
+	<Naming key="Excess">
+		超過
+	</Naming>
+	<Naming key="Classification">
+		種別
+	</Naming>
+	<Naming key="Transfer">
+		振替
+	</Naming>
+	<Naming key="PrescribedTransferHoliday">
+		所定振替休日
+	</Naming>
+	<Naming key="LegalTransferHoliday">
+		法定振替休日
+	</Naming>
+	<Naming key="Step">
+		ステップ
+	</Naming>
+	<Naming key="Result">
+		結果
+	</Naming>
+	<Naming key="NextTime">
+		次回	
+	</Naming>
+	<Naming key="Rest">
+		休
+	</Naming>
+	<Naming key="Attendance">
+		出退勤
+	</Naming>
+	<Naming key="Premium">
+		割増
+	</Naming>
+	<Naming key="LessThan">
+		未満
+	</Naming>
+	<Naming key="AndLess">
+		以下
+	</Naming>
+	<Naming key="Deduction">
+		控除
+	</Naming>
+	<Naming key="Yes">
+		有り
+	</Naming>
+	<Naming key="Without">
+		無し
+	</Naming>
+	<Naming key="Salaried">
+		有給
+	</Naming>
+	<Naming key="SalaryTime">
+		有時
+	</Naming>
+	<Naming key="Substitute">
+		代替
+	</Naming>
+	<Naming key="Weekday">
+		平日
+	</Naming>
+	<Naming key="Exceed">
+		超
+	</Naming>
+	<Naming key="Thirty">
+		30
+	</Naming>
+	<Naming key="No45">
+		45
+	</Naming>
+	<Naming key="No60">
+		60
+	</Naming>
+	<Naming key="Categories">
+		カテゴリ
+	</Naming>
+	<Naming key="Kara">
+		から
+	</Naming>
+	<Naming key="TimeDifference">
+		時差
+	</Naming>
+	<Naming key="TimeSettingAbbr">
+		勤設
+	</Naming>
+	<Naming key="WorkTypeAbbr">
+		勤形
+	</Naming>
+	<Naming key="NoLimit">
+		無制限
+	</Naming>
+	<Naming key="Certificates">
+		証明書
+	</Naming>
+	<Naming key="Handling">
+		取扱
+	</Naming>
+	<Naming key="Treatment">
+		処理
+	</Naming>
+	<Naming key="Definition">
+		確定
+	</Naming>
+	<Naming key="MondayAbbr">
+		月
+	</Naming>
+	<Naming key="TuesdayAbbr">
+		火
+	</Naming>
+	<Naming key="WednesdayAbbr">
+		水
+	</Naming>
+	<Naming key="ThursdayAbbr">
+		木
+	</Naming>
+	<Naming key="FridayAbbr">
+		金
+	</Naming>
+	<Naming key="SaturdayAbbr">
+		土
+	</Naming>
+	<Naming key="SundayAbbr">
+		日
+	</Naming>
+	<Naming key="InputCompensatoryLeave">
+		代休日を決定して下さい。
+	</Naming>
+	<Naming key="BeforeDay">
+		前日
+	</Naming>
+	<Naming key="ThisDay">
+		当日
+	</Naming>
+	<Naming key="NextDay">
+		翌日
+	</Naming>
+	<Naming key="Next">
+		翌
+	</Naming>
+	<Naming key="This">
+		当
+	</Naming>
+	<Naming key="Same">
+		同
+	</Naming>
+	<Naming key="Other">
+		他
+	</Naming>
+	<Naming key="InputActivateNoDataLeave">
+		対象の出勤日がありません。
+	</Naming>
+	<Naming key="AllTime">
+		全休
+	</Naming>
+	<Naming key="DayWellSet">
+		日締
+	</Naming>
+	<Naming key="TheEnd">
+		末
+	</Naming>
+	<Naming key="Receiving">
+		承
+	</Naming>
+	<Naming key="HolidayTime">
+		時間休
+	</Naming>
+	<Naming key="Exchange">
+		入替
+	</Naming>
+	<Naming key="HalfTimeExchangeEffectiveness">
+		前半休と後半休を入れ替えて取得することを可能とする
+	</Naming>
+	<Naming key="HalfTimeExchangeInactivate">
+		前半休と後半休を入れ替えて取得することは不可とする
+	</Naming>
+	<Naming key="Calc">
+		計算
+	</Naming>
+	<Naming key="TrialCalc">
+		試算
+	</Naming>
+	<Naming key="Comma">
+		,
+	</Naming>
+	<Naming key="TheFormerHalfDay">
+		午前休取得日に
+	</Naming>
+	<Naming key="BeforeHalfWork">
+		まで勤務を行うと、
+	</Naming>
+	<Naming key="UpToRestTime">
+		までは休憩時間となる。
+	</Naming>
+	<Naming key="StartWork">
+		始業
+	</Naming>
+	<Naming key="EndWork">
+		終業
+	</Naming>
+	<Naming key="AmRest">
+		午前休
+	</Naming>
+	<Naming key="PmRest">
+		午後休
+	</Naming>
+	<Naming key="DirectStart">
+		直行
+	</Naming>
+	<Naming key="DirectEnd">
+		直帰
+	</Naming>
+	<Naming key="NoEmployee">
+		対象の社員が存在しません
+	</Naming>
+	<Naming key="Correction">
+		修正
+	</Naming>
+	<Naming key="Corrector">
+		修正者
+	</Naming>
+	<Naming key="CorrectionRelease">
+		修正解除
+	</Naming>
+	<Naming key="NoLegalPrescribedHoliday">
+		該当する期間に法定/所定休日が存在しません
+	</Naming>
+	<Naming key="StartAbbr">
+		始
+	</Naming>
+	<Naming key="GoingWorkAbbr">
+		出
+	</Naming>
+	<Naming key="OvertimeAbbr">
+		残
+	</Naming>
+	<Naming key="OverTime">
+		残時
+	</Naming>
+	<Naming key="LeftOver">
+		残超
+	</Naming>
+	<Naming key="Myself">
+		本人
+	</Naming>
+	<Naming key="Wait">
+		待ち
+	</Naming>
+	<Naming key="Again">
+		再
+	</Naming>
+	<Naming key="Reservation">
+		保留
+	</Naming>
+	<Naming key="Completion">
+		完了
+	</Naming>
+	<Naming key="Medium">
+		中
+	</Naming>
+	<Naming key="Generation">
+		代
+	</Naming>
+	<Naming key="PrescribedAbbreviation">
+		所
+	</Naming>
+	<Naming key="MidnightAbbreviation">
+		深
+	</Naming>
+	<Naming key="Or">
+		または
+	</Naming>
+	<Naming key="Usually">
+		通常
+	</Naming>
+	<Naming key="SubstituteAbbr">
+		振
+	</Naming>
+	<Naming key="WorkTypeChangeAbbr">
+		変
+	</Naming>
+	<Naming key="TimeDefferenceAbbr">
+		時
+	</Naming>
+	<Naming key="CharaA">
+		A
+	</Naming>
+	<Naming key="CharaB">
+		B
+	</Naming>
+	<Naming key="CharaC">
+		C
+	</Naming>	
+	<Naming key="CharaD">
+		D
+	</Naming>
+	<Naming key="CharaS">
+		S
+	</Naming>
+	<Naming key="Convenience">
+		都合
+	</Naming>
+	<Naming key="PhysicalCondition">
+		体調
+	</Naming>
+	<Naming key="Bad">
+		不良
+	</Naming>
+	<Naming key="Train">
+		電車
+	</Naming>
+	<Naming key="Delay">
+		遅延
+	</Naming>
+	<Naming key="Company">
+		会社
+	</Naming>
+	<Naming key="Directions">
+		指示
+	</Naming>
+	<Naming key="ArrowRight">
+		→
+	</Naming>
+	<Naming key="Operator">
+		操作者
+	</Naming>
+	<Naming key="Process">
+		処理
+	</Naming>
+	<Naming key="Except">
+		以外
+	</Naming>
+	<Naming key="Previous">
+		以前
+	</Naming>
+	<Naming key="PaidHolidayAbbr">
+		有休
+	</Naming>
+	<Naming key="StockHolidayAbbr">
+		スト休
+	</Naming>
+	<Naming key="Point">
+		時点
+	</Naming>
+	<Naming key="The">
+		が
+	</Naming>
+	<Naming key="Is">
+		には
+	</Naming>
+	<Naming key="And">
+		と
+	</Naming>
+	<Naming key="Subordinate">
+		部下
+	</Naming>
+	<Naming key="RecordTime">
+		打刻
+	</Naming>
+	<Naming key="TheLine">
+		行目
+	</Naming>
+	<Naming key="Already">
+		既に
+	</Naming>
+	<Naming key="Pattern">
+		パターン
+	</Naming>
+	<Naming key="SubordinateCode">
+		コード
+	</Naming>
+	<Naming key="Unused">
+		未消化
+	</Naming>
+	<Naming key="Rest1">
+		休憩1
+	</Naming>
+	<Naming key="Rest2">
+		休憩2
+	</Naming>
+	<Naming key="Rest3">
+		休憩3
+	</Naming>
+	<Naming key="Rest4">
+		休憩4
+	</Naming>
+	<Naming key="Rest5">
+		休憩5
+	</Naming>
+	<Naming key="Rest6">
+		休憩6
+	</Naming>
+	<Naming key="RestBeforeOvertimeWork">
+		残前休憩
+	</Naming>
+	<Naming key="RestInOvertime">
+		残業休憩
+	</Naming>
+	<Naming key="PublicGoingOut">
+		公用外出
+	</Naming>
+	<Naming key="PublicGoingOut1">
+		公用外出1
+	</Naming>
+	<Naming key="PublicGoingOut2">
+		公用外出2
+	</Naming>
+	<Naming key="PrivateGoingOut">
+		私用外出
+	</Naming>
+	<Naming key="PrivateGoingOut1">
+		私用外出1
+	</Naming>
+	<Naming key="PrivateGoingOut2">
+		私用外出2
+	</Naming>
+	<Naming key="CorrectionInformation">
+		修正情報
+	</Naming>
+	<Naming key="CorrectionSummary">
+		修正情報
+	</Naming>
+	<Naming key="WorkManageComment">
+		勤怠コメント
+	</Naming>
+	<Naming key="AttendanceInformation">
+		出退勤情報
+	</Naming>
+	<Naming key="RestTimeInformation">
+		休憩情報
+	</Naming>
+	<Naming key="TardinessLeaveEarlyInformation">
+		遅刻早退情報
+	</Naming>
+	<Naming key="OvertimeWorkInformation">
+		残業情報
+	</Naming>
+	<Naming key="WorkApprovalSituation">
+		勤怠情報承認状況
+	</Naming>
+	<Naming key="OvertimeRequestSituation">
+		残業申請状況
+	</Naming>
+	<Naming key="HolidayRequestSituation">
+		休暇申請状況
+	</Naming>
+	<Naming key="WorkOnHolidayRequestSituation">
+		振出・休出申請状況
+	</Naming>
+	<Naming key="SubHolidayRequestSituation">
+		代休申請状況
+	</Naming>
+	<Naming key="WorkTypeChangeRequestSituation">
+		勤務形態変更申請状況
+	</Naming>
+	<Naming key="SelfTightening">
+		自己月締
+	</Naming>
+	<Naming key="RegularTime">
+		定時
+	</Naming>
+	<Naming key="ShortTime">
+		時短
+	</Naming>
+	<Naming key="UnpaidShortTime">
+		無給時短時間
+	</Naming>
+	<Naming key="ExcludeNightRest">
+		割増休憩除外
+	</Naming>
+	<Naming key="WeeklyOverFortyHour">
+		週40時間超
+	</Naming>
+	<Naming key="Administrator">
+		管理者
+	</Naming>
+	<Naming key="SubstituteWorkAbbr">
+		振出
+	</Naming>
+	<Naming key="HalfSubstituteWorkAbbr">
+		半振出
+	</Naming>
+	<Naming key="HalfSubstituteHolidayAbbr">
+		半振休
+	</Naming>
+	<Naming key="AnteMeridiemSubstituteHolidayAbbr">
+		振△
+	</Naming>
+	<Naming key="PostMeridiemSubstituteHolidayAbbr">
+		△振
+	</Naming>
+	<Naming key="AnteMeridiem">
+		午前
+	</Naming>
+	<Naming key="PostMeridiem">
+		午後
+	</Naming>
+	<Naming key="Accomplish">
+		達成
+	</Naming>
+	<Naming key="ContinuousServiceTermsCountingFromTheEmploymentDay">
+		雇入れの日から起算した継続勤務期間
+	</Naming>
+	<Naming key="LateAbbr">
+		遅
+	</Naming>
+	<Naming key="EarlyAbbr">
+		早
+	</Naming>
+	<Naming key="LessThan30Hours">
+		30時間未満
+	</Naming>
+	<Naming key="30HoursOrMore">
+		30時間以上
+	</Naming>
+	<Naming key="1Day">
+		1日
+	</Naming>
+	<Naming key="2Days">
+		2日
+	</Naming>
+	<Naming key="3Days">
+		3日
+	</Naming>
+	<Naming key="4Days">
+		4日
+	</Naming>
+	<Naming key="5DaysOrMore">
+		5日～
+	</Naming>
+	<Naming key="48To72Days">
+		48日～72日
+	</Naming>
+	<Naming key="73To120Days">
+		73日～120日
+	</Naming>
+	<Naming key="121To168Days">
+		121日～168日
+	</Naming>
+	<Naming key="169To216Days">
+		169日～216日
+	</Naming>
+	<Naming key="217DaysOrMore">
+		217日～
+	</Naming>
+	<Naming key="0.5Years">
+		6ヶ月
+	</Naming>
+	<Naming key="1.5Years">
+		1年6ヶ月
+	</Naming>
+	<Naming key="2.5Years">
+		2年6ヶ月
+	</Naming>
+	<Naming key="3.5Years">
+		3年6ヶ月
+	</Naming>
+	<Naming key="4.5Years">
+		4年6ヶ月
+	</Naming>
+	<Naming key="5.5Years">
+		5年6ヶ月
+	</Naming>
+	<Naming key="6.5YearsOrMore">
+		6年6ヶ月～
+	</Naming>
+	<Naming key="ListPaidHoliday">
+		有休
+	</Naming>
+	<Naming key="ListStockHoliday">
+		ス休
+	</Naming>
+	<Naming key="ListSeasonHoliday">
+		季休
+	</Naming>
+	<Naming key="WithdrawnAppli">
+		申請の取下を希望する(再申請しない)
+	</Naming>
+	<Naming key="OutOfTime">
+		時間外
+	</Naming>
+	<Naming key="PaidHolidayUsage">
+		有休取得状況
+	</Naming>
+	<Naming key="PaidHolidayUsageShortTotal">
+		未消化日数(合算)
+	</Naming>
+</MosP>

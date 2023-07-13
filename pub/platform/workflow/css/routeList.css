@@ -1,0 +1,88 @@
+@CHARSET "UTF-8";
+/*
+ * MosP - Mind Open Source Project    http://www.mosp.jp/
+ * Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+ * 
+ * This program is free software: you can redistribute it and/or
+ * modify it under the terms of the GNU Affero General Public License
+ * as published by the Free Software Foundation, either version 3
+ * of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+/* ************************************************************************** */
+/* === ルート一覧画面のスタイル === */
+/* ************************************************************************** */
+
+#list {
+	table-layout: fixed;	
+}
+
+/**
+ * 選択ボタンヘッダ幅。
+ */
+.LeftListTable #thButton {
+	width: 45px;
+}
+
+/**
+ * 有効日ヘッダ幅。
+ */
+.LeftListTable #thActivateDate {
+	width: 70px;
+}
+
+/**
+ * コードヘッダ幅。
+ */
+.LeftListTable #thRouteCode {
+	width: 90px;
+}
+
+/**
+ * 名称ヘッダ幅。
+ */
+.LeftListTable #thRouteName {
+	width: 200px;
+}
+
+/**
+ * 承認階層ヘッダ幅。
+ */
+.LeftListTable #thRouteStage {
+	width: 65px;
+}
+
+/**
+ * 一次承認ユニットヘッダ幅。
+ */
+.LeftListTable #thFirstUnit {
+	width: 140px;
+}
+
+/**
+ * 最終承認ユニットヘッダ幅。
+ */
+.LeftListTable #thEndUnit {
+	width: 140px;
+}
+
+/**
+ * 有効/無効ヘッダ幅。
+ */
+.LeftListTable #thInactivate {
+	width: 50px;
+}
+
+/**
+ * 選択チェックボックスヘッダ幅。
+ */
+.LeftListTable #thSelect {
+	width: 20px;
+}

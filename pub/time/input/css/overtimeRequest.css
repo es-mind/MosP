@@ -1,0 +1,120 @@
+@CHARSET "UTF-8";
+/*
+ * MosP - Mind Open Source Project    http://www.mosp.jp/
+ * Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+ * 
+ * This program is free software: you can redistribute it and/or
+ * modify it under the terms of the GNU Affero General Public License
+ * as published by the Free Software Foundation, either version 3
+ * of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+/* ************************************************************************** */
+/* === 残業申請画面のスタイル === */
+/* ************************************************************************** */
+
+/**
+ * 申請可能時間表示欄。
+ */
+.List #overtimeRequest_tblRemainder {
+	width: 450px;
+	margin-left: 0px;
+}
+
+/**
+ * 申請可能時間表示欄(ListSelectTh)。
+ */
+#overtimeRequest_tblRemainder .ListSelectTh {
+	width: 150px;
+}
+
+/**
+ * 申請項目名称表示欄。
+ */
+.List .TitleTd {
+	width: 90px;
+}
+
+/**
+ * 検索項目名称表示欄。
+ */
+.SearchList .TitleTd {
+	width: 100px;
+}
+
+/**
+ * 選択ボタンヘッダ幅。
+ */
+.LeftListTable #thButton {
+	width: 50px;
+}
+
+/**
+ * 申請日ヘッダ幅。
+ */
+.LeftListTable #thRequestDate {
+	width: 95px;
+}
+
+/**
+ * 申請日曜日ヘッダ幅。
+ */
+.LeftListTable #thRequestWeek {
+	width: 20px;
+}
+
+/**
+ * 申請区分ヘッダ幅。
+ */
+.LeftListTable #thRequestType {
+	width: 50px;
+}
+
+/**
+ * 予定時間ヘッダ幅。
+ */
+.LeftListTable #thRequestTime {
+	width: 50px;
+}
+
+/**
+ * 勤務前残業実績時間ヘッダ幅。
+ */
+.LeftListTable #thResult {
+	width: 50px;
+}
+
+/**
+ * 申請理由ヘッダ幅。
+ */
+.LeftListTable #thRequestReason {
+	width: 430px;
+}
+
+/**
+ * 承認状況ヘッダ幅。
+ */
+.LeftListTable #thState {
+	width: 45px;
+}
+
+/**
+ * 承認者ヘッダ幅。
+ */
+.LeftListTable #thApprover {
+	width: 100px;
+}
+
+/**
+ * 選択チェックボックスヘッダ幅。
+ */
+.LeftListTable #thSelect {
+	width: 20px;
+}

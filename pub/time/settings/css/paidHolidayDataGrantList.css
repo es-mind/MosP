@@ -1,0 +1,111 @@
+@CHARSET "UTF-8";
+/*
+ * MosP - Mind Open Source Project    http://www.mosp.jp/
+ * Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+ * 
+ * This program is free software: you can redistribute it and/or
+ * modify it under the terms of the GNU Affero General Public License
+ * as published by the Free Software Foundation, either version 3
+ * of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+.OverTable {
+	float: left;
+}
+
+.UnderTable {
+	float: left;
+}
+
+/**
+ * 選択ボタンヘッダ幅。
+ */
+.UnderTable #thButton {
+	width: 50px;
+}
+
+/**
+ * 社員コードヘッダ幅。
+ */
+.UnderTable #thEmployeeCode {
+	width: 90px;
+}
+
+/**
+ * 社員名ヘッダ幅(テスト補助機能)。
+ */
+.UnderTable #thEmployeeName2 {
+	width: 80px;
+}
+
+/**
+ * 出勤率ヘッダ幅。
+ */
+.UnderTable #thAttendanceRate {
+	width: 60px;
+}
+
+/**
+ * 出勤率ヘッダ幅(テスト補助機能)。
+ */
+.UnderTable #thAttendanceRate2 {
+	width: 100px;
+}
+
+/**
+ * 出勤率基準ヘッダ幅。
+ */
+.UnderTable #thAccomplish {
+	width: 90px;
+}
+
+/**
+ * 付与状態ヘッダ幅。
+ */
+.UnderTable #thGrant {
+	width: 80px;
+}
+
+/**
+ * 付与日付ヘッダ幅。
+ */
+.UnderTable #thGrantDate {
+	width: 100px;
+}
+
+/**
+ * 付与日付ヘッダ幅(テスト補助機能)。
+ */
+.UnderTable #thGrantDate2 {
+	width: 318px;
+}
+
+/**
+ * 付与日数ヘッダ幅。
+ */
+.UnderTable #thGrantDays {
+	width: 80px;
+}
+
+/**
+ * 選択チェックボックスヘッダ幅。
+ */
+.UnderTable #thSelect {
+	width: 20px;
+}
+
+/**
+ * 登録ボタン(非表示)。
+ */
+ .HiddenInsertButton {
+ 	width: 140px;
+ 	background-color: #ffff4c;
+ }

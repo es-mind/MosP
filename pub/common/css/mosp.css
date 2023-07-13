@@ -1,0 +1,776 @@
+@CHARSET "UTF-8";
+/*
+ * MosP - Mind Open Source Project    http://www.mosp.jp/
+ * Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+ * 
+ * This program is free software: you can redistribute it and/or
+ * modify it under the terms of the GNU Affero General Public License
+ * as published by the Free Software Foundation, either version 3
+ * of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+/* ************************************************************************** */
+/* === 共通のスタイル === */
+/* ************************************************************************** */
+/**
+ * タグ(div)のスタイルを定義する。
+ */
+div {
+	font-family: "ＭＳ ゴシック", "Takaoゴシック", sans-serif; 
+	font-size: 13px;
+	font-weight: normal;
+}
+
+/**
+ * タグ(table)のスタイルを定義する。
+ */
+table {
+	border-collapse: collapse;
+	margin: 0 auto;
+}
+
+/**
+ * タグ(a)のスタイルを定義する。
+ */
+a {
+	cursor: pointer;
+}
+
+/**
+ * タグ(th)のスタイルを定義する。
+ */
+th {
+	height: 25px;
+	padding: 2px 4px;
+	vertical-align: middle;
+	font-weight: normal;
+	border: 1px solid black;
+}
+
+/**
+ * タグ(td)のスタイルを定義する。
+ */
+td {
+	font-size: 13px;
+	height: 25px;
+	padding: 0;
+	text-align: left;
+	vertical-align: middle;
+	overflow: hidden;
+	white-space: nowrap;
+	padding: 2px 4px;
+}
+
+/**
+ * ページレイアウト(Body)。
+ */
+Body {
+	margin: 0 auto;
+	text-align: left;
+	width: 980px;
+}
+/* ************************************************************************** */
+/* === タイトルバー(.Header)のスタイル === */
+/* ************************************************************************** */
+/**
+ * ページレイアウト(ヘッダ)。
+ */
+.Header {
+	width: 980px;
+	margin: 0px auto 10px;
+	text-align: center;
+}
+
+/**
+ * ログアウトボタン表示欄(div)。
+ */
+.Header .MenuButtonBar {
+	float: right;
+	text-align: right;
+	vertical-align: middle;
+}
+
+/**
+ * タイトルバー(div)。
+ */
+.Header .TitleBar {
+	border: none;
+	background-color: #F8F8F8;
+	text-align: left;
+	padding: 5px 0px;
+}
+
+/**
+ * タイトルラベル。
+ */
+.Header .TitleBar #lblTitle {
+	font-size: 38px;
+	margin: 2px 10px;
+}
+
+/**
+ * バージョンラベル。
+ */
+.Header .TitleBar #lblVersion {
+	font-size:15px;
+	margin: 2px 0px;
+}
+
+/**
+ * ユーザー名ラベル。
+ */
+.Header .TitleBar #lblUserName {
+	font-size: 15px;
+	font-weight: bold;
+	margin: 2px 40px;
+}
+
+/**
+ * ロゴ表示欄(div)。
+ */
+.Header .LogoBar {
+	text-align: left;
+	vertical-align: middle;
+	float: left;
+}
+
+/**
+ * ロゴ表示欄イメージ。
+ */
+.Header .LogoBar .Logo {
+	max-width: 50px;
+	max-height: 50px;
+	margin: 3px 5px;
+}
+
+/**
+ * コミュニティアクセスリンク。
+ */
+.Header .Forum {
+	float: right;
+	margin-top: 15px;
+	margin-right: 25px;
+	font-size: 15px;
+}
+
+/* ************************************************************************** */
+/* === メニューバーとパンくずリスト(.Navi)のスタイル === */
+/* ************************************************************************** */
+/**
+ * ページレイアウト(ナビdiv)。
+ */
+.Navi {
+	width: 980px;
+	margin: 0px auto 10px;
+}
+
+/**
+ * ナビタブ(div)。
+ */
+.Navi #now {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+/**
+ * メインメニュータブ(div)。
+ */
+.Navi .MenuTable {
+	width: 100%;
+	table-layout: auto;
+}
+
+/**
+ * メインメニュータブ(td)。
+ */
+.Navi .MenuTable td {
+	border: 1px solid black;
+	cursor: pointer;
+	width: 10%;
+	height: 25px;
+	text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+/**
+ * メインメニュータブスクロール欄(td)。
+ */
+.Navi .MenuTable .ScrollTd {
+	width: 5%;
+}
+
+/**
+ * メインメニュータブ空白欄(td)。
+ */
+.Navi .MenuTable .LastTd {
+	width: auto;
+	cursor: default;
+	border-top: none;
+	border-right: none;
+}
+
+/**
+ * メニュータブ(div)。
+ */
+.Navi .MenuTab {
+	border: 1px solid black;
+	border-top: none;
+	padding: 5px 5px;
+	background-color: #ffb6c1;
+}
+
+/**
+ * サブメニュータブ(a)。
+ */
+.Navi .MenuTab a {
+	padding: 0px 10px;
+	border-right: 1px solid black;
+	color: black;
+	text-decoration: none;
+}
+
+/**
+ * パンくずリスト(div)。
+ */
+.Navi .TopicPath {
+	padding: 5px;
+}
+/* ************************************************************************** */
+/* === 画面本体部分(.Body)のスタイル === */
+/* ************************************************************************** */
+/**
+ * 右回り込み要素(太字)。
+ */
+.Body .TableButtonSpan {
+	font-size: 15px;
+	font-weight: bold;
+	float: right;
+}
+
+/**
+ * 右回り込み要素。
+ */
+.Body .TableLabelSpan {
+	font-size: 13px;
+	font-weight: normal;
+	float: right;
+	margin-top: 2px;
+}
+
+/**
+ * 左回り込み要素。
+ */
+.Body .FloatLeftSpan {
+	float: left;
+}
+/* ************************************************************************** */
+/* === メッセージ表示欄(.Message)のスタイル === */
+/* ************************************************************************** */
+/**
+ * メッセージ表示欄(div)。
+ */
+.Message {
+	margin: 10px auto;
+	text-align: center;
+}
+
+/**
+ * メッセージフォント(span)。
+ */
+.Message span {
+	width: 980px;
+	font-size: 15px;
+	color: blue;
+	font-weight: bold;
+}
+
+/**
+ * エラーメッセージフォント(span)。
+ */
+.Message .ErrorMessageSpan {
+	color: red;
+}
+
+/* ************************************************************************** */
+/* === 各種一覧件数表示欄(.ListInfo)のスタイル === */
+/* ************************************************************************** */
+/**
+ * 各種一覧表示件数(div)。
+ */
+.ListInfo {
+	width: 980px;
+	float: left;
+}
+
+/**
+ * 各種一覧表示件数(table)。
+ */
+.ListInfoTopTable {
+	width: 350px;
+	table-layout: fixed;
+}
+
+/**
+ * 各種一覧表示件数(td)。
+ */
+.ListInfoTopTable td {
+	text-align: center;
+}
+
+/**
+ * 各種一覧表示件数(td)。
+ */
+.ListInfoTopTable .RollLinkTd {
+	width: 50px;
+}
+
+/**
+ * 各種一覧表示件数(table)。
+ */
+.ListInfoBottomTable {
+	width: 800px;
+	table-layout: fixed;
+}
+
+/**
+ * 各種一覧表示件数(table)。
+ */
+.ListInfoBottomTable td {
+	text-align: center;
+}
+/* ************************************************************************** */
+/* === 各種一覧表示欄(.List)のスタイル === */
+/* ************************************************************************** */
+/**
+ * 一覧表示欄ソート項目用ヘッダ(th)。
+ */
+.List .ListSortTh {
+	white-space: nowrap;
+}
+
+/**
+ * 一覧表示欄(td)。
+ */
+.List td {
+	border: 1px solid black;
+}
+
+/**
+ * 一覧表示欄ヘッダ(table)。
+ */
+.List #tblHeader {
+	margin-bottom: 0px;
+	border-bottom: none;
+}
+
+/**
+ * 一覧表示欄ヘッダ(th)。
+ */
+#tblHeader th {
+	border-bottom: none;
+}
+/* ************************************************************************** */
+/* === 各種一覧固定幅表示欄(.FixList)のスタイル === */
+/* ************************************************************************** */
+/**
+ * 一覧表示欄(th)。
+ */
+.FixList table {
+	table-layout: fixed;
+}
+
+/**
+ * 一覧表示欄(th)。
+ */
+.FixList th {
+	white-space: nowrap;
+}
+
+/**
+ * 一覧表示欄(td)。
+ */
+.FixList td {
+	border: 1px solid black;
+}
+
+/**
+ * 一覧表示欄ヘッダ(table)。
+ */
+.FixList #tblHeader {
+	margin-bottom: 0px;
+	border-bottom: none;
+}
+/* ************************************************************************** */
+/* === 人事管理 各画面上部 社員検索欄(.Search)のスタイル === */
+/* ************************************************************************** */
+/**
+ * 検索欄(td)。
+ */
+.Search td {
+	border: 1px solid black;
+}
+
+/**
+ * 社員コード検索欄(table)。
+ */
+.Search .EmployeeCodeSearchTable {
+	margin-left: 0px;
+	margin: 5px 0px;
+	width: 230px;
+}
+
+/**
+ * 社員コード順送り欄(table)。
+ */
+.Search .EmployeeCodeRollTable {
+	float: right;
+	width: 400px;
+	table-layout: fixed;
+}
+
+/**
+ * 社員コード順送り欄(td)。
+ */
+.EmployeeCodeRollTable .RollTd {
+	text-align: center;
+	border-right: none;
+	border-left: none;
+}
+
+/**
+ * 社員コード送り戻表示欄(td)。
+ */
+.EmployeeCodeRollTable #tdFormerCode {
+	border-left: 1px solid black;
+	width: 75px;
+}
+
+/**
+ * 社員コード送り戻ボタン欄(td)。
+ */
+.EmployeeCodeRollTable #tdFormerButton {
+	width: 60px;
+}
+
+/**
+ * 社員コード送り次ボタン欄(td)。
+ */
+.EmployeeCodeRollTable #tdNextButton {
+	width: 60px;
+}
+
+/**
+ * 社員コード送り次表示欄(td)。
+ */
+.EmployeeCodeRollTable #tdNextCode {
+	border-right: 1px solid black;
+	width: 75px;
+}
+
+/**
+ * 社員情報表示欄(table)。
+ */
+.Search .EmployeeCodeLabelTable {
+	margin-left: 0px;
+	margin: 5px 0px;
+	width: 380px;
+	border: 1px solid black;
+	table-layout: fixed;
+}
+
+/**
+ * 社員情報表示欄(td)。
+ */
+.EmployeeCodeLabelTable td {
+	border: none;
+}
+
+/**
+ * 社員コード表示欄(td)。
+ */
+.Search .EmployeeCodeTd {
+	width: 180px;
+	padding: 2px 4px;
+	margin: 5px 0px; 
+}
+
+/**
+ * 社員名表示欄(td)。
+ */
+.Search .EmployeeNameTd {
+	width: 200px;
+}
+
+/**
+ * 人事台帳出力欄(table※プラットフォームでは未使用)。
+ */
+.Search .ExportTable {
+	float: right;
+	width: 130px;
+	margin: 5px 0px;
+}
+
+/**
+ * 人事台帳出力欄(td※プラットフォームでは未使用)。
+ */
+.Search .ExportTd {
+	text-align: center;
+}
+/* ************************************************************************** */
+/* === 各種ボタン設置欄(.Button)のスタイル === */
+/* ************************************************************************** */
+/**
+ * ボタン設置欄(div)。
+ */
+.Button {
+	width: 980px;
+	float: left;
+	margin: 10px auto;
+	text-align: center;
+}
+
+/**
+ * ボタン表示欄内ボタン(button)。
+ */
+.Button button {
+	margin: auto 10px;
+}
+/* ************************************************************************** */
+/* === 勤怠管理 各画面共通 社員情報表示欄のスタイル === */
+/* ************************************************************************** */
+/**
+ * 社員情報表示欄(table)。
+ */
+.ListHeader .EmployeeLabelTable {
+	width: 750px;
+	margin: 5px auto 5px 0px;
+	border: 1px solid black;
+	table-layout: fixed;
+	background-color: #EEEEEE;
+}
+
+/**
+ * 社員情報表示欄　社員コード(td)。
+ */
+.EmployeeLabelTable .EmployeeCodeTd {
+	width: 180px;
+}
+
+/**
+ * 社員情報表示欄　社員名(td)。
+ */
+.EmployeeLabelTable .EmployeeNameTd {
+	width: 200px;
+}
+
+/**
+ * 社員情報表示欄　所属(td)。
+ */
+.EmployeeLabelTable .SectionNameTd {
+	width: 370px;
+}
+
+/**
+ * 社員情報表示欄(table)。
+ */
+.ListHeader .ShortLabelTable {
+	width: 200px;
+	margin-top: 5px;
+	border: 1px solid black;
+	background-color: #EEEEEE;
+}
+
+/**
+ * 一覧表示月次指定欄(table)。
+ */
+.ListHeader .DateChangeTable {
+	width: 700px;
+	margin: 5px 5px 5px auto;
+}
+
+/**
+ * 一覧表示月次指定欄(td)。
+ */
+.ListHeader .DateChangeTable td {
+	font-size: 15px;
+	text-align: center;
+}
+
+/**
+ * 表示月指定欄、今月ボタン間スペース(td)。
+ */
+.BetweenTd {
+	width: 200px;
+}
+
+/**
+ * ファイル出力ボタン欄(table)。
+ */
+.ListHeader .SubTable {
+	float: right;
+	margin: 5px 10px auto auto;
+}
+
+/* ********************************************* */
+/* === 各種スクロール一覧(.Scroll)のスタイル === */
+/* ********************************************* */
+/**
+ * 水平スクロール欄(div)。
+ */
+.ScrollSide {
+	width: 980px;
+	float: left;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+	border-bottom: 1px solid black;
+	margin: 10px auto;
+	overflow-x: scroll;
+}
+
+/**
+ * 水平スクロール欄(div)。
+ */
+.ScrollSide td {
+	border: 1px solid black;
+}
+
+/**
+ * 垂直スクロール欄(div)。
+ */
+.ScrollVertical {
+	width: 980px;
+	height: 300px;
+	float: left;
+	border-top: 1px solid black;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	margin: 10px auto;
+	overflow-y: scroll;
+}
+
+/**
+ * 垂直スクロール欄(div)。
+ */
+.ScrollVerticalUnder {
+	width: 980px;
+	height: 150px;
+	float: left;
+	border-top: 1px solid black;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	overflow-y: scroll;
+	margin-bottom: 10px;
+}
+
+/**
+ * 垂直スクロール欄(div)。
+ */
+.ScrollVerticalUnder td {
+	border: 1px solid black;
+}
+
+/**
+ * 垂直スクロール欄(div)。
+ */
+.ScrollVertical td {
+	border: 1px solid black;
+}
+
+/**
+ * スクロール固定欄(div)。
+ */
+.ScrollLeft {
+	width: 180px;
+	margin-bottom: 10px;
+	margin-right: -4px;
+}
+
+/**
+ * スクロール移動欄(div)。
+ */
+.ScrollRight {
+	width: 790px;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+	border-bottom: 1px solid black;
+	margin-top: 18px;
+	margin-bottom: 10px;
+	overflow-x: scroll;
+	margin-left: -4px;
+}
+
+/**
+ * スクロール固定欄(table)。
+ */
+.ScrollVerticalOverTable {
+	width: 963px;
+	margin-left: 0px;
+	table-layout: fixed;
+	margin-top: 10px;
+}
+
+/**
+ * スクロール固定欄(table)。
+ */
+.ScrollVerticalUnderTable {
+	width: 963px;
+	table-layout: fixed;
+}
+
+/**
+ * スクロール固定欄(table)。
+ */
+.ScrollLeftTable {
+	width: 180px;
+}
+
+/**
+ * スクロール固定欄(table)。
+ */
+.ScrollLeftTable td {
+	border-right: none;
+	border: 1px solid black;
+}
+
+/**
+ * スクロール移動欄(table)。
+ */
+.ScrollRightTable td {
+	border: 1px solid black;
+}
+
+/**
+ * 警告メッセージ表示欄(div)。
+ */
+.WarningDiv {
+	background: linear-gradient(to bottom right, lightpink, white);
+	border:1px solid lightgrey;
+	border-radius: 10px;
+	padding: 20px;
+	margin: 50px;
+	text-align: center;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+/**
+ * 通知メッセージ表示欄(div)。
+ */
+.NoticingDiv {
+	background: linear-gradient(to bottom right, lightgreen, white);
+	border:1px solid lightgrey;
+	border-radius: 10px;
+	padding: 20px;
+	margin: 50px;
+	text-align: center;
+	font-size: 15px;
+	font-weight: bold;
+}

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE MosP>
+<!--
+MosP - Mind Open Source Project    http://www.mosp.jp/
+Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+
+This program is free software: you can redistribute it and/or
+modify it under the terms of the GNU Affero General Public License
+as published by the Free Software Foundation, either version 3
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<MosP>
+	
+	<!-- JNDI名(データソース)(空白：利用しない、空白以外：利用する) -->
+	<!-- 接続情報は/META-INF/context.xmlに記載 -->
+	<!-- Tomcatのライブラリディレクトリ(/usr/share/tomcat6/lib/等)にドライバを配置する必要有り -->
+	<!-- 開発環境では、Eclipse上でTomcatのコンテキスト設定をする必要がある -->
+	<!--<Application key="JndiDataSource">
+		java:comp/env/jdbc/mospv4
+	</Application>-->
+	
+	<!-- DB接続に用いるドライバ -->
+	<Application key="DbDriver">
+		org.postgresql.Driver
+	</Application>
+
+	<!-- DB接続に用いるURL -->
+	<Application key="DbUrl">
+		jdbc:postgresql://localhost:5432/mospv4
+	</Application>
+	
+	<!-- DB接続に用いるユーザ -->
+	<Application key="DbUser">
+		usermosp
+	</Application>
+	
+	<!-- DB接続に用いるパスワード -->
+	<Application key="DbPass">
+		passmosp
+	</Application>
+	
+</MosP>

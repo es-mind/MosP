@@ -1,0 +1,83 @@
+@CHARSET "UTF-8";
+/*
+ * MosP - Mind Open Source Project    http://www.mosp.jp/
+ * Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+ * 
+ * This program is free software: you can redistribute it and/or
+ * modify it under the terms of the GNU Affero General Public License
+ * as published by the Free Software Foundation, either version 3
+ * of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+/* ************************************************************************** */
+/* === 勤怠設定一覧画面のスタイル === */
+/* ************************************************************************** */
+/**
+ * 検索欄有効日名称表示欄幅。
+ */
+.InputTable #tdActivateDate {
+	width: 95px;
+}
+
+/**
+ * 選択ボタンヘッダ幅。
+ */
+.LeftListTable #thButton {
+	width: 50px;
+}
+
+/**
+ * 有効日ヘッダ幅。
+ */
+.LeftListTable #thActivateDate {
+	width: 120px;
+}
+
+/**
+ * コードヘッダ幅。
+ */
+.LeftListTable #thTimeSettingCode {
+	width: 150px;
+}
+
+/**
+ * 名称ヘッダ幅。
+ */
+.LeftListTable #thTimeSettingName {
+	width: 255px;
+}
+
+/**
+ * 略称ヘッダ幅。
+ */
+.LeftListTable #thTimeSettingAbbr {
+	width: 150px;
+}
+
+/**
+ * 締日ヘッダ幅。
+ */
+.LeftListTable #thCutoffDate {
+	width: 100px;
+}
+
+/**
+ * 有効/無効ヘッダ幅。
+ */
+.LeftListTable #thInactivate {
+	width: 50px;
+}
+
+/**
+ * 選択チェックボックスヘッダ幅。
+ */
+.LeftListTable #thSelect {
+	width: 20px;
+}

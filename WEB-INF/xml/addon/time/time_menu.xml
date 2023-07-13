@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE MosP>
+<!--
+MosP - Mind Open Source Project    http://www.mosp.jp/
+Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+
+This program is free software: you can redistribute it and/or
+modify it under the terms of the GNU Affero General Public License
+as published by the Free Software Foundation, either version 3
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<MosP>
+	<MainMenu key="menuTimeInput">
+		<Menu key="AttendanceList">
+			<Command>TM1100</Command>
+			<VoClass>jp.mosp.time.input.vo.AttendanceListVo</VoClass>
+		</Menu>
+		<Menu key="AttendanceCard">
+			<Command>TM1200</Command>
+			<VoClass>jp.mosp.time.input.vo.AttendanceCardVo</VoClass>
+		</Menu>
+		<Menu key="ScheduleReference">
+			<Command>TM1300</Command>
+			<VoClass>jp.mosp.time.input.vo.ScheduleReferenceVo</VoClass>
+		</Menu>
+		<Menu key="OvertimeRequest">
+			<Command>TM1400</Command>
+			<VoClass>jp.mosp.time.input.vo.OvertimeRequestVo</VoClass>
+		</Menu>
+		<Menu key="HolidayRequest">
+			<Command>TM1500</Command>
+			<VoClass>jp.mosp.time.input.vo.HolidayRequestVo</VoClass>
+		</Menu>
+		<Menu key="WorkOnHolidayRequest">
+			<Command>TM1600</Command>
+			<VoClass>jp.mosp.time.input.vo.WorkOnHolidayRequestVo</VoClass>
+		</Menu>
+		<Menu key="SubHolidayRequest">
+			<Command>TM1700</Command>
+			<VoClass>jp.mosp.time.input.vo.SubHolidayRequestVo</VoClass>
+		</Menu>
+		<Menu key="WorkTypeChangeRequest">
+			<Command>TM011100</Command>
+			<VoClass>jp.mosp.time.input.vo.WorkTypeChangeRequestVo</VoClass>
+		</Menu>
+		<Menu key="CancellationRequest">
+			<Command>TM011000</Command>
+			<VoClass>jp.mosp.time.input.vo.CancellationRequestVo</VoClass>
+		</Menu>
+	</MainMenu>
+	<MainMenu key="menuTimeManagement">
+		<Menu key="SubordinateList">
+			<Command>TM2100</Command>
+			<VoClass>jp.mosp.time.management.vo.SubordinateListVo</VoClass>
+		</Menu>
+		<Menu key="RequestList">
+			<Command>TM2200</Command>
+			<VoClass>jp.mosp.time.management.vo.RequestListVo</VoClass>
+		</Menu>
+		<Menu key="ApprovalList">
+			<Command>TM2310</Command>
+			<VoClass>jp.mosp.time.management.vo.ApprovalListVo</VoClass>
+		</Menu>
+		<Menu key="AttendanceHumanList">
+			<Command>TM2410</Command>
+			<VoClass>AttendanceHumanList</VoClass>
+		</Menu>
+		<Menu key="SubstitutionSetting">
+			<Command>PF3400</Command>
+			<VoClass>jp.mosp.platform.workflow.vo.SubApproverSettingVo</VoClass>
+		</Menu>
+		<Menu key="SubordinateFiscalList">
+			<Command>TM2510</Command>
+			<VoClass>jp.mosp.time.management.vo.SubordinateFiscalListVo</VoClass>
+		</Menu>
+	</MainMenu>
+	<MainMenu key="menuTimeCalculation">
+		<Menu key="TotalTime">
+			<Command>TM3110</Command>
+			<VoClass>jp.mosp.time.calculation.vo.TotalTimeVo</VoClass>
+		</Menu>
+		<Menu key="TimeImportList">
+			<Command>TM3210</Command>
+			<VoClass>jp.mosp.platform.file.vo.ImportListVo</VoClass>
+		</Menu>
+		<Menu key="TimeExportList">
+			<Command>TM3310</Command>
+			<VoClass>jp.mosp.time.file.vo.TimeExportListVo</VoClass>
+		</Menu>
+	</MainMenu>
+	<MainMenu key="menuTimeHoliday">
+		<Menu key="HolidayMaster">
+			<Command>TM4100</Command>
+			<VoClass>jp.mosp.time.settings.vo.HolidayMasterVo</VoClass>
+		</Menu>
+		<Menu key="SpecialHolidayManagement">
+			<Command>TM4210</Command>
+			<VoClass>jp.mosp.time.settings.vo.SpecialHolidayHistoryVo</VoClass>
+		</Menu>
+		<Menu key="OtherHolidayManagement">
+			<Command>TM4310</Command>
+			<VoClass>jp.mosp.time.settings.vo.OtherHolidayHistoryVo</VoClass>
+		</Menu>
+		<Menu key="PaidHolidayManagement">
+			<Command>TM4410</Command>
+			<VoClass>jp.mosp.time.settings.vo.PaidHolidayHistoryVo</VoClass>
+		</Menu>
+		<Menu key="PaidHolidayDataGrantList">
+			<Command>TM040900</Command>
+			<VoClass>jp.mosp.time.settings.vo.PaidHolidayDataGrantListVo</VoClass>
+		</Menu>
+	</MainMenu>
+	<MainMenu key="menuTimeSettings">
+		<Menu key="TimeSettingList">
+			<Command>TM5110</Command>
+			<VoClass>jp.mosp.time.settings.vo.TimeSettingListVo</VoClass>
+		</Menu>
+		<Menu key="WorkTypeList">
+			<Command>TM5210</Command>
+			<VoClass>jp.mosp.time.settings.vo.WorkTypeListVo</VoClass>
+		</Menu>
+		<Menu key="PaidHolidayList">
+			<Command>TM5310</Command>
+			<VoClass>jp.mosp.time.settings.vo.PaidHolidayListVo</VoClass>
+		</Menu>
+		<Menu key="ScheduleList">
+			<Command>TM5410</Command>
+			<VoClass>jp.mosp.time.settings.vo.ScheduleListVo</VoClass>
+		</Menu>
+		<Menu key="CutoffMaster">
+			<Command>TM5500</Command>
+			<VoClass>jp.mosp.time.settings.vo.CutoffMasterVo</VoClass>
+		</Menu>
+		<Menu key="ApplicationList">
+			<Command>TM5610</Command>
+			<VoClass>jp.mosp.time.settings.vo.ApplicationListVo</VoClass>
+		</Menu>
+		<Menu key="ApplicationReference">
+			<Command>TM5710</Command>
+			<VoClass>jp.mosp.time.settings.vo.ApplicationReferenceVo</VoClass>
+		</Menu>
+		<Menu key="WorkTypePatternList">
+			<Command>TM5810</Command>
+			<VoClass>jp.mosp.time.settings.vo.WorkTypePatternListVo</VoClass>
+		</Menu>
+	</MainMenu>
+</MosP>

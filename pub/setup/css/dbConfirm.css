@@ -1,0 +1,72 @@
+@CHARSET "UTF-8";
+/*
+ * MosP - Mind Open Source Project    http://www.mosp.jp/
+ * Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+ * 
+ * This program is free software: you can redistribute it and/or
+ * modify it under the terms of the GNU Affero General Public License
+ * as published by the Free Software Foundation, either version 3
+ * of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+/* ************************************************************************** */
+/* === DB接続画面のスタイル === */
+/* ************************************************************************** */
+
+/**
+ * テーブル
+ */
+ 
+.SetupTable {
+	border-collapse:separate;
+    border-spacing:2px;
+}
+
+.SetupTable td{
+	padding: 4px;
+}
+ 
+
+/**
+ * テーブル項目(TitleTd)。
+ */
+.SetupTable .SetupTitleTd {
+	background-color: black; 
+	text-align: center;
+}
+
+
+/**
+ * テーブル項目の値(InputTd)。
+ */
+.SetupTable .SetupInputTd {
+	border-bottom: 1px  dashed black;
+	
+
+}
+
+/**
+ *テーブル項目の色
+ */
+.SetupTitleTd .ServerFont {
+	color: white;
+}
+
+/**
+ * サーバ欄
+ */
+.ServerTextBox {
+ 	width: 310px;
+	height: 16px;
+	ime-mode: disabled;
+	border: 1px solid #003366;
+	vertical-align: middle;
+ }
+		

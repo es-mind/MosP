@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE MosP>
+<!--
+MosP - Mind Open Source Project    http://www.mosp.jp/
+Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+
+This program is free software: you can redistribute it and/or
+modify it under the terms of the GNU Affero General Public License
+as published by the Free Software Foundation, either version 3
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<MosP>
+	<Controller key="TM01100*">
+		<ActionClass>jp.mosp.time.input.action.CancellationRequestAction</ActionClass>
+	</Controller>
+	<Controller key="TM01101*">
+		<ActionClass>jp.mosp.time.input.action.CancellationRequestAction</ActionClass>
+	</Controller>
+	<Controller key="TM01102*">
+		<ActionClass>jp.mosp.time.input.action.CancellationRequestAction</ActionClass>
+	</Controller>
+	<Controller key="TM01110*">
+		<ActionClass>jp.mosp.time.input.action.WorkTypeChangeRequestAction</ActionClass>
+	</Controller>
+	<Controller key="TM01111*">
+		<ActionClass>jp.mosp.time.input.action.WorkTypeChangeRequestAction</ActionClass>
+	</Controller>
+	<Controller key="TM01112*">
+		<ActionClass>jp.mosp.time.input.action.WorkTypeChangeRequestAction</ActionClass>
+	</Controller>
+	<Controller key="TM01113*">
+		<ActionClass>jp.mosp.time.input.action.WorkTypeChangeRequestAction</ActionClass>
+	</Controller>
+	<Controller key="TM04090*">
+		<ActionClass>jp.mosp.time.settings.action.PaidHolidayDataGrantListAction</ActionClass>
+	</Controller>
+	<Controller key="TM04092*">
+		<ActionClass>jp.mosp.time.settings.action.PaidHolidayDataGrantListAction</ActionClass>
+	</Controller>
+	<Controller key="TM040921">
+		<ActionClass>jp.mosp.time.settings.action.PaidHolidayDataGrantListAction</ActionClass>
+		<NeedProcSeq>unnecessary</NeedProcSeq>
+	</Controller>
+	<Controller key="TM04093*">
+		<ActionClass>jp.mosp.time.settings.action.PaidHolidayDataGrantListAction</ActionClass>
+	</Controller>
+	<Controller key="TM04100*">
+		<ActionClass>jp.mosp.time.settings.action.PaidHolidayDataGrantCardAction</ActionClass>
+	</Controller>
+	<Controller key="TM110*">
+		<ActionClass>jp.mosp.time.input.action.AttendanceListAction</ActionClass>
+	</Controller>
+	<Controller key="TM119*">
+		<ActionClass>jp.mosp.time.input.action.AttendanceListAction</ActionClass>
+		<NeedProcSeq>unnecessary</NeedProcSeq>
+	</Controller>
+	<Controller key="TM191*">
+		<ActionClass>jp.mosp.time.input.action.AttendanceHistoryAction</ActionClass>
+	</Controller>
+	<Controller key="TM192*">
+		<ActionClass>jp.mosp.time.input.action.AttendanceHistoryAction</ActionClass>
+	</Controller>
+	<Controller key="TM120*">
+		<ActionClass>jp.mosp.time.input.action.AttendanceCardAction</ActionClass>
+	</Controller>
+	<Controller key="TM122*">
+		<ActionClass>jp.mosp.time.input.action.AttendanceCardAction</ActionClass>
+	</Controller>
+	<Controller key="TM130*">
+		<ActionClass>jp.mosp.time.input.action.ScheduleReferenceAction</ActionClass>
+	</Controller>
+	<Controller key="TM139*">
+		<ActionClass>jp.mosp.time.input.action.ScheduleReferenceAction</ActionClass>
+		<NeedProcSeq>unnecessary</NeedProcSeq>
+	</Controller>
+	<Controller key="TM140*">
+		<ActionClass>jp.mosp.time.input.action.OvertimeRequestAction</ActionClass>
+	</Controller>
+	<Controller key="TM143*">
+		<ActionClass>jp.mosp.time.input.action.OvertimeRequestAction</ActionClass>
+	</Controller>
+	<Controller key="TM149*">
+		<ActionClass>jp.mosp.time.input.action.OvertimeRequestAction</ActionClass>
+	</Controller>
+	<Controller key="TM150*">
+		<ActionClass>jp.mosp.time.input.action.HolidayRequestAction</ActionClass>
+	</Controller>
+	<Controller key="TM153*">
+		<ActionClass>jp.mosp.time.input.action.HolidayRequestAction</ActionClass>
+	</Controller>
+	<Controller key="TM159*">
+		<ActionClass>jp.mosp.time.input.action.HolidayRequestAction</ActionClass>
+	</Controller>
+	<Controller key="TM160*">
+		<ActionClass>jp.mosp.time.input.action.WorkOnHolidayRequestAction</ActionClass>
+	</Controller>
+	<Controller key="TM163*">
+		<ActionClass>jp.mosp.time.input.action.WorkOnHolidayRequestAction</ActionClass>
+	</Controller>
+	<Controller key="TM169*">
+		<ActionClass>jp.mosp.time.input.action.WorkOnHolidayRequestAction</ActionClass>
+	</Controller>
+	<Controller key="TM170*">
+		<ActionClass>jp.mosp.time.input.action.SubHolidayRequestAction</ActionClass>
+	</Controller>
+	<Controller key="TM173*">
+		<ActionClass>jp.mosp.time.input.action.SubHolidayRequestAction</ActionClass>
+	</Controller>
+	<Controller key="TM179*">
+		<ActionClass>jp.mosp.time.input.action.SubHolidayRequestAction</ActionClass>
+	</Controller>
+	<Controller key="TM181*">
+		<ActionClass>jp.mosp.time.input.action.ApprovalHistoryAction</ActionClass>
+	</Controller>
+	<Controller key="TM1821">
+		<ActionClass>jp.mosp.time.input.action.ApprovalHistoryAction</ActionClass>
+	</Controller>
+	<Controller key="TM1831">
+		<ActionClass>jp.mosp.time.input.action.ApprovalHistoryAction</ActionClass>
+	</Controller>
+	<Controller key="TM1841">
+		<ActionClass>jp.mosp.time.input.action.ApprovalHistoryAction</ActionClass>
+	</Controller>
+	<Controller key="TM1851">
+		<ActionClass>jp.mosp.time.input.action.ApprovalHistoryAction</ActionClass>
+	</Controller>
+	<Controller key="TM1861">
+		<ActionClass>jp.mosp.time.input.action.ApprovalHistoryAction</ActionClass>
+	</Controller>
+	<Controller key="TM1871">
+		<ActionClass>jp.mosp.time.input.action.ApprovalHistoryAction</ActionClass>
+	</Controller>
+	<Controller key="TM100*">
+		<ActionClass>jp.mosp.time.input.action.DifferenceRequestAction</ActionClass>
+	</Controller>
+	<Controller key="TM103*">
+		<ActionClass>jp.mosp.time.input.action.DifferenceRequestAction</ActionClass>
+	</Controller>
+	<Controller key="TM109*">
+		<ActionClass>jp.mosp.time.input.action.DifferenceRequestAction</ActionClass>
+	</Controller>
+
+	<Controller key="TM210*">
+		<ActionClass>jp.mosp.time.management.action.SubordinateListAction</ActionClass>
+	</Controller>
+	<Controller key="TM219*">
+		<ActionClass>jp.mosp.time.management.action.SubordinateListAction</ActionClass>
+		<NeedProcSeq>unnecessary</NeedProcSeq>
+	</Controller>
+	<Controller key="TM220*">
+		<ActionClass>jp.mosp.time.management.action.RequestListAction</ActionClass>
+	</Controller>
+	<Controller key="TM229*">
+		<ActionClass>jp.mosp.time.management.action.RequestListAction</ActionClass>
+	</Controller>
+	<Controller key="TM231*">
+		<ActionClass>jp.mosp.time.management.action.ApprovalListAction</ActionClass>
+	</Controller>
+	<Controller key="TM232*">
+		<ActionClass>jp.mosp.time.management.action.ApprovalCardAction</ActionClass>
+	</Controller>
+	<Controller key="TM233*">
+		<ActionClass>jp.mosp.time.management.action.ApprovalCardAction</ActionClass>
+	</Controller>
+	<Controller key="TM234*">
+		<ActionClass>jp.mosp.time.management.action.ApprovalCardAction</ActionClass>
+	</Controller>
+	<Controller key="TM235*">
+		<ActionClass>jp.mosp.time.management.action.ApprovalCardAction</ActionClass>
+	</Controller>
+	<Controller key="TM236*">
+		<ActionClass>jp.mosp.time.management.action.ApprovalCardAction</ActionClass>
+	</Controller>
+	<Controller key="TM237*">
+		<ActionClass>jp.mosp.time.management.action.ApprovalCardAction</ActionClass>
+	</Controller>
+	<Controller key="TM238*">
+		<ActionClass>jp.mosp.time.management.action.ApprovalCardAction</ActionClass>
+	</Controller>
+	<Controller key="TM241*">
+		<ActionClass>jp.mosp.time.management.action.SubordinateListAction</ActionClass>
+	</Controller>
+	<Controller key="TM242*">
+		<ActionClass>jp.mosp.time.input.action.AttendanceListAction</ActionClass>
+	</Controller>
+	<!-- 部下年度一覧 -->
+	<Controller key="TM251*">
+		<ActionClass>jp.mosp.time.management.action.SubordinateFiscalListAction</ActionClass>
+	</Controller>
+	<Controller key="TM259*">
+		<ActionClass>jp.mosp.time.management.action.SubordinateFiscalListAction</ActionClass>
+	</Controller>
+	<Controller key="TM252*">
+		<ActionClass>jp.mosp.time.management.action.SubordinateFiscalReferenceAction</ActionClass>
+	</Controller>
+	<Controller key="PF340*">
+		<ActionClass>jp.mosp.platform.workflow.action.SubApproverSettingAction</ActionClass>
+	</Controller>
+	<Controller key="PF349*">
+		<ActionClass>jp.mosp.platform.workflow.action.SubApproverSettingAction</ActionClass>
+	</Controller>
+	
+	<Controller key="TM311*">
+		<ActionClass>jp.mosp.time.calculation.action.TotalTimeAction</ActionClass>
+	</Controller>
+	<Controller key="TM312*">
+		<ActionClass>jp.mosp.time.calculation.action.TotalTimeListAction</ActionClass>
+	</Controller>
+	<Controller key="TM3176">
+		<ActionClass>jp.mosp.time.calculation.action.TotalTimeListAction</ActionClass>
+		<NeedProcSeq>unnecessary</NeedProcSeq>
+	</Controller>
+	<Controller key="TM313*">
+		<ActionClass>jp.mosp.time.calculation.action.TotalTimeCardAction</ActionClass>
+	</Controller>
+	<Controller key="TM314*">
+		<ActionClass>jp.mosp.time.calculation.action.CutoffErrorListAction</ActionClass>
+	</Controller>
+	<Controller key="TM318*">
+		<ActionClass>jp.mosp.time.calculation.action.TotalTimeAction</ActionClass>
+	</Controller>
+	<Controller key="TM321*">
+		<ActionClass>jp.mosp.time.file.action.TimeImportListAction</ActionClass>
+	</Controller>
+	<Controller key="TM3286">
+		<ActionClass>jp.mosp.time.file.action.TimeImportListAction</ActionClass>
+		<NeedProcSeq>unnecessary</NeedProcSeq>
+	</Controller>
+	<Controller key="TM331*">
+		<ActionClass>jp.mosp.time.file.action.TimeExportListAction</ActionClass>
+	</Controller>
+	<Controller key="TM338*">
+		<ActionClass>jp.mosp.time.file.action.TimeExportListAction</ActionClass>
+	</Controller>
+	<Controller key="TM3315">
+		<ActionClass>jp.mosp.time.report.action.TimeExportAction</ActionClass>
+		<NeedProcSeq>unnecessary</NeedProcSeq>
+	</Controller>
+	<Controller key="PF142*">
+		<ActionClass>jp.mosp.time.file.action.TimeExportCardAction</ActionClass>
+	</Controller>
+	<Controller key="PF147*">
+		<ActionClass>jp.mosp.time.file.action.TimeExportCardAction</ActionClass>
+	</Controller>
+
+	<Controller key="TM410*">
+		<ActionClass>jp.mosp.time.settings.action.HolidayMasterAction</ActionClass>
+	</Controller>
+	<Controller key="TM419*">
+		<ActionClass>jp.mosp.time.settings.action.HolidayMasterAction</ActionClass>
+	</Controller>
+	<Controller key="TM421*">
+		<ActionClass>jp.mosp.time.settings.action.SpecialHolidayManagementAction</ActionClass>
+	</Controller>
+	<Controller key="TM4280">
+		<ActionClass>jp.mosp.time.settings.action.SpecialHolidayManagementAction</ActionClass>
+	</Controller>
+	<Controller key="TM422*">
+		<ActionClass>jp.mosp.time.settings.action.SpecialHolidayHistoryAction</ActionClass>
+	</Controller>
+	<Controller key="TM427*">
+		<ActionClass>jp.mosp.time.settings.action.SpecialHolidayHistoryAction</ActionClass>
+	</Controller>
+	<Controller key="TM431*">
+		<ActionClass>jp.mosp.time.settings.action.OtherHolidayManagementAction</ActionClass>
+	</Controller>
+	<Controller key="TM4380">
+		<ActionClass>jp.mosp.time.settings.action.OtherHolidayManagementAction</ActionClass>
+	</Controller>
+	<Controller key="TM432*">
+		<ActionClass>jp.mosp.time.settings.action.OtherHolidayHistoryAction</ActionClass>
+	</Controller>
+	<Controller key="TM437*">
+		<ActionClass>jp.mosp.time.settings.action.OtherHolidayHistoryAction</ActionClass>
+	</Controller>
+	<Controller key="TM441*">
+		<ActionClass>jp.mosp.time.settings.action.PaidHolidayManagementAction</ActionClass>
+	</Controller>
+	<Controller key="TM4440">
+		<ActionClass>jp.mosp.time.settings.action.PaidHolidayManagementAction</ActionClass>
+		<NeedProcSeq>unnecessary</NeedProcSeq>
+	</Controller>
+	<Controller key="TM448*">
+		<ActionClass>jp.mosp.time.settings.action.PaidHolidayManagementAction</ActionClass>
+	</Controller>
+	<Controller key="TM442*">
+		<ActionClass>jp.mosp.time.settings.action.PaidHolidayHistoryAction</ActionClass>
+	</Controller>
+	<Controller key="TM447*">
+		<ActionClass>jp.mosp.time.settings.action.PaidHolidayHistoryAction</ActionClass>
+	</Controller>
+	<Controller key="TM443*">
+		<ActionClass>jp.mosp.time.settings.action.PaidHolidayReferenceAction</ActionClass>
+	</Controller>
+
+	<Controller key="TM511*">
+		<ActionClass>jp.mosp.time.settings.action.TimeSettingListAction</ActionClass>
+	</Controller>
+	<Controller key="TM518*">
+		<ActionClass>jp.mosp.time.settings.action.TimeSettingListAction</ActionClass>
+	</Controller>
+	<Controller key="TM512*">
+		<ActionClass>jp.mosp.time.settings.action.TimeSettingCardAction</ActionClass>
+	</Controller>
+	<Controller key="TM517*">
+		<ActionClass>jp.mosp.time.settings.action.TimeSettingCardAction</ActionClass>
+	</Controller>
+	<Controller key="TM521*">
+		<ActionClass>jp.mosp.time.settings.action.WorkTypeListAction</ActionClass>
+	</Controller>
+	<Controller key="TM528*">
+		<ActionClass>jp.mosp.time.settings.action.WorkTypeListAction</ActionClass>
+	</Controller>
+	<Controller key="TM522*">
+		<ActionClass>jp.mosp.time.settings.action.WorkTypeCardAction</ActionClass>
+	</Controller>
+	<Controller key="TM527*">
+		<ActionClass>jp.mosp.time.settings.action.WorkTypeCardAction</ActionClass>
+	</Controller>
+	<Controller key="TM531*">
+		<ActionClass>jp.mosp.time.settings.action.PaidHolidayListAction</ActionClass>
+	</Controller>
+	<Controller key="TM538*">
+		<ActionClass>jp.mosp.time.settings.action.PaidHolidayListAction</ActionClass>
+	</Controller>
+	<Controller key="TM532*">
+		<ActionClass>jp.mosp.time.settings.action.PaidHolidayCardAction</ActionClass>
+	</Controller>
+	<Controller key="TM537*">
+		<ActionClass>jp.mosp.time.settings.action.PaidHolidayCardAction</ActionClass>
+	</Controller>
+	<Controller key="TM541*">
+		<ActionClass>jp.mosp.time.settings.action.ScheduleListAction</ActionClass>
+	</Controller>
+	<Controller key="TM542*">
+		<ActionClass>jp.mosp.time.settings.action.ScheduleCardAction</ActionClass>
+	</Controller>
+	<Controller key="TM543*">
+		<ActionClass>jp.mosp.time.settings.action.ScheduleCardAction</ActionClass>
+	</Controller>
+	<Controller key="TM547*">
+		<ActionClass>jp.mosp.time.settings.action.ScheduleCardAction</ActionClass>
+	</Controller>
+	<Controller key="TM550*">
+		<ActionClass>jp.mosp.time.settings.action.CutoffMasterAction</ActionClass>
+	</Controller>
+	<Controller key="TM559*">
+		<ActionClass>jp.mosp.time.settings.action.CutoffMasterAction</ActionClass>
+	</Controller>
+	<Controller key="TM561*">
+		<ActionClass>jp.mosp.time.settings.action.ApplicationListAction</ActionClass>
+	</Controller>
+	<Controller key="TM568*">
+		<ActionClass>jp.mosp.time.settings.action.ApplicationListAction</ActionClass>
+	</Controller>
+	<Controller key="TM562*">
+		<ActionClass>jp.mosp.time.settings.action.ApplicationCardAction</ActionClass>
+	</Controller>
+	<Controller key="TM567*">
+		<ActionClass>jp.mosp.time.settings.action.ApplicationCardAction</ActionClass>
+	</Controller>
+	<Controller key="TM571*">
+		<ActionClass>jp.mosp.time.settings.action.ApplicationReferenceAction</ActionClass>
+	</Controller>
+	<Controller key="TM581*">
+		<ActionClass>jp.mosp.time.settings.action.WorkTypePatternListAction</ActionClass>
+	</Controller>
+	<Controller key="TM582*">
+		<ActionClass>jp.mosp.time.settings.action.WorkTypePatternCardAction</ActionClass>
+	</Controller>
+	<Controller key="TM587*">
+		<ActionClass>jp.mosp.time.settings.action.WorkTypePatternCardAction</ActionClass>
+	</Controller>
+</MosP>

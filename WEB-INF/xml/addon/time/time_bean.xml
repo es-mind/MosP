@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE MosP>
+<!--
+MosP - Mind Open Source Project    http://www.mosp.jp/
+Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+
+This program is free software: you can redistribute it and/or
+modify it under the terms of the GNU Affero General Public License
+as published by the Free Software Foundation, either version 3
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<MosP>
+	
+	<!--BeanHandler-->
+	<Model key="TimeBeanHandler">
+		jp.mosp.time.base.TimeBeanHandler
+	</Model>
+	<Model key="TimeReferenceBeanHandler">
+		jp.mosp.time.base.TimeReferenceBeanHandler
+	</Model>
+	
+	<!--Reference-->
+	<Model key="ExportTableReference">
+		jp.mosp.time.bean.impl.ExportTableReferenceBean
+	</Model>
+	<Model key="ImportTableReference">
+		jp.mosp.time.bean.impl.ImportTableReferenceBean
+	</Model>
+	<Model key="HolidayReference">
+		jp.mosp.time.bean.impl.HolidayReferenceBean
+	</Model>
+	<Model key="HolidayDataReference">
+		jp.mosp.time.bean.impl.HolidayDataReferenceBean
+	</Model>
+	<Model key="PaidHolidayInfoReference">
+		jp.mosp.time.bean.impl.PaidHolidayInfoReferenceBean
+	</Model>
+	<Model key="PaidHolidayTransactionReference">
+		jp.mosp.time.bean.impl.PaidHolidayTransactionReferenceBean
+	</Model>
+	<Model key="PaidHolidayDataReference">
+		jp.mosp.time.bean.impl.PaidHolidayDataReferenceBean
+	</Model>
+	<Model key="PaidHolidayGrantReference">
+		jp.mosp.time.bean.impl.PaidHolidayGrantReferenceBean
+	</Model>
+	<Model key="StockHolidayTransactionReference">
+		jp.mosp.time.bean.impl.StockHolidayTransactionReferenceBean
+	</Model>
+	<Model key="StockHolidayDataReference">
+		jp.mosp.time.bean.impl.StockHolidayDataReferenceBean
+	</Model>
+	<Model key="TimeSettingReference">
+		jp.mosp.time.bean.impl.TimeSettingReferenceBean
+	</Model>
+	<Model key="LimitStandardReference">
+		jp.mosp.time.bean.impl.LimitStandardReferenceBean
+	</Model>
+	<Model key="WorkTypeReference">
+		jp.mosp.time.bean.impl.WorkTypeReferenceBean
+	</Model>
+	<Model key="WorkTypeItemReference">
+		jp.mosp.time.bean.impl.WorkTypeItemReferenceBean
+	</Model>
+	<Model key="WorkTypePatternReference">
+		jp.mosp.time.bean.impl.WorkTypePatternReferenceBean
+	</Model>
+	<Model key="WorkTypePatternItemReference">
+		jp.mosp.time.bean.impl.WorkTypePatternItemReferenceBean
+	</Model>
+	<Model key="PaidHolidayReference">
+		jp.mosp.time.bean.impl.PaidHolidayReferenceBean
+	</Model>
+	<Model key="PaidHolidayProportionallyReference">
+		jp.mosp.time.bean.impl.PaidHolidayProportionallyReferenceBean
+	</Model>
+	<Model key="PaidHolidayFirstYearReference">
+		jp.mosp.time.bean.impl.PaidHolidayFirstYearReferenceBean
+	</Model>
+	<Model key="PaidHolidayPointDateReference">
+		jp.mosp.time.bean.impl.PaidHolidayPointDateReferenceBean
+	</Model>
+	<Model key="PaidHolidayEntranceDateReference">
+		jp.mosp.time.bean.impl.PaidHolidayEntranceDateReferenceBean
+	</Model>
+	<Model key="StockHolidayReference">
+		jp.mosp.time.bean.impl.StockHolidayReferenceBean
+	</Model>
+	<Model key="ScheduleReference">
+		jp.mosp.time.bean.impl.ScheduleReferenceBean
+	</Model>
+	<Model key="ScheduleDateReference">
+		jp.mosp.time.bean.impl.ScheduleDateReferenceBean
+	</Model>
+	<Model key="CutoffReference">
+		jp.mosp.time.bean.impl.CutoffReferenceBean
+	</Model>
+	<Model key="ApplicationReference">
+		jp.mosp.time.bean.impl.ApplicationReferenceBean
+	</Model>
+	<Model key="ApplicationEmployeeReference">
+		jp.mosp.time.bean.impl.ApplicationEmployeeReferenceBean
+	</Model>
+	<Model key="ApplicationInfoReference">
+		jp.mosp.time.bean.impl.ApplicationInfoReferenceBean
+	</Model>
+	<Model key="OvertimeRequestReference">
+		jp.mosp.time.bean.impl.OvertimeRequestReferenceBean
+	</Model>
+	<Model key="HolidayRequestReference">
+		jp.mosp.time.bean.impl.HolidayRequestReferenceBean
+	</Model>
+	<Model key="WorkOnHolidayRequestReference">
+		jp.mosp.time.bean.impl.WorkOnHolidayRequestReferenceBean
+	</Model>
+	<Model key="SubHolidayRequestReference">
+		jp.mosp.time.bean.impl.SubHolidayRequestReferenceBean
+	</Model>
+	<Model key="SubHolidayReference">
+		jp.mosp.time.bean.impl.SubHolidayReferenceBean
+	</Model>
+	<Model key="WorkTypeChangeRequestReference">
+		jp.mosp.time.bean.impl.WorkTypeChangeRequestReferenceBean
+	</Model>
+	<Model key="DifferenceRequestReference">
+		jp.mosp.time.bean.impl.DifferenceRequestReferenceBean
+	</Model>
+	<Model key="TotalTimeCorrectionReference">
+		jp.mosp.time.bean.impl.TotalTimeCorrectionReferenceBean
+	</Model>
+	<Model key="AttendanceCorrectionReference">
+		jp.mosp.time.bean.impl.AttendanceCorrectionReferenceBean
+	</Model>
+	<Model key="AllowanceReference">
+		jp.mosp.time.bean.impl.AllowanceReferenceBean
+	</Model>
+	<Model key="RestReference">
+		jp.mosp.time.bean.impl.RestReferenceBean
+	</Model>
+	<Model key="GoOutReference">
+		jp.mosp.time.bean.impl.GoOutReferenceBean
+	</Model>
+	<Model key="HolidayInfoReference">
+		jp.mosp.time.bean.impl.HolidayInfoReferenceBean
+	</Model>
+	<Model key="TotalLeaveReference">
+		jp.mosp.time.bean.impl.TotalLeaveReferenceBean
+	</Model>
+	<Model key="TotalOtherVacationReference">
+		jp.mosp.time.bean.impl.TotalOtherVacationReferenceBean
+	</Model>
+	<Model key="TotalAbsenceReference">
+		jp.mosp.time.bean.impl.TotalAbsenceReferenceBean
+	</Model>
+	<Model key="TotalAllowanceReference">
+		jp.mosp.time.bean.impl.TotalAllowanceReferenceBean
+	</Model>
+	<Model key="AttendanceReference">
+		jp.mosp.time.bean.impl.AttendanceReferenceBean
+	</Model>
+	<Model key="OvertimeInfoReference">
+		jp.mosp.time.bean.impl.OvertimeInfoReferenceBean
+	</Model>
+	<Model key="ApprovalInfoReference">
+		jp.mosp.time.bean.impl.ApprovalInfoReferenceBean
+	</Model>
+	<Model key="TotalTimeReference">
+		jp.mosp.time.bean.impl.TotalTimeReferenceBean
+	</Model>
+	<Model key="SubstituteReference">
+		jp.mosp.time.bean.impl.SubstituteReferenceBean
+	</Model>
+	<Model key="WorkOnHolidayInfoReference">
+		jp.mosp.time.bean.impl.WorkOnHolidayInfoReferenceBean
+	</Model>
+	<Model key="TotalTimeEmployeeTransactionReference">
+		jp.mosp.time.bean.impl.TotalTimeEmployeeTransactionReferenceBean
+	</Model>
+	<Model key="TotalTimeTransactionReference">
+		jp.mosp.time.bean.impl.TotalTimeTransactionReferenceBean
+	</Model>
+	<Model key="AttendanceTransactionReference">
+		jp.mosp.time.bean.impl.AttendanceTransactionReferenceBean
+	</Model>
+	<Model key="TimeRecordReference">
+		jp.mosp.time.bean.impl.TimeRecordReferenceBean
+	</Model>
+	<Model key="PaidHolidayUsageExport">
+		jp.mosp.time.bean.impl.PaidHolidayUsageExportBean
+	</Model>
+	<Model key="PaidHolidayUsage">
+		jp.mosp.time.bean.impl.PaidHolidayUsageBean
+	</Model>
+	<Model key="PaidHolidayRemain">
+		jp.mosp.time.bean.impl.PaidHolidayRemainBean
+	</Model>
+	<Model key="CutoffUtil">
+		jp.mosp.time.bean.impl.CutoffUtilBean
+	</Model>
+	<Model key="RequestUtil">
+		jp.mosp.time.bean.impl.RequestUtilBean
+	</Model>
+	<Model key="ScheduleUtil">
+		jp.mosp.time.bean.impl.ScheduleUtilBean
+	</Model>
+	<Model key="TimeMaster">
+		jp.mosp.time.bean.impl.TimeMasterBean
+	</Model>
+	<Model key="AttendanceTotalInfo">
+		jp.mosp.time.bean.impl.AttendanceTotalInfoBean
+	</Model>
+	<Model key="CalendarWorkingDays">
+		jp.mosp.time.bean.impl.CalendarWorkingDaysBean
+	</Model>
+	
+	<!--Search-->
+	<Model key="HolidaySearch">
+		jp.mosp.time.bean.impl.HolidaySearchBean
+	</Model>
+	<Model key="HolidayManagementSearch">
+		jp.mosp.time.bean.impl.HolidayManagementSearchBean
+	</Model>
+	<Model key="HolidayHistorySearch">
+		jp.mosp.time.bean.impl.HolidayHistorySearchBean
+	</Model>
+	<Model key="PaidHolidayManagementSearch">
+		jp.mosp.time.bean.impl.PaidHolidayManagementSearchBean
+	</Model>
+	<Model key="PaidHolidayHistorySearch">
+		jp.mosp.time.bean.impl.PaidHolidayHistorySearchBean
+	</Model>
+	<Model key="PaidHolidayDataSearch">
+		jp.mosp.time.bean.impl.PaidHolidayDataSearchBean
+	</Model>
+	<Model key="TimeSettingSearch">
+		jp.mosp.time.bean.impl.TimeSettingSearchBean
+	</Model>
+	<Model key="WorkTypeSearch">
+		jp.mosp.time.bean.impl.WorkTypeSearchBean
+	</Model>
+	<Model key="WorkTypePatternSearch">
+		jp.mosp.time.bean.impl.WorkTypePatternSearchBean
+	</Model>
+	<Model key="PaidHolidaySearch">
+		jp.mosp.time.bean.impl.PaidHolidaySearchBean
+	</Model>
+	<Model key="ScheduleSearch">
+		jp.mosp.time.bean.impl.ScheduleSearchBean
+	</Model>
+	<Model key="CutoffSearch">
+		jp.mosp.time.bean.impl.CutoffSearchBean
+	</Model>
+	<Model key="ApplicationSearch">
+		jp.mosp.time.bean.impl.ApplicationSearchBean
+	</Model>
+	<Model key="ApplicationEmployeeSearch">
+		jp.mosp.time.bean.impl.ApplicationEmployeeSearchBean
+	</Model>
+	<Model key="OvertimeRequestSearch">
+		jp.mosp.time.bean.impl.OvertimeRequestSearchBean
+	</Model>
+	<Model key="HolidayRequestSearch">
+		jp.mosp.time.bean.impl.HolidayRequestSearchBean
+	</Model>
+	<Model key="WorkOnHolidayRequestSearch">
+		jp.mosp.time.bean.impl.WorkOnHolidayRequestSearchBean
+	</Model>
+	<Model key="SubHolidayRequestSearch">
+		jp.mosp.time.bean.impl.SubHolidayRequestSearchBean
+	</Model>
+	<Model key="WorkTypeChangeRequestSearch">
+		jp.mosp.time.bean.impl.WorkTypeChangeRequestSearchBean
+	</Model>
+	<Model key="DifferenceRequestSearch">
+		jp.mosp.time.bean.impl.DifferenceRequestSearchBean
+	</Model>
+	<Model key="SubordinateSearch">
+		jp.mosp.time.bean.impl.SubordinateSearchBean
+	</Model>
+	<Model key="SubordinateFiscalSearch">
+		jp.mosp.time.bean.impl.SubordinateFiscalSearchBean
+	</Model>
+	<Model key="TotalTimeTransactionSearch">
+		jp.mosp.time.bean.impl.TotalTimeTransactionSearchBean
+	</Model>
+	<Model key="ApplicationReferenceSearch">
+		jp.mosp.time.bean.impl.ApplicationReferenceSearchBean
+	</Model>
+	<Model key="RequestSearch">
+		jp.mosp.time.bean.impl.RequestSearchBean
+	</Model>
+	<Model key="TotalTimeSearch">
+		jp.mosp.time.bean.impl.TotalTimeSearchBean
+	</Model>
+	
+	<!--Regist-->
+	<Model key="AttendanceListRegist">
+		jp.mosp.time.bean.impl.AttendanceListRegistBean
+	</Model>
+	<Model key="HolidayRegist">
+		jp.mosp.time.bean.impl.HolidayRegistBean
+	</Model>
+	<Model key="HolidayDataRegist">
+		jp.mosp.time.bean.impl.HolidayDataRegistBean
+	</Model>
+	<Model key="PaidHolidayTransactionRegist">
+		jp.mosp.time.bean.impl.PaidHolidayTransactionRegistBean
+	</Model>
+	<Model key="PaidHolidayGrantRegist">
+		jp.mosp.time.bean.impl.PaidHolidayGrantRegistBean
+	</Model>
+	<Model key="PaidHolidayDataRegist">
+		jp.mosp.time.bean.impl.PaidHolidayDataRegistBean
+	</Model>
+	<Model key="StockHolidayDataRegist">
+		jp.mosp.time.bean.impl.StockHolidayDataRegistBean
+	</Model>
+	<Model key="StockHolidayTransactionRegist">
+		jp.mosp.time.bean.impl.StockHolidayTransactionRegistBean
+	</Model>
+	<Model key="TimeSettingRegist">
+		jp.mosp.time.bean.impl.TimeSettingRegistBean
+	</Model>
+	<Model key="LimitStandardRegist">
+		jp.mosp.time.bean.impl.LimitStandardRegistBean
+	</Model>
+	<Model key="WorkTypeRegist">
+		jp.mosp.time.bean.impl.WorkTypeRegistBean
+	</Model>
+	<Model key="WorkTypeItemRegist">
+		jp.mosp.time.bean.impl.WorkTypeItemRegistBean
+	</Model>
+	<Model key="WorkTypePatternRegist">
+		jp.mosp.time.bean.impl.WorkTypePatternRegistBean
+	</Model>
+	<Model key="WorkTypePatternItemRegist">
+		jp.mosp.time.bean.impl.WorkTypePatternItemRegistBean
+	</Model>
+	<Model key="PaidHolidayRegist">
+		jp.mosp.time.bean.impl.PaidHolidayRegistBean
+	</Model>
+	<Model key="PaidHolidayProportionallyRegist">
+		jp.mosp.time.bean.impl.PaidHolidayProportionallyRegistBean
+	</Model>
+	<Model key="PaidHolidayFirstYearRegist">
+		jp.mosp.time.bean.impl.PaidHolidayFirstYearRegistBean
+	</Model>
+	<Model key="PaidHolidayPointDateRegist">
+		jp.mosp.time.bean.impl.PaidHolidayPointDateRegistBean
+	</Model>
+	<Model key="PaidHolidayEntranceDateRegist">
+		jp.mosp.time.bean.impl.PaidHolidayEntranceDateRegistBean
+	</Model>
+	<Model key="StockHolidayRegist">
+		jp.mosp.time.bean.impl.StockHolidayRegistBean
+	</Model>
+	<Model key="ScheduleRegist">
+		jp.mosp.time.bean.impl.ScheduleRegistBean
+	</Model>
+	<Model key="ScheduleDateRegist">
+		jp.mosp.time.bean.impl.ScheduleDateRegistBean
+	</Model>
+	<Model key="CutoffRegist">
+		jp.mosp.time.bean.impl.CutoffRegistBean
+	</Model>
+	<Model key="ApplicationRegist">
+		jp.mosp.time.bean.impl.ApplicationRegistBean
+	</Model>
+	<Model key="OvertimeRequestRegist">
+		jp.mosp.time.bean.impl.OvertimeRequestRegistBean
+	</Model>
+	<Model key="HolidayRequestRegist">
+		jp.mosp.time.bean.impl.HolidayRequestRegistBean
+	</Model>
+	<Model key="HolidayRequestExecute">
+		jp.mosp.time.bean.impl.HolidayRequestExecuteBean
+	</Model>
+	<Model key="WorkOnHolidayRequestRegist">
+		jp.mosp.time.bean.impl.WorkOnHolidayRequestRegistBean
+	</Model>
+	<Model key="SubHolidayRequestRegist">
+		jp.mosp.time.bean.impl.SubHolidayRequestRegistBean
+	</Model>
+	<Model key="SubHolidayRegist">
+		jp.mosp.time.bean.impl.SubHolidayRegistBean
+	</Model>
+	<Model key="WorkTypeChangeRequestRegist">
+		jp.mosp.time.bean.impl.WorkTypeChangeRequestRegistBean
+	</Model>
+	<Model key="DifferenceRequestRegist">
+		jp.mosp.time.bean.impl.DifferenceRequestRegistBean
+	</Model>
+	<Model key="AttendanceCorrectionRegist">
+		jp.mosp.time.bean.impl.AttendanceCorrectionRegistBean
+	</Model>
+	<Model key="AllowanceRegist">
+		jp.mosp.time.bean.impl.AllowanceRegistBean
+	</Model>
+	<Model key="RestRegist">
+		jp.mosp.time.bean.impl.RestRegistBean
+	</Model>
+	<Model key="GoOutRegist">
+		jp.mosp.time.bean.impl.GoOutRegistBean
+	</Model>
+	<Model key="TotalTimeRegist">
+		jp.mosp.time.bean.impl.TotalTimeRegistBean
+	</Model>
+	<Model key="TotalLeaveRegist">
+		jp.mosp.time.bean.impl.TotalLeaveRegistBean
+	</Model>
+	<Model key="TotalOtherVacationRegist">
+		jp.mosp.time.bean.impl.TotalOtherVacationRegistBean
+	</Model>
+	<Model key="TotalAbsenceRegist">
+		jp.mosp.time.bean.impl.TotalAbsenceRegistBean
+	</Model>
+	<Model key="TotalAllowanceRegist">
+		jp.mosp.time.bean.impl.TotalAllowanceRegistBean
+	</Model>
+	<Model key="TotalTimeCorrectionRegist">
+		jp.mosp.time.bean.impl.TotalTimeCorrectionRegistBean
+	</Model>
+	<Model key="AttendanceRegist">
+		jp.mosp.time.bean.impl.AttendanceRegistBean
+	</Model>
+	<Model key="TotalTimeTransactionRegist">
+		jp.mosp.time.bean.impl.TotalTimeTransactionRegistBean
+	</Model>
+	<Model key="TotalTimeEmployeeTransactionRegist">
+		jp.mosp.time.bean.impl.TotalTimeEmployeeTransactionRegistBean
+	</Model>
+	<Model key="AttendanceTransactionRegist">
+		jp.mosp.time.bean.impl.AttendanceTransactionRegistBean
+	</Model>
+	<Model key="SubstituteRegist">
+		jp.mosp.time.bean.impl.SubstituteRegistBean
+	</Model>
+	<Model key="TimeRecordRegist">
+		jp.mosp.time.bean.impl.TimeRecordRegistBean
+	</Model>
+	<Model key="TotalTimeCalc">
+		jp.mosp.time.bean.impl.TotalTimeCalcBean
+	</Model>
+	<Model key="AttendanceCalc">
+		jp.mosp.time.bean.impl.AttendCalcBean
+	</Model>
+	<Model key="TimeApproval">
+		jp.mosp.time.bean.impl.TimeApprovalBean
+	</Model>
+	<Model key="PaidHolidayDataGrant">
+		jp.mosp.time.bean.impl.PaidHolidayDataGrantBean
+	</Model>
+	<Model key="StockHolidayDataGrant">
+		jp.mosp.time.bean.impl.StockHolidayDataGrantBean
+	</Model>
+	<Model key="HolidayRequestImport">
+		jp.mosp.time.bean.impl.HolidayRequestImportBean
+	</Model>
+	<Model key="WorkOnHolidayRequestImport">
+		jp.mosp.time.bean.impl.WorkOnHolidayRequestImportBean
+	</Model>
+	<Model key="AfterApplyAttendancesExecute">
+		jp.mosp.time.bean.impl.AfterApplyAttendancesExecuteBean
+	</Model>
+	
+	<Model key="AttendCalcReference">
+		jp.mosp.time.bean.impl.AttendCalcReferenceBean
+	</Model>
+	<Model key="TotalTimeEntityReference">
+		jp.mosp.time.bean.impl.TotalTimeEntityReferenceBean
+	</Model>
+	
+	<Model key="TotalTimeEntity">
+		jp.mosp.time.entity.TotalTimeEntity
+	</Model>
+	<Model key="AttendCalcEntity">
+		jp.mosp.time.entity.AttendCalcEntity
+	</Model>
+	<Model key="AttendListEntity">
+		jp.mosp.time.entity.AttendListEntity
+	</Model>
+	<Model key="AttendanceEntity">
+		jp.mosp.time.entity.AttendanceEntity
+	</Model>
+	<Model key="RequestDetectEntity">
+		jp.mosp.time.entity.RequestDetectEntity
+	</Model>
+	<Model key="TimeSettingEntity">
+		jp.mosp.time.entity.TimeSettingEntity
+	</Model>
+	<Model key="CutoffEntity">
+		jp.mosp.time.entity.CutoffEntity
+	</Model>
+	<Model key="WorkTypeEntity">
+		jp.mosp.time.entity.WorkTypeEntity
+	</Model>
+	<Model key="RequestEntity">
+		jp.mosp.time.entity.RequestEntity
+	</Model>
+	<Model key="HolidayRequestEntity">
+		jp.mosp.time.entity.HolidayRequestEntity
+	</Model>
+	
+	<!--jp.mosp.time.report.bean-->
+	<Model key="ScheduleBook">
+		jp.mosp.time.report.bean.impl.ScheduleBookBean
+	</Model>
+	<Model key="AttendanceBook">
+		jp.mosp.time.report.bean.impl.AttendanceBookBean
+	</Model>
+	
+	<!--jp.mosp.time.portal.bean-->
+	<Model key="TimeRecord">
+		jp.mosp.time.bean.impl.TimeRecordBean
+	</Model>
+
+	<!-- export -->
+	<Code key="TimeExportBean">
+		<!-- 出勤簿データ -->
+		<CodeItem key="export_tmd_attendance_book">
+			<ItemName>jp.mosp.time.bean.impl.AttendanceBookExportBean</ItemName>
+		</CodeItem>
+		<!-- 代休データ -->
+		<CodeItem key="export_tmd_sub_holiday">
+			<ItemName>jp.mosp.time.bean.impl.SubHolidayExportBean</ItemName>
+		</CodeItem>
+		<!-- 休暇取得データ -->
+		<CodeItem key="export_holiday_request_data">
+			<ItemName>jp.mosp.time.bean.impl.HolidayExportBean</ItemName>
+		</CodeItem>
+		<!-- 勤怠再申請対象者データ -->
+		<CodeItem key="export_attendance_reapplication">
+			<ItemName>jp.mosp.time.bean.impl.AttendanceReapplicationExportBean</ItemName>
+		</CodeItem>
+		<!-- 各種申請理由データ -->
+		<CodeItem key="export_appli_reason_data">
+			<ItemName>jp.mosp.time.bean.impl.AppliReasonDataExportBean</ItemName>
+		</CodeItem>
+		<!-- 有給休暇取得状況データ -->
+		<CodeItem key="export_used_paid_holiday_data">
+			<ItemName>jp.mosp.time.bean.impl.UsedPaidHolidayDataExportBean</ItemName>
+		</CodeItem>
+	</Code>
+	
+</MosP>

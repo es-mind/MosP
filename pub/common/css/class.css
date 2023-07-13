@@ -1,0 +1,1908 @@
+@CHARSET "UTF-8";
+/*
+ * MosP - Mind Open Source Project    http://www.mosp.jp/
+ * Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+ * 
+ * This program is free software: you can redistribute it and/or
+ * modify it under the terms of the GNU Affero General Public License
+ * as published by the Free Software Foundation, either version 3
+ * of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+/* ****************************************** */
+/* === 各種入力項目 === */
+/* ****************************************** */
+/**
+ * 各種テキストボックス
+ */
+input {
+	font-family: "ＭＳ ゴシック", "Takaoゴシック", sans-serif;
+}
+
+/**
+ * ログイン_ID
+ */
+.LoginIdTextBox {
+	height: 22px;
+	ime-mode: disabled;
+	width: 310px;
+	border: 1px solid #003366;
+	font-size: 20px;
+}
+
+/**
+ * ログイン_パス
+ */
+.LoginPassTextBox {
+	height: 22px;
+	ime-mode: disabled;
+	border: 1px solid #003366;
+	width: 310px;
+}
+
+/**
+ * パスワード変更用ユーザID
+ */
+.PassChangeUserIdTextBox {
+	height: 22px;
+	ime-mode: disabled;
+	width: 310px;
+	border: 1px solid #003366;
+	font-size: 20px;
+}
+
+/**
+ * パスワード変更用メールアドレス
+ */
+.PassChangeMailAddressTextBox {
+	height: 22px;
+	ime-mode: disabled;
+	width: 310px;
+	border: 1px solid #003366;
+	font-size: 20px;
+}
+
+/**
+ * ユーザID_50(必須)
+ */
+.UserId50RequiredTextBox {
+	width: 310px;
+	height: 16px;
+	ime-mode: disabled;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * ユーザID_50
+ */
+.UserId50TextBox {
+	width: 355px;
+	height: 16px;
+	ime-mode: disabled;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * コード_2(必須)
+ */
+.Code2RequiredTextBox {
+	width: 20px;
+	height: 16px;
+	ime-mode: disabled;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * コード_2
+ */
+.Code2TextBox {
+	width: 20px;
+	height: 16px;
+	ime-mode: disabled;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * コード_10(必須)
+ */
+.Code10RequiredTextBox {
+	width: 75px;
+	height: 16px;
+	ime-mode: disabled;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * コード_10
+ */
+.Code10TextBox {
+	width: 75px;
+	height: 16px;
+	ime-mode: disabled;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+
+/**
+ * コード_11(必須)
+ */
+.Code11RequiredTextBox {
+	width: 75px;
+	height: 16px;
+	ime-mode: disabled;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * コード_11
+ */
+.Code11TextBox {
+	width: 75px;
+	height: 16px;
+	ime-mode: disabled;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+
+
+/**
+ * コード_50(必須)
+ */
+.Code50RequiredTextBox {
+	width: 310px;
+	height: 16px;
+	ime-mode: disabled;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * コード_50
+ */
+.Code50TextBox {
+	width: 355px;
+	height: 16px;
+	ime-mode: disabled;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * コード_csv
+ */
+.CodeCsvTextBox {
+	width: 660px;
+	height: 16px;
+	ime-mode: disabled;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称_3(必須)
+ */
+.Name3RequiredTextBox {
+	width: 45px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称_3
+ */
+.Name3TextBox {
+	width: 45px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称_5(必須)
+ */
+.Name5RequiredTextBox {
+	width: 70px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称_5
+ */
+.Name5TextBox {
+	width: 70px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称_6(必須)
+ */
+.Name6RequiredTextBox {
+	width: 70px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称_6
+ */
+.Name6TextBox {
+	width: 70px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称_8
+ */
+.Name8TextBox {
+	width: 120px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称_11(必須)
+ */
+.Name11RequiredTextBox {
+	width: 145px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称_11
+ */
+.Name11TextBox {
+	width: 145px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称_10(必須)
+ */
+.Name10RequiredTextBox {
+	width: 145px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称_10
+ */
+.Name10TextBox {
+	width: 145px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称_12(必須)
+ */
+.Name12RequiredTextBox {
+	width: 160px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称_12
+ */
+.Name12TextBox {
+	width: 160px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称_14
+ */
+.Name14TextBox {
+	width: 205px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称_15(必須)
+ */
+.Name15RequiredTextBox {
+	width: 215px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称_15
+ */
+.Name15TextBox {
+	width: 215px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称_16(必須)
+ */
+.Name16RequiredTextBox {
+	width: 230px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+/**
+ * 名称_20(必須)
+ */
+.Name20RequiredTextBox {
+	width: 320px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称_20
+ */
+.Name20TextBox {
+	width: 320px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+
+/**
+ * 名称_21
+ */
+.Name21TextBox {
+	width: 320px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称_25(必須)
+ */
+.Name25RequiredTextBox {
+	width: 360px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称_25
+ */
+.Name25TextBox {
+	width: 380px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称_30(必須)
+ */
+.Name30RequiredTextBox {
+	width: 455px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称_30
+ */
+.Name30TextBox {
+	width: 455px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称_31(必須)
+ */
+.Name31RequiredTextBox {
+	width: 470px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称_32(必須)
+ */
+.Name32RequiredTextBox {
+	width: 490px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称_33(必須)
+ */
+.Name33RequiredTextBox {
+	width: 500px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称_10-30(入力欄幅10、桁数30、必須)
+ */
+.Name10-30RequiredTextBox {
+	width: 145px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称_10-30(入力欄幅10、桁数30)
+ */
+.Name10-30TextBox {
+	width: 145px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称_15-30(入力欄幅15、桁数30、必須)
+ */
+.Name15-30RequiredTextBox {
+	width: 215px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称_15-30(入力欄幅15、桁数30)
+ */
+.Name15-30TextBox {
+	width: 215px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称_15-40(入力欄幅15、桁数40、必須)
+ */
+.Name15-40RequiredTextBox {
+	width: 215px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称_15-40(入力欄幅15、桁数40)
+ */
+.Name15-40TextBox {
+	width: 215px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称_40(必須)
+ */
+.Name40RequiredTextBox {
+	width: 570px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称_40
+ */
+.Name40TextBox {
+	width: 570px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称_50(必須)
+ */
+.Name50RequiredTextBox {
+	width: 685px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称_50
+ */
+.Name50TextBox {
+	width: 685px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+
+/**
+ * 名称_60(必須)
+ */
+.Name60RequiredTextBox {
+	width: 685px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称_60
+ */
+.Name60TextBox {
+	width: 685px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称_10-50(入力欄幅10、桁数50)
+ */
+.Name10-50TextBox {
+	width: 145px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称_21-50(入力欄幅25、桁数50)
+ */
+.Name21-50TextBox {
+	width: 320px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称_21-50(入力欄幅25、桁数50、必須)
+ */
+.Name21-50RequiredTextBox {
+	width: 320px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称_25-50(入力欄幅25、桁数50)
+ */
+.Name25-50TextBox {
+	width: 380px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称_25-50(入力欄幅25、桁数50、必須)
+ */
+.Name25-50RequiredTextBox {
+	width: 380px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称_50
+ */
+.Name50TextBox {
+	width: 750px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称_64
+ */
+.Name64TextBox {
+	width: 700px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称カナ_10(必須)
+ */
+.Kana10RequiredTextBox {
+	width: 80px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称カナ_10
+ */
+.Kana10TextBox {
+	width: 80px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称カナ_15(必須)
+ */
+.Kana15RequiredTextBox {
+	width: 110px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称カナ_15
+ */
+.Kana15TextBox {
+	width: 110px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * バイト_6(必須)
+ */
+.Byte6RequiredTextBox {
+	width: 45px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * バイト_6
+ */
+.Byte6TextBox {
+	width: 45px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 数値_1(必須)
+ */
+.Number1RequiredTextBox {
+	width: 20px;
+	height: 16px;
+	text-align: right;
+	ime-mode: disabled;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 数値_1
+ */
+.Number1TextBox {
+	width: 20px;
+	height: 16px;
+	text-align: right;
+	ime-mode: disabled;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 数値_2(必須)
+ */
+.Number2RequiredTextBox {
+	width: 20px;
+	height: 16px;
+	text-align: right;
+	ime-mode: disabled;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 数値_2
+ */
+.Number2TextBox {
+	width: 20px;
+	height: 16px;
+	text-align: right;
+	ime-mode: disabled;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 数値_3(必須)
+ */
+.Number3RequiredTextBox {
+	width: 25px;
+	height: 16px;
+	text-align: right;
+	ime-mode: disabled;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 数値_3
+ */
+.Number3TextBox {
+	width: 25px;
+	height: 16px;
+	text-align: right;
+	ime-mode: disabled;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 数値_4(必須)
+ */
+.Number4RequiredTextBox {
+	width: 35px;
+	height: 16px;
+	text-align: right;
+	ime-mode: disabled;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 数値_4
+ */
+.Number4TextBox {
+	width: 35px;
+	height: 16px;
+	text-align: right;
+	ime-mode: disabled;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 数値_4(小数点含む、入力必須)
+ */
+.Numeric4RequiredTextBox {
+	width: 35px;
+	height: 16px;
+	text-align: right;
+	ime-mode: disabled;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 数値_5(必須)
+ */
+.Number5RequiredTextBox {
+	width: 40px;
+	height: 16px;
+	text-align: right;
+	ime-mode: disabled;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 数値_5
+ */
+.Number5TextBox {
+	width: 40px;
+	height: 16px;
+	text-align: right;
+	ime-mode: disabled;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 数値_5(小数点含む)
+ */
+.Numeric5TextBox {
+	width: 35px;
+	height: 16px;
+	text-align: right;
+	ime-mode: disabled;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 半角ImeOff_6
+ */
+.ImeOff6TextBox {
+	width: 45px;
+	height: 16px;
+	text-align: right;
+	ime-mode: disabled;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 数値_6
+ */
+.Number6TextBox {
+	width: 45px;
+	height: 16px;
+	text-align: right;
+	ime-mode: disabled;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 数値_6(必須)
+ */
+.Number6RequiredTextBox {
+	width: 45px;
+	height: 16px;
+	text-align: right;
+	ime-mode: disabled;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 数値_7(必須)
+ */
+.Number7RequiredTextBox {
+	width: 55px;
+	height: 16px;
+	text-align: right;
+	ime-mode: disabled;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 数値_8(必須)
+ */
+.Number8TextBox {
+	width: 65px;
+	height: 16px;
+	text-align: right;
+	ime-mode: disabled;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 数値_8(必須)
+ */
+.Number8RequiredTextBox {
+	width: 65px;
+	height: 16px;
+	text-align: right;
+	ime-mode: disabled;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 数値_9
+ */
+.Number9TextBox {
+	width: 70px;
+	height: 16px;
+	text-align: right;
+	ime-mode: disabled;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 数値_10
+ */
+.Number10TextBox {
+	width: 75px;
+	height: 16px;
+	text-align: right;
+	ime-mode: disabled;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 数値_10(必須)
+ */
+.Number10RequiredTextBox {
+	width: 75px;
+	height: 16px;
+	text-align: right;
+	ime-mode: disabled;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 備考入力欄。
+ */
+.Name100TextArea {
+	width: 850px;
+	height: 35px;
+	font-size: 13px;
+	border: 1px solid #003366;
+	ime-mode: active;
+	font-family: "ＭＳ ゴシック", "Takaoゴシック", sans-serif;
+}
+
+/**
+ * コメント_120
+ */
+.Name120TextArea {
+	width: 580px;
+	height: 50px;
+	font-size: 13px;
+	border: 1px solid #003366;
+	ime-mode: active;
+	font-family: "ＭＳ ゴシック", "Takaoゴシック", sans-serif;
+}
+
+/**
+ * コメント_200
+ */
+.Name200TextArea {
+	width: 965px;
+	height: 50px;
+	font-size: 13px;
+	border: 1px solid #003366;
+	ime-mode: active;
+	overflow: hidden;
+	font-family: "ＭＳ ゴシック", "Takaoゴシック", sans-serif;
+}
+
+
+/**
+ * メールアドレス用テキストボックス
+ */
+.MailAddressTextBox {
+	width: 300px;
+	height: 16px;
+	ime-mode: disabled;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+
+/**
+ * 各種プルダウン
+ */
+select {
+	height: 20px;
+	border: 1px solid #003366;
+	vertical-align: middle;
+	font-family: "ＭＳ ゴシック", "Takaoゴシック", sans-serif;
+}
+
+/**
+ * プルダウン_名称1
+ */
+.Name1PullDown {
+	width: 40px;
+}
+
+/**
+ * プルダウン_名称2
+ */
+.Name2PullDown {
+	width: 55px;
+}
+
+/**
+ * プルダウン_名称3
+ */
+.Name3PullDown {
+	width: 70px;
+}
+
+/**
+ * プルダウン_名称4
+ */
+.Name4PullDown {
+	width: 85px;
+}
+
+/**
+ * プルダウン_名称5
+ */
+.Name5PullDown {
+	width: 95px;
+}
+
+/**
+ * プルダウン_名称6
+ */
+.Name6PullDown {
+	width: 110px;
+}
+
+/**
+ * プルダウン_名称8
+ */
+.Name8PullDown {
+	width: 140px;
+}
+
+/**
+ * プルダウン_名称12
+ */
+.Name12PullDown {
+	width: 190px;
+}
+
+/**
+ * プルダウン_名称13(～を入力して下さい、対象データが存在しません)
+ */
+.Name13PullDown {
+	width: 210px;
+}
+
+/**
+ * プルダウン_名称15
+ */
+.Name15PullDown {
+	width: 235px;
+}
+
+/**
+ * プルダウン_名称16(所属表示名称用)
+ */
+.SectionNamePullDown {
+	width: 250px;
+}
+
+/**
+ * プルダウン_名称25
+ */
+.Name25PullDown {
+	width: 380px;
+}
+
+/**
+ * プルダウン_数値1
+ */
+.Number1PullDown {
+	width: 35px;
+}
+
+/**
+ * プルダウン_数値2
+ */
+.Number2PullDown {
+	width: 40px;
+}
+
+/**
+ * プルダウン_数値4
+ */
+.Number4PullDown {
+	width: 55px;
+}
+
+/**
+ * プルダウン_数値10
+ */
+.Number10PullDown {
+	width: 95px;
+}
+
+/**
+ * プルダウン_マスタ項目
+ */
+.MasterPullDown {
+	width: 170px;
+}
+
+/**
+ * プルダウン_勤務形態
+ */
+.WorkTypePullDown {
+	width: 175px;
+	font-family: "ＭＳ Ｐゴシック", "Takao Pゴシック", sans-serif;
+}
+
+/**
+ * プルダウン_勤務形態
+ */
+.WorkTypeFullNamePullDown {
+	width: 310px;
+	font-family: "ＭＳ Ｐゴシック", "Takao Pゴシック", sans-serif;
+}
+
+/**
+ * プルダウン_所属階層経路
+ */
+.ClassRoutePullDown {
+	width: 265px;
+}
+
+/**
+ * 各種チェックボックス
+ */
+.CheckBox {
+	vertical-align: middle;
+}
+
+/**
+ * 各種ラジオボタン
+ */
+.RadioButton {
+	vertical-align: -3px;
+}
+/* ****************************************** */
+/* === 各種出力項目 === */
+/* ****************************************** */
+/**
+ * 項目名表示欄
+ */
+.TitleTd {
+	text-align: center;
+	background-color: #EEEEEE;
+}
+
+/**
+ * 項目名表示欄(右寄せ)
+ */
+.TitleNumberTd {
+	text-align: right;
+	background-color: #EEEEEE;
+}
+
+/**
+ * 項目名表示欄(左寄せ)
+ */
+.TitleInputTd {
+	text-align: left;
+	background-color: #EEEEEE;
+}
+
+/**
+ * 項目内容入力・表示欄
+ */
+.InputTd {
+	text-align: left;
+	background-color: #FFFFFF;
+}
+
+/**
+ * ボタン・チェックボックス表示欄
+ */
+.SelectTd {
+	text-align: center;
+	background-color: #FFFFFF;
+}
+
+/**
+ * ボタン・チェックボックス表示欄
+ */
+.SelectAuxiliaryTd {
+	text-align: center;
+	background-color: #EEEEEE;
+}
+
+/**
+ * 各種数値表示欄
+ */
+.NumberTd {
+	text-align: right;
+	background-color: #FFFFFF;
+}
+
+/**
+ * リスト内容表示欄
+ */
+.ListInputTd {
+	text-align: left;
+}
+
+/**
+ * リスト内ボタン・チェックボックス表示欄
+ */
+.ListSelectTd {
+	text-align: center;
+}
+
+/**
+ * リスト内数値表示欄
+ */
+.ListNumberTd {
+	text-align: right;
+}
+
+/**
+ * テーブルタイトルフォント
+ */
+.TitleTh {
+	font-size: 16px;
+	font-weight: bold;
+	float: left
+}
+
+/**
+ * 検索結果一覧最下部ボタン欄(td)
+ */
+.UnderTd {
+	width: 980px;
+	background-color: #EEEEEE;
+}
+/* ****************************************** */
+/* === 各種共通テーブル === */
+/* ****************************************** */
+/**
+ * 一覧表示欄(table)。
+ */
+.ListTable {
+	width: 980px;
+	margin: 10px auto;
+}
+
+/**
+ * 左寄せ一覧表示欄(table)。
+ */
+.LeftListTable {
+	width: 980px;
+	float: left;
+	margin: 10px auto;
+}
+
+/**
+ * 各種入力項目表示欄(table)。
+ */
+.InputTable {
+	width: 900px;
+	float: left;
+	margin: 10px auto 10px 0px;
+}
+
+/**
+ * 合計値表示欄(table)。
+ */
+.ListFooterTable {
+	width: 550px;
+	float: left
+}
+
+/**
+ * 幅固定用テーブルヘッダ(table)。
+ */
+.OverTable {
+	width: 980px;
+	margin: 10px auto 0px;
+}
+
+/**
+ * 幅固定用テーブルヘッダ(td)。
+ */
+.OverTable td {
+	border-bottom: none;
+}
+
+/**
+ * 幅固定用テーブル内容(table)。
+ */
+.UnderTable {
+	width: 980px;
+	margin: 0px auto 10px;
+	table-layout: fixed;
+}
+
+/**
+ * 幅固定用テーブル内容(td)。
+ */
+.UnderTable td {
+	border-top: none;
+}
+
+/**
+ * 幅固定用900pxテーブルヘッダ(table)。
+ */
+.OverInputTable {
+	width: 900px;
+	float: left;
+	margin: 10px auto 0px;
+}
+
+/**
+ * 幅固定用900pxテーブルヘッダ(td)。
+ */
+.OverInputTable td {
+	border-bottom: none;
+}
+
+/**
+ * 幅固定用900pxテーブル内容(table)。
+ */
+.UnderInputTable {
+	width: 900px;
+	float: left;
+	margin: 0px auto 10px;
+	table-layout: fixed;
+}
+
+/**
+ * 幅固定用900pxテーブル内容(td)。
+ */
+.UnderInputTable td {
+	border-top: none;
+}
+
+/**
+ * ボタン単体テーブル(table)。
+ */
+.ButtonTable {
+	float: right;
+	width: 70px;
+	margin: 10px 10px auto auto;
+	border: none;
+}
+
+/**
+ * ボタン単体テーブル(td)。
+ */
+.ButtonTable td {
+	text-align: right;
+	border: none;
+}
+
+/**
+ * 承認者選択テーブル(td)。
+ */
+#tblApproverSelect td {
+	border-top: 1px solid black;
+	width: 110px;
+}
+
+/**
+ * 承認者選択テーブル内容表示欄(td)。
+ */
+#tblApproverSelect .InputTd {
+	width: 320px;
+}
+
+/**
+ * 承認者選択テーブル内空欄(td)。
+ */
+#tblApproverSelect .Blank {
+	width: 440px;
+	border-top: none;
+}
+
+/**
+ * 社員一覧検索項目表示切替用テーブル。
+ */
+.ButtonTable a {
+	float: left;
+	font-size: 15px;
+	margin-left: 4px;
+	text-decoration: none;
+}
+
+/**
+ * 単一項目表示欄(table)。
+ */
+.LabelTable {
+	width: 980px;
+	float: left;
+	margin: 10px auto;
+	border: 1px solid black;
+	background-color: #EEEEEE;
+}
+/* ****************************************** */
+/* === 各種テーブルヘッダ・背景色 === */
+/* ****************************************** */
+/**
+ * 紫、左寄せ
+ */
+.ListTableTh {
+	text-align: left;
+	background-color: #CCCCFF;
+	cursor: default;
+}
+
+/**
+ * 紫、右寄せ
+ */
+.ListNumberTh {
+	text-align: right;
+	background-color: #CCCCFF;
+	cursor: default;
+}
+
+/**
+ * 紫、中央揃え
+ */
+.ListSelectTh {
+	text-align: center;
+	background-color: #CCCCFF;
+	width: 100px;
+}
+
+/**
+ * 紫、中央揃え、ポインタ変化
+ */
+.ListSortTh {
+	cursor: pointer;
+	text-align: center;
+	background-color: #CCCCFF;
+	white-space: nowrap;
+}
+
+/**
+ * 緑、左寄せ
+ */
+.EditTableTh {
+	text-align: left;
+	background-color: #CCFFCC;
+}
+
+/**
+ * 緑、中央揃え
+ */
+.EditSelectTh {
+	text-align: center;
+	background-color: #CCFFCC;
+}
+
+/**
+ * 緑、中央揃え、ポインタ変化
+ */
+.EditSortTh {
+	cursor: pointer;
+	text-align: center;
+	background-color: #CCFFCC;
+}
+
+/**
+ * 青、左寄せ
+ */
+.UpdateTableTh {
+	text-align: left;
+	background-color: #CCFFFF;
+}
+
+/**
+ * 青、中央揃え
+ */
+.UpdateSelectTh {
+	text-align: center;
+	background-color: #CCFFFF;
+}
+/**
+ * 灰色、左寄せ
+ */
+.ItemTableTh {
+	text-align: left;
+	background-color: #EEEEEE;
+	cursor: default;
+}
+
+/**
+ * 灰色、右寄せ
+ */
+.ItemNumberTh {
+	text-align: right;
+	background-color: #EEEEEE;
+	cursor: default;
+}
+
+/**
+ * 灰色、中央揃え
+ */
+.ItemSelectTh {
+	text-align: center;
+	background-color: #EEEEEE;
+	width: 100px;
+}
+
+/**
+ * 灰色、中央揃え、ポインタ変化
+ */
+.ItemSortTh {
+	cursor: pointer;
+	text-align: center;
+	background-color: #EEEEEE;
+	white-space: nowrap;
+}
+
+
+
+/**
+ * 各種検索テーブル背景
+ */
+.Search table {
+	background-color: #EEEEEE;
+}
+
+/**
+ * ボタン用テーブル背景
+ */
+.Search .ButtonTable {
+	background-color: #F8F8F8;
+}
+/* ****************************************** */
+/* === 各種ボタン === */
+/* ****************************************** */
+/**
+ * ボタン全般。
+ */
+button {
+	cursor: pointer;
+	font-family: "ＭＳ ゴシック", "Takaoゴシック", monospace;
+	border-radius: 5px 5px 5px 5px;
+	box-shadow: 1px 1px 1px rgba(100, 100, 100, 0.5);
+	border: 1px solid black;
+	width: 50px;
+	height: 20px;
+	vertical-align: middle;
+	background-color: #FFFFFF;
+	/* Firefox12以前表示用 */
+	-moz-border-radius: 5px 5px 5px 5px;
+	-moz-box-shadow: 1px 1px 1px rgba(100, 100, 100, 0.5);
+}
+
+/**
+ * ボタン(1文字)
+ */
+.Name1Button {
+	width: 25px;
+	margin: auto 5px;
+}
+
+/**
+ * ボタン(2文字)
+ */
+.Name2Button {
+	width: 50px;
+}
+
+/**
+ * ボタン(3文字)
+ */
+.Name3Button {
+	width: 65px;
+}
+
+/**
+ * ボタン(4文字)
+ */
+.Name4Button {
+	width: 80px;
+}
+
+/**
+ * ボタン(5文字)
+ */
+.Name5Button {
+	width: 100px;
+}
+
+/**
+ * ボタン(6文字)
+ */
+.Name6Button {
+	width: 110px;
+}
+
+/**
+ * ボタン(7文字)
+ */
+.Name7Button {
+	width: 125px;
+}
+
+/**
+ * ボタン(8文字)
+ */
+.Name8Button {
+	width: 140px;
+}
+
+/**
+ * ボタン(メッセージ含む)
+ */
+.MessageButton {
+	width: 200px;
+}
+
+/**
+ * ボタン(ログアウト)
+ */
+.LogoutButton {
+	width: 100px;
+	font-weight: bold;
+	height: 25px;
+	margin: 15px 20px auto auto; 
+	color: red;
+}
+
+/**
+ * ボタン(ログイン)
+ */
+.LoginButton {
+	font-size: 15px;
+	font-weight: bold;
+	height: 30px;
+	width: 145px;
+}
+/* ****************************************** */
+/* === リンク === */
+/* ****************************************** */
+/**
+ * サブメニュー文字色マウスオーバー時。
+ */
+.Navi .MenuTab a:hover {
+	color: #FFFFFF;
+}
+
+/**
+ * ページ先頭遷移用リンク(div)。
+ */
+.MoveUpLink {
+	width: 980px;
+	float: right;
+	text-align: right;
+	margin: 0px auto 10px;
+}
+
+/**
+ * ページ先頭遷移用リンク(a)。
+ */
+.MoveUpLink a {
+	text-decoration: underline;
+}
+
+/**
+ * 表示対象範囲指定リンク(a)。
+ */
+.RollLink {
+	font-size: 20px;
+}
+
+/**
+ * 有効日順送りリンク(a)。
+ */
+.ActivateDateRollLink {
+	font-size: 15px;
+}
+
+/**
+ * 各種リンク(a)。
+ */
+.Body a {
+	color: #0000FF;
+	cursor: pointer;
+}
+
+/**
+ * 各種リンクマウスオーバー時。
+ */
+.Body a:hover {
+	color: #FF0000;
+}
+/* ****************************************** */
+/* === フォント関連 === */
+/* ****************************************** */
+/**
+ * 太字。
+ */
+.Bold {
+	font-weight: bold;	
+}
+
+/**
+ * 文字色青。
+ */
+.FontBlue {
+	color: #0000FF;
+}
+
+/**
+ * 文字色赤。
+ */
+.FontRed {
+	color: #FF0000;
+}
+
+/**
+ * 文字色灰。
+ */
+.FontGray {
+	color: #D3D3D3;
+}
+
+/**
+ * 入力必須マーク。
+ */
+.RequiredLabel {
+	color: red;
+}
+/* ****************************************** */
+/* === その他 === */
+/* ****************************************** */
+/**
+ * ロゴ。
+ */
+.Logo {
+	margin: 3px 5px;
+}
+
+/**
+ * 罫線有り(上側)。
+ */
+#tdBorderTop {
+	border-top: 1px solid black;
+}
+
+/**
+ * 罫線無し(上側)。
+ */
+#tdNoBorderTop {
+	border-top: none;
+}
+
+/**
+ * 罫線無し(下側)。
+ */
+#tdNoBorderBottom {
+	border-bottom: none;
+}
+
+/**
+ * 罫線無し(上下)。
+ */
+#tdNoBorderVertical {
+	border-top: none;
+	border-bottom: none;
+}
+
+/**
+ * 空白部分(ListTable)。
+ */
+.ListTable .Blank {
+	border: medium none;
+	background-color: #F8F8F8;
+}
+
+/**
+ * 空白部分(LeftListTable)。
+ */
+.LeftListTable .Blank {
+	border: medium none;
+	background-color: #F8F8F8;
+}
+
+/**
+ * 空白部分(InputTable)。
+ */
+.InputTable .Blank {
+	border: medium none;
+	background-color: #F8F8F8;
+}
+
+/**
+ * 空白部分(FixInputTable)。
+ */
+.FixInputTable .Blank {
+	border: medium none;
+	background-color: #F8F8F8;
+}
+
+/**
+ * 空白部分(UnderTable)。
+ */
+.UnderTable .Blank {
+	border: medium none;
+	background-color: #F8F8F8;
+}
+
+/**
+ * 空白部分(UnderInputTable)。
+ */
+.UnderInputTable .Blank {
+	border: medium none;
+	background-color: #F8F8F8;
+}

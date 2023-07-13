@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE MosP>
+<!--
+MosP - Mind Open Source Project    http://www.mosp.jp/
+Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+
+This program is free software: you can redistribute it and/or
+modify it under the terms of the GNU Affero General Public License
+as published by the Free Software Foundation, either version 3
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<MosP>
+
+<!--BeanHandler-->
+	<Model key="PlatformBeanHandler">
+		jp.mosp.platform.base.PlatformBeanHandler
+	</Model>
+	<Model key="ReferenceBeanHandler">
+		jp.mosp.platform.base.ReferenceBeanHandler
+	</Model>
+
+<!--jp.mosp.platform.bean.human-->
+	<Model key="HumanGeneral">
+		jp.mosp.platform.bean.human.impl.HumanGeneralBean
+	</Model>
+	<Model key="HumanGeneralCheck">
+		jp.mosp.platform.bean.human.impl.HumanGeneralCheckBean
+	</Model>
+	<Model key="EmployeeNumbering">
+		jp.mosp.platform.bean.human.impl.EmployeeNumberingBean
+	</Model>
+<!--Reference-->
+	<Model key="EmployeeReference">
+		jp.mosp.platform.bean.human.impl.EmployeeReferenceBean
+	</Model>
+	<Model key="HumanReference">
+		jp.mosp.platform.bean.human.impl.HumanReferenceBean
+	</Model>
+	<Model key="EntranceReference">
+		jp.mosp.platform.bean.human.impl.EntranceReferenceBean
+	</Model>
+	<Model key="SuspensionReference">
+		jp.mosp.platform.bean.human.impl.SuspensionReferenceBean
+	</Model>
+	<Model key="RetirementReference">
+		jp.mosp.platform.bean.human.impl.RetirementReferenceBean
+	</Model>
+	<Model key="ConcurrentReference">
+		jp.mosp.platform.bean.human.impl.ConcurrentReferenceBean
+	</Model>
+	<Model key="AddressReference">
+		jp.mosp.platform.bean.human.impl.AddressReferenceBean
+	</Model>
+	<Model key="PhoneReference">
+		jp.mosp.platform.bean.human.impl.PhoneReferenceBean
+	</Model>
+	<Model key="AccountReference">
+		jp.mosp.platform.bean.human.impl.AccountReferenceBean
+	</Model>
+	<Model key="HumanHistoryReference">
+		jp.mosp.platform.bean.human.impl.HumanHistoryReferenceBean
+	</Model>
+	<Model key="HumanNormalReference">
+		jp.mosp.platform.bean.human.impl.HumanNormalReferenceBean
+	</Model>
+	<Model key="HumanArrayReference">
+		jp.mosp.platform.bean.human.impl.HumanArrayReferenceBean
+	</Model>
+	<Model key="HumanBinaryHistoryReference">
+		jp.mosp.platform.bean.human.impl.HumanBinaryHistoryReferenceBean
+	</Model>
+	<Model key="HumanBinaryNormalReference">
+		jp.mosp.platform.bean.human.impl.HumanBinaryNormalReferenceBean
+	</Model>
+	<Model key="HumanBinaryArrayReference">
+		jp.mosp.platform.bean.human.impl.HumanBinaryArrayReferenceBean
+	</Model>
+	
+<!--Search-->
+	<Model key="HumanSearch">
+		jp.mosp.platform.bean.human.impl.HumanSearchBean
+	</Model>
+	<Model key="HumanSubordinate">
+		jp.mosp.platform.bean.human.impl.HumanSubordinateBean
+	</Model>
+	
+<!--Register-->
+	<Model key="HumanRegist">
+		jp.mosp.platform.bean.human.impl.HumanRegistBean
+	</Model>
+	<Model key="HistoryBasicDelete">
+		jp.mosp.platform.bean.human.impl.HistoryBasicDeleteBean
+	</Model>
+	<Model key="EntranceRegist">
+		jp.mosp.platform.bean.human.impl.EntranceRegistBean
+	</Model>
+	<Model key="SuspensionRegist">
+		jp.mosp.platform.bean.human.impl.SuspensionRegistBean
+	</Model>
+	<Model key="RetirementRegist">
+		jp.mosp.platform.bean.human.impl.RetirementRegistBean
+	</Model>
+	<Model key="ConcurrentRegist">
+		jp.mosp.platform.bean.human.impl.ConcurrentRegistBean
+	</Model>
+	<Model key="AddressRegist">
+		jp.mosp.platform.bean.human.impl.AddressRegistBean
+	</Model>
+	<Model key="PhoneRegist">
+		jp.mosp.platform.bean.human.impl.PhoneRegistBean
+	</Model>
+	<Model key="AccountRegist">
+		jp.mosp.platform.bean.human.impl.AccountRegistBean
+	</Model>
+	<Model key="HumanHistoryRegist">
+		jp.mosp.platform.bean.human.impl.HumanHistoryRegistBean
+	</Model>
+	<Model key="HumanNormalRegist">
+		jp.mosp.platform.bean.human.impl.HumanNormalRegistBean
+	</Model>
+	<Model key="HumanArrayRegist">
+		jp.mosp.platform.bean.human.impl.HumanArrayRegistBean
+	</Model>
+	<Model key="HumanBinaryHistoryRegist">
+		jp.mosp.platform.bean.human.impl.HumanBinaryHistoryRegistBean
+	</Model>
+	<Model key="HumanBinaryNormalRegist">
+		jp.mosp.platform.bean.human.impl.HumanBinaryNormalRegistBean
+	</Model>
+	<Model key="HumanBinaryArrayRegist">
+		jp.mosp.platform.bean.human.impl.HumanBinaryArrayRegistBean
+	</Model>
+	<Model key="HumanCheck">
+		jp.mosp.platform.bean.human.impl.HumanCheckBean
+	</Model>
+
+<!--jp.mosp.platform.bean.system-->
+	<Model key="PlatformMasterCheck">
+		jp.mosp.platform.bean.system.impl.PlatformMasterCheckBean
+	</Model>
+	<Model key="PlatformSystemValidate">
+		jp.mosp.platform.bean.system.impl.PlatformSystemValidateBean
+	</Model>
+	<Model key="Cipher">
+		jp.mosp.platform.bean.system.impl.CipherBean
+	</Model>
+	
+<!--Reference-->
+	<Model key="UserMasterReference">
+		jp.mosp.platform.bean.system.impl.UserMasterReferenceBean
+	</Model>
+	<Model key="UserExtraRoleReference">
+		jp.mosp.platform.bean.system.impl.UserExtraRoleReferenceBean
+	</Model>
+	<Model key="SectionReference">
+		jp.mosp.platform.bean.system.impl.SectionReferenceBean
+	</Model>
+	<Model key="PositionReference">
+		jp.mosp.platform.bean.system.impl.PositionReferenceBean
+	</Model>
+	<Model key="EmploymentContractReference">
+		jp.mosp.platform.bean.system.impl.EmploymentContractReferenceBean
+	</Model>
+	<Model key="WorkPlaceReference">
+		jp.mosp.platform.bean.system.impl.WorkPlaceReferenceBean
+	</Model>
+	<Model key="RoleReference">
+		jp.mosp.platform.bean.system.impl.RoleReferenceBean
+	</Model>
+	<Model key="GeneralReference">
+		jp.mosp.platform.bean.system.impl.GeneralReferenceBean
+	</Model>
+	<Model key="IcCardReference">
+		jp.mosp.platform.bean.system.impl.IcCardReferenceBean
+	</Model>
+	<Model key="ReceptionIcCardReference">
+		jp.mosp.platform.bean.system.impl.ReceptionIcCardReferenceBean
+	</Model>
+	<Model key="NamingReference">
+		jp.mosp.platform.bean.system.impl.NamingReferenceBean
+	</Model>
+	<Model key="PostalCodeReference">
+		jp.mosp.platform.bean.system.impl.PostalCodeReferenceBean
+	</Model>
+	<Model key="BankBaseReference">
+		jp.mosp.platform.bean.system.impl.BankBaseReferenceBean
+	</Model>
+	<Model key="BankBranchReference">
+		jp.mosp.platform.bean.system.impl.BankBranchReferenceBean
+	</Model>
+	<Model key="PlatformMaster">
+		jp.mosp.platform.bean.system.impl.PlatformMasterBean
+	</Model>
+	
+	
+<!--Search-->
+	<Model key="UserMasterSearch">
+		jp.mosp.platform.bean.system.impl.UserMasterSearchBean
+	</Model>
+	<Model key="SectionSearch">
+		jp.mosp.platform.bean.system.impl.SectionSearchBean
+	</Model>
+	<Model key="PositionSearch">
+		jp.mosp.platform.bean.system.impl.PositionSearchBean
+	</Model>
+	<Model key="EmploymentContractSearch">
+		jp.mosp.platform.bean.system.impl.EmploymentContractSearchBean
+	</Model>
+	<Model key="WorkPlaceSearch">
+		jp.mosp.platform.bean.system.impl.WorkPlaceSearchBean
+	</Model>
+	<Model key="IcCardSearch">
+		jp.mosp.platform.bean.system.impl.IcCardSearchBean
+	</Model>
+	<Model key="NamingSearch">
+		jp.mosp.platform.bean.system.impl.NamingSearchBean
+	</Model>
+	
+<!--Register-->
+	<Model key="UserAccountRegist">
+		jp.mosp.platform.bean.system.impl.UserAccountRegistBean
+	</Model>
+	<Model key="UserMasterRegist">
+		jp.mosp.platform.bean.system.impl.UserMasterRegistBean
+	</Model>
+	<Model key="UserExtraRoleRegist">
+		jp.mosp.platform.bean.system.impl.UserExtraRoleRegistBean
+	</Model>
+	<Model key="UserPasswordRegist">
+		jp.mosp.platform.bean.system.impl.UserPasswordRegistBean
+	</Model>
+	<Model key="SectionRegist">
+		jp.mosp.platform.bean.system.impl.SectionRegistBean
+	</Model>
+	<Model key="PositionRegist">
+		jp.mosp.platform.bean.system.impl.PositionRegistBean
+	</Model>
+	<Model key="EmploymentContractRegist">
+		jp.mosp.platform.bean.system.impl.EmploymentContractRegistBean
+	</Model>
+	<Model key="WorkPlaceRegist">
+		jp.mosp.platform.bean.system.impl.WorkPlaceRegistBean
+	</Model>
+		<Model key="GeneralRegist">
+		jp.mosp.platform.bean.system.impl.GeneralRegistBean
+	</Model>
+	<Model key="ReceptionIcCardRegist">
+		jp.mosp.platform.bean.system.impl.ReceptionIcCardRegistBean
+	</Model>
+	<Model key="IcCardRegist">
+		jp.mosp.platform.bean.system.impl.IcCardRegistBean
+	</Model>
+	<Model key="NamingRegist">
+		jp.mosp.platform.bean.system.impl.NamingRegistBean
+	</Model>
+	<Model key="PostalCodeRegist">
+		jp.mosp.platform.bean.system.impl.PostalCodeRegistBean
+	</Model>
+	<Model key="BankBaseRegist">
+		jp.mosp.platform.bean.system.impl.BankBaseRegistBean
+	</Model>
+	<Model key="BankBranchRegist">
+		jp.mosp.platform.bean.system.impl.BankBranchRegistBean
+	</Model>
+	<Model key="AppPropertyRegist">
+		jp.mosp.platform.bean.system.impl.AppPropertyRegistBean
+	</Model>
+	
+<!--jp.mosp.platform.bean.portal-->
+	<Model key="Auth">
+		jp.mosp.platform.bean.portal.impl.AuthBean
+	</Model>
+	<Model key="MospUser">
+		jp.mosp.platform.bean.portal.impl.MospUserBean
+	</Model>
+	<Model key="UserCheck">
+		jp.mosp.platform.bean.portal.impl.UserCheckBean
+	</Model>
+	<Model key="PasswordCheck">
+		jp.mosp.platform.bean.portal.impl.PasswordCheckBean
+	</Model>
+	<Model key="PreAction">
+		jp.mosp.platform.bean.portal.impl.PreActionBean
+	</Model>
+	
+<!--jp.mosp.platform.bean.message-->
+<!--Reference-->
+	<Model key="MessageReference">
+		jp.mosp.platform.bean.message.impl.MessageReferenceBean
+	</Model>
+	
+<!--Search-->
+	<Model key="MessageSearch">
+		jp.mosp.platform.bean.message.impl.MessageSearchBean
+	</Model>
+	<Model key="MessageMail">
+		jp.mosp.platform.bean.message.impl.MessageMailBean
+	</Model>
+	
+<!--Register-->
+	<Model key="MessageRegist">
+		jp.mosp.platform.bean.message.impl.MessageRegistBean
+	</Model>
+	
+<!--jp.mosp.platform.bean.file-->
+<!--Reference-->
+	<Model key="ImportReference">
+		jp.mosp.platform.bean.file.impl.ImportReferenceBean
+	</Model>
+	<Model key="ImportFieldReference">
+		jp.mosp.platform.bean.file.impl.ImportFieldReferenceBean
+	</Model>
+	<Model key="TemplateOutput">
+		jp.mosp.platform.bean.file.impl.TemplateOutputBean
+	</Model>
+	<Model key="ExportReference">
+		jp.mosp.platform.bean.file.impl.ExportReferenceBean
+	</Model>
+	<Model key="ExportFieldReference">
+		jp.mosp.platform.bean.file.impl.ExportFieldReferenceBean
+	</Model>
+	<Model key="HumanExport">
+		jp.mosp.platform.bean.file.impl.HumanExportBean
+	</Model>
+	<Model key="UserExport">
+		jp.mosp.platform.bean.file.impl.UserExportBean
+	</Model>
+	<Model key="UserExtraRoleExport">
+		jp.mosp.platform.bean.file.impl.UserExtraRoleExportBean
+	</Model>
+	<Model key="SectionExport">
+		jp.mosp.platform.bean.file.impl.SectionExportBean
+	</Model>
+	<Model key="TableType">
+		jp.mosp.platform.bean.file.impl.TableTypeBean
+	</Model>
+
+<!--Search-->
+	<Model key="ImportSearch">
+		jp.mosp.platform.bean.file.impl.ImportSearchBean
+	</Model>
+	<Model key="ExportSearch">
+		jp.mosp.platform.bean.file.impl.ExportSearchBean
+	</Model>
+
+<!--Register-->
+	<Model key="ImportRegist">
+		jp.mosp.platform.bean.file.impl.ImportRegistBean
+	</Model>
+	<Model key="ImportFieldRegist">
+		jp.mosp.platform.bean.file.impl.ImportFieldRegistBean
+	</Model>
+	<Model key="ExportRegist">
+		jp.mosp.platform.bean.file.impl.ExportRegistBean
+	</Model>
+	<Model key="ExportFieldRegist">
+		jp.mosp.platform.bean.file.impl.ExportFieldRegistBean
+	</Model>
+	<Model key="HumanImport">
+		jp.mosp.platform.bean.file.impl.HumanImportBean
+	</Model>
+	<Model key="UserImport">
+		jp.mosp.platform.bean.file.impl.UserImportBean
+	</Model>
+	<Model key="UserExtraRoleImport">
+		jp.mosp.platform.bean.file.impl.UserExtraRoleImportBean
+	</Model>
+	<Model key="SectionImport">
+		jp.mosp.platform.bean.file.impl.SectionImportBean
+	</Model>
+	<Model key="PositionImport">
+		jp.mosp.platform.bean.file.impl.PositionImportBean
+	</Model>
+	<Model key="UnitSectionImport">
+		jp.mosp.platform.bean.file.impl.UnitSectionImportBean
+	</Model>
+	<Model key="UnitPersonImport">
+		jp.mosp.platform.bean.file.impl.UnitPersonImportBean
+	</Model>
+
+<!--jp.mosp.platform.bean.workflow-->
+<!--Reference-->
+	<Model key="ApprovalUnitReference">
+		jp.mosp.platform.bean.workflow.impl.ApprovalUnitReferenceBean
+	</Model>
+	<Model key="ApprovalRouteReference">
+		jp.mosp.platform.bean.workflow.impl.ApprovalRouteReferenceBean
+	</Model>
+	<Model key="ApprovalRouteUnitReference">
+		jp.mosp.platform.bean.workflow.impl.ApprovalRouteUnitReferenceBean
+	</Model>
+	<Model key="SubApproverReference">
+		jp.mosp.platform.bean.workflow.impl.SubApproverReferenceBean
+	</Model>
+	<Model key="WorkflowReference">
+		jp.mosp.platform.bean.workflow.impl.WorkflowReferenceBean
+	</Model>
+	<Model key="WorkflowCommentReference">
+		jp.mosp.platform.bean.workflow.impl.WorkflowCommentReferenceBean
+	</Model>
+	<Model key="RouteApplicationReference">
+		jp.mosp.platform.bean.workflow.impl.RouteApplicationReferenceBean
+	</Model>
+	
+<!--Search-->
+	<Model key="ApprovalUnitSearch">
+		jp.mosp.platform.bean.workflow.impl.ApprovalUnitSearchBean
+	</Model>
+	<Model key="ApprovalRouteSearch">
+		jp.mosp.platform.bean.workflow.impl.ApprovalRouteSearchBean
+	</Model>
+	<Model key="SubApproverSearch">
+		jp.mosp.platform.bean.workflow.impl.SubApproverSearchBean
+	</Model>
+	<Model key="RouteApplicationSearch">
+		jp.mosp.platform.bean.workflow.impl.RouteApplicationSearchBean
+	</Model>
+	<Model key="RouteApplicationReferenceSearch">
+		jp.mosp.platform.bean.workflow.impl.RouteApplicationReferenceSearchBean
+	</Model>
+	
+<!--Register-->
+	<Model key="ApprovalUnitRegist">
+		jp.mosp.platform.bean.workflow.impl.ApprovalUnitRegistBean
+	</Model>
+	<Model key="ApprovalRouteRegist">
+		jp.mosp.platform.bean.workflow.impl.ApprovalRouteRegistBean
+	</Model>
+	<Model key="ApprovalRouteUnitRegist">
+		jp.mosp.platform.bean.workflow.impl.ApprovalRouteUnitRegistBean
+	</Model>
+	<Model key="SubApproverRegist">
+		jp.mosp.platform.bean.workflow.impl.SubApproverRegistBean
+	</Model>
+	<Model key="WorkflowRegist">
+		jp.mosp.platform.bean.workflow.impl.WorkflowRegistBean
+	</Model>
+	<Model key="WorkflowCommentRegist">
+		jp.mosp.platform.bean.workflow.impl.WorkflowCommentRegistBean
+	</Model>
+	<Model key="RouteApplicationRegist">
+		jp.mosp.platform.bean.workflow.impl.RouteApplicationRegistBean
+	</Model>
+	<Model key="WorkflowIntegrate">
+		jp.mosp.platform.bean.workflow.impl.WorkflowIntegrateBean
+	</Model>
+	
+<!-- jp.mosp.platform.bean.mail -->
+	<Model key="MailStartTls">
+		 jp.mosp.platform.bean.mail.impl.MailStartTlsBean
+	</Model>
+</MosP>

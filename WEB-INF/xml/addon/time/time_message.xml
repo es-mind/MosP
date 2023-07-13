@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE MosP>
+<!--
+MosP - Mind Open Source Project    http://www.mosp.jp/
+Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+
+This program is free software: you can redistribute it and/or
+modify it under the terms of the GNU Affero General Public License
+as published by the Free Software Foundation, either version 3
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<MosP>
+	<!-- Warning -->
+	<Message key="TMW0201">
+		<MessageBody>下記の申請・承認が完了していません。すべての申請・承認を行ってからもう一度締処理を実行してください。</MessageBody>
+	</Message>
+	<Message key="TMW0202">
+		<MessageBody>時は0--%1%を入力してください。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="TMW0203">
+		<MessageBody>分は0--59を入力してください。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="TMW0204">
+		<MessageBody>自動付与（基準日）の回数が重複しています。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="TMW0205">
+		<MessageBody>ラジオボタンにチェックが一つもありません。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="TMW0206">
+		<MessageBody>時間は0--%1%を入力してください。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="TMW0208">
+		<MessageBody>自動付与（入社日/入社月）の回数が重複しています。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="TMW0209">
+		<MessageBody>自動付与（入社日/入社月）は必ず一件入力してください。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="TMW0211">
+		<MessageBody>継続勤務年数と付与日数はセットで入力してください。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="TMW0212">
+		<MessageBody>半休取得時休憩はセットで入力してください。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="TMW0213">
+		<MessageBody>有効な%1%が無ければ、登録することができません。有効日を再度決定してください。</MessageBody>
+	</Message>
+	<Message key="TMW0214">
+		<MessageBody>有効な%1%が存在しません。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="TMW0215">
+		<MessageBody>出勤率には0--100を入力してください。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="TMW0217">
+		<MessageBody>%1%関連の%2%が存在するので削除できません。</MessageBody>
+	</Message>
+	<Message key="TMW0219">
+		<MessageBody>%1%には0.5で割り切れる数値を入力してください。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="TMW0220">
+		<MessageBody>区分Sは大幅な時差勤務を認められた場合のみ申請可能です。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="TMW0222">
+		<MessageBody>%1%は既に登録されています。</MessageBody>
+	</Message>
+	<Message key="TMW0223">
+		<MessageBody>%1%年%2%月に締処理をしているため締日を変更できません。有効日を変更して履歴追加してください。</MessageBody>
+	</Message>
+	<Message key="TMW0224">
+		<MessageBody>コード：%1%は、勤怠設定：%2%が使用しています。勤怠設定：%2%の締日を変更してください。</MessageBody>
+	</Message>
+	<Message key="TMW0225">
+		<MessageBody>コード：%1%は、カレンダ：%2%が使用しています。カレンダ：%2%の勤務形態を変更してください。</MessageBody>
+	</Message>
+	<Message key="TMW0226">
+		<MessageBody>コード：%1%は、設定適用：%2%が使用しています。設定適用：%2%の%3%を変更してください。</MessageBody>
+	</Message>
+	<Message key="TMW0227">
+		<MessageBody>%1%は既に%2%件登録されています。新たに登録をする場合は登録済の%1%を削除してください。</MessageBody>
+	</Message>
+	<Message key="TMW0228">
+		<MessageBody>その年度における履歴が既に存在しているため、別の年度を入力してください。</MessageBody>
+	</Message>
+	<Message key="TMW0230">
+		<MessageBody>%1%は時差出勤が申請されています。午後休を申請してもよろしいですか。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="TMW0231">
+		<MessageBody>%1%のチェックを一件以上選択してください。</MessageBody>
+	</Message>
+	<Message key="TMW0233">
+		<MessageBody>%1%の時間と分をそれぞれ正しく入力してください。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="TMW0235">
+		<MessageBody>%1%：最大入力可能時刻:%2%を超過した%3%の入力はできません。</MessageBody>
+	</Message>
+	<Message key="TMW0236">
+		<MessageBody>終業時刻は始業時刻よりも後になるよう入力してください。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="TMW0237">
+		<MessageBody>勤務時間外に%1%が設定されています。%1%は勤務時間内に含めて設定してください。</MessageBody>
+	</Message>
+	<Message key="TMW0238">
+		<MessageBody>入力された%1%で重複している箇所があります。%1%の範囲が重複しないように入力してください。</MessageBody>
+	</Message>
+	<Message key="TMW0239">
+		<MessageBody>%1%は%2%の連続勤務の場合は終業時刻%3%(%4%)で1日を区切ってください。</MessageBody>
+	</Message>
+	<Message key="TMW0240">
+		<MessageBody>%1%は既に%2%申請が行われています。%3%を選択し直してください。</MessageBody>
+	</Message>
+	<Message key="TMW0241">
+		<MessageBody>%1%は%2%よりも先の申請を行うことはできません。%3%を選択し直してください。</MessageBody>
+	</Message>
+	<Message key="TMW0242">
+		<MessageBody>%1%は%2%ではありません。%3%を選択し直してください。</MessageBody>
+	</Message>
+	<Message key="TMW0243">
+		<MessageBody>%1%が重複しています。%2%を選択し直してください。</MessageBody>
+	</Message>
+	<Message key="TMW0244">
+		<MessageBody>取得期限が切れています。%1%を選択し直してください。</MessageBody>
+	</Message>
+	<Message key="TMW0245">
+		<MessageBody>%1%は%2%できません。%3%を選択し直してください。</MessageBody>
+	</Message>
+	<Message key="TMW0246">
+		<MessageBody>%1%には%2%が設定されていません。各種設定の登録と適用範囲の設定を行う必要があります。</MessageBody>
+	</Message>
+	<Message key="TMW0247">
+		<MessageBody>勤務時間外に%1%が設定されています。勤務時間内に含めて入力してください。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="TMW0248">
+		<MessageBody>%1%は振替可能な期間を超過しています。振替日を選択し直してください。</MessageBody>
+	</Message>
+	<Message key="TMW0249">
+		<MessageBody>%1%は出勤日ではありません。%2%を行う必要があります。</MessageBody>
+	</Message>
+	<Message key="TMW0252">
+		<MessageBody>代休日数が%1%未満の場合、登録できません。</MessageBody>
+	</Message>
+	<Message key="TMW0253">
+		<MessageBody>%1%には%2%が設定されていません。%3%の登録と勤怠設定情報への適用を行う必要があります。</MessageBody>
+	</Message>
+	<Message key="TMW0254">
+		<MessageBody>%1%の申請可能な%2%数を超過しています。休暇年月日または休暇種別を選択し直してください。</MessageBody>
+	</Message>
+	<Message key="TMW0255">
+		<MessageBody>%1%には登録できません。</MessageBody>
+	</Message>
+	<Message key="TMW0256">
+		<MessageBody>%1%は社員コード:%2%の初年度付与の利用期限に達していないため、ストック休暇を付与することはできません。</MessageBody>
+	</Message>
+	<Message key="TMW0257">
+		<MessageBody>%1%は社員コード:%2%がまだ入社していません。社員コードまたは付与日を変更してください。</MessageBody>
+	</Message>
+	<Message key="TMW0258">
+		<MessageBody>%1%は社員コード:%2%が入社1年目又は入社前であるため前年度の有給休暇を付与することはできません。</MessageBody>
+	</Message>
+	<Message key="TMW0259">
+		<MessageBody>%1%は付与されていません。休暇年月日または休暇種別を選択し直してください。</MessageBody>
+	</Message>
+	<Message key="TMW0260">
+		<MessageBody>社員コードが正しくありません。社員コードを入力し直してください。</MessageBody>
+	</Message>
+	<Message key="TMW0261">
+		<MessageBody>入力した%1%の%2%がありません。%1%を選択し直してください。</MessageBody>
+	</Message>
+	<Message key="TMW0262">
+		<MessageBody>%1%が設定されていません。%2%を利用するためには%3%で設定を行う必要があります。</MessageBody>
+	</Message>
+	<Message key="TMW0263">
+		<MessageBody>%1%は既に社員コード：%2%へ有給休暇の手動付与を行っています。付与日または社員コードを変更してください。</MessageBody>
+	</Message>
+	<Message key="TMW0264">
+		<MessageBody>%1%の勤務形態で%2%を設定していないため%3%できません。確認してください。</MessageBody>
+	</Message>
+	
+	<Message key="TMW0265">
+		<MessageBody>%1%で有効な%2%が存在しません。</MessageBody>
+	</Message>
+	<Message key="TMW0266">
+		<MessageBody>勤務形態の登録、または年度の変更を行ってください。</MessageBody>
+	</Message>
+	<Message key="TMW0267">
+		<MessageBody>%1%は%2%の承認が完了していません。下書を行うか承認がされてから申請を行ってください。</MessageBody>
+	</Message>
+	<Message key="TMW0268">
+		<MessageBody>下書を行うには始業時刻または終業時刻を必ず入力して下さい。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="TMW0269">
+		<MessageBody>休暇コード:%1%は社員コード:%2%に%3%されています。削除または無効化を行う場合は%4%を変更してください。</MessageBody>
+	</Message>
+	<Message key="TMW0270">
+		<MessageBody>選択した休暇種別では%1%を0で設定することはできません。%2%の日数を入力してください。</MessageBody>
+	</Message>
+	<Message key="TMW0271">
+		<MessageBody>%1%が申請・承認・使用日数を下回っています。</MessageBody>
+	</Message>
+	<Message key="TMW0272">
+		<MessageBody>%1%は既に月次処理が行われています。%2%を変更してください。</MessageBody>
+	</Message>
+	<Message key="TMW0273">
+		<MessageBody>%1%の社員コード：%2%は勤怠管理対象ではないので該当機能を利用することができません。</MessageBody>
+	</Message>
+	<Message key="TMW0274">
+		<MessageBody>社員コード：%1%は該当月の集計が未締の状態となっています。対象者の個別仮締を行ってください。</MessageBody>
+	</Message>
+	<Message key="TMW0275">
+		<MessageBody>この休暇は連続取得が義務付けられています。申請可能日数を使い切っていないため残り日数は破棄されますがよろしいですか。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="TMW0276">
+		<MessageBody>この休暇は連続取得が義務付けられています。このまま申請しますがよろしいですか。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="TMW0277">
+		<MessageBody>%1%は既に他の申請が行われています。%2%を選択し直してください。</MessageBody>
+	</Message>
+	<Message key="TMW0278">
+		<MessageBody>%1%は%2%の承認が完了していません。承認がされてから下書または申請を行ってください。</MessageBody>
+	</Message>
+	<Message key="TMW0279">
+		<MessageBody>%1%は%2%の申請が行われているので%3%の申請及び下書を行うことはできません。</MessageBody>
+	</Message>
+	<Message key="TMW0280">
+		<MessageBody>%1%終了は%2%開始より後となるようにしてください。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="TMW0281">
+		<MessageBody>時差出勤時刻が深夜時間帯ではありません。このまま申請しますがよろしいですか。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="TMW0282">
+		<MessageBody>%1%の%2%時間は%3%限度時間を超過しています。%4%を申請した上で再度勤怠の申請を行ってください。</MessageBody>
+	</Message>
+	<Message key="TMW0283">
+		<MessageBody>既に振替出勤申請は別の申請によって再振替されているため、解除できません。</MessageBody>
+	</Message>
+	<Message key="TMW0284">
+		<MessageBody>解除するためには、再振替している申請を変更してください。</MessageBody>
+	</Message>
+	<Message key="TMW0285">
+		<MessageBody>%1%は差し戻された申請を再び下書できません。</MessageBody>
+	</Message>
+	<Message key="TMW0286">
+		<MessageBody>%1%は連続勤務となるため、翌日の勤怠を差し戻してから承認してください。</MessageBody>
+	</Message>
+	<Message key="TMW0287">
+		<MessageBody>%1%の打刻が未入力、もしくは差戻しになっています。</MessageBody>
+	</Message>
+	<Message key="TMW0288">
+		<MessageBody>連続休暇申請期間中に%1%できません。%1%したい場合は管理者に連絡してください。</MessageBody>
+	</Message>
+	<Message key="TMW0301">
+		<MessageBody>%1%は既に%2%が登録されているため、%3%できません。勤怠詳細を確認してください。</MessageBody>
+	</Message>
+	<Message key="TMW0302">
+		<MessageBody>%1%の%2%は、%3%が登録されていないため%4%できません。勤怠詳細を確認してください。</MessageBody>
+	</Message>
+	<Message key="TMW0303">
+		<MessageBody>%1%の%2%は、限度を超えるため%3%できません。勤怠詳細を確認してください。</MessageBody>
+	</Message>
+	<Message key="TMW0304">
+		<MessageBody>%1%は、%2%しています。%3%申請をしてください。</MessageBody>
+	</Message>
+	<Message key="TMW0305">
+		<MessageBody>範囲を選択し直して下さい。</MessageBody>
+	</Message>
+	<Message key="TMW0306">
+		<MessageBody>%1%の形式が不正です。</MessageBody>
+	</Message>
+	<Message key="TMW0307">
+		<MessageBody>%1%はファイル内で重複しています。</MessageBody>
+	</Message>
+	<Message key="TMW0309">
+		<MessageBody>%1%は既に%2%申請が行われています。%2%申請を取り下げてから再度申請してください。</MessageBody>
+	</Message>
+	<Message key="TMW0310">
+		<MessageBody>%1%は%2%内で入力してください。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="TMW0312">
+		<MessageBody>%1%は%2%と%3%の時間帯が重複しています。</MessageBody>
+	</Message>
+	<Message key="TMW0313">
+		<MessageBody>有給休暇が残っています。ストック休暇を利用するには、別途承認が必要ですが、このまま申請しますか。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="TMW0314">
+		<MessageBody>%1%と%2%の時間帯(%3%～%4%)が重複しています。</MessageBody>
+	</Message>
+	<Message key="TMW0315">
+		<MessageBody>%1%は%2%と%3%が重複しています。</MessageBody>
+	</Message>
+	<Message key="TMW0316">
+		<MessageBody>先に%1%を取り下げてから%2%してください。</MessageBody>
+	</Message>
+	<Message key="TMW0317">
+		<MessageBody>前年度分の有給休暇が0.5日残っています。全休を申請する場合は半日ずつ申請してください。</MessageBody>
+	</Message>
+	<Message key="TMW0318">
+		<MessageBody>%1%の%2%が%3%です。</MessageBody>
+	</Message>
+	<Message key="TMW0319">
+		<MessageBody>%1%：%2%を選択してください。</MessageBody>
+	</Message>
+	<Message key="TMW0320">
+		<MessageBody>%1%～%2%は時短時間が設定されています。この時間帯と重複しないように申請してください。</MessageBody>
+	</Message>
+	<Message key="TMW0321">
+		<MessageBody>%1%の%2%には%3%と同一の時刻を入力してください。</MessageBody>
+	</Message>
+	<Message key="TMW0322">
+		<MessageBody>時短時間1で無給を設定した場合、時短時間2でも必ず無給を設定するようにしてください。</MessageBody>
+	</Message>
+	<Message key="TMW0323">
+		<MessageBody>遅刻か早退があるため、勤怠詳細から勤怠を申請してください。</MessageBody>
+	</Message>
+	<Message key="TMW0325">
+		<MessageBody>勤務時間がマイナスになります。確認してください。</MessageBody>
+	</Message>
+	<Message key="TMW0327">
+		<MessageBody>%1%に%2%は取得できません。確認してください。</MessageBody>
+	</Message>
+	<Message key="TMW0329">
+		<MessageBody>%1%は%2%を計算してから%3%してください。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="TMW0330">
+		<MessageBody>時短時間1(無給)が設定されている場合、勤務前残業自動申請は有効に出来ません。</MessageBody>
+	</Message>
+	<Message key="TMW0331">
+		<MessageBody>付与日：%1%は休暇年月日：%2%に休暇申請を申請しているため削除できません。休暇申請を取下してください。</MessageBody>
+	</Message>
+	<Message key="TMW0332">
+		<MessageBody>付与日：%1%は有効日：%2%に有給休暇手動付与を作成しているため削除できません。</MessageBody>
+	</Message>
+	<Message key="TMW0333">
+		<MessageBody>%1%は%2%が異なるため%3%できません。</MessageBody>
+	</Message>
+	<Message key="TMW0334">
+		<MessageBody>%1%は全日の振替休日ではないため、全日の振替及び休日出勤は出来ません。申請区分または範囲を選択し直してください。</MessageBody>
+	</Message>
+	<Message key="TMW0335">
+		<MessageBody>%1%は勤務形態が異なるため申請できません。勤怠詳細ではなく、勤務形態変更申請より出勤日と振替日の勤務形態を同一にしてください</MessageBody>
+	</Message>
+	<Message key="TMW0336">
+		<MessageBody>%1%を決定してください。</MessageBody>
+	</Message>
+	<Message key="TMW0337">
+		<MessageBody>先に%1%の勤怠を削除してください。</MessageBody>
+	</Message>
+	<Message key="TMW0338">
+		<MessageBody>%1%は申請により休暇となるので%2%の申請及び下書を行うことはできません。</MessageBody>
+	</Message>
+	<Message key="TMW0339">
+		<MessageBody>%1%は既に社員コード：%2%に付与されています。付与日または社員コードを選択し直してください。</MessageBody>
+	</Message>
+	<Message key="TMW0340">
+		<MessageBody>%1%は勤務形態の時間内(%2%)に申請してください。</MessageBody>
+	</Message>
+	<Message key="TMW0341">
+		<MessageBody>終業時刻が翌日の始業時刻を超えています。確認してください。</MessageBody>
+	</Message>
+	<Message key="TMW0342">
+		<MessageBody>ダブルトラックまたは分割付与の可能性あり。</MessageBody>
+	</Message>
+	<Message key="TMW0343">
+		<MessageBody>休憩を入力してください。このまま申請する場合はキャンセルを押してください。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>	
+	</Message>
+	<Message key="TMW0344">
+		<MessageBody>勤務時間が6時間を超えています。休憩を入力してください。</MessageBody>
+	</Message>
+	
+	<!-- Information -->
+	<Message key="TMI0001">
+		<MessageBody>%1%を%2%しました。</MessageBody>
+	</Message>
+	<Message key="TMI0002">
+		<MessageBody>承認されると、既に下書されている休憩が削除されます。</MessageBody>
+	</Message>
+	<Message key="TMI0003">
+		<MessageBody>%1%\n確認して下さい。</MessageBody>
+	</Message>
+	<Message key="TMI0004">
+		<MessageBody>%1%に%2%を%3%しました。</MessageBody>
+	</Message>
+	<Message key="TMI0005">
+		<MessageBody>(下書/申請はまだ完了していません。)</MessageBody>
+	</Message>
+	<Message key="TMI0006">
+		<MessageBody>振替日の勤怠が既に下書されている場合は、削除されます。</MessageBody>
+	</Message>
+	<Message key="TMI0011">
+		<MessageBody>%1%の「%2%」の表示欄に反映される時間です。</MessageBody>
+	</Message>
+	<Message key="TMI0012">
+		<MessageBody>この時間を超えると、%1%の「%2%」に%3%色で時間が表示されます。</MessageBody>
+	</Message>
+	
+	<!-- Question -->
+	<Message key="TMQ3001">
+		<MessageBody>%1%年%2%月の%3%をします。よろしいですか。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<Message key="TMQ3002">
+		<MessageBody>一度集計処理を行うと、%1%年%2%月に各種申請を行うことはできません。\nよろしいですか。</MessageBody>
+		<ClientAvailable>true</ClientAvailable>
+	</Message>
+	<!-- Error -->
+</MosP>

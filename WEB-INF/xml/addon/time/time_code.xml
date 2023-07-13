@@ -1,0 +1,3504 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE MosP>
+<!--
+MosP - Mind Open Source Project    http://www.mosp.jp/
+Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+
+This program is free software: you can redistribute it and/or
+modify it under the terms of the GNU Affero General Public License
+as published by the Free Software Foundation, either version 3
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<MosP>
+	<Code key="MessageType">
+		<CodeItem key="1">
+			<ItemName>勤怠</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="2">
+			<ItemName>人事</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="CutoffDate">
+		<CodeItem key="1">
+			<ItemName>翌1日締</ItemName>
+			<ViewIndex>15</ViewIndex>
+		</CodeItem>
+		<CodeItem key="2">
+			<ItemName>翌2日締</ItemName>
+			<ViewIndex>16</ViewIndex>
+		</CodeItem>
+		<CodeItem key="3">
+			<ItemName>翌3日締</ItemName>
+			<ViewIndex>17</ViewIndex>
+		</CodeItem>
+		<CodeItem key="4">
+			<ItemName>翌4日締</ItemName>
+			<ViewIndex>18</ViewIndex>
+		</CodeItem>
+		<CodeItem key="5">
+			<ItemName>翌5日締</ItemName>
+			<ViewIndex>19</ViewIndex>
+		</CodeItem>
+		<CodeItem key="6">
+			<ItemName>翌6日締</ItemName>
+			<ViewIndex>20</ViewIndex>
+		</CodeItem>
+		<CodeItem key="7">
+			<ItemName>翌7日締</ItemName>
+			<ViewIndex>21</ViewIndex>
+		</CodeItem>
+		<CodeItem key="8">
+			<ItemName>翌8日締</ItemName>
+			<ViewIndex>22</ViewIndex>
+		</CodeItem>
+		<CodeItem key="9">
+			<ItemName>翌9日締</ItemName>
+			<ViewIndex>23</ViewIndex>
+		</CodeItem>
+		<CodeItem key="10">
+			<ItemName>翌10日締</ItemName>
+			<ViewIndex>24</ViewIndex>
+		</CodeItem>
+		<CodeItem key="11">
+			<ItemName>翌11日締</ItemName>
+			<ViewIndex>25</ViewIndex>
+		</CodeItem>
+		<CodeItem key="12">
+			<ItemName>翌12日締</ItemName>
+			<ViewIndex>26</ViewIndex>
+		</CodeItem>
+		<CodeItem key="13">
+			<ItemName>翌13日締</ItemName>
+			<ViewIndex>27</ViewIndex>
+		</CodeItem>
+		<CodeItem key="14">
+			<ItemName>翌14日締</ItemName>
+			<ViewIndex>28</ViewIndex>
+		</CodeItem>
+		<CodeItem key="15">
+			<ItemName>翌15日締</ItemName>
+			<ViewIndex>29</ViewIndex>
+		</CodeItem>
+		<CodeItem key="16">
+			<ItemName>16日締</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="17">
+			<ItemName>17日締</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="18">
+			<ItemName>18日締</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+		<CodeItem key="19">
+			<ItemName>19日締</ItemName>
+			<ViewIndex>4</ViewIndex>
+		</CodeItem>
+		<CodeItem key="20">
+			<ItemName>20日締</ItemName>
+			<ViewIndex>5</ViewIndex>
+		</CodeItem>
+		<CodeItem key="21">
+			<ItemName>21日締</ItemName>
+			<ViewIndex>6</ViewIndex>
+		</CodeItem>
+		<CodeItem key="22">
+			<ItemName>22日締</ItemName>
+			<ViewIndex>7</ViewIndex>
+		</CodeItem>
+		<CodeItem key="23">
+			<ItemName>23日締</ItemName>
+			<ViewIndex>8</ViewIndex>
+		</CodeItem>
+		<CodeItem key="24">
+			<ItemName>24日締</ItemName>
+			<ViewIndex>9</ViewIndex>
+		</CodeItem>
+		<CodeItem key="25">
+			<ItemName>25日締</ItemName>
+			<ViewIndex>10</ViewIndex>
+		</CodeItem>
+		<CodeItem key="26">
+			<ItemName>26日締</ItemName>
+			<ViewIndex>11</ViewIndex>
+		</CodeItem>
+		<CodeItem key="27">
+			<ItemName>27日締</ItemName>
+			<ViewIndex>12</ViewIndex>
+		</CodeItem>
+		<CodeItem key="28">
+			<ItemName>28日締</ItemName>
+			<ViewIndex>13</ViewIndex>
+		</CodeItem>
+		<CodeItem key="0">
+			<ItemName>末日締</ItemName>
+			<ViewIndex>14</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="NoApproval">
+		<CodeItem key="0">
+			<ItemName>有効</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="1">
+			<ItemName>無効(残業事後申請可)</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="2">
+			<ItemName>無効(残業事前申請のみ)</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+		<CodeItem key="3">
+			<ItemName>無効(残業申請なし)</ItemName>
+			<ViewIndex>4</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="PaidHolidayType">
+		<CodeItem key="0">
+			<ItemName>基準日</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="1">
+			<ItemName>入社月</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+		<CodeItem key="2">
+			<ItemName>入社日</ItemName>
+			<ViewIndex>4</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="3">
+			<ItemName>対象外</ItemName>
+			<ViewIndex>5</ViewIndex>
+		</CodeItem>
+		<CodeItem key="4">
+			<ItemName>比例</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="PaidHolidayTime">
+		<CodeItem key="1">
+			<ItemName>1</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="2">
+			<ItemName>2</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="3">
+			<ItemName>3</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+		<CodeItem key="4">
+			<ItemName>4</ItemName>
+			<ViewIndex>4</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="TimeAcquisitionLimitTimes">
+		<CodeItem key="1">
+			<ItemName>1</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="2">
+			<ItemName>2</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="3">
+			<ItemName>3</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+		<CodeItem key="4">
+			<ItemName>4</ItemName>
+			<ViewIndex>4</ViewIndex>
+		</CodeItem>
+		<CodeItem key="5">
+			<ItemName>5</ItemName>
+			<ViewIndex>5</ViewIndex>
+		</CodeItem>
+		<CodeItem key="6">
+			<ItemName>6</ItemName>
+			<ViewIndex>6</ViewIndex>
+		</CodeItem>
+		<CodeItem key="7">
+			<ItemName>7</ItemName>
+			<ViewIndex>7</ViewIndex>
+		</CodeItem>
+		<CodeItem key="8">
+			<ItemName>8</ItemName>
+			<ViewIndex>8</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="TimeAcquisitionLimitDays">
+		<CodeItem key="1">
+			<ItemName>1</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="2">
+			<ItemName>2</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+		<CodeItem key="3">
+			<ItemName>3</ItemName>
+			<ViewIndex>4</ViewIndex>
+		</CodeItem>
+		<CodeItem key="4">
+			<ItemName>4</ItemName>
+			<ViewIndex>5</ViewIndex>
+		</CodeItem>
+		<CodeItem key="5">
+			<ItemName>5</ItemName>
+			<ViewIndex>6</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="6">
+			<ItemName>6</ItemName>
+			<ViewIndex>7</ViewIndex>
+		</CodeItem>
+		<CodeItem key="7">
+			<ItemName>7</ItemName>
+			<ViewIndex>8</ViewIndex>
+		</CodeItem>
+		<CodeItem key="8">
+			<ItemName>8</ItemName>
+			<ViewIndex>9</ViewIndex>
+		</CodeItem>
+		<CodeItem key="9">
+			<ItemName>9</ItemName>
+			<ViewIndex>10</ViewIndex>
+		</CodeItem>
+-->
+	</Code>
+	<Code key="AppliTimeInterval">
+		<CodeItem key="1">
+			<ItemName>1</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="15">
+			<ItemName>15</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="30">
+			<ItemName>30</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="HalfHolidayRequest">
+		<CodeItem key="0">
+			<ItemName>有効</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="1">
+			<ItemName>無効</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="MaxCarryOverYears">
+		<CodeItem key="0">
+			<ItemName>0</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="1">
+			<ItemName>1</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="MaxCarryOverTimes">
+		<CodeItem key="0">
+			<ItemName>そのまま繰越</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="1">
+			<ItemName>日単位に切上げて繰越</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="2">
+			<ItemName>繰越なし</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="Continue">
+		<CodeItem key="0">
+			<ItemName>必須</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="1">
+			<ItemName>警告</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="2">
+			<ItemName>不要</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="SalaryPayType">
+		<CodeItem key="0">
+			<ItemName>有給</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="1">
+			<ItemName>無給</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="RoundingItems">
+		<CodeItem key="0">
+			<ItemName>無し</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="1">
+			<ItemName>切捨て</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="2">
+			<ItemName>切上げ</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="DayOfTheWeek">
+		<CodeItem key="1">
+			<ItemName>日</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="2">
+			<ItemName>月</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="3">
+			<ItemName>火</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+		<CodeItem key="4">
+			<ItemName>水</ItemName>
+			<ViewIndex>4</ViewIndex>
+		</CodeItem>
+		<CodeItem key="5">
+			<ItemName>木</ItemName>
+			<ViewIndex>5</ViewIndex>
+		</CodeItem>
+		<CodeItem key="6">
+			<ItemName>金</ItemName>
+			<ViewIndex>6</ViewIndex>
+		</CodeItem>
+		<CodeItem key="7">
+			<ItemName>土</ItemName>
+			<ViewIndex>7</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="SpecificHoliday">
+		<CodeItem key="1">
+			<ItemName>通常</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="2">
+			<ItemName>暦日</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="ApprovalState">
+		<CodeItem key="1">
+			<ItemName>下書</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="2">
+			<ItemName>未承認</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="3">
+			<ItemName>承認済</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+		<CodeItem key="4">
+			<ItemName>差戻</ItemName>
+			<ViewIndex>4</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="EffectiveState">
+		<CodeItem key="1">
+			<ItemName>未承認</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="9">
+			<ItemName>承認済</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+		<CodeItem key="3">
+			<ItemName>差戻</ItemName>
+			<ViewIndex>4</ViewIndex>
+		</CodeItem>
+		<CodeItem key="6">
+			<ItemName>解除申</ItemName>
+			<ViewIndex>5</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="NotApproved">
+		<CodeItem key="0">
+			<ItemName>未承認無し</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="1">
+			<ItemName>未承認有り</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="2">
+			<ItemName>勤怠未申請有り</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+		<CodeItem key="3">
+			<ItemName>未承認・未申請有り</ItemName>
+			<ViewIndex>4</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="ScheduleOver">
+		<CodeItem key="1">
+			<ItemName>有り</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="2">
+			<ItemName>無し</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="OverTimeType">
+		<CodeItem key="1">
+			<ItemName>勤務前残業</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="2">
+			<ItemName>勤務後残業</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="SubstituteWorkRange">
+		<CodeItem key="1">
+			<ItemName>全日</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="3">
+			<ItemName>午前</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="4">
+			<ItemName>午後</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="SubstituteHolidayRange">
+		<CodeItem key="2">
+			<ItemName>午前</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="3">
+			<ItemName>午後</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="Substitute1Range">
+		<CodeItem key="1">
+			<ItemName>全休</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="2">
+			<ItemName>午前休</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="3">
+			<ItemName>午後休</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="Substitute2Range">
+		<CodeItem key="1">
+			<ItemName>無し</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="2">
+			<ItemName>午前休</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="3">
+			<ItemName>午後休</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="ApprovalType">
+		<CodeItem key="1">
+			<ItemName>日々勤怠申請</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="2">
+			<ItemName>残業申請</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="3">
+			<ItemName>休暇申請</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+		<CodeItem key="4">
+			<ItemName>振出休出申請</ItemName>
+			<ViewIndex>4</ViewIndex>
+		</CodeItem>
+		<CodeItem key="5">
+			<ItemName>代休申請</ItemName>
+			<ViewIndex>5</ViewIndex>
+		</CodeItem>
+		<CodeItem key="7">
+			<ItemName>勤形変更申請</ItemName>
+			<ViewIndex>7</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="CutoffState">
+		<CodeItem key="0">
+			<ItemName>未締</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="1">
+			<ItemName>仮締</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="2">
+			<ItemName>確定</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="SubordinateSearchType">
+		<CodeItem key="1">
+			<ItemName>承認すべき申請者</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="2">
+			<ItemName>部下</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="EditType">
+		<CodeItem key="1">
+			<ItemName>csv</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="2">
+			<ItemName>xml</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="3">
+			<ItemName>text</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+	</Code>
+	<!-- インポート -->
+	<Code key="TimeImportTableType">
+		<CodeItem key="import_tmd_attendance">
+			<ItemName>勤怠データ</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="import_tmd_attendance_self">
+			<ItemName>勤怠データ【自己承認】</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="import_tmd_total_time">
+			<ItemName>勤怠集計データ</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+		<CodeItem key="import_tmd_paid_holiday">
+			<ItemName>有給休暇データ</ItemName>
+			<ViewIndex>4</ViewIndex>
+		</CodeItem>
+		<CodeItem key="import_tmd_stock_holiday">
+			<ItemName>ストック休暇データ</ItemName>
+			<ViewIndex>5</ViewIndex>
+		</CodeItem>
+		<CodeItem key="import_tmd_holiday">
+			<ItemName>休暇付与データ</ItemName>
+			<ViewIndex>7</ViewIndex>
+		</CodeItem>
+		<CodeItem key="import_tmd_holiday_request">
+			<ItemName>休暇申請データ【自己承認】</ItemName>
+			<ViewIndex>8</ViewIndex>
+		</CodeItem>
+		<CodeItem key="import_tmd_work_on_holiday_request">
+			<ItemName>振替出勤申請データ【自己承認】</ItemName>
+			<ViewIndex>9</ViewIndex>
+		</CodeItem>
+		<CodeItem key="import_tmd_work_on_holiday_request_substitute_off">
+			<ItemName>休日出勤申請データ【自己承認】</ItemName>
+			<ViewIndex>10</ViewIndex>
+		</CodeItem>
+		<CodeItem key="import_tmd_work_type">
+			<ItemName>勤務形態データ</ItemName>
+			<ViewIndex>11</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="import_tmd_attendance">
+		<CodeItem key="employee_code">
+			<ItemName>社員コード</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="work_date">
+			<ItemName>勤務日</ItemName>
+			<ViewIndex>101</ViewIndex>
+		</CodeItem>
+		<CodeItem key="times_work">
+			<ItemName>勤務回数</ItemName>
+			<ViewIndex>102</ViewIndex>
+		</CodeItem>
+		<CodeItem key="work_type_code">
+			<ItemName>勤務形態コード</ItemName>
+			<ViewIndex>103</ViewIndex>
+		</CodeItem>
+		<CodeItem key="direct_start">
+			<ItemName>直行</ItemName>
+			<ViewIndex>104</ViewIndex>
+		</CodeItem>
+		<CodeItem key="direct_end">
+			<ItemName>直帰</ItemName>
+			<ViewIndex>105</ViewIndex>
+		</CodeItem>
+		<CodeItem key="start_time">
+			<ItemName>始業時刻(丸め打刻)</ItemName>
+			<ViewIndex>106</ViewIndex>
+		</CodeItem>
+		<CodeItem key="actual_start_time">
+			<ItemName>始業時刻(実打刻)</ItemName>
+			<ViewIndex>107</ViewIndex>
+		</CodeItem>
+		<CodeItem key="end_time">
+			<ItemName>終業時刻(丸め打刻)</ItemName>
+			<ViewIndex>108</ViewIndex>
+		</CodeItem>
+		<CodeItem key="actual_end_time">
+			<ItemName>終業時刻(実打刻)</ItemName>
+			<ViewIndex>109</ViewIndex>
+		</CodeItem>
+		<CodeItem key="late_time">
+			<ItemName>遅刻時間</ItemName>
+			<ViewIndex>110</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="actual_late_time">
+			<ItemName>実遅刻時間</ItemName>
+			<ViewIndex>111</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="late_reason">
+			<ItemName>遅刻理由</ItemName>
+			<ViewIndex>112</ViewIndex>
+		</CodeItem>
+		<CodeItem key="late_certificate">
+			<ItemName>遅刻証明書</ItemName>
+			<ViewIndex>113</ViewIndex>
+		</CodeItem>
+		<CodeItem key="late_comment">
+			<ItemName>遅刻コメント</ItemName>
+			<ViewIndex>114</ViewIndex>
+		</CodeItem>
+		<CodeItem key="leave_early_time">
+			<ItemName>早退時間</ItemName>
+			<ViewIndex>115</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="actual_leave_early_time">
+			<ItemName>実早退時間</ItemName>
+			<ViewIndex>116</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="leave_early_reason">
+			<ItemName>早退理由</ItemName>
+			<ViewIndex>117</ViewIndex>
+		</CodeItem>
+		<CodeItem key="leave_early_certificate">
+			<ItemName>早退証明書</ItemName>
+			<ViewIndex>118</ViewIndex>
+		</CodeItem>
+		<CodeItem key="leave_early_comment">
+			<ItemName>早退コメント</ItemName>
+			<ViewIndex>119</ViewIndex>
+		</CodeItem>
+		<CodeItem key="work_time">
+			<ItemName>勤務時間</ItemName>
+			<ViewIndex>120</ViewIndex>
+		</CodeItem>
+		<CodeItem key="general_work_time">
+			<ItemName>所定労働時間</ItemName>
+			<ViewIndex>121</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="short_unpaid">
+			<ItemName>無給時短時間</ItemName>
+			<ViewIndex>122</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="rest_time">
+			<ItemName>休憩時間</ItemName>
+			<ViewIndex>123</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="over_rest_time">
+			<ItemName>法定外休憩時間</ItemName>
+			<ViewIndex>124</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="night_rest_time">
+			<ItemName>深夜休憩時間</ItemName>
+			<ViewIndex>125</ViewIndex>
+		</CodeItem>
+		<CodeItem key="public_time">
+			<ItemName>公用外出時間</ItemName>
+			<ViewIndex>126</ViewIndex>
+		</CodeItem>
+		<CodeItem key="private_time">
+			<ItemName>私用外出時間</ItemName>
+			<ViewIndex>127</ViewIndex>
+		</CodeItem>
+		<CodeItem key="overtime">
+			<ItemName>残業時間</ItemName>
+			<ViewIndex>128</ViewIndex>
+		</CodeItem>
+		<CodeItem key="overtime_before">
+			<ItemName>前残業時間</ItemName>
+			<ViewIndex>129</ViewIndex>
+		</CodeItem>
+		<CodeItem key="overtime_after">
+			<ItemName>後残業時間</ItemName>
+			<ViewIndex>130</ViewIndex>
+		</CodeItem>
+		<CodeItem key="overtime_in">
+			<ItemName>法定内残業時間</ItemName>
+			<ViewIndex>131</ViewIndex>
+		</CodeItem>
+		<CodeItem key="overtime_out">
+			<ItemName>法定外残業時間</ItemName>
+			<ViewIndex>132</ViewIndex>
+		</CodeItem>
+		<CodeItem key="late_night_time">
+			<ItemName>深夜勤務時間</ItemName>
+			<ViewIndex>133</ViewIndex>
+		</CodeItem>
+		<CodeItem key="night_work_within_prescribed_work">
+			<ItemName>深夜所定労働時間内時間</ItemName>
+			<ViewIndex>134</ViewIndex>
+		</CodeItem>
+		<CodeItem key="night_overtime_work">
+			<ItemName>深夜時間外時間</ItemName>
+			<ViewIndex>135</ViewIndex>
+		</CodeItem>
+		<CodeItem key="night_work_on_holiday">
+			<ItemName>深夜休日労働時間</ItemName>
+			<ViewIndex>136</ViewIndex>
+		</CodeItem>
+		<CodeItem key="specific_work_time">
+			<ItemName>所定休日勤務時間</ItemName>
+			<ViewIndex>137</ViewIndex>
+		</CodeItem>
+		<CodeItem key="legal_work_time">
+			<ItemName>法定休日勤務時間</ItemName>
+			<ViewIndex>138</ViewIndex>
+		</CodeItem>
+		<CodeItem key="decrease_time">
+			<ItemName>減額対象時間</ItemName>
+			<ViewIndex>139</ViewIndex>
+		</CodeItem>
+		<CodeItem key="time_comment">
+			<ItemName>勤怠コメント</ItemName>
+			<ViewIndex>140</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="import_tmd_attendance_self">
+		<CodeItem key="employee_code">
+			<ItemName>社員コード</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="work_date">
+			<ItemName>勤務日</ItemName>
+			<ViewIndex>101</ViewIndex>
+		</CodeItem>
+		<CodeItem key="times_work">
+			<ItemName>勤務回数</ItemName>
+			<ViewIndex>102</ViewIndex>
+		</CodeItem>
+		<CodeItem key="work_type_code">
+			<ItemName>勤務形態コード</ItemName>
+			<ViewIndex>103</ViewIndex>
+		</CodeItem>
+		<CodeItem key="direct_start">
+			<ItemName>直行</ItemName>
+			<ViewIndex>104</ViewIndex>
+		</CodeItem>
+		<CodeItem key="direct_end">
+			<ItemName>直帰</ItemName>
+			<ViewIndex>105</ViewIndex>
+		</CodeItem>
+		<CodeItem key="start_time">
+			<ItemName>始業時刻(丸め打刻)</ItemName>
+			<ViewIndex>106</ViewIndex>
+		</CodeItem>
+		<CodeItem key="actual_start_time">
+			<ItemName>始業時刻(実打刻)</ItemName>
+			<ViewIndex>107</ViewIndex>
+		</CodeItem>
+		<CodeItem key="end_time">
+			<ItemName>終業時刻(丸め打刻)</ItemName>
+			<ViewIndex>108</ViewIndex>
+		</CodeItem>
+		<CodeItem key="actual_end_time">
+			<ItemName>終業時刻(実打刻)</ItemName>
+			<ViewIndex>109</ViewIndex>
+		</CodeItem>
+		<CodeItem key="late_time">
+			<ItemName>遅刻時間</ItemName>
+			<ViewIndex>110</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="actual_late_time">
+			<ItemName>実遅刻時間</ItemName>
+			<ViewIndex>111</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="late_reason">
+			<ItemName>遅刻理由</ItemName>
+			<ViewIndex>112</ViewIndex>
+		</CodeItem>
+		<CodeItem key="late_certificate">
+			<ItemName>遅刻証明書</ItemName>
+			<ViewIndex>113</ViewIndex>
+		</CodeItem>
+		<CodeItem key="late_comment">
+			<ItemName>遅刻コメント</ItemName>
+			<ViewIndex>114</ViewIndex>
+		</CodeItem>
+		<CodeItem key="leave_early_time">
+			<ItemName>早退時間</ItemName>
+			<ViewIndex>115</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="actual_leave_early_time">
+			<ItemName>実早退時間</ItemName>
+			<ViewIndex>116</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="leave_early_reason">
+			<ItemName>早退理由</ItemName>
+			<ViewIndex>117</ViewIndex>
+		</CodeItem>
+		<CodeItem key="leave_early_certificate">
+			<ItemName>早退証明書</ItemName>
+			<ViewIndex>118</ViewIndex>
+		</CodeItem>
+		<CodeItem key="leave_early_comment">
+			<ItemName>早退コメント</ItemName>
+			<ViewIndex>119</ViewIndex>
+		</CodeItem>
+		<CodeItem key="work_time">
+			<ItemName>勤務時間</ItemName>
+			<ViewIndex>120</ViewIndex>
+		</CodeItem>
+		<CodeItem key="general_work_time">
+			<ItemName>所定労働時間</ItemName>
+			<ViewIndex>121</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="short_unpaid">
+			<ItemName>無給時短時間</ItemName>
+			<ViewIndex>122</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="rest_time">
+			<ItemName>休憩時間</ItemName>
+			<ViewIndex>123</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="over_rest_time">
+			<ItemName>法定外休憩時間</ItemName>
+			<ViewIndex>124</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="night_rest_time">
+			<ItemName>深夜休憩時間</ItemName>
+			<ViewIndex>125</ViewIndex>
+		</CodeItem>
+		<CodeItem key="public_time">
+			<ItemName>公用外出時間</ItemName>
+			<ViewIndex>126</ViewIndex>
+		</CodeItem>
+		<CodeItem key="private_time">
+			<ItemName>私用外出時間</ItemName>
+			<ViewIndex>127</ViewIndex>
+		</CodeItem>
+		<CodeItem key="overtime">
+			<ItemName>残業時間</ItemName>
+			<ViewIndex>128</ViewIndex>
+		</CodeItem>
+		<CodeItem key="overtime_before">
+			<ItemName>前残業時間</ItemName>
+			<ViewIndex>129</ViewIndex>
+		</CodeItem>
+		<CodeItem key="overtime_after">
+			<ItemName>後残業時間</ItemName>
+			<ViewIndex>130</ViewIndex>
+		</CodeItem>
+		<CodeItem key="overtime_in">
+			<ItemName>法定内残業時間</ItemName>
+			<ViewIndex>131</ViewIndex>
+		</CodeItem>
+		<CodeItem key="overtime_out">
+			<ItemName>法定外残業時間</ItemName>
+			<ViewIndex>132</ViewIndex>
+		</CodeItem>
+		<CodeItem key="late_night_time">
+			<ItemName>深夜勤務時間</ItemName>
+			<ViewIndex>133</ViewIndex>
+		</CodeItem>
+		<CodeItem key="night_work_within_prescribed_work">
+			<ItemName>深夜所定労働時間内時間</ItemName>
+			<ViewIndex>134</ViewIndex>
+		</CodeItem>
+		<CodeItem key="night_overtime_work">
+			<ItemName>深夜時間外時間</ItemName>
+			<ViewIndex>135</ViewIndex>
+		</CodeItem>
+		<CodeItem key="night_work_on_holiday">
+			<ItemName>深夜休日労働時間</ItemName>
+			<ViewIndex>136</ViewIndex>
+		</CodeItem>
+		<CodeItem key="specific_work_time">
+			<ItemName>所定休日勤務時間</ItemName>
+			<ViewIndex>137</ViewIndex>
+		</CodeItem>
+		<CodeItem key="legal_work_time">
+			<ItemName>法定休日勤務時間</ItemName>
+			<ViewIndex>138</ViewIndex>
+		</CodeItem>
+		<CodeItem key="decrease_time">
+			<ItemName>減額対象時間</ItemName>
+			<ViewIndex>139</ViewIndex>
+		</CodeItem>
+		<CodeItem key="time_comment">
+			<ItemName>勤怠コメント</ItemName>
+			<ViewIndex>140</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="import_tmd_total_time">
+		<CodeItem key="employee_code">
+			<ItemName>社員コード</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="calculation_year">
+			<ItemName>年</ItemName>
+			<ViewIndex>101</ViewIndex>
+		</CodeItem>
+		<CodeItem key="calculation_month">
+			<ItemName>月</ItemName>
+			<ViewIndex>102</ViewIndex>
+		</CodeItem>
+		<CodeItem key="calculation_date">
+			<ItemName>集計日</ItemName>
+			<ViewIndex>103</ViewIndex>
+		</CodeItem>
+		<CodeItem key="work_time">
+			<ItemName>勤務時間</ItemName>
+			<ViewIndex>104</ViewIndex>
+		</CodeItem>
+		<CodeItem key="specific_work_time">
+			<ItemName>所定勤務時間</ItemName>
+			<ViewIndex>105</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="contract_work_time">
+			<ItemName>契約勤務時間</ItemName>
+			<ViewIndex>106</ViewIndex>
+		</CodeItem>
+-->
+<!--
+		<CodeItem key="short_unpaid">
+			<ItemName>無給時短時間</ItemName>
+			<ViewIndex>107</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="times_work_date">
+			<ItemName>出勤日数</ItemName>
+			<ViewIndex>108</ViewIndex>
+		</CodeItem>
+		<CodeItem key="times_work">
+			<ItemName>出勤回数</ItemName>
+			<ViewIndex>109</ViewIndex>
+		</CodeItem>
+		<CodeItem key="legal_work_on_holiday">
+			<ItemName>法定休日出勤日数</ItemName>
+			<ViewIndex>110</ViewIndex>
+		</CodeItem>
+		<CodeItem key="specific_work_on_holiday">
+			<ItemName>所定休日出勤日数</ItemName>
+			<ViewIndex>111</ViewIndex>
+		</CodeItem>
+		<CodeItem key="times_achievement">
+			<ItemName>出勤実績日数</ItemName>
+			<ViewIndex>112</ViewIndex>
+		</CodeItem>
+		<CodeItem key="times_total_work_date">
+			<ItemName>出勤対象日数</ItemName>
+			<ViewIndex>113</ViewIndex>
+		</CodeItem>
+		<CodeItem key="direct_start">
+			<ItemName>直行回数</ItemName>
+			<ViewIndex>114</ViewIndex>
+		</CodeItem>
+		<CodeItem key="direct_end">
+			<ItemName>直帰回数</ItemName>
+			<ViewIndex>115</ViewIndex>
+		</CodeItem>
+		<CodeItem key="rest_time">
+			<ItemName>休憩時間</ItemName>
+			<ViewIndex>116</ViewIndex>
+		</CodeItem>
+		<CodeItem key="rest_late_night">
+			<ItemName>深夜休憩時間</ItemName>
+			<ViewIndex>117</ViewIndex>
+		</CodeItem>
+		<CodeItem key="rest_work_on_specific_holiday">
+			<ItemName>所定休出休憩時間</ItemName>
+			<ViewIndex>118</ViewIndex>
+		</CodeItem>
+		<CodeItem key="rest_work_on_holiday">
+			<ItemName>法定休出休憩時間</ItemName>
+			<ViewIndex>119</ViewIndex>
+		</CodeItem>
+		<CodeItem key="public_time">
+			<ItemName>公用外出時間</ItemName>
+			<ViewIndex>120</ViewIndex>
+		</CodeItem>
+		<CodeItem key="private_time">
+			<ItemName>私用外出時間</ItemName>
+			<ViewIndex>121</ViewIndex>
+		</CodeItem>
+		<CodeItem key="overtime">
+			<ItemName>残業時間</ItemName>
+			<ViewIndex>122</ViewIndex>
+		</CodeItem>
+		<CodeItem key="overtime_in">
+			<ItemName>法定内残業時間</ItemName>
+			<ViewIndex>123</ViewIndex>
+		</CodeItem>
+		<CodeItem key="overtime_out">
+			<ItemName>法定外残業時間</ItemName>
+			<ViewIndex>124</ViewIndex>
+		</CodeItem>
+		<CodeItem key="late_night">
+			<ItemName>深夜時間</ItemName>
+			<ViewIndex>125</ViewIndex>
+		</CodeItem>
+		<CodeItem key="night_work_within_prescribed_work">
+			<ItemName>深夜所定労働時間内時間</ItemName>
+			<ViewIndex>126</ViewIndex>
+		</CodeItem>
+		<CodeItem key="night_overtime_work">
+			<ItemName>深夜時間外時間</ItemName>
+			<ViewIndex>127</ViewIndex>
+		</CodeItem>
+		<CodeItem key="night_work_on_holiday">
+			<ItemName>深夜休日労働時間</ItemName>
+			<ViewIndex>128</ViewIndex>
+		</CodeItem>
+		<CodeItem key="work_on_specific_holiday">
+			<ItemName>所定休出時間</ItemName>
+			<ViewIndex>129</ViewIndex>
+		</CodeItem>
+		<CodeItem key="work_on_holiday">
+			<ItemName>法定休出時間</ItemName>
+			<ViewIndex>130</ViewIndex>
+		</CodeItem>
+		<CodeItem key="decrease_time">
+			<ItemName>減額対象時間</ItemName>
+			<ViewIndex>131</ViewIndex>
+		</CodeItem>
+		<CodeItem key="forty_five_hour_overtime">
+			<ItemName>45時間超残業時間</ItemName>
+			<ViewIndex>132</ViewIndex>
+		</CodeItem>
+		<CodeItem key="times_overtime">
+			<ItemName>残業回数</ItemName>
+			<ViewIndex>133</ViewIndex>
+		</CodeItem>
+		<CodeItem key="times_working_holiday">
+			<ItemName>休日出勤回数</ItemName>
+			<ViewIndex>134</ViewIndex>
+		</CodeItem>
+		<CodeItem key="late_days">
+			<ItemName>遅刻合計日数</ItemName>
+			<ViewIndex>135</ViewIndex>
+		</CodeItem>
+		<CodeItem key="late_thirty_minutes_or_more">
+			<ItemName>遅刻30分以上日数</ItemName>
+			<ViewIndex>136</ViewIndex>
+		</CodeItem>
+		<CodeItem key="late_less_than_thirty_minutes">
+			<ItemName>遅刻30分未満日数</ItemName>
+			<ViewIndex>137</ViewIndex>
+		</CodeItem>
+		<CodeItem key="late_time">
+			<ItemName>遅刻合計時間</ItemName>
+			<ViewIndex>138</ViewIndex>
+		</CodeItem>
+		<CodeItem key="late_thirty_minutes_or_more_time">
+			<ItemName>遅刻30分以上時間</ItemName>
+			<ViewIndex>139</ViewIndex>
+		</CodeItem>
+		<CodeItem key="late_less_than_thirty_minutes_time">
+			<ItemName>遅刻30分未満時間</ItemName>
+			<ViewIndex>140</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="times_late">
+			<ItemName>遅刻合計回数</ItemName>
+			<ViewIndex>141</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="leave_early_days">
+			<ItemName>早退合計日数</ItemName>
+			<ViewIndex>142</ViewIndex>
+		</CodeItem>
+		<CodeItem key="leave_early_thirty_minutes_or_more">
+			<ItemName>早退30分以上日数</ItemName>
+			<ViewIndex>143</ViewIndex>
+		</CodeItem>
+		<CodeItem key="leave_early_less_than_thirty_minutes">
+			<ItemName>早退30分未満日数</ItemName>
+			<ViewIndex>144</ViewIndex>
+		</CodeItem>
+		<CodeItem key="leave_early_time">
+			<ItemName>早退合計時間</ItemName>
+			<ViewIndex>145</ViewIndex>
+		</CodeItem>
+		<CodeItem key="leave_early_thirty_minutes_or_more_time">
+			<ItemName>早退30分以上時間</ItemName>
+			<ViewIndex>146</ViewIndex>
+		</CodeItem>
+		<CodeItem key="leave_early_less_than_thirty_minutes_time">
+			<ItemName>早退30分未満時間</ItemName>
+			<ViewIndex>147</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="times_leave_early">
+			<ItemName>早退合計回数</ItemName>
+			<ViewIndex>148</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="times_holiday">
+			<ItemName>合計休日日数</ItemName>
+			<ViewIndex>149</ViewIndex>
+		</CodeItem>
+		<CodeItem key="times_legal_holiday">
+			<ItemName>法定休日日数</ItemName>
+			<ViewIndex>150</ViewIndex>
+		</CodeItem>
+		<CodeItem key="times_specific_holiday">
+			<ItemName>所定休日日数</ItemName>
+			<ViewIndex>151</ViewIndex>
+		</CodeItem>
+		<CodeItem key="times_paid_holiday">
+			<ItemName>有給休暇日数</ItemName>
+			<ViewIndex>152</ViewIndex>
+		</CodeItem>
+		<CodeItem key="paid_holiday_hour">
+			<ItemName>有給休暇時間</ItemName>
+			<ViewIndex>153</ViewIndex>
+		</CodeItem>
+		<CodeItem key="times_stock_holiday">
+			<ItemName>ストック休暇日数</ItemName>
+			<ViewIndex>154</ViewIndex>
+		</CodeItem>
+		<CodeItem key="times_compensation">
+			<ItemName>合計代休日数</ItemName>
+			<ViewIndex>155</ViewIndex>
+		</CodeItem>
+		<CodeItem key="times_legal_compensation">
+			<ItemName>法定代休日数</ItemName>
+			<ViewIndex>156</ViewIndex>
+		</CodeItem>
+		<CodeItem key="times_specific_compensation">
+			<ItemName>所定代休日数</ItemName>
+			<ViewIndex>157</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="times_late_compensation">
+			<ItemName>深夜代休日数</ItemName>
+			<ViewIndex>158</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="times_holiday_substitute">
+			<ItemName>合計振替休日日数</ItemName>
+			<ViewIndex>159</ViewIndex>
+		</CodeItem>
+		<CodeItem key="times_legal_holiday_substitute">
+			<ItemName>法定振替休日日数</ItemName>
+			<ViewIndex>160</ViewIndex>
+		</CodeItem>
+		<CodeItem key="times_specific_holiday_substitute">
+			<ItemName>所定振替休日日数</ItemName>
+			<ViewIndex>161</ViewIndex>
+		</CodeItem>
+		<CodeItem key="total_special_holiday">
+			<ItemName>特別休暇合計日数</ItemName>
+			<ViewIndex>162</ViewIndex>
+		</CodeItem>
+		<CodeItem key="special_holiday_hour">
+			<ItemName>特別休暇時間</ItemName>
+			<ViewIndex>163</ViewIndex>
+		</CodeItem>
+		<CodeItem key="total_other_holiday">
+			<ItemName>その他休暇合計日数</ItemName>
+			<ViewIndex>164</ViewIndex>
+		</CodeItem>
+		<CodeItem key="other_holiday_hour">
+			<ItemName>その他休暇時間</ItemName>
+			<ViewIndex>165</ViewIndex>
+		</CodeItem>
+		<CodeItem key="total_absence">
+			<ItemName>欠勤合計日数</ItemName>
+			<ViewIndex>166</ViewIndex>
+		</CodeItem>
+		<CodeItem key="absence_hour">
+			<ItemName>欠勤時間</ItemName>
+			<ViewIndex>167</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="total_allowance">
+			<ItemName>手当合計</ItemName>
+			<ViewIndex>168</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="sixty_hour_overtime">
+			<ItemName>60時間超残業時間</ItemName>
+			<ViewIndex>169</ViewIndex>
+		</CodeItem>
+		<CodeItem key="week_day_overtime">
+			<ItemName>平日時間外時間</ItemName>
+			<ViewIndex>170</ViewIndex>
+		</CodeItem>
+		<CodeItem key="specific_overtime">
+			<ItemName>所定休日時間外時間</ItemName>
+			<ViewIndex>171</ViewIndex>
+		</CodeItem>
+		<CodeItem key="times_alternative">
+			<ItemName>代替休暇日数</ItemName>
+			<ViewIndex>172</ViewIndex>
+		</CodeItem>
+		<CodeItem key="legal_compensation_occurred">
+			<ItemName>法定代休発生日数</ItemName>
+			<ViewIndex>173</ViewIndex>
+		</CodeItem>
+		<CodeItem key="specific_compensation_occurred">
+			<ItemName>所定代休発生日数</ItemName>
+			<ViewIndex>174</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="late_compensation_occurred">
+			<ItemName>深夜代休発生日数</ItemName>
+			<ViewIndex>175</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="legal_compensation_unused">
+			<ItemName>法定代休未取得日数</ItemName>
+			<ViewIndex>176</ViewIndex>
+		</CodeItem>
+		<CodeItem key="specific_compensation_unused">
+			<ItemName>所定代休未取得日数</ItemName>
+			<ViewIndex>177</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="late_compensation_unused">
+			<ItemName>深夜代休未取得日数</ItemName>
+			<ViewIndex>178</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="weekly_over_forty_hour_work_time">
+			<ItemName>週40時間超勤務時間</ItemName>
+			<ViewIndex>179</ViewIndex>
+		</CodeItem>
+		<CodeItem key="overtime_in_no_weekly_forty">
+			<ItemName>法定内残業時間(週40時間超除く)</ItemName>
+			<ViewIndex>180</ViewIndex>
+		</CodeItem>
+		<CodeItem key="overtime_out_no_weekly_forty">
+			<ItemName>法定外残業時間(週40時間超除く)</ItemName>
+			<ViewIndex>181</ViewIndex>
+		</CodeItem>
+		<CodeItem key="week_day_overtime_total">
+			<ItemName>平日残業合計時間</ItemName>
+			<ViewIndex>182</ViewIndex>
+		</CodeItem>
+		<CodeItem key="week_day_overtime_in_no_weekly_forty">
+			<ItemName>平日時間内時間(週40時間超除く)</ItemName>
+			<ViewIndex>183</ViewIndex>
+		</CodeItem>
+		<CodeItem key="week_day_overtime_out_no_weekly_forty">
+			<ItemName>平日時間外時間(週40時間超除く)</ItemName>
+			<ViewIndex>184</ViewIndex>
+		</CodeItem>
+		<CodeItem key="week_day_overtime_in">
+			<ItemName>平日時間内時間</ItemName>
+			<ViewIndex>185</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="import_tmd_paid_holiday">
+		<CodeItem key="employee_code">
+			<ItemName>社員コード</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="activate_date">
+			<ItemName>有効日</ItemName>
+			<ViewIndex>101</ViewIndex>
+		</CodeItem>
+		<CodeItem key="acquisition_date">
+			<ItemName>取得日</ItemName>
+			<ViewIndex>102</ViewIndex>
+		</CodeItem>
+		<CodeItem key="limit_date">
+			<ItemName>期限日</ItemName>
+			<ViewIndex>103</ViewIndex>
+		</CodeItem>
+		<CodeItem key="hold_day">
+			<ItemName>付与日数</ItemName>
+			<ViewIndex>104</ViewIndex>
+		</CodeItem>
+		<CodeItem key="hold_hour">
+			<ItemName>付与時間数</ItemName>
+			<ViewIndex>105</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="giving_day">
+			<ItemName>付与日数</ItemName>
+			<ViewIndex>106</ViewIndex>
+		</CodeItem>
+		<CodeItem key="giving_hour">
+			<ItemName>付与時間数</ItemName>
+			<ViewIndex>107</ViewIndex>
+		</CodeItem>
+		<CodeItem key="cancel_day">
+			<ItemName>廃棄日数</ItemName>
+			<ViewIndex>108</ViewIndex>
+		</CodeItem>
+		<CodeItem key="cancel_hour">
+			<ItemName>廃棄時間数</ItemName>
+			<ViewIndex>109</ViewIndex>
+		</CodeItem>
+		<CodeItem key="use_day">
+			<ItemName>使用日数</ItemName>
+			<ViewIndex>110</ViewIndex>
+		</CodeItem>
+		<CodeItem key="use_hour">
+			<ItemName>使用時間数</ItemName>
+			<ViewIndex>111</ViewIndex>
+		</CodeItem>
+-->
+	</Code>
+	<Code key="import_tmd_stock_holiday">
+		<CodeItem key="employee_code">
+			<ItemName>社員コード</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="activate_date">
+			<ItemName>有効日</ItemName>
+			<ViewIndex>101</ViewIndex>
+		</CodeItem>
+		<CodeItem key="acquisition_date">
+			<ItemName>取得日</ItemName>
+			<ViewIndex>102</ViewIndex>
+		</CodeItem>
+		<CodeItem key="limit_date">
+			<ItemName>期限日</ItemName>
+			<ViewIndex>103</ViewIndex>
+		</CodeItem>
+		<CodeItem key="hold_day">
+			<ItemName>付与日数</ItemName>
+			<ViewIndex>104</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="giving_day">
+			<ItemName>付与日数</ItemName>
+			<ViewIndex>105</ViewIndex>
+		</CodeItem>
+		<CodeItem key="giving_hour">
+			<ItemName>付与時間数</ItemName>
+			<ViewIndex>106</ViewIndex>
+		</CodeItem>
+		<CodeItem key="cancel_day">
+			<ItemName>廃棄日数</ItemName>
+			<ViewIndex>107</ViewIndex>
+		</CodeItem>
+		<CodeItem key="cancel_hour">
+			<ItemName>廃棄時間数</ItemName>
+			<ViewIndex>108</ViewIndex>
+		</CodeItem>
+		<CodeItem key="use_day">
+			<ItemName>使用日数</ItemName>
+			<ViewIndex>109</ViewIndex>
+		</CodeItem>
+		<CodeItem key="use_hour">
+			<ItemName>使用時間数</ItemName>
+			<ViewIndex>110</ViewIndex>
+		</CodeItem>
+-->
+	</Code>
+	<Code key="import_tmd_holiday">
+		<CodeItem key="employee_code">
+			<ItemName>社員コード</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="activate_date">
+			<ItemName>有効日</ItemName>
+			<ViewIndex>101</ViewIndex>
+		</CodeItem>
+		<CodeItem key="holiday_code">
+			<ItemName>休暇コード</ItemName>
+			<ViewIndex>102</ViewIndex>
+		</CodeItem>
+		<CodeItem key="holiday_type">
+			<ItemName>休暇区分</ItemName>
+			<ViewIndex>103</ViewIndex>
+		</CodeItem>
+		<CodeItem key="giving_day">
+			<ItemName>付与日数</ItemName>
+			<ViewIndex>104</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="cancel_day">
+			<ItemName>廃棄日数</ItemName>
+			<ViewIndex>105</ViewIndex>
+		</CodeItem>
+		<CodeItem key="holiday_limit_date">
+			<ItemName>取得期限</ItemName>
+			<ViewIndex>106</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="holiday_limit_month">
+			<ItemName>取得期限(月)</ItemName>
+			<ViewIndex>107</ViewIndex>
+		</CodeItem>
+		<CodeItem key="holiday_limit_day">
+			<ItemName>取得期限(日)</ItemName>
+			<ViewIndex>108</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="import_tmd_holiday_request">
+		<CodeItem key="personal_id">
+			<ItemName>社員コード</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="request_start_date">
+			<ItemName>申請開始日</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="request_end_date">
+			<ItemName>申請終了日</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+		<CodeItem key="holiday_type1">
+			<ItemName>休暇種別1</ItemName>
+			<ViewIndex>4</ViewIndex>
+		</CodeItem>
+		<CodeItem key="holiday_type2">
+			<ItemName>休暇種別2</ItemName>
+			<ViewIndex>5</ViewIndex>
+		</CodeItem>
+		<CodeItem key="holiday_range">
+			<ItemName>休暇範囲</ItemName>
+			<ViewIndex>6</ViewIndex>
+		</CodeItem>
+		<CodeItem key="start_time">
+			<ItemName>時休開始時刻</ItemName>
+			<ViewIndex>7</ViewIndex>
+		</CodeItem>
+		<CodeItem key="request_reason">
+			<ItemName>理由</ItemName>
+			<ViewIndex>8</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="import_tmd_work_on_holiday_request">
+		<CodeItem key="personal_id">
+			<ItemName>社員コード</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="request_date">
+			<ItemName>出勤日</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="times_work">
+			<ItemName>勤務回数</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+-->
+<!--
+		<CodeItem key="work_on_holiday_type">
+			<ItemName>休出種別</ItemName>
+			<ViewIndex>4</ViewIndex>
+		</CodeItem>
+-->
+<!--
+		<CodeItem key="substitute">
+			<ItemName>振替申請</ItemName>
+			<ViewIndex>5</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="work_type_code">
+			<ItemName>勤務形態コード</ItemName>
+			<ViewIndex>6</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="start_time">
+			<ItemName>出勤予定時刻</ItemName>
+			<ViewIndex>7</ViewIndex>
+		</CodeItem>
+-->
+<!--
+		<CodeItem key="end_time">
+			<ItemName>退勤予定時刻</ItemName>
+			<ViewIndex>8</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="request_reason">
+			<ItemName>理由</ItemName>
+			<ViewIndex>9</ViewIndex>
+		</CodeItem>
+		<CodeItem key="substitute_date">
+			<ItemName>振替日</ItemName>
+			<ViewIndex>10</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="substitute_range">
+			<ItemName>振替範囲</ItemName>
+			<ViewIndex>11</ViewIndex>
+		</CodeItem>
+-->
+	</Code>
+	<Code key="import_tmd_work_on_holiday_request_substitute_off">
+		<CodeItem key="personal_id">
+			<ItemName>社員コード</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="request_date">
+			<ItemName>出勤日</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="start_time">
+			<ItemName>出勤予定時刻</ItemName>
+			<ViewIndex>7</ViewIndex>
+		</CodeItem>
+		<CodeItem key="end_time">
+			<ItemName>退勤予定時刻</ItemName>
+			<ViewIndex>8</ViewIndex>
+		</CodeItem>
+		<CodeItem key="request_reason">
+			<ItemName>理由</ItemName>
+			<ViewIndex>9</ViewIndex>
+		</CodeItem>
+	</Code>
+	<!-- 勤務形態データ -->
+	<Code key="import_tmd_work_type">
+		<CodeItem key="activate_date_year">
+			<ItemName>有効日(年)</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="activate_date_month">
+			<ItemName>有効日(月)</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="work_type_code">
+			<ItemName>勤務形態コード</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+		<CodeItem key="work_type_name">
+			<ItemName>勤務形態名称</ItemName>
+			<ViewIndex>4</ViewIndex>
+		</CodeItem>
+		<CodeItem key="work_type_abbr">
+			<ItemName>勤務形態略称</ItemName>
+			<ViewIndex>5</ViewIndex>
+		</CodeItem>
+		<CodeItem key="inactivate_flag">
+			<ItemName>有効/無効</ItemName>
+			<ViewIndex>6</ViewIndex>
+		</CodeItem>
+		<CodeItem key="work_start_time">
+			<ItemName>始業時刻</ItemName>
+			<ViewIndex>7</ViewIndex>
+		</CodeItem>
+		<CodeItem key="work_end_time">
+			<ItemName>終業時刻</ItemName>
+			<ViewIndex>8</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="work_time">
+			<ItemName>勤務時間</ItemName>
+			<ViewIndex>9</ViewIndex>
+		</CodeItem>
+		<CodeItem key="rest_time">
+			<ItemName>休憩時間</ItemName>
+			<ViewIndex>10</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="rest1_start_time">
+			<ItemName>休憩1(開始時間)</ItemName>
+			<ViewIndex>11</ViewIndex>
+		</CodeItem>
+		<CodeItem key="rest1_end_time">
+			<ItemName>休憩1(終了時間)</ItemName>
+			<ViewIndex>12</ViewIndex>
+		</CodeItem>
+		<CodeItem key="rest2_start_time">
+			<ItemName>休憩2(開始時間)</ItemName>
+			<ViewIndex>13</ViewIndex>
+		</CodeItem>
+		<CodeItem key="rest2_end_time">
+			<ItemName>休憩2(終了時間)</ItemName>
+			<ViewIndex>14</ViewIndex>
+		</CodeItem>
+		<CodeItem key="rest3_start_time">
+			<ItemName>休憩3(開始時間)</ItemName>
+			<ViewIndex>15</ViewIndex>
+		</CodeItem>
+		<CodeItem key="rest3_end_time">
+			<ItemName>休憩3(終了時間)</ItemName>
+			<ViewIndex>16</ViewIndex>
+		</CodeItem>
+		<CodeItem key="rest4_start_time">
+			<ItemName>休憩4(開始時間)</ItemName>
+			<ViewIndex>17</ViewIndex>
+		</CodeItem>
+		<CodeItem key="rest4_end_time">
+			<ItemName>休憩4(終了時間)</ItemName>
+			<ViewIndex>18</ViewIndex>
+		</CodeItem>
+		<CodeItem key="front_start_time">
+			<ItemName>午前休(開始時間)</ItemName>
+			<ViewIndex>19</ViewIndex>
+		</CodeItem>
+		<CodeItem key="front_end_time">
+			<ItemName>午前休(終了時間)</ItemName>
+			<ViewIndex>20</ViewIndex>
+		</CodeItem>
+		<CodeItem key="back_start_time">
+			<ItemName>午後休(開始時間)</ItemName>
+			<ViewIndex>21</ViewIndex>
+		</CodeItem>
+		<CodeItem key="back_end_time">
+			<ItemName>午後休(終了時間)</ItemName>
+			<ViewIndex>22</ViewIndex>
+		</CodeItem>
+		<CodeItem key="over_per">
+			<ItemName>残業休憩時間[毎]</ItemName>
+			<ViewIndex>23</ViewIndex>
+		</CodeItem>
+		<CodeItem key="over_rest">
+			<ItemName>残業休憩時間</ItemName>
+			<ViewIndex>24</ViewIndex>
+		</CodeItem>
+		<CodeItem key="over_before">
+			<ItemName>残前休憩</ItemName>
+			<ViewIndex>25</ViewIndex>
+		</CodeItem>
+		<CodeItem key="before_overtime">
+			<ItemName>勤務前残業実績登録</ItemName>
+			<ViewIndex>26</ViewIndex>
+		</CodeItem>
+		<CodeItem key="half_rest_work_time">
+			<ItemName>半休取得時休憩(午前休取得日の勤務時間)</ItemName>
+			<ViewIndex>27</ViewIndex>
+		</CodeItem>
+		<CodeItem key="half_rest_start_time">
+			<ItemName>半休取得時休憩(休憩開始時間)</ItemName>
+			<ViewIndex>28</ViewIndex>
+		</CodeItem>
+		<CodeItem key="half_rest_end_time">
+			<ItemName>半休取得時休憩(休憩終了時間)</ItemName>
+			<ViewIndex>29</ViewIndex>
+		</CodeItem>
+		<!-- 時短機能 -->
+<!--
+		<CodeItem key="direct_start">
+			<ItemName>直行</ItemName>
+			<ViewIndex>100</ViewIndex>
+		</CodeItem>
+		<CodeItem key="direct_end">
+			<ItemName>直帰</ItemName>
+			<ViewIndex>101</ViewIndex>
+		</CodeItem>
+		<CodeItem key="exclude_night_rest">
+			<ItemName>割増休憩除外</ItemName>
+			<ViewIndex>102</ViewIndex>
+		</CodeItem>
+		<CodeItem key="short1_start">
+			<ItemName>時短時間1(開始時間)</ItemName>
+			<ViewIndex>103</ViewIndex>
+		</CodeItem>
+		<CodeItem key="short1_end">
+			<ItemName>時短時間1(終了時間)</ItemName>
+			<ViewIndex>104</ViewIndex>
+		</CodeItem>
+		<CodeItem key="short1_type">
+			<ItemName>時短時間1(区分)</ItemName>
+			<ViewIndex>105</ViewIndex>
+		</CodeItem>
+		<CodeItem key="short2_start">
+			<ItemName>時短時間2(開始時間)</ItemName>
+			<ViewIndex>106</ViewIndex>
+		</CodeItem>
+		<CodeItem key="short2_end">
+			<ItemName>時短時間2(終了時間)</ItemName>
+			<ViewIndex>107</ViewIndex>
+		</CodeItem>
+		<CodeItem key="short2_type">
+			<ItemName>時短時間2(区分)</ItemName>
+			<ViewIndex>108</ViewIndex>
+		</CodeItem>
+-->
+	</Code>
+	
+	<!-- エクスポート -->
+	<Code key="TimeExportTableType">
+		<CodeItem key="export_tmd_attendance">
+			<ItemName>勤怠データ</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="export_tmd_total_time">
+			<ItemName>勤怠集計データ</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="export_tmd_paid_holiday">
+			<ItemName>有給休暇データ</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+		<CodeItem key="export_tmd_stock_holiday">
+			<ItemName>ストック休暇データ</ItemName>
+			<ViewIndex>4</ViewIndex>
+		</CodeItem>
+		<CodeItem key="export_tmd_holiday">
+			<ItemName>休暇付与データ</ItemName>
+			<ViewIndex>6</ViewIndex>
+		</CodeItem>
+		<CodeItem key="export_tmd_sub_holiday">
+			<ItemName>代休データ</ItemName>
+			<ViewIndex>7</ViewIndex>
+		</CodeItem>
+		<CodeItem key="export_tmd_attendance_book">
+			<ItemName>出勤簿データ</ItemName>
+			<ViewIndex>8</ViewIndex>
+		</CodeItem>
+		<CodeItem key="export_holiday_request_data">
+			<ItemName>休暇取得データ</ItemName>
+			<ViewIndex>9</ViewIndex>
+		</CodeItem>
+		<CodeItem key="export_attendance_reapplication">
+			<ItemName>勤怠再申請対象者</ItemName>
+			<ViewIndex>10</ViewIndex>
+		</CodeItem>
+		<CodeItem key="export_appli_reason_data">
+			<ItemName>各種申請理由データ</ItemName>
+			<ViewIndex>12</ViewIndex>
+		</CodeItem>
+		<CodeItem key="export_used_paid_holiday_data">
+			<ItemName>有給休暇申請(時間休除く)データ</ItemName>
+			<ViewIndex>13</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="export_tmd_attendance">
+		<CodeItem key="employee_code">
+			<ItemName>社員コード</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="full_name">
+			<ItemName>氏名</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="section_name">
+			<ItemName>所属名称</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="section_display">
+			<ItemName>所属表示名称</ItemName>
+			<ViewIndex>4</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="work_date">
+			<ItemName>勤務日</ItemName>
+			<ViewIndex>101</ViewIndex>
+		</CodeItem>
+		<CodeItem key="times_work">
+			<ItemName>勤務回数</ItemName>
+			<ViewIndex>102</ViewIndex>
+		</CodeItem>
+		<CodeItem key="work_type_code">
+			<ItemName>勤務形態コード</ItemName>
+			<ViewIndex>103</ViewIndex>
+		</CodeItem>
+		<CodeItem key="direct_start">
+			<ItemName>直行</ItemName>
+			<ViewIndex>104</ViewIndex>
+		</CodeItem>
+		<CodeItem key="direct_end">
+			<ItemName>直帰</ItemName>
+			<ViewIndex>105</ViewIndex>
+		</CodeItem>
+		<CodeItem key="start_time">
+			<ItemName>始業時刻(丸め打刻)</ItemName>
+			<ViewIndex>106</ViewIndex>
+		</CodeItem>
+		<CodeItem key="actual_start_time">
+			<ItemName>始業時刻(実打刻)</ItemName>
+			<ViewIndex>107</ViewIndex>
+		</CodeItem>
+		<CodeItem key="time_recode_start_time">
+			<ItemName>始業時刻(ポータル打刻)</ItemName>
+			<ViewIndex>108</ViewIndex>
+		</CodeItem>
+		<CodeItem key="end_time">
+			<ItemName>終業時刻(丸め打刻)</ItemName>
+			<ViewIndex>109</ViewIndex>
+		</CodeItem>
+		<CodeItem key="actual_end_time">
+			<ItemName>終業時刻(実打刻)</ItemName>
+			<ViewIndex>110</ViewIndex>
+		</CodeItem>
+		<CodeItem key="time_recode_end_time">
+			<ItemName>終業時刻(ポータル打刻)</ItemName>
+			<ViewIndex>111</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="late_days">
+			<ItemName>遅刻日数</ItemName>
+			<ViewIndex>120</ViewIndex>
+		</CodeItem>
+--><!--
+		<CodeItem key="late_thirty_minutes_or_more">
+			<ItemName>遅刻30分以上日数</ItemName>
+			<ViewIndex>121</ViewIndex>
+		</CodeItem>
+--><!--
+		<CodeItem key="late_less_than_thirty_minutes">
+			<ItemName>遅刻30分未満日数</ItemName>
+			<ViewIndex>122</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="late_time">
+			<ItemName>遅刻時間</ItemName>
+			<ViewIndex>123</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="actual_late_time">
+			<ItemName>実遅刻時間</ItemName>
+			<ViewIndex>124</ViewIndex>
+		</CodeItem>
+--><!--
+		<CodeItem key="late_thirty_minutes_or_more_time">
+			<ItemName>遅刻30分以上時間</ItemName>
+			<ViewIndex>125</ViewIndex>
+		</CodeItem>
+--><!--
+		<CodeItem key="late_less_than_thirty_minutes_time">
+			<ItemName>遅刻30分未満時間</ItemName>
+			<ViewIndex>126</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="late_reason">
+			<ItemName>遅刻理由</ItemName>
+			<ViewIndex>127</ViewIndex>
+		</CodeItem>
+		<CodeItem key="late_certificate">
+			<ItemName>遅刻証明書</ItemName>
+			<ViewIndex>128</ViewIndex>
+		</CodeItem>
+		<CodeItem key="late_comment">
+			<ItemName>遅刻コメント</ItemName>
+			<ViewIndex>129</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="leave_early_days">
+			<ItemName>早退日数</ItemName>
+			<ViewIndex>130</ViewIndex>
+		</CodeItem>
+--><!--
+		<CodeItem key="leave_early_thirty_minutes_or_more">
+			<ItemName>早退30分以上日数</ItemName>
+			<ViewIndex>131</ViewIndex>
+		</CodeItem>
+--><!--
+		<CodeItem key="leave_early_less_than_thirty_minutes">
+			<ItemName>早退30分未満日数</ItemName>
+			<ViewIndex>132</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="leave_early_time">
+			<ItemName>早退時間</ItemName>
+			<ViewIndex>133</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="actual_leave_early_time">
+			<ItemName>実早退時間</ItemName>
+			<ViewIndex>134</ViewIndex>
+		</CodeItem>
+--><!--
+		<CodeItem key="leave_early_thirty_minutes_or_more_time">
+			<ItemName>早退30分以上時間</ItemName>
+			<ViewIndex>135</ViewIndex>
+		</CodeItem>
+--><!--
+		<CodeItem key="leave_early_less_than_thirty_minutes_time">
+			<ItemName>早退30分未満時間</ItemName>
+			<ViewIndex>136</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="leave_early_reason">
+			<ItemName>早退理由</ItemName>
+			<ViewIndex>137</ViewIndex>
+		</CodeItem>
+		<CodeItem key="leave_early_certificate">
+			<ItemName>早退証明書</ItemName>
+			<ViewIndex>138</ViewIndex>
+		</CodeItem>
+		<CodeItem key="leave_early_comment">
+			<ItemName>早退コメント</ItemName>
+			<ViewIndex>139</ViewIndex>
+		</CodeItem>
+		<CodeItem key="work_time">
+			<ItemName>勤務時間</ItemName>
+			<ViewIndex>140</ViewIndex>
+		</CodeItem>
+		<CodeItem key="general_work_time">
+			<ItemName>所定労働時間</ItemName>
+			<ViewIndex>141</ViewIndex>
+		</CodeItem>
+		<CodeItem key="work_time_within_prescribed_work_time">
+			<ItemName>所定勤務時間</ItemName>
+			<ViewIndex>142</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="contract_work_time">
+			<ItemName>契約勤務時間</ItemName>
+			<ViewIndex>143</ViewIndex>
+		</CodeItem>
+-->
+<!--
+		<CodeItem key="short_unpaid">
+			<ItemName>無給時短時間</ItemName>
+			<ViewIndex>144</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="rest_time">
+			<ItemName>休憩時間</ItemName>
+			<ViewIndex>145</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="over_rest_time">
+			<ItemName>法定外休憩時間</ItemName>
+			<ViewIndex>146</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="night_rest_time">
+			<ItemName>深夜休憩時間</ItemName>
+			<ViewIndex>147</ViewIndex>
+		</CodeItem>
+		<CodeItem key="legal_holiday_rest_time">
+			<ItemName>法定休出休憩時間</ItemName>
+			<ViewIndex>148</ViewIndex>
+		</CodeItem>
+		<CodeItem key="prescribed_holiday_rest_time">
+			<ItemName>所定休出休憩時間</ItemName>
+			<ViewIndex>149</ViewIndex>
+		</CodeItem>
+		<CodeItem key="public_time">
+			<ItemName>公用外出時間</ItemName>
+			<ViewIndex>150</ViewIndex>
+		</CodeItem>
+		<CodeItem key="private_time">
+			<ItemName>私用外出時間</ItemName>
+			<ViewIndex>151</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="minutely_holiday_a_time">
+			<ItemName>分単位休暇A時間</ItemName>
+			<ViewIndex>152</ViewIndex>
+		</CodeItem>
+		<CodeItem key="minutely_holiday_b_time">
+			<ItemName>分単位休暇B時間</ItemName>
+			<ViewIndex>153</ViewIndex>
+		</CodeItem>
+-->
+<!--
+		<CodeItem key="times_overtime">
+			<ItemName>残業回数</ItemName>
+			<ViewIndex>154</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="overtime">
+			<ItemName>残業時間</ItemName>
+			<ViewIndex>155</ViewIndex>
+		</CodeItem>
+		<CodeItem key="overtime_before">
+			<ItemName>前残業時間</ItemName>
+			<ViewIndex>156</ViewIndex>
+		</CodeItem>
+		<CodeItem key="overtime_after">
+			<ItemName>後残業時間</ItemName>
+			<ViewIndex>157</ViewIndex>
+		</CodeItem>
+		<CodeItem key="overtime_in">
+			<ItemName>法定内残業時間</ItemName>
+			<ViewIndex>158</ViewIndex>
+		</CodeItem>
+		<CodeItem key="overtime_out">
+			<ItemName>法定外残業時間</ItemName>
+			<ViewIndex>159</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="workday_overtime_in">
+			<ItemName>平日法定時間内残業時間</ItemName>
+			<ViewIndex>160</ViewIndex>
+		</CodeItem>
+		<CodeItem key="workday_overtime_out">
+			<ItemName>平日法定時間外残業時間</ItemName>
+			<ViewIndex>161</ViewIndex>
+		</CodeItem>
+		<CodeItem key="prescribed_holiday_overtime_in">
+			<ItemName>所定休日法定時間内残業時間</ItemName>
+			<ViewIndex>162</ViewIndex>
+		</CodeItem>
+		<CodeItem key="prescribed_holiday_overtime_out">
+			<ItemName>所定休日法定時間外残業時間</ItemName>
+			<ViewIndex>163</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="late_night_time">
+			<ItemName>深夜勤務時間</ItemName>
+			<ViewIndex>164</ViewIndex>
+		</CodeItem>
+		<CodeItem key="night_work_within_prescribed_work">
+			<ItemName>深夜所定労働時間内時間</ItemName>
+			<ViewIndex>165</ViewIndex>
+		</CodeItem>
+		<CodeItem key="night_overtime_work">
+			<ItemName>深夜時間外時間</ItemName>
+			<ViewIndex>166</ViewIndex>
+		</CodeItem>
+		<CodeItem key="night_work_on_holiday">
+			<ItemName>深夜休日労働時間</ItemName>
+			<ViewIndex>167</ViewIndex>
+		</CodeItem>
+		<CodeItem key="specific_work_time">
+			<ItemName>所定休日勤務時間</ItemName>
+			<ViewIndex>168</ViewIndex>
+		</CodeItem>
+		<CodeItem key="legal_work_time">
+			<ItemName>法定休日勤務時間</ItemName>
+			<ViewIndex>169</ViewIndex>
+		</CodeItem>
+		<CodeItem key="decrease_time">
+			<ItemName>減額対象時間</ItemName>
+			<ViewIndex>170</ViewIndex>
+		</CodeItem>
+		<CodeItem key="time_comment">
+			<ItemName>勤怠コメント</ItemName>
+			<ViewIndex>171</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="work_days">
+			<ItemName>出勤日数</ItemName>
+			<ViewIndex>172</ViewIndex>
+		</CodeItem>
+--><!--
+		<CodeItem key="work_days_for_paid_leave">
+			<ItemName>有給休暇用出勤日数</ItemName>
+			<ViewIndex>173</ViewIndex>
+		</CodeItem>
+--><!--
+		<CodeItem key="total_work_days_for_paid_leave">
+			<ItemName>有給休暇用全労働日</ItemName>
+			<ViewIndex>174</ViewIndex>
+		</CodeItem>
+--><!--
+		<CodeItem key="times_holiday_work">
+			<ItemName>休日出勤回数</ItemName>
+			<ViewIndex>175</ViewIndex>
+		</CodeItem>
+--><!--
+		<CodeItem key="times_legal_holiday_work">
+			<ItemName>法定休日出勤回数</ItemName>
+			<ViewIndex>176</ViewIndex>
+		</CodeItem>
+--><!--
+		<CodeItem key="times_prescribed_holiday_work">
+			<ItemName>所定休日出勤回数</ItemName>
+			<ViewIndex>177</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="paid_leave_days">
+			<ItemName>有給休暇日数</ItemName>
+			<ViewIndex>178</ViewIndex>
+		</CodeItem>
+		<CodeItem key="paid_leave_hours">
+			<ItemName>有給休暇時間数</ItemName>
+			<ViewIndex>179</ViewIndex>
+		</CodeItem>
+		<CodeItem key="stock_leave_days">
+			<ItemName>ストック休暇日数</ItemName>
+			<ViewIndex>180</ViewIndex>
+		</CodeItem>
+		<CodeItem key="compensation_days">
+			<ItemName>代休日数</ItemName>
+			<ViewIndex>181</ViewIndex>
+		</CodeItem>
+		<CodeItem key="legal_compensation_days">
+			<ItemName>法定代休日数</ItemName>
+			<ViewIndex>182</ViewIndex>
+		</CodeItem>
+		<CodeItem key="prescribed_compensation_days">
+			<ItemName>所定代休日数</ItemName>
+			<ViewIndex>183</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="night_compensation_days">
+			<ItemName>深夜代休日数</ItemName>
+			<ViewIndex>184</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="special_leave_days">
+			<ItemName>特別休暇日数</ItemName>
+			<ViewIndex>185</ViewIndex>
+		</CodeItem>
+		<CodeItem key="special_leave_hours">
+			<ItemName>特別休暇時間数</ItemName>
+			<ViewIndex>186</ViewIndex>
+		</CodeItem>
+		<CodeItem key="other_leave_days">
+			<ItemName>その他休暇日数</ItemName>
+			<ViewIndex>187</ViewIndex>
+		</CodeItem>
+		<CodeItem key="other_leave_hours">
+			<ItemName>その他休暇時間数</ItemName>
+			<ViewIndex>188</ViewIndex>
+		</CodeItem>
+		<CodeItem key="absence_days">
+			<ItemName>欠勤日数</ItemName>
+			<ViewIndex>189</ViewIndex>
+		</CodeItem>
+		<CodeItem key="absence_hours">
+			<ItemName>欠勤時間数</ItemName>
+			<ViewIndex>190</ViewIndex>
+		</CodeItem>
+		<CodeItem key="granted_legal_compensation_days">
+			<ItemName>法定代休発生日数</ItemName>
+			<ViewIndex>191</ViewIndex>
+		</CodeItem>
+		<CodeItem key="granted_prescribed_compensation_days">
+			<ItemName>所定代休発生日数</ItemName>
+			<ViewIndex>192</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="granted_night_compensation_days">
+			<ItemName>深夜代休発生日数</ItemName>
+			<ViewIndex>193</ViewIndex>
+		</CodeItem>
+		<CodeItem key="legal_holiday_work_time_with_compensation_day">
+			<ItemName>法定休出時間(代休あり)</ItemName>
+			<ViewIndex>194</ViewIndex>
+		</CodeItem>
+		<CodeItem key="legal_holiday_work_time_without_compensation_day">
+			<ItemName>法定休出時間(代休なし)</ItemName>
+			<ViewIndex>195</ViewIndex>
+		</CodeItem>
+		<CodeItem key="prescribed_holiday_work_time_with_compensation_day">
+			<ItemName>所定休出時間(代休あり)</ItemName>
+			<ViewIndex>196</ViewIndex>
+		</CodeItem>
+		<CodeItem key="prescribed_holiday_work_time_without_compensation_day">
+			<ItemName>所定休出時間(代休なし)</ItemName>
+			<ViewIndex>197</ViewIndex>
+		</CodeItem>
+		<CodeItem key="overtime_in_with_compensation_day">
+			<ItemName>法定労働時間内残業時間(代休あり)</ItemName>
+			<ViewIndex>198</ViewIndex>
+		</CodeItem>
+		<CodeItem key="overtime_in_without_compensation_day">
+			<ItemName>法定労働時間内残業時間(代休なし)</ItemName>
+			<ViewIndex>199</ViewIndex>
+		</CodeItem>
+		<CodeItem key="overtime_out_with_compensation_day">
+			<ItemName>法定労働時間外残業時間(代休あり)</ItemName>
+			<ViewIndex>200</ViewIndex>
+		</CodeItem>
+		<CodeItem key="overtime_out_without_compensation_day">
+			<ItemName>法定労働時間外残業時間(代休なし)</ItemName>
+			<ViewIndex>201</ViewIndex>
+		</CodeItem>
+		<CodeItem key="statutory_holiday_work_time_in"> 
+			<ItemName>所定労働時間内法定休日労働時間</ItemName>
+			<ViewIndex>202</ViewIndex>
+		</CodeItem>
+		<CodeItem key="statutory_holiday_work_time_out">
+			<ItemName>所定労働時間外法定休日労働時間</ItemName>
+			<ViewIndex>203</ViewIndex>
+		</CodeItem>
+		<CodeItem key="prescribed_holiday_work_time_in"> 
+			<ItemName>所定労働時間内所定休日労働時間</ItemName>
+			<ViewIndex>204</ViewIndex>
+		</CodeItem>
+		<CodeItem key="prescribed_holiday_work_time_out">
+			<ItemName>所定労働時間外所定休日労働時間</ItemName>
+			<ViewIndex>205</ViewIndex>
+		</CodeItem>
+-->
+	</Code>
+	<Code key="export_tmd_total_time">
+		<CodeItem key="employee_code">
+			<ItemName>社員コード</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="full_name">
+			<ItemName>氏名</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="section_name">
+			<ItemName>所属名称</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+-->
+<!--
+		<CodeItem key="section_display">
+			<ItemName>所属表示名称</ItemName>
+			<ViewIndex>4</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="work_place_code">
+			<ItemName>勤務地コード</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>		
+		<CodeItem key="employment_contract_code">
+			<ItemName>雇用契約コード</ItemName>
+			<ViewIndex>4</ViewIndex>
+		</CodeItem>
+		<CodeItem key="section_code">
+			<ItemName>所属コード</ItemName>
+			<ViewIndex>5</ViewIndex>
+		</CodeItem>
+		<CodeItem key="position_code">
+			<ItemName>職位コード</ItemName>
+			<ViewIndex>6</ViewIndex>
+		</CodeItem>
+		<CodeItem key="work_place_name">
+			<ItemName>勤務地名称</ItemName>
+			<ViewIndex>7</ViewIndex>
+		</CodeItem>
+		<CodeItem key="employment_contract_name">
+			<ItemName>雇用契約名称</ItemName>
+			<ViewIndex>8</ViewIndex>
+		</CodeItem>
+		<CodeItem key="section_name">
+			<ItemName>所属名称</ItemName>
+			<ViewIndex>9</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="section_display">
+			<ItemName>所属表示名称</ItemName>
+			<ViewIndex>10</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="position_name">
+			<ItemName>職位名称</ItemName>
+			<ViewIndex>11</ViewIndex>
+		</CodeItem>
+		
+		<CodeItem key="calculation_year">
+			<ItemName>年</ItemName>
+			<ViewIndex>101</ViewIndex>
+		</CodeItem>
+		<CodeItem key="calculation_month">
+			<ItemName>月</ItemName>
+			<ViewIndex>102</ViewIndex>
+		</CodeItem>
+		<CodeItem key="calculation_date">
+			<ItemName>集計日</ItemName>
+			<ViewIndex>103</ViewIndex>
+		</CodeItem>
+		<CodeItem key="work_time">
+			<ItemName>勤務時間</ItemName>
+			<ViewIndex>104</ViewIndex>
+		</CodeItem>
+		<CodeItem key="specific_work_time">
+			<ItemName>所定勤務時間</ItemName>
+			<ViewIndex>105</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="contract_work_time">
+			<ItemName>契約勤務時間</ItemName>
+			<ViewIndex>106</ViewIndex>
+		</CodeItem>
+-->
+<!--
+		<CodeItem key="short_unpaid">
+			<ItemName>無給時短時間</ItemName>
+			<ViewIndex>107</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="times_work_date">
+			<ItemName>出勤日数</ItemName>
+			<ViewIndex>108</ViewIndex>
+		</CodeItem>
+		<CodeItem key="times_work">
+			<ItemName>出勤回数</ItemName>
+			<ViewIndex>109</ViewIndex>
+		</CodeItem>
+		<CodeItem key="legal_work_on_holiday">
+			<ItemName>法定休日出勤日数</ItemName>
+			<ViewIndex>110</ViewIndex>
+		</CodeItem>
+		<CodeItem key="specific_work_on_holiday">
+			<ItemName>所定休日出勤日数</ItemName>
+			<ViewIndex>111</ViewIndex>
+		</CodeItem>
+		<CodeItem key="times_achievement">
+			<ItemName>出勤実績日数</ItemName>
+			<ViewIndex>112</ViewIndex>
+		</CodeItem>
+		<CodeItem key="times_total_work_date">
+			<ItemName>出勤対象日数</ItemName>
+			<ViewIndex>113</ViewIndex>
+		</CodeItem>
+		<CodeItem key="direct_start">
+			<ItemName>直行回数</ItemName>
+			<ViewIndex>114</ViewIndex>
+		</CodeItem>
+		<CodeItem key="direct_end">
+			<ItemName>直帰回数</ItemName>
+			<ViewIndex>115</ViewIndex>
+		</CodeItem>
+		<CodeItem key="rest_time">
+			<ItemName>休憩時間</ItemName>
+			<ViewIndex>116</ViewIndex>
+		</CodeItem>
+		<CodeItem key="rest_late_night">
+			<ItemName>深夜休憩時間</ItemName>
+			<ViewIndex>117</ViewIndex>
+		</CodeItem>
+		<CodeItem key="rest_work_on_specific_holiday">
+			<ItemName>所定休出休憩時間</ItemName>
+			<ViewIndex>118</ViewIndex>
+		</CodeItem>
+		<CodeItem key="rest_work_on_holiday">
+			<ItemName>法定休出休憩時間</ItemName>
+			<ViewIndex>119</ViewIndex>
+		</CodeItem>
+		<CodeItem key="public_time">
+			<ItemName>公用外出時間</ItemName>
+			<ViewIndex>120</ViewIndex>
+		</CodeItem>
+		<CodeItem key="private_time">
+			<ItemName>私用外出時間</ItemName>
+			<ViewIndex>121</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="minutely_holiday_a_time">
+			<ItemName>分単位休暇A時間</ItemName>
+			<ViewIndex>122</ViewIndex>
+		</CodeItem>
+		<CodeItem key="minutely_holiday_b_time">
+			<ItemName>分単位休暇B時間</ItemName>
+			<ViewIndex>123</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="overtime">
+			<ItemName>残業時間</ItemName>
+			<ViewIndex>124</ViewIndex>
+		</CodeItem>
+		<CodeItem key="overtime_in">
+			<ItemName>法定内残業時間</ItemName>
+			<ViewIndex>125</ViewIndex>
+		</CodeItem>
+		<CodeItem key="overtime_out">
+			<ItemName>法定外残業時間</ItemName>
+			<ViewIndex>126</ViewIndex>
+		</CodeItem>
+		<CodeItem key="late_night">
+			<ItemName>深夜時間</ItemName>
+			<ViewIndex>127</ViewIndex>
+		</CodeItem>
+		<CodeItem key="night_work_within_prescribed_work">
+			<ItemName>深夜所定労働時間内時間</ItemName>
+			<ViewIndex>128</ViewIndex>
+		</CodeItem>
+		<CodeItem key="night_overtime_work">
+			<ItemName>深夜時間外時間</ItemName>
+			<ViewIndex>129</ViewIndex>
+		</CodeItem>
+		<CodeItem key="night_work_on_holiday">
+			<ItemName>深夜休日労働時間</ItemName>
+			<ViewIndex>130</ViewIndex>
+		</CodeItem>
+		<CodeItem key="work_on_specific_holiday">
+			<ItemName>所定休出時間</ItemName>
+			<ViewIndex>131</ViewIndex>
+		</CodeItem>
+		<CodeItem key="work_on_holiday">
+			<ItemName>法定休出時間</ItemName>
+			<ViewIndex>132</ViewIndex>
+		</CodeItem>
+		<CodeItem key="decrease_time">
+			<ItemName>減額対象時間</ItemName>
+			<ViewIndex>133</ViewIndex>
+		</CodeItem>
+		<CodeItem key="forty_five_hour_overtime">
+			<ItemName>45時間超残業時間</ItemName>
+			<ViewIndex>134</ViewIndex>
+		</CodeItem>
+		<CodeItem key="times_overtime">
+			<ItemName>残業回数</ItemName>
+			<ViewIndex>135</ViewIndex>
+		</CodeItem>
+		<CodeItem key="times_working_holiday">
+			<ItemName>休日出勤回数</ItemName>
+			<ViewIndex>136</ViewIndex>
+		</CodeItem>
+		<CodeItem key="late_days">
+			<ItemName>遅刻合計日数</ItemName>
+			<ViewIndex>137</ViewIndex>
+		</CodeItem>
+		<CodeItem key="late_thirty_minutes_or_more">
+			<ItemName>遅刻30分以上日数</ItemName>
+			<ViewIndex>138</ViewIndex>
+		</CodeItem>
+		<CodeItem key="late_less_than_thirty_minutes">
+			<ItemName>遅刻30分未満日数</ItemName>
+			<ViewIndex>139</ViewIndex>
+		</CodeItem>
+		<CodeItem key="late_time">
+			<ItemName>遅刻合計時間</ItemName>
+			<ViewIndex>140</ViewIndex>
+		</CodeItem>
+		<CodeItem key="late_thirty_minutes_or_more_time">
+			<ItemName>遅刻30分以上時間</ItemName>
+			<ViewIndex>141</ViewIndex>
+		</CodeItem>
+		<CodeItem key="late_less_than_thirty_minutes_time">
+			<ItemName>遅刻30分未満時間</ItemName>
+			<ViewIndex>142</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="times_late">
+			<ItemName>遅刻合計回数</ItemName>
+			<ViewIndex>143</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="leave_early_days">
+			<ItemName>早退合計日数</ItemName>
+			<ViewIndex>144</ViewIndex>
+		</CodeItem>
+		<CodeItem key="leave_early_thirty_minutes_or_more">
+			<ItemName>早退30分以上日数</ItemName>
+			<ViewIndex>145</ViewIndex>
+		</CodeItem>
+		<CodeItem key="leave_early_less_than_thirty_minutes">
+			<ItemName>早退30分未満日数</ItemName>
+			<ViewIndex>146</ViewIndex>
+		</CodeItem>
+		<CodeItem key="leave_early_time">
+			<ItemName>早退合計時間</ItemName>
+			<ViewIndex>147</ViewIndex>
+		</CodeItem>
+		<CodeItem key="leave_early_thirty_minutes_or_more_time">
+			<ItemName>早退30分以上時間</ItemName>
+			<ViewIndex>148</ViewIndex>
+		</CodeItem>
+		<CodeItem key="leave_early_less_than_thirty_minutes_time">
+			<ItemName>早退30分未満時間</ItemName>
+			<ViewIndex>149</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="times_leave_early">
+			<ItemName>早退合計回数</ItemName>
+			<ViewIndex>150</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="times_holiday">
+			<ItemName>合計休日日数</ItemName>
+			<ViewIndex>151</ViewIndex>
+		</CodeItem>
+		<CodeItem key="times_legal_holiday">
+			<ItemName>法定休日日数</ItemName>
+			<ViewIndex>152</ViewIndex>
+		</CodeItem>
+		<CodeItem key="times_specific_holiday">
+			<ItemName>所定休日日数</ItemName>
+			<ViewIndex>153</ViewIndex>
+		</CodeItem>
+		<CodeItem key="times_paid_holiday">
+			<ItemName>有給休暇日数</ItemName>
+			<ViewIndex>154</ViewIndex>
+		</CodeItem>
+		<CodeItem key="paid_holiday_hour">
+			<ItemName>有給休暇時間</ItemName>
+			<ViewIndex>155</ViewIndex>
+		</CodeItem>
+		<CodeItem key="times_stock_holiday">
+			<ItemName>ストック休暇日数</ItemName>
+			<ViewIndex>156</ViewIndex>
+		</CodeItem>
+		<CodeItem key="times_compensation">
+			<ItemName>合計代休日数</ItemName>
+			<ViewIndex>157</ViewIndex>
+		</CodeItem>
+		<CodeItem key="times_legal_compensation">
+			<ItemName>法定代休日数</ItemName>
+			<ViewIndex>158</ViewIndex>
+		</CodeItem>
+		<CodeItem key="times_specific_compensation">
+			<ItemName>所定代休日数</ItemName>
+			<ViewIndex>159</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="times_late_compensation">
+			<ItemName>深夜代休日数</ItemName>
+			<ViewIndex>160</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="times_holiday_substitute">
+			<ItemName>合計振替休日日数</ItemName>
+			<ViewIndex>161</ViewIndex>
+		</CodeItem>
+		<CodeItem key="times_legal_holiday_substitute">
+			<ItemName>法定振替休日日数</ItemName>
+			<ViewIndex>162</ViewIndex>
+		</CodeItem>
+		<CodeItem key="times_specific_holiday_substitute">
+			<ItemName>所定振替休日日数</ItemName>
+			<ViewIndex>163</ViewIndex>
+		</CodeItem>
+		<CodeItem key="total_special_holiday">
+			<ItemName>特別休暇合計日数</ItemName>
+			<ViewIndex>164</ViewIndex>
+		</CodeItem>
+		<CodeItem key="special_holiday_hour">
+			<ItemName>特別休暇時間</ItemName>
+			<ViewIndex>166</ViewIndex>
+		</CodeItem>
+		<CodeItem key="total_other_holiday">
+			<ItemName>その他休暇合計日数</ItemName>
+			<ViewIndex>167</ViewIndex>
+		</CodeItem>
+		<CodeItem key="other_holiday_hour">
+			<ItemName>その他休暇時間</ItemName>
+			<ViewIndex>168</ViewIndex>
+		</CodeItem>
+		<CodeItem key="total_absence">
+			<ItemName>欠勤合計日数</ItemName>
+			<ViewIndex>169</ViewIndex>
+		</CodeItem>
+		<CodeItem key="absence_hour">
+			<ItemName>欠勤時間</ItemName>
+			<ViewIndex>170</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="total_allowance">
+			<ItemName>手当合計</ItemName>
+			<ViewIndex>171</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="sixty_hour_overtime">
+			<ItemName>60時間超残業時間</ItemName>
+			<ViewIndex>172</ViewIndex>
+		</CodeItem>
+		<CodeItem key="week_day_overtime">
+			<ItemName>平日時間外時間</ItemName>
+			<ViewIndex>173</ViewIndex>
+		</CodeItem>
+		<CodeItem key="specific_overtime">
+			<ItemName>所定休日時間外時間</ItemName>
+			<ViewIndex>174</ViewIndex>
+		</CodeItem>
+		<CodeItem key="times_alternative">
+			<ItemName>代替休暇日数</ItemName>
+			<ViewIndex>175</ViewIndex>
+		</CodeItem>
+		<CodeItem key="legal_compensation_occurred">
+			<ItemName>法定代休発生日数</ItemName>
+			<ViewIndex>176</ViewIndex>
+		</CodeItem>
+		<CodeItem key="specific_compensation_occurred">
+			<ItemName>所定代休発生日数</ItemName>
+			<ViewIndex>177</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="late_compensation_occurred">
+			<ItemName>深夜代休発生日数</ItemName>
+			<ViewIndex>178</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="legal_compensation_unused">
+			<ItemName>法定代休未取得日数</ItemName>
+			<ViewIndex>179</ViewIndex>
+		</CodeItem>
+		<CodeItem key="specific_compensation_unused">
+			<ItemName>所定代休未取得日数</ItemName>
+			<ViewIndex>180</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="late_compensation_unused">
+			<ItemName>深夜代休未取得日数</ItemName>
+			<ViewIndex>181</ViewIndex>
+		</CodeItem>
+		<CodeItem key="statutory_holiday_work_time_in">
+			<ItemName>所定労働時間内法定休日労働時間</ItemName>
+			<ViewIndex>182</ViewIndex>
+		</CodeItem>
+		<CodeItem key="statutory_holiday_work_time_out">
+			<ItemName>所定労働時間外法定休日労働時間</ItemName>
+			<ViewIndex>183</ViewIndex>
+		</CodeItem>
+		<CodeItem key="prescribed_holiday_work_time_in">
+			<ItemName>所定労働時間内所定休日労働時間</ItemName>
+			<ViewIndex>184</ViewIndex>
+		</CodeItem>
+		<CodeItem key="prescribed_holiday_work_time_out">
+			<ItemName>所定労働時間外所定休日労働時間</ItemName>
+			<ViewIndex>185</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="weekly_over_forty_hour_work_time">
+			<ItemName>週40時間超勤務時間</ItemName>
+			<ViewIndex>186</ViewIndex>
+		</CodeItem>
+		<CodeItem key="weekly_over_forty_in">
+			<ItemName>週40時間超勤務時間(法定内発生分)</ItemName>
+			<ViewIndex>187</ViewIndex>
+		</CodeItem>
+		<CodeItem key="weekly_over_forty_normnal">
+			<ItemName>週40時間超勤務時間(勤務内発生分)</ItemName>
+			<ViewIndex>188</ViewIndex>
+		</CodeItem>
+		<CodeItem key="overtime_in_no_weekly_forty">
+			<ItemName>法定内残業時間(週40時間超除く)</ItemName>
+			<ViewIndex>189</ViewIndex>
+		</CodeItem>
+		<CodeItem key="overtime_out_no_weekly_forty">
+			<ItemName>法定外残業時間(週40時間超除く)</ItemName>
+			<ViewIndex>190</ViewIndex>
+		</CodeItem>
+		<CodeItem key="week_day_overtime_total">
+			<ItemName>平日残業合計時間</ItemName>
+			<ViewIndex>191</ViewIndex>
+		</CodeItem>
+		<CodeItem key="week_day_overtime_in_no_weekly_forty">
+			<ItemName>平日時間内時間(週40時間超除く)</ItemName>
+			<ViewIndex>192</ViewIndex>
+		</CodeItem>
+		<CodeItem key="week_day_overtime_out_no_weekly_forty">
+			<ItemName>平日時間外時間(週40時間超除く)</ItemName>
+			<ViewIndex>193</ViewIndex>
+		</CodeItem>
+		<CodeItem key="week_day_overtime_in">
+			<ItemName>平日時間内時間</ItemName>
+			<ViewIndex>194</ViewIndex>
+		</CodeItem>
+		<CodeItem key="calendar_working_days">
+			<ItemName>カレンダ勤務日数</ItemName>
+			<ViewIndex>195</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="export_tmd_paid_holiday">
+		<CodeItem key="employee_code">
+			<ItemName>社員コード</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="full_name">
+			<ItemName>氏名</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="section_name">
+			<ItemName>所属名称</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="section_display">
+			<ItemName>所属表示名称</ItemName>
+			<ViewIndex>4</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="activate_date">
+			<ItemName>有効日</ItemName>
+			<ViewIndex>101</ViewIndex>
+		</CodeItem>
+		<CodeItem key="acquisition_date">
+			<ItemName>取得日</ItemName>
+			<ViewIndex>102</ViewIndex>
+		</CodeItem>
+		<CodeItem key="limit_date">
+			<ItemName>期限日</ItemName>
+			<ViewIndex>103</ViewIndex>
+		</CodeItem>
+		<CodeItem key="hold_day">
+			<ItemName>付与日数</ItemName>
+			<ViewIndex>104</ViewIndex>
+		</CodeItem>
+		<CodeItem key="hold_hour">
+			<ItemName>付与時間数</ItemName>
+			<ViewIndex>105</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="giving_day">
+			<ItemName>付与日数</ItemName>
+			<ViewIndex>106</ViewIndex>
+		</CodeItem>
+		<CodeItem key="giving_hour">
+			<ItemName>付与時間数</ItemName>
+			<ViewIndex>107</ViewIndex>
+		</CodeItem>
+		<CodeItem key="cancel_day">
+			<ItemName>廃棄日数</ItemName>
+			<ViewIndex>108</ViewIndex>
+		</CodeItem>
+		<CodeItem key="cancel_hour">
+			<ItemName>廃棄時間数</ItemName>
+			<ViewIndex>109</ViewIndex>
+		</CodeItem>
+		<CodeItem key="use_day">
+			<ItemName>使用日数</ItemName>
+			<ViewIndex>110</ViewIndex>
+		</CodeItem>
+		<CodeItem key="use_hour">
+			<ItemName>使用時間数</ItemName>
+			<ViewIndex>111</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="carryover_day">
+			<ItemName>前年繰越日数</ItemName>
+			<ViewIndex>112</ViewIndex>
+		</CodeItem>
+		<CodeItem key="carryover_hour">
+			<ItemName>前年繰越時間数</ItemName>
+			<ViewIndex>113</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="export_tmd_stock_holiday">
+		<CodeItem key="employee_code">
+			<ItemName>社員コード</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="full_name">
+			<ItemName>氏名</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="section_name">
+			<ItemName>所属名称</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="section_display">
+			<ItemName>所属表示名称</ItemName>
+			<ViewIndex>4</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="activate_date">
+			<ItemName>有効日</ItemName>
+			<ViewIndex>101</ViewIndex>
+		</CodeItem>
+		<CodeItem key="acquisition_date">
+			<ItemName>取得日</ItemName>
+			<ViewIndex>102</ViewIndex>
+		</CodeItem>
+		<CodeItem key="limit_date">
+			<ItemName>期限日</ItemName>
+			<ViewIndex>103</ViewIndex>
+		</CodeItem>
+		<CodeItem key="hold_day">
+			<ItemName>付与日数</ItemName>
+			<ViewIndex>104</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="giving_day">
+			<ItemName>付与日数</ItemName>
+			<ViewIndex>105</ViewIndex>
+		</CodeItem>
+		<CodeItem key="cancel_day">
+			<ItemName>廃棄日数</ItemName>
+			<ViewIndex>106</ViewIndex>
+		</CodeItem>
+		<CodeItem key="use_day">
+			<ItemName>使用日数</ItemName>
+			<ViewIndex>107</ViewIndex>
+		</CodeItem>
+-->
+	</Code>
+	<Code key="export_tmd_holiday">
+		<CodeItem key="employee_code">
+			<ItemName>社員コード</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="full_name">
+			<ItemName>氏名</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="section_name">
+			<ItemName>所属名称</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="section_display">
+			<ItemName>所属表示名称</ItemName>
+			<ViewIndex>4</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="activate_date">
+			<ItemName>有効日</ItemName>
+			<ViewIndex>101</ViewIndex>
+		</CodeItem>
+		<CodeItem key="holiday_code">
+			<ItemName>休暇コード</ItemName>
+			<ViewIndex>102</ViewIndex>
+		</CodeItem>
+		<CodeItem key="holiday_type">
+			<ItemName>休暇区分</ItemName>
+			<ViewIndex>103</ViewIndex>
+		</CodeItem>
+		<CodeItem key="giving_day">
+			<ItemName>付与日数</ItemName>
+			<ViewIndex>104</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="cancel_day">
+			<ItemName>廃棄日数</ItemName>
+			<ViewIndex>105</ViewIndex>
+		</CodeItem>
+		<CodeItem key="holiday_limit_date">
+			<ItemName>取得期限</ItemName>
+			<ViewIndex>106</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="holiday_limit_month">
+			<ItemName>取得期限(月)</ItemName>
+			<ViewIndex>107</ViewIndex>
+		</CodeItem>
+		<CodeItem key="holiday_limit_day">
+			<ItemName>取得期限(日)</ItemName>
+			<ViewIndex>108</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="export_tmd_sub_holiday">
+		<CodeItem key="employee_code">
+			<ItemName>社員コード</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="full_name">
+			<ItemName>氏名</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="section_name">
+			<ItemName>所属名称</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="section_display">
+			<ItemName>所属表示名称</ItemName>
+			<ViewIndex>4</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="work_date">
+			<ItemName>出勤日</ItemName>
+			<ViewIndex>101</ViewIndex>
+		</CodeItem>
+		<CodeItem key="sub_holiday_type">
+			<ItemName>代休種別</ItemName>
+			<ViewIndex>102</ViewIndex>
+		</CodeItem>
+		<CodeItem key="request_date1">
+			<ItemName>代休日1</ItemName>
+			<ViewIndex>103</ViewIndex>
+		</CodeItem>
+		<CodeItem key="request_date2">
+			<ItemName>代休日2</ItemName>
+			<ViewIndex>104</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="export_tmd_attendance_book">
+		<CodeItem key="schedule_Day">
+			<ItemName>カレンダ日付(曜)</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="employee_code">
+			<ItemName>社員コード</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="full_name">
+			<ItemName>氏名</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+		<CodeItem key="section_code">
+			<ItemName>所属コード</ItemName>
+			<ViewIndex>4</ViewIndex>
+		</CodeItem>
+		<CodeItem key="section_name">
+			<ItemName>所属名称</ItemName>
+			<ViewIndex>5</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="section_display">
+			<ItemName>所属表示名称</ItemName>
+			<ViewIndex>6</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="work_type_code">
+			<ItemName>勤務形態コード</ItemName>
+			<ViewIndex>7</ViewIndex>
+		</CodeItem>
+		<CodeItem key="work_type_abbr">
+			<ItemName>勤務形態略称</ItemName>
+			<ViewIndex>8</ViewIndex>
+		</CodeItem>
+		<CodeItem key="start_time">
+			<ItemName>始業時刻</ItemName>
+			<ViewIndex>9</ViewIndex>
+		</CodeItem>
+		<CodeItem key="end_time">
+			<ItemName>終業時刻</ItemName>
+			<ViewIndex>10</ViewIndex>
+		</CodeItem>
+		<CodeItem key="work_time">
+			<ItemName>勤務時間</ItemName>
+			<ViewIndex>11</ViewIndex>
+		</CodeItem>
+		<CodeItem key="rest_time">
+			<ItemName>休憩時間</ItemName>
+			<ViewIndex>12</ViewIndex>
+		</CodeItem>
+		<CodeItem key="private_time">
+			<ItemName>私用外出時間</ItemName>
+			<ViewIndex>13</ViewIndex>
+		</CodeItem>
+		<CodeItem key="late_leave_early_time">
+			<ItemName>遅刻早退時間</ItemName>
+			<ViewIndex>14</ViewIndex>
+		</CodeItem>
+		<CodeItem key="overtime_in">
+			<ItemName>法定内残業時間</ItemName>
+			<ViewIndex>15</ViewIndex>
+		</CodeItem>
+		<CodeItem key="overtime_out">
+			<ItemName>法定外残業時間</ItemName>
+			<ViewIndex>16</ViewIndex>
+		</CodeItem>
+		<CodeItem key="work_on_holiday">
+			<ItemName>休日出勤時間</ItemName>
+			<ViewIndex>17</ViewIndex>
+		</CodeItem>
+		<CodeItem key="late_night">
+			<ItemName>深夜時間</ItemName>
+			<ViewIndex>18</ViewIndex>
+		</CodeItem>
+		<CodeItem key="time_remarks">
+			<ItemName>備考</ItemName>
+			<ViewIndex>19</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="export_holiday_request_data">
+		<CodeItem key="employee_code">
+			<ItemName>社員コード</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="full_name">
+			<ItemName>氏名</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="section_name">
+			<ItemName>所属名称</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="section_display">
+			<ItemName>所属表示名称</ItemName>
+			<ViewIndex>4</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="paid_holiday_all">
+			<ItemName>有給休暇(全休)</ItemName>
+			<ViewIndex>11</ViewIndex>
+		</CodeItem>
+		<CodeItem key="paid_holiday_half">
+			<ItemName>有給休暇(半休)</ItemName>
+			<ViewIndex>12</ViewIndex>
+		</CodeItem>
+		<CodeItem key="paid_holiday_time">
+			<ItemName>有給休暇(時休)</ItemName>
+			<ViewIndex>13</ViewIndex>
+		</CodeItem>
+		<CodeItem key="paid_holiday_am">
+			<ItemName>有給休暇(午前)</ItemName>
+			<ViewIndex>14</ViewIndex>
+		</CodeItem>
+		<CodeItem key="paid_holiday_pm">
+			<ItemName>有給休暇(午後)</ItemName>
+			<ViewIndex>15</ViewIndex>
+		</CodeItem>
+		<CodeItem key="stock_holiday_all">
+			<ItemName>ストック休暇(全休)</ItemName>
+			<ViewIndex>21</ViewIndex>
+		</CodeItem>
+		<CodeItem key="stock_holiday_half">
+			<ItemName>ストック休暇(半休)</ItemName>
+			<ViewIndex>22</ViewIndex>
+		</CodeItem>
+		<CodeItem key="stock_holiday_am">
+			<ItemName>ストック休暇(午前)</ItemName>
+			<ViewIndex>23</ViewIndex>
+		</CodeItem>
+		<CodeItem key="stock_holiday_pm">
+			<ItemName>ストック休暇(午後)</ItemName>
+			<ViewIndex>24</ViewIndex>
+		</CodeItem>	
+		<CodeItem key="sub_holiday_all">
+			<ItemName>代休(全休)</ItemName>
+			<ViewIndex>31</ViewIndex>
+		</CodeItem>
+		<CodeItem key="sub_holiday_half">
+			<ItemName>代休(半休)</ItemName>
+			<ViewIndex>32</ViewIndex>
+		</CodeItem>
+		<CodeItem key="sub_holiday_am">
+			<ItemName>代休(午前)</ItemName>
+			<ViewIndex>33</ViewIndex>
+		</CodeItem>
+		<CodeItem key="sub_holiday_pm">
+			<ItemName>代休(午後)</ItemName>
+			<ViewIndex>34</ViewIndex>
+		</CodeItem>
+		<CodeItem key="substitute_holiday_all">
+			<ItemName>振替休日(全休)</ItemName>
+			<ViewIndex>41</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="export_attendance_reapplication">
+		<CodeItem key="employee_code">
+			<ItemName>社員コード</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="full_name">
+			<ItemName>氏名</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="work_date">
+			<ItemName>出勤日</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="export_appli_reason_data">
+		<CodeItem key="employee_code">
+			<ItemName>社員コード</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="full_name">
+			<ItemName>氏名</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="section_name">
+			<ItemName>所属名称</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="section_display">
+			<ItemName>所属表示名称</ItemName>
+			<ViewIndex>4</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="work_date">
+			<ItemName>日付</ItemName>
+			<ViewIndex>5</ViewIndex>
+		</CodeItem>
+		<CodeItem key="appli_type">
+			<ItemName>申請区分</ItemName>
+			<ViewIndex>6</ViewIndex>
+		</CodeItem>
+		<CodeItem key="appli_detailed_1">
+			<ItemName>詳細1</ItemName>
+			<ViewIndex>7</ViewIndex>
+		</CodeItem>
+		<CodeItem key="appli_detailed_2">
+			<ItemName>詳細2</ItemName>
+			<ViewIndex>8</ViewIndex>
+		</CodeItem>
+		<CodeItem key="appli_detailed_3">
+			<ItemName>詳細3</ItemName>
+			<ViewIndex>9</ViewIndex>
+		</CodeItem>
+		<CodeItem key="appli_detailed_4">
+			<ItemName>詳細4</ItemName>
+			<ViewIndex>10</ViewIndex>
+		</CodeItem>
+		<CodeItem key="appli_reason">
+			<ItemName>申請理由</ItemName>
+			<ViewIndex>11</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="export_used_paid_holiday_data">
+		<CodeItem key="employee_code">
+			<ItemName>社員コード</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="full_name">
+			<ItemName>氏名</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="section_name">
+			<ItemName>所属名称</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+		<CodeItem key="acquisition_date">
+			<ItemName>取得日</ItemName>
+			<ViewIndex>5</ViewIndex>
+		</CodeItem>
+		<CodeItem key="used_days">
+			<ItemName>申請日数</ItemName>
+			<ViewIndex>6</ViewIndex>
+		</CodeItem>
+		<CodeItem key="appli_date">
+			<ItemName>申請日</ItemName>
+			<ViewIndex>7</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="Allowance">
+		<CodeItem key="0">
+			<ItemName>無し</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="1">
+			<ItemName>有り</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="StartDate">
+		<CodeItem key="1">
+			<ItemName>前日</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="2">
+			<ItemName>当日</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="3">
+			<ItemName>翌日</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="HolidayType">
+		<CodeItem key="1">
+			<ItemName>有給休暇</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="2">
+			<ItemName>特別休暇</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="3">
+			<ItemName>その他</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+		<CodeItem key="4">
+			<ItemName>欠勤</ItemName>
+			<ViewIndex>4</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="HolidayMasterType">
+		<CodeItem key="2">
+			<ItemName>特別休暇</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="3">
+			<ItemName>その他</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="4">
+			<ItemName>欠勤</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="HolidayType3Range1">
+		<CodeItem key="1">
+			<ItemName>全休</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="2">
+			<ItemName>午前休</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="3">
+			<ItemName>午後休</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+		<CodeItem key="4">
+			<ItemName>時間休</ItemName>
+			<ViewIndex>4</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="HolidayType3Range2">
+		<CodeItem key="1">
+			<ItemName>全休</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="2">
+			<ItemName>午前休</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="3">
+			<ItemName>午後休</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="HolidayType2WithPay">
+		<CodeItem key="1">
+			<ItemName>通常</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="2">
+			<ItemName>ストック</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="GivingType">
+		<CodeItem key="1">
+			<ItemName>付与</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="2">
+			<ItemName>破棄</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="WorkOnHolidaySubstitute">
+		<CodeItem key="1">
+			<ItemName>振替出勤(勤務形態変更なし)</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="2">
+			<ItemName>振替日なし(休日出勤)</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+		<CodeItem key="5">
+			<ItemName>振替出勤(勤務形態変更あり)</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="PaidHolidayCalc">
+		<CodeItem key="1">
+			<ItemName>出勤扱い</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="2">
+			<ItemName>欠勤扱い</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="3">
+			<ItemName>計算対象外</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="WorkOnHolidayCalc">
+		<CodeItem key="1">
+			<ItemName>出勤扱い</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="2">
+			<ItemName>欠勤扱い</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="3">
+			<ItemName>計算対象外</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="HalfTimeExchange">
+		<CodeItem key="1">
+			<ItemName>前半休と後半休を入れ替えて取得することを可能とする</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="2">
+			<ItemName>前半休と後半休を入れ替えて取得することは不可とする</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="PrescribedLegalHoliday">
+		<CodeItem key="prescribed_holiday">
+			<ItemName>所定休日</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="legal_holiday">
+			<ItemName>法定休日</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="HolidayTypeMaster">
+		<CodeItem key="2">
+			<ItemName>特別休暇</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="3">
+			<ItemName>その他</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="4">
+			<ItemName>欠勤</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="DifferenceType">
+		<CodeItem key="a">
+			<ItemName>A【8:00～16:00】</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="b">
+			<ItemName>B【8:30～16:30】</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="c">
+			<ItemName>C【9:30～17:30】</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+		<CodeItem key="d">
+			<ItemName>D【10:00～18:00】</ItemName>
+			<ViewIndex>4</ViewIndex>
+		</CodeItem>
+		<CodeItem key="s">
+			<ItemName>S【特別申請】</ItemName>
+			<ViewIndex>5</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="WorkOnHoliday">
+		<CodeItem key="work_on_prescribed">
+			<ItemName>所定休出</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="work_on_legal">
+			<ItemName>法定休出</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="ReasonOfLate">
+		<CodeItem key="individu">
+			<ItemName>個人都合</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="bad_health">
+			<ItemName>体調不良</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="others">
+			<ItemName>その他</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+		<CodeItem key="train">
+			<ItemName>電車遅延</ItemName>
+			<ViewIndex>4</ViewIndex>
+		</CodeItem>
+		<CodeItem key="company">
+			<ItemName>会社指示</ItemName>
+			<ViewIndex>5</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="ReasonOfLeaveEarly">
+		<CodeItem key="individu">
+			<ItemName>個人都合</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="bad_health">
+			<ItemName>体調不良</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="others">
+			<ItemName>その他</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+		<CodeItem key="company">
+			<ItemName>会社指示</ItemName>
+			<ViewIndex>5</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="Grant">
+		<CodeItem key="1">
+			<ItemName>未計算</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="2">
+			<ItemName>未付与(計算済)</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="0">
+			<ItemName>未付与</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+		<CodeItem key="3">
+			<ItemName>付与済</ItemName>
+			<ViewIndex>4</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="TimeManagement">
+		<CodeItem key="0">
+			<ItemName>有効</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="1">
+			<ItemName>無効</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="2">
+			<ItemName>無効(勤怠/残業/代休申請不可)</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="PortalRestButtons">
+		<CodeItem key="1">
+			<ItemName>表示</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="2">
+			<ItemName>非表示</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="PortalTimeButtons">
+		<CodeItem key="1">
+			<ItemName>始業/終業</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="2">
+			<ItemName>始業/定終業</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="3">
+			<ItemName>始業/定終業/残終業</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+		<CodeItem key="4">
+			<ItemName>出勤</ItemName>
+			<ViewIndex>4</ViewIndex>
+		</CodeItem>
+		<CodeItem key="9">
+			<ItemName>非表示</ItemName>
+			<ViewIndex>9</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="ReasonType">
+		<CodeItem key="0">
+			<ItemName>任意</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="1">
+			<ItemName>必須</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+	</Code>
+</MosP>

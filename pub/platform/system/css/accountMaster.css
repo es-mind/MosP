@@ -1,0 +1,130 @@
+@CHARSET "UTF-8";
+/*
+ * MosP - Mind Open Source Project    http://www.mosp.jp/
+ * Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+ * 
+ * This program is free software: you can redistribute it and/or
+ * modify it under the terms of the GNU Affero General Public License
+ * as published by the Free Software Foundation, either version 3
+ * of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+/* ************************************************************************** */
+/* === アカウントマスタ画面のスタイル === */
+/* ************************************************************************** */
+
+/**
+ * 項目名称表示欄。
+ */
+#divEdit .TitleTd {
+	width: 110px;	
+}
+
+/**
+ * 項目内容表示欄。
+ */
+#divEdit .InputTd {
+	width: 320px;
+}
+
+/**
+ * 項目内容
+ */
+#tdEmployeeCodeNoBoder {
+	border-bottom-style : none;
+}
+ 
+#tdEmployeeNameNoBoder {
+	border-top-style : none
+}
+
+/**
+ * ボタン表示欄。
+ */
+#divEdit .ButtonTable {
+	margin-top: 0px;
+}
+
+/**
+ * 項目名称表示欄(追加ロール)。
+ */
+#divEdit .RoleTitleTd {
+	width: 180px;	
+}
+
+/**
+ * 項目内容表示欄(追加ロール)。
+ */
+#divEdit .RoleInputTd {
+	width: auto;
+}
+
+/**
+ * 編集欄有効日入力項目表示位置
+ */
+.List #divSearchRoleCode {
+	margin-bottom: 5px;
+}
+
+/**
+ * 一覧表示ヘッダ(選択ボタン)。
+ */
+.LeftListTable #thButton {
+	width: 50px;
+}
+
+/**
+ * 一覧表示ヘッダ(有効日)。
+ */
+.LeftListTable #thActivateDate {
+	width: 80px;
+}
+
+/**
+ * 一覧表示ヘッダ(有効/無効)。
+ */
+.LeftListTable #thInactivate {
+	width: 60px;
+}
+
+/**
+ * 一覧表示ヘッダ(選択チェックボックス)。
+ */
+.LeftListTable #thSelect {
+	width: 20px;
+}
+
+/**
+ * 一覧表示ヘッダ(社員コード)。
+ */
+.LeftListTable #thEmployeeCode {
+	width: 100px;
+}
+
+/**
+ * 一覧表示ヘッダ(社員名)。
+ */
+.LeftListTable #thEmployeeName {
+	width: 120px;
+}
+
+/**
+ * 一覧表示ヘッダ(ロール)。
+ */
+.LeftListTable #thRoleCode {
+	width: 130px;
+}
+
+/**
+ * 一覧表示ヘッダ(ロール：追加ロール利用時)。
+ */
+.LeftListTable #thExtraRoleCode {
+	width: 220px;
+}

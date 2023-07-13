@@ -1,0 +1,108 @@
+@CHARSET "UTF-8";
+/*
+ * MosP - Mind Open Source Project    http://www.mosp.jp/
+ * Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+ * 
+ * This program is free software: you can redistribute it and/or
+ * modify it under the terms of the GNU Affero General Public License
+ * as published by the Free Software Foundation, either version 3
+ * of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+/* ************************************************************************** */
+/* === 勤怠管理共通のスタイル === */
+/* ************************************************************************** */
+
+/**
+ * 検索項目表示欄(table)。
+ */
+.SearchInputTable {
+	width: 980px;
+	margin-bottom: 0px;
+}
+
+.SearchInputTable .ButtonTd {
+	width: 70px;
+	text-align: center;
+	background-color: #eeeeee;
+}
+
+/**
+ * 申請リスト情報欄。
+ */
+.RequestListInfo {
+	width: 978px;
+	border-left: 1px solid;
+	border-right: 1px solid;
+	background-color: #ffffff;
+	float: left;
+}
+
+/**
+ * 申請リストページ繰り欄。
+ */
+.RequestListPage {
+	width: 978px;
+	margin-top: 0px;
+	border-left: 1px solid;
+	border-right: 1px solid;
+	border-bottom: 1px solid;
+	background-color: #ffffff;
+	float: left;
+}
+
+/*
+ * 左寄せ申請一覧表示欄(table)。
+ */
+.LeftRequestListTable {
+	margin-top: 0px;
+	margin-bottom:0px;
+}
+
+/**
+ * 集計情報表示欄。
+ */
+.TotalInfoTable {
+	margin-left: 0px;
+}
+
+/**
+ * 集計情報表示欄(td)。
+ */
+.TotalInfoTable td {
+	text-align: left;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+/**
+ * 赤文字ラベル。
+ */
+.RedLabel {
+	color: red;
+}
+
+/**
+ * 青文字ラベル。
+ */
+.BlueLabel {
+	color: blue;
+}
+
+/**
+ * 黒文字ラベル。
+ */
+.BlackLabel {
+	color: black;
+}
+
+.RollLink {
+	font-size: 15px;
+}

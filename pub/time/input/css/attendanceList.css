@@ -1,0 +1,266 @@
+@CHARSET "UTF-8";
+/*
+ * MosP - Mind Open Source Project    http://www.mosp.jp/
+ * Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+ * 
+ * This program is free software: you can redistribute it and/or
+ * modify it under the terms of the GNU Affero General Public License
+ * as published by the Free Software Foundation, either version 3
+ * of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+/* ************************************************************************** */
+/* === メッセージ表示欄(.Message)のスタイル === */
+/* ************************************************************************** */
+/**
+ * メッセージ表示欄(div)。
+ */
+.Message {
+	text-align: left;
+}
+
+.Search .EmployeeCodeRollTable {
+	float: none;
+}
+
+/* ************************************************************************** */
+/* === 勤怠一覧画面のスタイル === */
+/* ************************************************************************** */
+/* === 勤怠情報一覧(table) === */
+#list {
+	table-layout: fixed;
+}
+
+/* === 一覧表示順送り欄 === */
+.EmployeeCodeRollTable .RollTd {
+	border: none;
+}
+
+.EmployeeCodeRollTable #tdFormerCode {
+	border: none;
+	text-align: right;
+}
+
+.EmployeeCodeRollTable #tdFormerButton {
+	border: none;
+	text-align: left;
+}
+
+.EmployeeCodeRollTable #tdNextCode {
+	border: none;
+	text-align: left;
+}
+
+.EmployeeCodeRollTable #tdNextButton {
+	border: none;
+	text-align: right;
+}
+
+/* === 一覧ボタン欄幅 === */
+.UnderTable #thButton {
+	width: 50px;
+}
+
+/* === 一覧各種時間欄幅 === */
+.UnderTable #thTime {
+	width: 35px;
+}
+
+/* === 一覧始終業時刻欄幅 === */
+.UnderTable #thInput {
+	width: 40px;
+}
+
+/* === 一覧外残時間欄幅 === */
+.UnderTable #thOvertimeOut {
+	width: 35px;
+}
+
+/* === 一覧一文字欄幅 === */
+.UnderTable #thSingle {
+	width: 20px;
+}
+
+/* === 一覧状態欄幅 === */
+.UnderTable #thState {
+	width: 40px;
+}
+
+/* === 合計時間欄幅 === */
+.UnderTable #thTotalTime {
+	width: 50px;
+}
+
+/* === 一覧備考欄 === */
+.UnderTable #thRemark {
+	width: 220px;
+}
+
+
+.divButton {
+		float: right;
+}
+
+/* === 合計値表示欄 === */
+
+#thSumTotalTime {
+	width: 50px;
+}
+
+/* === 合計値表示欄 === */
+#thTotalWork {
+	width: 50px;
+}
+
+/* === 合計値表示欄 === */
+#thTotalRestTime {
+	width: 50px;
+}
+
+/* === 合計値表示欄 === */
+#thTotalGoingOut {
+	width: 50px;
+}
+
+/* === 合計値表示欄 === */
+#thTotalLateLeaveEarly {
+	width: 50px;
+}
+
+/* === 合計値表示欄 === */
+#thTotalInsideRemainder {
+	width: 50px;
+}
+
+/* === 合計値表示欄 === */
+#thTotalLeftOut {
+	width: 50px;
+}
+
+/* === 合計値表示欄 === */
+#thTotalWorkingHoliday {
+	width: 50px;
+}
+
+/* === 合計値表示欄 === */
+#thTotalMidnight {
+	width: 50px;
+}
+
+/* === 合計値表示欄 === */
+#thTotalFrequency {
+	width: 50px;
+}
+
+/* === 合計値表示欄 === */
+#thTotalGoingWork {
+	width: 50px;
+}
+
+/* === 合計値表示欄 === */
+#thTotalTardiness {
+	width: 50px;
+}
+
+/* === 合計値表示欄 === */
+#thTotalLeaveEarly {
+	width: 50px;
+}
+
+/* === 合計値表示欄 === */
+#thTotalOvertimeWork {
+	width: 50px;
+}
+
+/* === 合計値表示欄 === */
+#thTotalWorkingHoliday {
+	width: 50px;
+}
+
+/* === 合計値表示欄 === */
+#thTotalHoliday {
+	width: 50px;
+}
+
+/* === 合計値表示欄 === */
+#thTotalLegal {
+	width: 50px;
+}
+
+/* === 合計値表示欄 === */
+#thTotalPrescribed {
+	width: 50px;
+}
+
+/* === 合計値表示欄 === */
+#thTotalClosedVibration {
+	width: 50px;
+}
+
+/* === 合計値表示欄 === */
+#thTotalVacation {
+	width: 50px;
+}
+
+/* === 合計値表示欄 === */
+#thTotalPaidHoliday {
+	width: 50px;
+}
+
+/* === 合計値表示欄 === */
+#thTotalSalaryTime {
+	width: 50px;
+}
+
+/* === 合計値表示欄 === */
+#thTotalSpecialLeave {
+	width: 50px;
+}
+
+/* === 合計値表示欄 === */
+#thTotalOthers {
+	width: 50px;
+}
+
+/* === 合計値表示欄 === */
+#thTotalCompensatoryHoliday {
+	width: 50px;
+}
+
+/* === 合計値表示欄 === */
+#thTotalAbsence {
+	width: 50px;
+}
+
+/* === 合計値表示欄 === */
+#thTotalCompensatoryHolidayBirth {
+	width: 50px;
+}
+
+/* === 合計値表示欄 === */
+#thTotalLegal {
+	width: 50px;
+}
+
+/* === 合計値表示欄 === */
+#thTotalPrescribed {
+	width: 50px;
+}
+
+/* === 合計値表示欄 === */
+#thTotalMidnight {
+	width: 50px;
+}
+
+/* === 合計値表示欄 === */
+#thShortUnpaidTotal {
+	width: 50px;
+}
+

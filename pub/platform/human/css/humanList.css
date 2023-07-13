@@ -1,0 +1,162 @@
+@CHARSET "UTF-8";
+/*
+ * MosP - Mind Open Source Project    http://www.mosp.jp/
+ * Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+ * 
+ * This program is free software: you can redistribute it and/or
+ * modify it under the terms of the GNU Affero General Public License
+ * as published by the Free Software Foundation, either version 3
+ * of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+/* ************************************************************************** */
+/* === 社員一覧画面(情報一覧)のスタイル === */
+/* ************************************************************************** */
+
+/**
+ * 検索欄(td)。
+ */
+#humanListSearch td{
+	padding: 2px 3px;
+}
+
+/**
+ * 検索欄(Titletd)。
+ */
+#humanListSearch .TitleTd {
+	width: 135px;
+}
+
+/**
+ * 検索欄(InputTd)。
+ */
+#humanListSearch .InputTd {
+	width: 300px;
+}
+
+/**
+ * 検索欄(情報内容表示欄)。
+ */
+#humanListSearch #tdInformation {
+	width: 735px;
+}
+
+/**
+ * ボタン表示欄(td)。
+ */
+.ButtonTable .ButtonTd {
+	text-align: center;
+}
+
+/**
+ * ボタン表示欄(a)。
+ */
+.ButtonTd a {
+	font-size: 13px;
+}
+
+/**
+ * 件数表示欄(table)。
+ */
+.ListInfoTopTable {
+	margin-top: 10px;
+}
+
+/* === 検索結果表示欄 === */
+/**
+ * 社員一覧ヘッダ(ボタン)。
+ */
+.LeftListTable #thButton {
+	width: 50px;
+}
+
+/**
+ * 社員一覧ヘッダ(社員コード)。
+ */
+.LeftListTable #thEmployeeCode {
+	width: 85px;
+}
+
+/**
+ * 社員一覧ヘッダ(氏名)。
+ */
+.LeftListTable #thEmployeeName {
+	width: 100px;
+}
+
+/**
+ * 社員一覧ヘッダ(氏名カナ)。
+ */
+.LeftListTable #thEmployeeKana {
+	width: 100px;
+}
+
+/**
+ * 社員一覧ヘッダ(勤務地略称)。
+ */
+.LeftListTable #thWorkPlaceAbbr {
+	width: 85px;
+}
+
+/**
+ * 社員一覧ヘッダ(所属略称)。
+ */
+.LeftListTable #thSectionAbbr {
+	width: 225px;
+}
+
+/**
+ * 社員一覧ヘッダ(職位)。
+ */
+.LeftListTable #thPositionName {
+	width: 85px;
+}
+
+/**
+ * 社員一覧ヘッダ(雇用契約)。
+ */
+.LeftListTable #thEmploymentName {
+	width: 80px;
+}
+
+/**
+ * 社員一覧ヘッダ(休退職区分)。
+ */
+.LeftListTable #thState {
+	width: 65px;
+}
+
+/**
+ * 社員検索項目欄。
+ */
+.List #tblGeneral {
+	margin-bottom: 2px;
+}
+
+/**
+ * 社員一覧検索欄(table)。
+ */
+#humanListSearch .InputTable {
+	table-layout: fixed;
+}
+
+/**
+ * 社員検索項目欄(hidden)。
+ */
+#hidden .InputTable {
+	margin-top: 0px;
+}
+
+/**
+ * 名称15プルダウン。
+ */
+.Name15PullDown {
+	width: 250px;
+}

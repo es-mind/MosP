@@ -1,0 +1,209 @@
+@CHARSET "UTF-8";
+/*
+ * MosP - Mind Open Source Project    http://www.mosp.jp/
+ * Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+ * 
+ * This program is free software: you can redistribute it and/or
+ * modify it under the terms of the GNU Affero General Public License
+ * as published by the Free Software Foundation, either version 3
+ * of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+/* ************************************************************************** */
+/* === 人事汎用機能用のスタイル === */
+/* ************************************************************************** */
+
+/**
+ * 罫線無し(下側)。
+ */
+.tdNoBorderBottom {
+	border-bottom: none;
+	text-align: left;
+	background-color: #EEEEEE;
+}
+
+/**
+ * 罫線無し(下側)。
+ */
+.tdNoBorderTop {
+	border-top: none;
+	text-align: left;
+	background-color: #EEEEEE;
+}
+
+/**
+ * 汎用履歴詳細：空白行
+ */
+.UnderTable #tdHiddenTitle {
+	display:none;
+}
+
+/**
+ * 汎用履歴詳細：空白行
+ */
+.UnderTable #tdHiddenBody {
+	visibility:hidden;
+	border-left: none;
+	border-right: none;
+}
+
+
+
+/**
+ * 単体管理情報編集欄(div)。
+ */
+#divNormalCard .UnderTable {
+	table-layout: auto;
+}
+
+/**
+ * 履歴管理情報編集欄(div)。
+ */
+#divHistoryCard .UnderTable {
+	table-layout: auto;
+}
+
+/**
+ * 履歴/配列管理情報有効日表示欄(table)。
+ */
+#tblActivateDate {
+	width: 400px;
+	margin-left: 0px;
+}
+
+/**
+ * 名称20桁テキストボックス
+ */
+.Name20TextBox {
+	width: 300px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+/**
+ * 名称_20(必須)
+ */
+.Name20RequiredTextBox {
+	width: 300px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 名称25-50桁テキストボックス
+ */
+.Name25-50TextBox {
+	width: 355px;
+	height: 16px;
+	ime-mode: active;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 人事汎用一覧用選択ボタン
+ */
+.UnderTable #arrayButton {
+	width: 60px;
+}
+
+/**
+ * 人事汎用一覧用有効日
+ */
+.UnderTable #arrayActivateDate {
+	width: 120px;
+}
+
+/**
+ * 人事汎用一覧社内外区分
+ */
+.UnderTable #tdInOutTypeTitle {
+	width: 80px;
+}
+
+/**
+ * 証明写真：項目
+ */
+#underPersonalIdPhotoTable .TitleTd {
+	 width: 170px
+}
+
+/**
+ * バイナリ有効日
+ */
+#tdBinaryActivateDateBody{
+	width: 90px;
+}
+
+/**
+ * 資格証明書項目幅
+ */
+#underCertificateTable .TitleTd {
+	width: 170px
+}
+
+/**
+ * 採用情報項目幅
+ */
+#underAdoptTable .TitleTd {
+	width: 155px
+}
+
+/**
+ * 健康情報項目幅
+ */
+#underHealthTable .TitleTd {
+	width: 135px
+}
+
+/**
+ * 資格：資格有効期限
+ */
+.UnderTable #tdQualificationLimitTitle {
+	width: 90px;
+}
+
+/**
+ * 資格：資格番号
+ */
+.UnderTable #tdQualificationNumberTitle {
+	width: 150px;
+}
+
+/**
+ * 賞罰：賞罰内容
+ */
+.UnderTable #tdRewardTypeTitle {
+	width: 35px;
+}
+
+/**
+ * 研修：研修終了日
+ */
+.UnderTable #tdTrainingEndTitle {
+	width: 90px;
+}
+
+/**
+ * スキル：作業終了日
+ */
+.UnderTable #tdCareerCompanyTitle {
+	width: 150px;
+}
+
+/**
+ * スキル：作業終了日
+ */
+.UnderTable #tdCareerEndTitle {
+	width: 90px;
+}

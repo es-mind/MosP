@@ -1,0 +1,418 @@
+@CHARSET "UTF-8";
+/*
+ * MosP - Mind Open Source Project    http://www.mosp.jp/
+ * Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+ * 
+ * This program is free software: you can redistribute it and/or
+ * modify it under the terms of the GNU Affero General Public License
+ * as published by the Free Software Foundation, either version 3
+ * of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+/* ************************************************************************** */
+/* === �e��ʋ��� �㕔���\���E�Ј������E�L���I�𗓂̃X�^�C�� === */
+/* ************************************************************************** */
+/**
+ * �������Ј��R�[�h�����e�[�u��(table)
+ */
+.Search .TblSCodeSearch {
+	margin-left: 0px;
+	margin: 5px 0px;
+	width: 230px;
+	border: 1px solid black;
+}
+
+/**
+ * �������Ј��R�[�h�ЂƂ���e�[�u��(table)
+ */
+.Search .TblSCodeRoll {
+	float: right;
+	width: 350px;
+	margin: 5px 0px;
+	border: 1px solid black;
+}
+
+/**
+ * �������Ј��R�[�h�\�����x��(table)
+ */
+.Search .TblScodeLabel {
+	margin-left: 0px;
+	margin: 5px 0px;
+	width: 380px;
+	border: 1px solid black;
+}
+
+/**
+ * �������Ј��R�[�h�\�����x��(td)
+ */
+.TblScodeLabel td {
+	border: 1px solid black;
+}
+
+/**
+ * �������Ј��R�[�h�\�����x��(�l�����ꗗ�p)
+ */
+.Search #tblScodeLabel {
+	margin-left: 0px;
+	margin: 5px 0px;
+	width: 650px;
+	border: 1px solid black;
+}
+
+/**
+ * �l�����ꗗ��ʐl���䒠�o�͗�(table���v���b�g�t�H�[���ł͖��g�p)
+ */
+.Search .TblExport {
+	float: right;
+	width: 130px;
+	margin: 5px 0px;
+	border: 1px solid black;
+}
+
+.Search .ExportTd {
+	text-align: center;
+}
+
+/**
+ * �l�����ꗗ��ʌ�����(Td)
+ */
+.Search .SCodeTd {
+	width: 180px;
+	padding: 2px 4px;
+	margin: 5px 0px; 
+}
+
+/**
+ * �l�����ꗗ��ʌ�����(Td)
+ */
+.Search .SNameTd {
+	width: 200px;
+}
+
+/**
+ * �l�����ꗗ��ʌ�����(Td)
+ */
+.Search .NowDateTd {
+	width: 270px;
+	text-align: center;
+}
+
+/**
+ * �l�����ꗗ��ʌ�����(Td)
+ */
+.Search .RollTd {
+	text-align: center;
+}
+
+/**
+ * �l�����ꗗ��ʐl���䒠�o�͗�(td���v���b�g�t�H�[���ł͖��g�p)
+ */
+.Search .ExportTd {
+	text-align: center;
+}
+/* ************************************************************************** */
+/* === �Ј��ꗗ���(������)�̃X�^�C�� === */
+/* ************************************************************************** */
+/**
+ * ������div(td)
+ */
+#humanListSearch td{
+	padding: 2px 3px;
+}
+
+/**
+ * ������div(Titletd)
+ */
+#humanListSearch .TitleTd{
+	width: 90px;
+}
+
+/**
+ * ������(�L�����)
+ */
+#humanListSearch #inputDate {
+	width: 202px;
+}
+
+/**
+ * ������(�Ј��R�[�h���)
+ */
+#humanListSearch #inputSCode {
+	width: 180px;
+}
+
+/**
+ * ������(�����)
+ */
+#humanListSearch #inputFamilyName {
+	width: 205px;
+}
+
+/**
+ * ������(�����)
+ */
+#humanListSearch #inputFirstName {
+	width: 202px;
+}
+
+/**
+ * ������(���J�i���)
+ */
+#humanListSearch #inputFamilyKana {
+	width: 180px;
+}
+
+/**
+ * ������(���J�i���)
+ */
+#humanListSearch #inputFirstKana {
+	width: 205px;
+}
+/* ************************************************************************** */
+/* === �Ј��ꗗ���(���ꗗ)�̃X�^�C�� === */
+/* ************************************************************************** */
+/**
+ * �Ј��ꗗ�w�b�_(�{�^��)
+ */
+.List #thButton {
+	width: 80px;
+	cursor: default;
+}
+
+/**
+ * �Ј��ꗗ�̃w�b�_(�Ј��R�[�h)
+ */
+.List #thSCode {
+	width: 100px;
+}
+/**
+ * �Ј��ꗗ�̃w�b�_(����)
+ */
+.List #thName {
+	width: 170px;
+}
+/**
+ * �Ј��ꗗ�̃w�b�_(�����J�i)
+ */
+.List #thKana {
+	width: 120px;
+}
+/**
+ * �Ј��ꗗ�̃w�b�_(��������)
+ */
+.List #thPositionShort {
+	width: 180px;
+}
+
+/**
+ * �Ј��ꗗ�̃w�b�_(�E��)
+ */
+.List #thClass {
+	width: 160px;
+}
+
+/**
+ * �Ј��ꗗ�̃w�b�_(�ٗp�_��)
+ */
+.List #thEmployment {
+	width: 80px;
+}
+
+/**
+ * �Ј��ꗗ�̃w�b�_(�x�ސE�敪)
+ */
+.List #thState {
+	width: 70px;
+}
+
+/* ************************************************************************** */
+/* === �l�����ꗗ/�e����ڍ׋��ʂ̃X�^�C�� === */
+/* ************************************************************************** */
+/**
+ * �e��񋤒ʁi�ԍ��j
+ */
+.TblList #titleListNumber {
+	width: 30px;
+}
+
+/**
+ * �e��ʋ��ʁi�I���j�̃X�^�C�����`����B
+ */
+.TblList #titleListSelect {
+	width: 30px;
+	cursor: defalt;
+}
+
+/**
+ * �e��񋤒ʁi��t�j
+ */
+.TblList #titleListDate {
+	width: 120px;
+}
+
+/**
+ * �e��񋤒ʁi��t��́j
+ */
+.TblList #titleCardDate {
+	width: 150px;
+}
+/* ************************************************************************** */
+/* === �l�����ꗗ���(���ꗗ)�̃X�^�C�� === */
+/* ************************************************************************** */
+/**
+ * �l��{���(titleTd)
+ */
+.List #titleListBasic {
+	width: 150px;
+}
+
+/**
+ * �l��{���(inputTd)
+ */
+.List #inputListBasic {
+	width: 340px;
+}
+
+/**
+ * �x�E���i�x�E���R�j
+ */
+.TblList #titleListLeaveReason {
+	width: 590px;
+}
+
+/**
+ * �ސE���i�ސE��ʁj
+ */
+.TblList #titleListRetireType {
+	width: 230px;
+}
+
+/**
+ * �ސE���i���R�j
+ */
+.TblList #titleListRetireReason {
+	width: 620px;
+}
+
+/**
+ * �������i�������́j
+ */
+.TblList #titleListLadderPosition {
+	width: 180px;
+}
+
+/**
+ * �������i�E�ʁj
+ */
+.TblList #titleListLadderClass {
+	width: 180px;
+}
+
+/**
+ * �������i���l�j
+ */
+.TblList #titleListLadderOther {
+	width: 350px;
+}
+/* ************************************************************************** */
+/* === �e����ڍ׉�ʂ̃X�^�C�� === */
+/* ************************************************************************** */
+/**
+ * �Ј��V�K�o�^(TitleTd)
+ */
+#tblBasicNewCard .TitleTd {
+	width: 140px;
+	text-align: center;
+}
+
+/**
+ * �Ј��V�K�o�^(InputTd)
+ */
+#tblBasicNewCard .InputTd {
+	width: 350px;
+	font-size: 12px;
+}
+
+/**
+ * �l��{���itable�j�̃X�^�C�����`����B
+ */
+.TblNewCard {
+	width: 800px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+
+/**
+ * �l��{���iTitleTd�j�̃X�^�C�����`����B
+ */
+.TblNewCard .TitleTd {
+	text-align: center;
+	width: 120px;
+}
+
+/**
+ * �l��{���iInputTd�j�̃X�^�C�����`����B
+ */
+.TblNewCard .InputTd {
+	text-align: left;
+	width: 280px;
+}
+
+/**
+ * �x�E���i���R�j
+ */
+.TblList #titleCardLeaveReason {
+	width: 440px;
+}
+
+/**
+ * �ސE���i���R�j
+ */
+.TblList #titleCardRetireReason {
+	width: 580px;
+}
+
+/**
+ * �������i���݂̎�S���e�[�u���j
+ */
+.List #nowPosition {
+	width: 980px;
+	text-align: left;
+	padding: 2px 4px;
+}
+
+/**
+ * ���E���i�J�n��j
+ */
+.TblList #titleCardButtonDate {
+	width: 270px;
+}
+
+/**
+ * ���E���i�������́j
+ */
+.TblList #titleCardLadderPosition {
+	width: 140px;
+}
+
+/**
+ * ���E���i�E�ʗ��́j
+ */
+.TblList #titleCardLadderClass {
+	width: 80px;
+}
+
+/**
+ * ���E���i���l�j
+ */
+.TblList #titleCardLadderOther {
+	width: 230px;
+}
+/* ************************************************************************** */

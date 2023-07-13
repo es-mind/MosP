@@ -1,0 +1,157 @@
+@CHARSET "UTF-8";
+/*
+ * MosP - Mind Open Source Project    http://www.mosp.jp/
+ * Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+ * 
+ * This program is free software: you can redistribute it and/or
+ * modify it under the terms of the GNU Affero General Public License
+ * as published by the Free Software Foundation, either version 3
+ * of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/**
+ * 年テキストボックス(カレンダ)(必須)。
+ */
+.Calendar4RequiredTextBox {
+	width: 35px;
+	height: 16px;
+	text-align: right;
+	ime-mode: disabled;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 年テキストボックス(カレンダ)。
+ */
+.Calendar4TextBox {
+	width: 35px;
+	height: 16px;
+	text-align: right;
+	ime-mode: disabled;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 年月テキストボックス(カレンダ)(必須)。
+ */
+.Calendar7RequiredTextBox {
+	width: 55px;
+	height: 16px;
+	ime-mode: disabled;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+/**
+ * 年月テキストボックス(カレンダ)。
+ */
+.Calendar7TextBox {
+	width: 55px;
+	height: 16px;
+	ime-mode: disabled;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 年月日テキストボックス(カレンダ)(必須)。
+ */
+.Calendar10RequiredTextBox {
+	width: 75px;
+	height: 16px;
+	ime-mode: disabled;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+
+/**
+ * 年月日テキストボックス(カレンダ)。
+ */
+.Calendar10TextBox {
+	width: 75px;
+	height: 16px;
+	ime-mode: disabled;
+	border: 1px solid #003366;
+	vertical-align: middle;
+}
+ 
+/**
+ * カレンダ要素(DIV)。
+ */
+.CalendarDiv {
+	display: inline;
+}
+
+/**
+ * カレンダボタン(BUTTON)。
+ */
+.CalendarButton {
+    width: auto;
+    padding: 0px;
+    margin: 5px;
+    background: none;
+    border: 0;
+    font-size: 0;
+    line-height: 0;
+    overflow: visible;
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+}
+
+/**
+ * カレンダ表示領域(DIV)。
+ */
+.CalendarDisplayDiv {
+	position: absolute;
+	z-index: 100000; 
+}
+
+/**
+ * TD(カレンダヘッダ行)。
+ */
+.CalendarHeaderTr td {
+	background-color: #6495ed;
+	color: #ffffff;
+	cursor: pointer;
+	font-weight: bold;
+	text-align: center;
+	border: 1px solid #dcdcdc;
+}
+
+/**
+ * TD(カレンダ曜日行)。
+ */
+.CalendarWeekTr td {
+	background-color: #87cefa;
+	color: #ffffff;
+	text-align: center;
+	border: 1px solid #dcdcdc;
+}
+
+/**
+ * TD(カレンダ日付行)。
+ */
+.CalendarBodyTr td {
+	background-color: #f8f8f8;
+	cursor: pointer;
+	text-align: center;
+	border: 1px solid #dcdcdc;
+	width: 35px;
+}
+
+/**
+ * TD(カレンダ日付行)。
+ */
+.CalendarBodyTr td:hover {
+	background-color: #e5e5e5;
+}

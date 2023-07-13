@@ -1,0 +1,131 @@
+@CHARSET "UTF-8";
+/*
+ * MosP - Mind Open Source Project    http://www.mosp.jp/
+ * Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+ * 
+ * This program is free software: you can redistribute it and/or
+ * modify it under the terms of the GNU Affero General Public License
+ * as published by the Free Software Foundation, either version 3
+ * of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+/* ***************************************************** */
+/* === 勤怠修正画面のスタイル  === */
+/* ***************************************************** */
+
+/* === 幅固定ヘッダテーブル  === */
+.HeaderTable {
+	width: 980px;
+	float: left;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	border-bottom: none;
+}
+
+/* ===幅固定テーブル  === */
+.FixTable {
+	width: 980px;
+	float: left;
+	table-layout: fixed;
+	margin-top: 0px;
+	margin-bottom: 10px;
+	border-top: none;
+}
+
+.FixTable td {
+	border-top: none;
+}
+
+.FixTable .Blank {
+	border: medium none;
+	background-color: #F8F8F8;
+}
+
+/* === 社員情報表示欄 === */
+.ListHeader .EmployeeLabelTable {
+	float: left;
+}
+
+/* === 集計月表示欄 === */
+.ListHeader .ShortLabelTable {
+	float: right;
+}
+
+.ShortLabelTable td {
+	text-align: center;
+}
+
+/* === 修正情報表示欄 === */
+#tblCorrection #tdCorrectionTitle {
+	width: 120px;
+}
+
+/* === 割増情報表示欄 === */
+#tblOverTime #tdOverTimeTitle {
+	width: 125px;
+}
+
+#tblOverTime .TitleTd {
+	width: 185px;
+}
+
+#tblOverTime .InputTd {
+	width: 140px;
+}
+
+/* === 残業情報表示欄 === */
+#tblOverTime #tdDecreaseTimeTitle {
+	border-top: 1px solid black;
+}
+
+#tblOverTime #tdDecreaseTimeInput {
+	border-top: 1px solid black;
+}
+
+/* === 遅刻早退情報表示欄 === */
+#tblLateLeaveEarly .InputTd {
+	width: 125px;
+}
+
+/* === 休日情報表示欄 === */
+#tblHoliday .TitleTd {
+	width: 150px;
+}
+
+/* === 休暇情報表示欄 === */
+#tblVacation .Blank {
+	width: 230px;
+}
+
+#tblVacation #tdLateNightTitle {
+	border-top: 1px solid black;
+}
+
+#tblVacation #tdLateNightInput {
+	border-top: 1px solid black;
+}
+
+/* === 特別休暇、その他休暇、欠勤情報表示欄 === */
+.HolidayTitleTd {
+	width: 120px;
+}
+
+.HolidayInputTd {
+	width: 80px;
+}
+
+.LastTd {
+	width: 61px;
+}
+
+/* === 時間外(60時間)情報表示欄 === */
+#tbl .InputTd {
+	width: 150px;
+}

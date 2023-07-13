@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE MosP>
+<!--
+MosP - Mind Open Source Project    http://www.mosp.jp/
+Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+
+This program is free software: you can redistribute it and/or
+modify it under the terms of the GNU Affero General Public License
+as published by the Free Software Foundation, either version 3
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<MosP>
+	<Code key="InactivateFlag">
+		<CodeItem key="0">
+			<ItemName>有効</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="1">
+			<ItemName>無効</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="Retirement">
+		<CodeItem key="0">
+			<ItemName>定年、労働契約期間満了等によるもの</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="1">
+			<ItemName>労働者の判断によるもの</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="2">
+			<ItemName>事業主の判断によるもの</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+		<CodeItem key="3">
+			<ItemName>事業所の倒産等によるもの</ItemName>
+			<ViewIndex>4</ViewIndex>
+		</CodeItem>
+		<CodeItem key="4">
+			<ItemName>その他</ItemName>
+			<ViewIndex>5</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="NamingType">
+		<CodeItem key="post">
+			<ItemName>役職</ItemName>
+		</CodeItem>
+		<CodeItem key="committee">
+			<ItemName>委員会</ItemName>
+		</CodeItem>
+	</Code>
+	<Code key="Gender">
+		<CodeItem key="1">
+			<ItemName>男性</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="2">
+			<ItemName>女性</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="Prefecture">
+		<CodeItem key="1">
+			<ItemName>北海道</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="2">
+			<ItemName>青森県</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="3">
+			<ItemName>岩手県</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+		<CodeItem key="4">
+			<ItemName>宮城県</ItemName>
+			<ViewIndex>4</ViewIndex>
+		</CodeItem>
+		<CodeItem key="5">
+			<ItemName>秋田県</ItemName>
+			<ViewIndex>5</ViewIndex>
+		</CodeItem>
+		<CodeItem key="6">
+			<ItemName>山形県</ItemName>
+			<ViewIndex>6</ViewIndex>
+		</CodeItem>
+		<CodeItem key="7">
+			<ItemName>福島県</ItemName>
+			<ViewIndex>7</ViewIndex>
+		</CodeItem>
+		<CodeItem key="8">
+			<ItemName>茨城県</ItemName>
+			<ViewIndex>8</ViewIndex>
+		</CodeItem>
+		<CodeItem key="9">
+			<ItemName>栃木県</ItemName>
+			<ViewIndex>9</ViewIndex>
+		</CodeItem>
+		<CodeItem key="10">
+			<ItemName>群馬県</ItemName>
+			<ViewIndex>10</ViewIndex>
+		</CodeItem>
+		<CodeItem key="11">
+			<ItemName>埼玉県</ItemName>
+			<ViewIndex>11</ViewIndex>
+		</CodeItem>
+		<CodeItem key="12">
+			<ItemName>千葉県</ItemName>
+			<ViewIndex>12</ViewIndex>
+		</CodeItem>
+		<CodeItem key="13">
+			<ItemName>東京都</ItemName>
+			<ViewIndex>13</ViewIndex>
+		</CodeItem>
+		<CodeItem key="14">
+			<ItemName>神奈川県</ItemName>
+			<ViewIndex>14</ViewIndex>
+		</CodeItem>
+		<CodeItem key="15">
+			<ItemName>新潟県</ItemName>
+			<ViewIndex>15</ViewIndex>
+		</CodeItem>
+		<CodeItem key="16">
+			<ItemName>富山県</ItemName>
+			<ViewIndex>16</ViewIndex>
+		</CodeItem>
+		<CodeItem key="17">
+			<ItemName>石川県</ItemName>
+			<ViewIndex>17</ViewIndex>
+		</CodeItem>
+		<CodeItem key="18">
+			<ItemName>福井県</ItemName>
+			<ViewIndex>18</ViewIndex>
+		</CodeItem>
+		<CodeItem key="19">
+			<ItemName>山梨県</ItemName>
+			<ViewIndex>19</ViewIndex>
+		</CodeItem>
+		<CodeItem key="20">
+			<ItemName>長野県</ItemName>
+			<ViewIndex>20</ViewIndex>
+		</CodeItem>
+		<CodeItem key="21">
+			<ItemName>岐阜県</ItemName>
+			<ViewIndex>21</ViewIndex>
+		</CodeItem>
+		<CodeItem key="22">
+			<ItemName>静岡県</ItemName>
+			<ViewIndex>22</ViewIndex>
+		</CodeItem>
+		<CodeItem key="23">
+			<ItemName>愛知県</ItemName>
+			<ViewIndex>23</ViewIndex>
+		</CodeItem>
+		<CodeItem key="24">
+			<ItemName>三重県</ItemName>
+			<ViewIndex>24</ViewIndex>
+		</CodeItem>
+		<CodeItem key="25">
+			<ItemName>滋賀県</ItemName>
+			<ViewIndex>25</ViewIndex>
+		</CodeItem>
+		<CodeItem key="26">
+			<ItemName>京都府</ItemName>
+			<ViewIndex>26</ViewIndex>
+		</CodeItem>
+		<CodeItem key="27">
+			<ItemName>大阪府</ItemName>
+			<ViewIndex>27</ViewIndex>
+		</CodeItem>
+		<CodeItem key="28">
+			<ItemName>兵庫県</ItemName>
+			<ViewIndex>28</ViewIndex>
+		</CodeItem>
+		<CodeItem key="29">
+			<ItemName>奈良県</ItemName>
+			<ViewIndex>29</ViewIndex>
+		</CodeItem>
+		<CodeItem key="30">
+			<ItemName>和歌山県</ItemName>
+			<ViewIndex>30</ViewIndex>
+		</CodeItem>
+		<CodeItem key="31">
+			<ItemName>鳥取県</ItemName>
+			<ViewIndex>31</ViewIndex>
+		</CodeItem>
+		<CodeItem key="32">
+			<ItemName>島根県</ItemName>
+			<ViewIndex>32</ViewIndex>
+		</CodeItem>
+		<CodeItem key="33">
+			<ItemName>岡山県</ItemName>
+			<ViewIndex>33</ViewIndex>
+		</CodeItem>
+		<CodeItem key="34">
+			<ItemName>広島県</ItemName>
+			<ViewIndex>34</ViewIndex>
+		</CodeItem>
+		<CodeItem key="35">
+			<ItemName>山口県</ItemName>
+			<ViewIndex>35</ViewIndex>
+		</CodeItem>
+		<CodeItem key="36">
+			<ItemName>徳島県</ItemName>
+			<ViewIndex>36</ViewIndex>
+		</CodeItem>
+		<CodeItem key="37">
+			<ItemName>香川県</ItemName>
+			<ViewIndex>37</ViewIndex>
+		</CodeItem>
+		<CodeItem key="38">
+			<ItemName>愛媛県</ItemName>
+			<ViewIndex>38</ViewIndex>
+		</CodeItem>
+		<CodeItem key="39">
+			<ItemName>高知県</ItemName>
+			<ViewIndex>39</ViewIndex>
+		</CodeItem>
+		<CodeItem key="40">
+			<ItemName>福岡県</ItemName>
+			<ViewIndex>40</ViewIndex>
+		</CodeItem>
+		<CodeItem key="41">
+			<ItemName>佐賀県</ItemName>
+			<ViewIndex>41</ViewIndex>
+		</CodeItem>
+		<CodeItem key="42">
+			<ItemName>長崎県</ItemName>
+			<ViewIndex>42</ViewIndex>
+		</CodeItem>
+		<CodeItem key="43">
+			<ItemName>熊本県</ItemName>
+			<ViewIndex>43</ViewIndex>
+		</CodeItem>
+		<CodeItem key="44">
+			<ItemName>大分県</ItemName>
+			<ViewIndex>44</ViewIndex>
+		</CodeItem>
+		<CodeItem key="45">
+			<ItemName>宮崎県</ItemName>
+			<ViewIndex>45</ViewIndex>
+		</CodeItem>
+		<CodeItem key="46">
+			<ItemName>鹿児島県</ItemName>
+			<ViewIndex>46</ViewIndex>
+		</CodeItem>
+		<CodeItem key="47">
+			<ItemName>沖縄県</ItemName>
+			<ViewIndex>47</ViewIndex>
+		</CodeItem>	
+	</Code>
+	<Code key="SearchType">
+		<CodeItem key="forward">
+			<ItemName>前方一致</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="broad">
+			<ItemName>部分一致</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="exact">
+			<ItemName>完全一致</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="EmployeeState">
+		<CodeItem key="presence">
+			<ItemName>在職</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="suspend">
+			<ItemName>休職</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="retire">
+			<ItemName>退職</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="FreeWordType">
+		<CodeItem key="human">
+			<ItemName>個人基本情報</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="suspend">
+			<ItemName>休職情報</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="retire">
+			<ItemName>退職情報</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+		<CodeItem key="concur">
+			<ItemName>兼務情報</ItemName>
+			<ViewIndex>4</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="SearchSectionType">
+		<CodeItem key="code">
+			<ItemName>所属のみ</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="route">
+			<ItemName>階層含む</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="UnitType">
+		<CodeItem key="section">
+			<ItemName>所属</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="person">
+			<ItemName>個人</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="ApprovalCount">
+		<CodeItem key="1">
+			<ItemName>1</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="2">
+			<ItemName>2</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="3">
+			<ItemName>3</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+		<CodeItem key="4">
+			<ItemName>4</ItemName>
+			<ViewIndex>4</ViewIndex>
+		</CodeItem>
+		<CodeItem key="5">
+			<ItemName>5</ItemName>
+			<ViewIndex>5</ViewIndex>
+		</CodeItem>
+		<CodeItem key="6">
+			<ItemName>6</ItemName>
+			<ViewIndex>6</ViewIndex>
+		</CodeItem>
+		<CodeItem key="7">
+			<ItemName>7</ItemName>
+			<ViewIndex>7</ViewIndex>
+		</CodeItem>
+		<CodeItem key="8">
+			<ItemName>8</ItemName>
+			<ViewIndex>8</ViewIndex>
+		</CodeItem>
+		<CodeItem key="9">
+			<ItemName>9</ItemName>
+			<ViewIndex>9</ViewIndex>
+		</CodeItem>
+		<CodeItem key="10">
+			<ItemName>10</ItemName>
+			<ViewIndex>10</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="MessageType">
+		<CodeItem key="0">
+			<ItemName>その他</ItemName>
+			<ViewIndex>9</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="MessageImportance">
+		<CodeItem key="1">
+			<ItemName>高</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="3">
+			<ItemName>中</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="5">
+			<ItemName>低</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="MessageImportanceMark">
+		<CodeItem key="1">
+			<ItemName>●</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="3">
+			<ItemName>●</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="5">
+			<ItemName></ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="WorkflowType">
+		<CodeItem key="1">
+			<ItemName>勤怠</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="FileType">
+		<CodeItem key="1">
+			<ItemName>CSV</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="HeaderType">
+		<CodeItem key="0">
+			<ItemName>無し</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="1">
+			<ItemName>有り</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="HumanImportTableType">
+		<CodeItem key="pfm_human">
+			<ItemName>人事情報</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="pfm_user">
+			<ItemName>アカウント情報</ItemName>
+			<ViewIndex>10</ViewIndex>
+		</CodeItem>
+		<CodeItem key="pfm_section">
+			<ItemName>所属情報</ItemName>
+			<ViewIndex>20</ViewIndex>
+		</CodeItem>
+		<CodeItem key="pfm_position">
+			<ItemName>職位情報</ItemName>
+			<ViewIndex>30</ViewIndex>
+		</CodeItem>
+		<CodeItem key="unit_section">
+			<ItemName>ユニット情報(所属)</ItemName>
+			<ViewIndex>40</ViewIndex>
+		</CodeItem>
+		<CodeItem key="unit_person">
+			<ItemName>ユニット情報(個人)</ItemName>
+			<ViewIndex>50</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="HumanExportTableType">
+		<CodeItem key="pfm_human">
+			<ItemName>人事情報</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="pfm_user">
+			<ItemName>アカウント情報</ItemName>
+			<ViewIndex>10</ViewIndex>
+		</CodeItem>
+		<CodeItem key="pfm_section">
+			<ItemName>所属情報</ItemName>
+			<ViewIndex>20</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="pfm_human">
+		<CodeItem key="employee_code">
+			<ItemName>社員コード</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="activate_date">
+			<ItemName>有効日</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="last_name">
+			<ItemName>姓</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+		<CodeItem key="first_name">
+			<ItemName>名</ItemName>
+			<ViewIndex>4</ViewIndex>
+		</CodeItem>
+		<CodeItem key="last_kana">
+			<ItemName>カナ姓</ItemName>
+			<ViewIndex>5</ViewIndex>
+		</CodeItem>
+		<CodeItem key="first_kana">
+			<ItemName>カナ名</ItemName>
+			<ViewIndex>6</ViewIndex>
+		</CodeItem>
+		<CodeItem key="work_place_code">
+			<ItemName>勤務地コード</ItemName>
+			<ViewIndex>7</ViewIndex>
+		</CodeItem>
+		<CodeItem key="employment_contract_code">
+			<ItemName>雇用契約コード</ItemName>
+			<ViewIndex>8</ViewIndex>
+		</CodeItem>
+		<CodeItem key="section_code">
+			<ItemName>所属コード</ItemName>
+			<ViewIndex>9</ViewIndex>
+		</CodeItem>
+		<CodeItem key="position_code">
+			<ItemName>職位コード</ItemName>
+			<ViewIndex>10</ViewIndex>
+		</CodeItem>
+		<CodeItem key="section_name">
+			<ItemName>所属名称</ItemName>
+			<ViewIndex>11</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="section_display">
+			<ItemName>所属表示名称</ItemName>
+			<ViewIndex>12</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="entrance_date">
+			<ItemName>入社日(入社情報)</ItemName>
+			<ViewIndex>101</ViewIndex>
+		</CodeItem>
+		<CodeItem key="retirement_date">
+			<ItemName>退職日(退職情報)</ItemName>
+			<ViewIndex>301</ViewIndex>
+		</CodeItem>
+		<CodeItem key="retirement_reason">
+			<ItemName>退職理由(退職情報)</ItemName>
+			<ViewIndex>302</ViewIndex>
+		</CodeItem>
+		<CodeItem key="retirement_detail">
+			<ItemName>退職理由詳細(退職情報)</ItemName>
+			<ViewIndex>303</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="pfm_user">
+		<CodeItem key="user_id">
+			<ItemName>ユーザID</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="activate_date">
+			<ItemName>有効日</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="employee_code">
+			<ItemName>社員コード</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+		<CodeItem key="full_name">
+			<ItemName>氏名</ItemName>
+			<ViewIndex>4</ViewIndex>
+		</CodeItem>
+		<CodeItem key="section_name">
+			<ItemName>所属名称</ItemName>
+			<ViewIndex>5</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="section_display">
+			<ItemName>所属表示名称</ItemName>
+			<ViewIndex>6</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="role_code">
+			<ItemName>ロールコード</ItemName>
+			<ViewIndex>7</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="pfa_user_extra_role">
+		<CodeItem key="user_id">
+			<ItemName>ユーザID</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="activate_date">
+			<ItemName>有効日</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="role_type">
+			<ItemName>ロール区分</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+		<CodeItem key="role_code">
+			<ItemName>ロールコード</ItemName>
+			<ViewIndex>4</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="pfm_section">
+		<CodeItem key="section_code">
+			<ItemName>所属コード</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="activate_date">
+			<ItemName>有効日</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="section_name">
+			<ItemName>所属名称</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+		<CodeItem key="section_abbr">
+			<ItemName>所属略称</ItemName>
+			<ViewIndex>4</ViewIndex>
+		</CodeItem>
+<!--
+		<CodeItem key="section_display">
+			<ItemName>所属表示名称</ItemName>
+			<ViewIndex>5</ViewIndex>
+		</CodeItem>
+-->
+		<CodeItem key="upper_section_code">
+			<ItemName>上位所属コード</ItemName>
+			<ViewIndex>6</ViewIndex>
+		</CodeItem>
+		<CodeItem key="close_flag">
+			<ItemName>有効/無効</ItemName>
+			<ViewIndex>7</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="pfm_position">
+		<CodeItem key="position_code">
+			<ItemName>職位コード</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="activate_date">
+			<ItemName>有効日</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="position_name">
+			<ItemName>職位名称</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+		<CodeItem key="position_abbr">
+			<ItemName>職位略称</ItemName>
+			<ViewIndex>4</ViewIndex>
+		</CodeItem>
+		<CodeItem key="position_grade">
+			<ItemName>職位ランク</ItemName>
+			<ViewIndex>5</ViewIndex>
+		</CodeItem>
+		<CodeItem key="close_flag">
+			<ItemName>有効/無効</ItemName>
+			<ViewIndex>6</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="unit_section">
+		<CodeItem key="unit_code">
+			<ItemName>ユニットコード</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="activate_date">
+			<ItemName>有効日</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="unit_name">
+			<ItemName>ユニット名称</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+		<CodeItem key="approver_section_code">
+			<ItemName>承認者所属コード</ItemName>
+			<ViewIndex>4</ViewIndex>
+		</CodeItem>
+		<CodeItem key="approver_position_code">
+			<ItemName>承認者職位コード</ItemName>
+			<ViewIndex>5</ViewIndex>
+		</CodeItem>
+		<CodeItem key="approver_position_grade">
+			<ItemName>承認者職位等級範囲</ItemName>
+			<ViewIndex>6</ViewIndex>
+		</CodeItem>
+		<CodeItem key="inactivate_flag">
+			<ItemName>有効/無効</ItemName>
+			<ViewIndex>10</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="unit_person">
+		<CodeItem key="unit_code">
+			<ItemName>ユニットコード</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="activate_date">
+			<ItemName>有効日</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="unit_name">
+			<ItemName>ユニット名称</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+		<CodeItem key="approver_personal_id">
+			<ItemName>承認者社員コード(セミコロン(;)区切)</ItemName>
+			<ViewIndex>4</ViewIndex>
+		</CodeItem>
+		<CodeItem key="inactivate_flag">
+			<ItemName>有効/無効</ItemName>
+			<ViewIndex>10</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="BloodType">
+		<CodeItem key="1">
+			<ItemName>A</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="2">
+			<ItemName>B</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+		<CodeItem key="3">
+			<ItemName>O</ItemName>
+			<ViewIndex>3</ViewIndex>
+		</CodeItem>
+		<CodeItem key="4">
+			<ItemName>AB</ItemName>
+			<ViewIndex>4</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="InOut">
+		<CodeItem key="1">
+			<ItemName>社内</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="2">
+			<ItemName>社外</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="Result">
+		<CodeItem key="1">
+			<ItemName>可</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="2">
+			<ItemName>否</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="Reward">
+		<CodeItem key="1">
+			<ItemName>賞</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="2">
+			<ItemName>罰</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="PhonePlace">
+		<CodeItem key="1">
+			<ItemName>自宅電話</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="2">
+			<ItemName>携帯電話</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="UnitPositionGradeRange">
+		<CodeItem key="1">
+			<ItemName>以上</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+		<CodeItem key="2">
+			<ItemName>以下</ItemName>
+			<ViewIndex>2</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="AppPropertyNames">
+		<CodeItem key="PasswordPeriod">
+			<ItemName>パスワード有効期間</ItemName>
+			<ViewIndex>1</ViewIndex>
+		</CodeItem>
+	</Code>
+	<Code key="AppPropertyTypes">
+		<CodeItem key="PasswordPeriod">
+			<ItemName>Number4RequiredTextBox</ItemName>
+		</CodeItem>
+	</Code>
+	<Code key="AppPropertyDescriptions">
+		<CodeItem key="PasswordPeriod">
+			<ItemName>日　※無期限に設定したい場合、0を入力して下さい。</ItemName>
+		</CodeItem>
+	</Code>
+	
+	<!-- テーブル区分配列(インポート及びエクスポート)取得追加処理 -->
+	<!--
+	<Code key="AdditionlLogicTableType">
+	</Code>
+	-->
+	
+</MosP>

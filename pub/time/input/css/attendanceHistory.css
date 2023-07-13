@@ -1,0 +1,112 @@
+@CHARSET "UTF-8";
+/*
+ * MosP - Mind Open Source Project    http://www.mosp.jp/
+ * Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+ * 
+ * This program is free software: you can redistribute it and/or
+ * modify it under the terms of the GNU Affero General Public License
+ * as published by the Free Software Foundation, either version 3
+ * of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+/* ************************************************************************** */
+/* === 勤怠情報修正履歴画面のスタイル === */
+/* ************************************************************************** */
+
+/**
+ * ヘッダ幅(日付)。
+ */
+.ListTable #thDate {
+	width: 95px;
+}
+
+/**
+ * ヘッダ幅(1文字)。
+ */
+.ListTable #th1 {
+	width: 20px;
+}
+
+/**
+ * ヘッダ幅(2文字)。
+ */
+.ListTable #th2 {
+	width: 35px;
+}
+
+/**
+ * 勤怠状態ヘッダ幅。
+ */
+.ListTable #thAttendanceState {
+	width: 40px;
+}
+
+/**
+ * 承認者ヘッダ幅。
+ */
+.ListTable #thName {
+	width: 100px;
+}
+
+/**
+ * 勤怠備考ヘッダ幅。
+ */
+.ListTable #thAttendanceRemark {
+	width: 260px;
+}
+
+/**
+ * 修正日時ヘッダ幅。
+ */
+.ListTable #thCorrectionDate {
+	width: 160px;
+}
+
+/**
+ * 承認日時ヘッダ幅。
+ */
+.ListTable #thDateTime {
+	width: 60px;
+}
+
+/**
+ * 履歴番号ヘッダ幅。
+ */
+.ListTable #thNumber {
+	width: 15px;
+}
+
+/**
+ * 修正者ヘッダ幅。
+ */
+.ListTable #thCorrectionName {
+	width: 90px;
+}
+
+/**
+ * 修正箇所ヘッダ幅。
+ */
+.ListTable #thCorrectionPlace {
+	width: 140px;
+}
+
+/**
+ * 修正前後ヘッダ幅。
+ */
+.ListTable #thCorrectionTime {
+	width: 255px;
+}
+
+/**
+ * コメントヘッダ幅。
+ */
+.ListTable #thComment {
+	width: 350px;
+}

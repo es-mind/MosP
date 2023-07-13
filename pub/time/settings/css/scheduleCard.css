@@ -1,0 +1,106 @@
+@CHARSET "UTF-8";
+/*
+ * MosP - Mind Open Source Project    http://www.mosp.jp/
+ * Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+ * 
+ * This program is free software: you can redistribute it and/or
+ * modify it under the terms of the GNU Affero General Public License
+ * as published by the Free Software Foundation, either version 3
+ * of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+/* ************************************************************************** */
+/* === インポートマスタ詳細画面のスタイル  === */
+/* ************************************************************************** */
+/* === カレンダ表示欄ヘッダ(table)  === */
+.List #tblSchedule {
+	margin-bottom: 0px;	
+}
+
+/* === カレンダ表示欄ヘッダ(th)  === */
+#tblSchedule th {
+	border-bottom: none;	
+}
+
+/* === カレンダ表示欄前半(table)  === */
+.ScheduleFrontTable {
+	table-layout: fixed;
+	width: 490px;
+	float: left;
+	margin-bottom: 10px;
+}
+
+/* === カレンダ表示欄前半(th)  === */
+.ScheduleFrontTable {
+	border-top: none;
+}
+
+/* === カレンダ表示欄後半(table)  === */
+.ScheduleBackTable {
+	table-layout: fixed;
+	width: 490px;
+	float: right;
+	border-top: none;
+	margin-bottom: 10px;
+}
+
+/* === 勤怠指定テーブル  === */
+.InputTable #tblWorkTypeSelect {
+	table-layout: fixed;	
+}
+
+/* === 表示月切替ボタン表示テーブル  === */
+.ListInfo .ListInfoTopTable {
+	width: 800px;
+}
+
+/* === 勤怠指定テーブルヘッダ  === */
+.InputTable .ListTableTh {
+	width: 200px;
+}
+
+/* === 勤怠指定テーブル項目内容表示欄  === */
+#tblWorkTypeSelect .InputTd {
+	white-space: normal;
+	width: 680px;
+}
+
+/* === カレンダ日付幅 === */
+.List #thDay {
+	width: 65px;
+}
+
+/* === カレンダ勤務形態幅 === */
+.List #thForm {
+	width: 85px;
+}
+
+/* === カレンダ時間・時刻幅 === */
+.List .ListSelectTh {
+	width: 35px;
+}
+
+/* === カレンダ備考欄幅 === */
+.List #thRemarks {
+	width: 150px;
+}
+
+/* === カレンダ選択チェック幅 === */
+.List #thSelect {
+	width: 20px;
+}
+
+/**
+ * カレンダ表示欄空白部分。
+ */
+.List .Blank {
+	border: medium none;
+	background-color: #F8F8F8;
+}

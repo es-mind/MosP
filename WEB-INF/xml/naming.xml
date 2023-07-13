@@ -1,0 +1,944 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE MosP>
+<!--
+MosP - Mind Open Source Project    http://www.mosp.jp/
+Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+
+This program is free software: you can redistribute it and/or
+modify it under the terms of the GNU Affero General Public License
+as published by the Free Software Foundation, either version 3
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<MosP>
+	<Naming key="menuTop">
+		トップ
+	</Naming>
+	<Naming key="menuHumanManage">
+		人事管理
+	</Naming>
+	<Naming key="menuBaseSetting">
+		基本設定
+	</Naming>
+	<Naming key="menuWorkflowManage">
+		承認管理
+	</Naming>
+	<Naming key="menuMessageSetting">
+		通知設定
+	</Naming>
+	<Naming key="menuIndividualSetting">
+		個人設定
+	</Naming>
+	<Naming key="jp.mosp.platform.portal.vo.PortalVo">
+		トップ
+	</Naming>
+	<Naming key="jp.mosp.platform.human.vo.HumanListVo">
+		社員一覧
+	</Naming>
+	<Naming key="jp.mosp.platform.human.vo.BasicNewCardVo">
+		新規社員登録
+	</Naming>
+	<Naming key="jp.mosp.platform.file.vo.ImportListVo">
+		インポートマスタ一覧
+	</Naming>
+	<Naming key="jp.mosp.platform.file.vo.ImportCardVo">
+		インポートマスタ詳細
+	</Naming>
+	<Naming key="jp.mosp.platform.file.vo.HumanExportListVo">
+		エクスポートマスタ一覧
+	</Naming>
+	<Naming key="jp.mosp.platform.file.vo.ExportCardVo">
+		エクスポートマスタ詳細
+	</Naming>
+	<Naming key="jp.mosp.platform.human.vo.BasicCardVo">
+		個人基本情報登録
+	</Naming>
+	<Naming key="jp.mosp.platform.human.vo.HumanInfoVo">
+		人事情報一覧
+	</Naming>
+	<Naming key="jp.mosp.platform.human.vo.BasicListVo">
+		個人基本情報履歴一覧
+	</Naming>
+	<Naming key="jp.mosp.platform.human.vo.EntranceCardVo">
+		入社情報登録
+	</Naming>
+	<Naming key="jp.mosp.platform.human.vo.SuspensionCardVo">
+		休職情報追加登録
+	</Naming>
+	<Naming key="jp.mosp.platform.human.vo.RetirementCardVo">
+		退職情報登録
+	</Naming>
+	<Naming key="jp.mosp.platform.human.vo.ConcurrentCardVo">
+		兼務情報追加登録
+	</Naming>
+	<Naming key="jp.mosp.platform.system.vo.EmploymentMasterVo">
+		雇用契約マスタ
+	</Naming>
+	<Naming key="jp.mosp.platform.system.vo.SectionMasterVo">
+		所属マスタ
+	</Naming>
+	<Naming key="jp.mosp.platform.system.vo.PositionMasterVo">
+		職位マスタ
+	</Naming>
+	<Naming key="jp.mosp.platform.system.vo.AccountMasterVo">
+		アカウントマスタ
+	</Naming>
+	<Naming key="jp.mosp.platform.system.vo.WorkPlaceMasterVo">
+		勤務地マスタ
+	</Naming>
+	<Naming key="jp.mosp.platform.system.vo.SystemManagementVo">
+		システム管理
+	</Naming>
+	<Naming key="jp.mosp.platform.system.vo.NamingTypeListVo">
+		名称区分マスタ
+	</Naming>
+	<Naming key="jp.mosp.platform.workflow.vo.UnitListVo">
+		ユニット一覧
+	</Naming>
+	<Naming key="jp.mosp.platform.workflow.vo.UnitCardVo">
+		ユニット詳細
+	</Naming>
+	<Naming key="jp.mosp.platform.workflow.vo.RouteListVo">
+		ルート一覧
+	</Naming>
+	<Naming key="jp.mosp.platform.workflow.vo.RouteCardVo">
+		ルート詳細
+	</Naming>
+	<Naming key="jp.mosp.platform.workflow.vo.RouteApplicationListVo">
+		ルート適用一覧
+	</Naming>
+	<Naming key="jp.mosp.platform.workflow.vo.RouteApplicationCardVo">
+		ルート適用詳細
+	</Naming>
+	<Naming key="jp.mosp.platform.workflow.vo.RouteApplicationReferenceVo">
+		ルート適用参照
+	</Naming>
+	<Naming key="jp.mosp.platform.workflow.vo.SubApproverSettingVo">
+		代理登録
+	</Naming>
+	<Naming key="jp.mosp.platform.message.vo.MessageListVo">
+		メッセージ設定一覧
+	</Naming>
+	<Naming key="jp.mosp.platform.message.vo.MessageCardVo">
+		メッセージ設定詳細
+	</Naming>
+	<Naming key="jp.mosp.platform.portal.vo.PasswordChangeVo">
+		パスワード変更
+	</Naming>
+	<Naming key="Year">
+		年
+	</Naming>
+	<Naming key="Month">
+		月
+	</Naming>
+	<Naming key="Day">
+		日
+	</Naming>
+	<Naming key="AmountWeek">
+		週間
+	</Naming>
+	<Naming key="AmountMonth">
+		ヶ月
+	</Naming>
+	<Naming key="ActivateDate">
+		有効日
+	</Naming>
+	<Naming key="Employee">
+		社員
+	</Naming>
+	<Naming key="Code">
+		コード
+	</Naming>
+	<Naming key="EmployeeCode">
+		社員コード
+	</Naming>
+	<Naming key="Personal">
+		個人
+	</Naming>
+	<Naming key="Id">
+		ID
+	</Naming>
+	<Naming key="Effectiveness">
+		有効
+	</Naming>
+	<Naming key="Inactivate">
+		無効
+	</Naming>
+	<Naming key="Delete">
+		削除
+	</Naming>
+	<Naming key="Flag">
+		フラグ
+	</Naming>
+	<Naming key="Type">
+		区分
+	</Naming>
+	<Naming key="Decision">
+		決定
+	</Naming>
+	<Naming key="Edit">
+		編集
+	</Naming>
+	<Naming key="Front">
+		前方
+	</Naming>
+	<Naming key="Perfect">
+		完全
+	</Naming>
+	<Naming key="Part">
+		部分
+	</Naming>
+	<Naming key="Match">
+		一致
+	</Naming>
+	<Naming key="Section">
+		所属
+	</Naming>
+	<Naming key="Position">
+		職位
+	</Naming>
+	<Naming key="EmploymentContract">
+		雇用契約
+	</Naming>
+	<Naming key="Employment">
+		雇用
+	</Naming>
+	<Naming key="EmploymentContractAbbr">
+		雇契
+	</Naming>
+	<Naming key="Post">
+		役職
+	</Naming>
+	<Naming key="Search">
+		検索
+	</Naming>
+	<Naming key="FirstName">
+		名
+	</Naming>
+	<Naming key="LastName">
+		姓
+	</Naming>
+	<Naming key="FullName">
+		氏名
+	</Naming>
+	<Naming key="Name">
+		名称
+	</Naming>
+	<Naming key="Kana">
+		ｶﾅ
+	</Naming>
+	<Naming key="FrontParentheses">
+		(
+	</Naming>
+	<Naming key="BackParentheses">
+		)
+	</Naming>
+	<Naming key="FrontWithCornerParentheses">
+		【
+	</Naming>
+	<Naming key="BackWithCornerParentheses">
+		】
+	</Naming>
+	<Naming key="LeftSquareBracket">
+		[
+	</Naming>
+	<Naming key="RightSquareBracket">
+		]
+	</Naming>
+	<Naming key="Information">
+		情報
+	</Naming>
+	<Naming key="InService">
+		在職
+	</Naming>
+	<Naming key="Suspension">
+		休職
+	</Naming>
+	<Naming key="Retirement">
+		退職
+	</Naming>
+	<Naming key="Basis">
+		基本
+	</Naming>
+	<Naming key="Concurrent">
+		兼務
+	</Naming>
+	<Naming key="SearchWord">
+		検索ワード
+	</Naming>
+	<Naming key="RetirementAndSuspension">
+		休退職
+	</Naming>
+	<Naming key="Abbreviation">
+		略称
+	</Naming>
+	<Naming key="InputActiveDate">
+		有効日を入力して下さい。
+	</Naming>
+	<Naming key="InputStartDate">
+		開始日を入力して下さい。
+	</Naming>
+	<Naming key="SearchCode">
+		コードを検索して下さい。
+	</Naming>
+	<Naming key="InputEmployeeCode">
+		社員コードを入力して下さい。
+	</Naming>
+	<Naming key="PleaseSearch">
+		検索して下さい。
+	</Naming>
+	<Naming key="Page">
+		頁
+	</Naming>
+	<Naming key="PreviousPage">
+		前頁
+	</Naming>
+	<Naming key="NextPage">
+		次頁
+	</Naming>
+	<Naming key="Count">
+		件
+	</Naming>
+	<Naming key="Other">
+		他
+	</Naming>
+	<Naming key="Select">
+		選択
+	</Naming>
+	<Naming key="Since">
+		以降
+	</Naming>
+	<Naming key="UpperTriangular">
+		▲
+	</Naming>
+	<Naming key="LowerTriangular">
+		▼
+	</Naming>
+	<Naming key="Slash">
+		/
+	</Naming>
+	<Naming key="TopOfPage">
+		ページの先頭へ
+	</Naming>
+	<Naming key="CopyRight">
+		Copyright (C) Mind, All Rights Reserved.
+	</Naming>
+	<Naming key="History">
+		履歴
+	</Naming>
+	<Naming key="Add">
+		追加
+	</Naming>
+	<Naming key="New">
+		新規
+	</Naming>
+	<Naming key="Insert">
+		登録
+	</Naming>
+	<Naming key="Replication">
+		複製
+	</Naming>
+	<Naming key="List">
+		一覧
+	</Naming>
+	<Naming key="Update">
+		更新
+	</Naming>
+	<Naming key="Bulk">
+		一括
+	</Naming>
+	<Naming key="Switching">
+		切替
+	</Naming>
+	<Naming key="Hierarchy">
+		階層
+	</Naming>
+	<Naming key="Pathway">
+		経路
+	</Naming>
+	<Naming key="HigherOrder">
+		上位
+	</Naming>
+	<Naming key="PositionGrade">
+		職位ランク
+	</Naming>
+	<Naming key="PositionLevel">
+		等級
+	</Naming>
+	<Naming key="PositionLevelUnit">
+		号
+	</Naming>
+	<Naming key="Of">
+		の
+	</Naming>
+	<Naming key="Num">
+		数
+	</Naming>
+	<Naming key="Finality">
+		最終
+	</Naming>
+	<Naming key="Refresh">
+		再表示
+	</Naming>
+	<Naming key="Reference">
+		参照
+	</Naming>
+	<Naming key="Joined">
+		入社
+	</Naming>
+	<Naming key="Start">
+		開始
+	</Naming>
+	<Naming key="End">
+		終了
+	</Naming>
+	<Naming key="Schedule">
+		予定
+	</Naming>
+	<Naming key="Reason">
+		理由
+	</Naming>
+	<Naming key="Detail">
+		詳細
+	</Naming>
+	<Naming key="Role">
+		ロール
+	</Naming>
+	<Naming key="Password">
+		パスワード
+	</Naming>
+	<Naming key="Initialization">
+		初期化
+	</Naming>
+	<Naming key="Account">
+		アカウント
+	</Naming>
+	<Naming key="User">
+		ユーザ
+	</Naming>
+	<Naming key="WorkPlace">
+		勤務地
+	</Naming>
+	<Naming key="WorkPlaceAbbr">
+		勤地
+	</Naming>
+	<Naming key="Phone">
+		電話
+	</Naming>
+	<Naming key="PostalCode">
+		郵便番号
+	</Naming>
+	<Naming key="Number">
+		番号
+	</Naming>
+	<Naming key="Hyphen">
+		-
+	</Naming>
+	<Naming key="Address">
+		住所
+	</Naming>
+	<Naming key="To">
+		へ
+	</Naming>
+	<Naming key="Row">
+		行
+	</Naming>
+	<Naming key="Colon">
+		：
+	</Naming>
+	<Naming key="SingleColon">
+		:
+	</Naming>
+	<Naming key="Period">
+		.
+	</Naming>
+	<Naming key="QuestionAndAnswer">
+	</Naming>
+	<Naming key="QuestionAndAnswerURI">
+	</Naming>
+	<Naming key="HumanInfo">
+		人事
+	</Naming>
+	<Naming key="Wave">
+		～
+	</Naming>
+	<Naming key="Remarks">
+		備考
+	</Naming>
+	<Naming key="PresentTime">
+		現在
+	</Naming>
+	<Naming key="Charge">
+		担当
+	</Naming>
+	<Naming key="Mainly">
+		主
+	</Naming>
+	<Naming key="Prefecture">
+		都道府県
+	</Naming>
+	<Naming key="City">
+		市区町村
+	</Naming>
+	<Naming key="StreetAddress">
+		番地
+	</Naming>
+	<Naming key="Building">
+		建物
+	</Naming>
+	<Naming key="SignStar">
+		※
+	</Naming>
+	<Naming key="InputAsMaking">
+		を作成する場合、入力してください
+	</Naming>
+	<Naming key="Login">
+		ログイン
+	</Naming>
+	<Naming key="Logout">
+		ログアウト
+	</Naming>
+	<Naming key="Change">
+		変更
+	</Naming>
+	<Naming key="ItNew">
+		新しい
+	</Naming>
+	<Naming key="Input">
+		入力
+	</Naming>
+	<Naming key="Confirmation">
+		確認
+	</Naming>
+	<Naming key="GoingWork">
+		出勤
+	</Naming>
+	<Naming key="RetireOffice">
+		退勤
+	</Naming>
+	<Naming key="WorkManage">
+		勤怠
+	</Naming>
+	<Naming key="Work">
+		勤務
+	</Naming>
+	<Naming key="ServiceYears">
+		勤続年数
+	</Naming>
+	<Naming key="Time">
+		時間
+	</Naming>
+	<Naming key="Hour">
+		時
+	</Naming>
+	<Naming key="Minutes">
+		分
+	</Naming>
+	<Naming key="Target">
+		対象
+	</Naming>
+	<Naming key="TargetPerson">
+		対象者
+	</Naming>
+	<Naming key="EffectivenessExistence">
+		有
+	</Naming>
+	<Naming key="InactivateExistence">
+		無
+	</Naming>
+	<Naming key="All">
+		全
+	</Naming>
+	<Naming key="Latest">
+		最新
+	</Naming>
+	<Naming key="Exist">
+		存在
+	</Naming>
+	<Naming key="NoTargetData">
+		対象データが存在しません。
+	</Naming>
+	<Naming key="RegistAsGreatest">
+		【なし】 最上位部署として登録
+	</Naming>
+	<Naming key="WorkflowUnit">
+		ユニット
+	</Naming>
+	<Naming key="Route">
+		ルート
+	</Naming>
+	<Naming key="Flow">
+		フロー
+	</Naming>
+	<Naming key="SelfApproval">
+		自己承認
+	</Naming>
+	<Naming key="WorkPaper">
+		下書
+	</Naming>
+	<Naming key="Application">
+		申請
+	</Naming>
+	<Naming key="Approval">
+		承認
+	</Naming>
+	<Naming key="SendingBack">
+		差戻
+	</Naming>
+	<Naming key="Cancel">
+		取消
+	</Naming>
+	<Naming key="Release">
+		解除
+	</Naming>
+	<Naming key="ApprovalRelease">
+		承解除
+	</Naming>
+	<Naming key="TakeDown">
+		取下
+	</Naming>
+	<Naming key="Following">
+		次
+	</Naming>
+	<Naming key="Finish">
+		済
+	</Naming>
+	<Naming key="Register">
+		申
+	</Naming>
+	<Naming key="Back">
+		戻
+	</Naming>
+	<Naming key="Under">
+		下
+	</Naming>
+	<Naming key="Suffer">
+		被
+	</Naming>
+	<Naming key="Substitution">
+		代理
+	</Naming>
+	<Naming key="SubApprover">
+		代理人
+	</Naming>
+	<Naming key="Approver">
+		承認者
+	</Naming>
+	<Naming key="Multiple">
+		複数
+	</Naming>
+	<Naming key="Settlement">
+		決済
+	</Naming>
+	<Naming key="InsertUser">
+		登録者
+	</Naming>
+	<Naming key="Open">
+		公開
+	</Naming>
+	<Naming key="No">
+		No
+	</Naming>
+	<Naming key="Message">
+		メッセージ
+	</Naming>
+	<Naming key="Importance">
+		重要度
+	</Naming>
+	<Naming key="Title">
+		タイトル
+	</Naming>
+	<Naming key="Display">
+		表示
+	</Naming>
+	<Naming key="Term">
+		期間
+	</Naming>
+	<Naming key="Apply">
+		適用
+	</Naming>
+	<Naming key="Range">
+		範囲
+	</Naming>
+	<Naming key="Set">
+		設定
+	</Naming>
+	<Naming key="TimeLimit">
+		期限
+	</Naming>
+	<Naming key="Screen">
+		画面
+	</Naming>
+	<Naming key="DisplaySetting">
+		表示設定
+	</Naming>
+	<Naming key="InputCsv">
+		カンマ区切で入力
+	</Naming>
+	<Naming key="InputSomething">
+		を入力して下さい。
+	</Naming>
+	<Naming key="IsNothing">
+		はありません。
+	</Naming>
+	<Naming key="HowToApplyAllRange">
+		勤務地、雇用契約、所属、職位を全て未指定で登録することにより全体適用になります。
+	</Naming>
+	<Naming key="No0">
+		0
+	</Naming>
+	<Naming key="No1">
+		1
+	</Naming>
+	<Naming key="No2">
+		2
+	</Naming>
+	<Naming key="No3">
+		3
+	</Naming>
+	<Naming key="No4">
+		4
+	</Naming>
+	<Naming key="No5">
+		5
+	</Naming>
+	<Naming key="No6">
+		6
+	</Naming>
+	<Naming key="No7">
+		7
+	</Naming>
+	<Naming key="No8">
+		8
+	</Naming>
+	<Naming key="No9">
+		9
+	</Naming>
+	<Naming key="No10">
+		10
+	</Naming>
+	<Naming key="No11">
+		11
+	</Naming>
+	<Naming key="No12">
+		12
+	</Naming>
+	<Naming key="Red">
+		赤
+	</Naming>
+	<Naming key="Yellow">
+		黄
+	</Naming>
+	<Naming key="Output">
+		出力
+	</Naming>
+	<Naming key="Template">
+		テンプレート
+	</Naming>
+	<Naming key="Export">
+		エクスポート
+	</Naming>
+	<Naming key="Import">
+		インポート
+	</Naming>
+	<Naming key="FileType">
+		データ区分
+	</Naming>
+	<Naming key="DataClass">
+		データ型
+	</Naming>
+	<Naming key="File">
+		ファイル
+	</Naming>
+	<Naming key="Data">
+		データ
+	</Naming>
+	<Naming key="Header">
+		ヘッダ
+	</Naming>
+	<Naming key="Execution">
+		実行
+	</Naming>
+	<Naming key="Item">
+		項目
+	</Naming>
+	<Naming key="LegalAbbreviation">
+		法
+	</Naming>
+	<Naming key="YearsOld">
+		歳
+	</Naming>
+	<Naming key="SelectExportBeforeExecute">
+		※エクスポートマスタを選択してから実行して下さい。
+	</Naming>
+	<Naming key="PersonalBasisInformation">
+		個人基本情報
+	</Naming>
+	<Naming key="EntranceInformation">
+		入社情報
+	</Naming>
+	<Naming key="ConcurrentInformation">
+		兼務情報
+	</Naming>
+	<Naming key="SuspensionInformation">
+		休職情報
+	</Naming>
+	<Naming key="RetirementInformation">
+		退職情報
+	</Naming>
+	<Naming key="ComingOfAgeDay">
+		成人の日
+	</Naming>
+	<Naming key="MarineDay">
+		海の日
+	</Naming>
+	<Naming key="MountDay">
+		山の日
+	</Naming>
+	<Naming key="RespectForTheAgedDay">
+		敬老の日
+	</Naming>
+	<Naming key="SportsDayOld">
+		体育の日
+	</Naming>
+	<Naming key="SportsDay">
+		スポーツの日
+	</Naming>
+	<Naming key="VernalEquinoxDay">
+		春分の日
+	</Naming>
+	<Naming key="AutumnalEquinoxDay">
+		秋分の日
+	</Naming>
+	<Naming key="NewYearsDay">
+		元日
+	</Naming>
+	<Naming key="NationalFoundationDay">
+		建国記念の日
+	</Naming>
+	<Naming key="ShowaDay">
+		昭和の日
+	</Naming>
+	<Naming key="ConstitutionDay">
+		憲法記念日
+	</Naming>
+	<Naming key="GreeneryDay">
+		みどりの日
+	</Naming>
+	<Naming key="ChildrensDay">
+		こどもの日
+	</Naming>
+	<Naming key="CultureDay">
+		文化の日
+	</Naming>
+	<Naming key="LaborThanksgivingDay">
+		勤労感謝の日
+	</Naming>
+	<Naming key="EmperorsBirthday">
+		天皇誕生日
+	</Naming>
+	<Naming key="AccessionDay">
+		天皇即位の礼
+	</Naming>
+	<Naming key="CoronationCeremony">
+		即位礼正殿の儀
+	</Naming>
+	<Naming key="PeoplesDay">
+		国民の休日
+	</Naming>
+	<Naming key="ObservedHoliday">
+		振替休日
+	</Naming>
+	<Naming key="Master">
+		マスタ
+	</Naming>
+	<Naming key="Portal">
+		ポータル
+	</Naming>
+	<Naming key="Button">
+		ボタン
+	</Naming>
+	<Naming key="SuspensionReason">
+		休職理由
+	</Naming>
+	<Naming key="ReasonDetail">
+		理由詳細
+	</Naming>
+	<Naming key="Relevance">
+		関連
+	</Naming>
+	<Naming key="Conditions">
+		条件
+	</Naming>
+	<Naming key="MailAddress">
+		メールアドレス
+	</Naming>
+	<Naming key="SendMail">
+		メール送信
+	</Naming>
+	<Naming key="ApproverPositionGrade">
+		承認者職位等級範囲
+	</Naming>
+	<Naming key="IcCardId">
+		カードID
+	</Naming>
+	<Naming key="AppKey">
+		アプリケーション設定キー
+	</Naming>
+	<Naming key="Touten">
+		、
+	</Naming>
+	<Naming key="Blank">
+		空白
+	</Naming>
+	<Naming key="AutoNumbering">
+		自動設定
+	</Naming>
+	<Naming key="InCaseForgotPassword">
+		パスワードを忘れた場合
+	</Naming>
+	<Naming key="NeedLowerSection">
+		下位所属含む
+	</Naming>
+	<Naming key="LowerAlphaCharacter">
+		半角英字
+	</Naming>	
+	<Naming key="SpaceKana">
+		スペース
+	</Naming>
+	<Naming key="Or">
+		又は
+	</Naming>
+	<Naming key="LowerAlphaNumeric">
+		半角英数字
+	</Naming>
+	<Naming key="HyphenKana">
+		ハイフン
+	</Naming>
+	<Naming key="NumericValue">
+		数値
+	</Naming>
+	<Naming key="Digit">
+		桁
+	</Naming>
+	<Naming key="MiddlePoint">
+		・
+	</Naming>
+	<Naming key="Checked">
+		レ
+	</Naming>
+	<Naming key="Selected">
+		●
+	</Naming>
+	<Naming key="SetCase">
+		に設定したい場合
+	</Naming>
+	
+</MosP>

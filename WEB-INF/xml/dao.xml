@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE MosP>
+<!--
+MosP - Mind Open Source Project    http://www.mosp.jp/
+Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+
+This program is free software: you can redistribute it and/or
+modify it under the terms of the GNU Affero General Public License
+as published by the Free Software Foundation, either version 3
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<MosP>
+
+<!--jp.mosp.platform.dao.human-->
+	<Model key="HumanDao">
+		jp.mosp.platform.dao.human.impl.PfmHumanDao
+	</Model>
+	<Model key="HumanSearchDao">
+		jp.mosp.platform.dao.human.impl.HumanSearchDao
+	</Model>
+	<Model key="EntranceDao">
+		jp.mosp.platform.dao.human.impl.PfaHumanEntranceDao
+	</Model>
+	<Model key="SuspensionDao">
+		jp.mosp.platform.dao.human.impl.PfaHumanSuspensionDao
+	</Model>
+	<Model key="RetirementDao">
+		jp.mosp.platform.dao.human.impl.PfaHumanRetirementDao
+	</Model>
+	<Model key="ConcurrentDao">
+		jp.mosp.platform.dao.human.impl.PfaHumanConcurrentDao
+	</Model>
+	<Model key="AddressDao">
+		jp.mosp.platform.dao.human.impl.PfaAddressDao
+	</Model>
+	<Model key="PhoneDao">
+		jp.mosp.platform.dao.human.impl.PfaPhoneDao
+	</Model>
+	<Model key="AccountDao">
+		jp.mosp.platform.dao.human.impl.PfaAccountDao
+	</Model>
+	<Model key="HumanHistoryDao">
+		jp.mosp.platform.dao.human.impl.PfaHumanHistoryDao
+	</Model>
+	<Model key="HumanNormalDao">
+		jp.mosp.platform.dao.human.impl.PfaHumanNormalDao
+	</Model>
+	<Model key="HumanArrayDao">
+		jp.mosp.platform.dao.human.impl.PfaHumanArrayDao
+	</Model>
+	<Model key="HumanBinaryHistoryDao">
+		jp.mosp.platform.dao.human.impl.PfaHumanBinaryHistoryDao
+	</Model>
+	<Model key="HumanBinaryNormalDao">
+		jp.mosp.platform.dao.human.impl.PfaHumanBinaryNormalDao
+	</Model>
+	<Model key="HumanBinaryArrayDao">
+		jp.mosp.platform.dao.human.impl.PfaHumanBinaryArrayDao
+	</Model>
+	
+<!--jp.mosp.platform.dao.system-->
+	<Model key="UserMasterDao">
+		jp.mosp.platform.dao.system.impl.PfmUserDao
+	</Model>
+	<Model key="UserExtraRoleDao">
+		jp.mosp.platform.dao.system.impl.PfaUserExtraRoleDao
+	</Model>
+	<Model key="UserPasswordDao">
+		jp.mosp.platform.dao.system.impl.PfaUserPasswordDao
+	</Model>
+	<Model key="UserCountDao">
+		jp.mosp.platform.dao.system.impl.UserCountDao
+	</Model>
+	<Model key="PositionDao">
+		jp.mosp.platform.dao.system.impl.PfmPositionDao
+	</Model>
+	<Model key="SectionDao">
+		jp.mosp.platform.dao.system.impl.PfmSectionDao
+	</Model>
+	<Model key="EmploymentContractDao">
+		jp.mosp.platform.dao.system.impl.PfmEmploymentContractDao
+	</Model>
+	<Model key="WorkPlaceDao">
+		jp.mosp.platform.dao.system.impl.PfmWorkPlaceDao
+	</Model>
+	<Model key="NamingDao">
+		jp.mosp.platform.dao.system.impl.PfmNamingDao
+	</Model>
+	<Model key="GeneralDao">
+		jp.mosp.platform.dao.system.impl.PfgGeneralDao
+	</Model>
+	<Model key="ReceptionIcCardDao">
+		jp.mosp.platform.dao.system.impl.PftReceptionIcCardDao
+	</Model>
+	<Model key="IcCardDao">
+		jp.mosp.platform.dao.system.impl.PfmIcCardDao
+	</Model>
+	<Model key="PostalCodeDao">
+		jp.mosp.platform.dao.system.impl.PfmPostalCodeDao
+	</Model>
+	<Model key="BankBaseDao">
+		jp.mosp.platform.dao.system.impl.PfmBankBaseDao
+	</Model>
+	<Model key="BankBranchDao">
+		jp.mosp.platform.dao.system.impl.PfmBankBranchDao
+	</Model>
+	<Model key="AppPropertyDao">
+		jp.mosp.platform.dao.system.impl.PfmAppPropertyDao
+	</Model>
+	
+<!--jp.mosp.platform.dao.message-->
+	<Model key="MessageDao">
+		jp.mosp.platform.dao.message.impl.PftMessageDao
+	</Model>
+
+<!--jp.mosp.platform.dao.file-->
+	<Model key="ImportDao">
+		jp.mosp.platform.dao.file.impl.PfmImportDao
+	</Model>
+	<Model key="ImportFieldDao">
+		jp.mosp.platform.dao.file.impl.PfaImportFieldDao
+	</Model>
+	<Model key="ExportDao">
+		jp.mosp.platform.dao.file.impl.PfmExportDao
+	</Model>
+	<Model key="ExportFieldDao">
+		jp.mosp.platform.dao.file.impl.PfaExportFieldDao
+	</Model>
+
+<!--jp.mosp.platform.dao.workflow-->
+	<Model key="WorkflowDao">
+		jp.mosp.platform.dao.workflow.impl.PftWorkflowDao
+	</Model>
+	<Model key="WorkflowCommentDao">
+		jp.mosp.platform.dao.workflow.impl.PftWorkflowCommentDao
+	</Model>
+	<Model key="ApprovalUnitDao">
+		jp.mosp.platform.dao.workflow.impl.PfmApprovalUnitDao
+	</Model>
+	<Model key="ApprovalRouteDao">
+		jp.mosp.platform.dao.workflow.impl.PfmApprovalRouteDao
+	</Model>
+	<Model key="ApprovalRouteUnitDao">
+		jp.mosp.platform.dao.workflow.impl.PfaApprovalRouteUnitDao
+	</Model>
+	<Model key="SubApproverDao">
+		jp.mosp.platform.dao.workflow.impl.PftSubApproverDao
+	</Model>
+	<Model key="RouteApplicationDao">
+		jp.mosp.platform.dao.workflow.impl.PfmRouteApplicationDao
+	</Model>
+
+</MosP>

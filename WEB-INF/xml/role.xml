@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MosP>
+<!--
+MosP - Mind Open Source Project    http://www.mosp.jp/
+Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+
+This program is free software: you can redistribute it and/or
+modify it under the terms of the GNU Affero General Public License
+as published by the Free Software Foundation, either version 3
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<MosP>
+	<Role key="10">
+		<RoleName>一般従業員</RoleName>
+		<RoleExtra>default</RoleExtra>
+		<ViewIndex>10</ViewIndex>
+		<Menu key="Top">
+			<Index>100</Index>
+		</Menu>
+		<Menu key="PasswordChange">
+			<Index>9000</Index>
+		</Menu>
+	</Role>
+	<Role key="20">
+		<RoleName>勤怠管理者</RoleName>
+		<RoleExtra>approver</RoleExtra>
+		<ViewIndex>20</ViewIndex>
+		<Menu key="Top">
+			<Index>100</Index>
+		</Menu>
+		<Menu key="PasswordChange">
+			<Index>9000</Index>
+		</Menu>
+	</Role>
+	<Role key="30">
+		<RoleName>計算管理者</RoleName>
+		<RoleExtra>approver,calculator</RoleExtra>
+		<ViewIndex>30</ViewIndex>
+		<Menu key="Top">
+			<Index>100</Index>
+		</Menu>
+		<Menu key="MessageList">
+			<Index>8000</Index>
+		</Menu>
+		<Menu key="PasswordChange">
+			<Index>9000</Index>
+		</Menu>
+	</Role>
+	<Role key="40">
+		<RoleName>人事管理者</RoleName>
+		<RoleExtra>approver</RoleExtra>
+		<ViewIndex>40</ViewIndex>
+		<Menu key="Top">
+			<Index>100</Index>
+		</Menu>
+		<Menu key="HumanList">
+			<Index>110</Index>
+			<Range key="1">
+				<WorkPlace></WorkPlace>
+				<EmploymentContract></EmploymentContract>
+				<Position></Position>
+				<Section></Section>
+				<Employee></Employee>
+			</Range>
+		</Menu>
+		<Menu key="BasicNewCard">
+			<Index>120</Index>
+			<Range key="2">
+			</Range>
+		</Menu>
+		<Menu key="ImportList">
+			<Index>130</Index>
+		</Menu>
+		<Menu key="ExportList">
+			<Index>140</Index>
+		</Menu>
+		<Menu key="WorkPlaceMaster">
+			<Index>210</Index>
+		</Menu>
+		<Menu key="EmploymentMaster">
+			<Index>220</Index>
+		</Menu>
+		<Menu key="SectionMaster">
+			<Index>230</Index>
+		</Menu>
+		<Menu key="PositionMaster">
+			<Index>240</Index>
+		</Menu>
+		<Menu key="AccountMaster">
+			<Index>250</Index>
+		</Menu>
+		<Menu key="UnitList">
+			<Index>310</Index>
+		</Menu>
+		<Menu key="RouteList">
+			<Index>320</Index>
+		</Menu>
+		<Menu key="RouteApplicationList">
+			<Index>330</Index>
+		</Menu>
+		<Menu key="RouteApplicationReference">
+			<Index>340</Index>
+		</Menu>
+		<Menu key="MessageList">
+			<Index>8000</Index>
+		</Menu>
+		<Menu key="PasswordChange">
+			<Index>9000</Index>
+		</Menu>
+	</Role>
+	<Role key="50">
+		<RoleName>人事計算管理者</RoleName>
+		<RoleExtra>approver,calculator</RoleExtra>
+		<ViewIndex>50</ViewIndex>
+		<Menu key="Top">
+			<Index>100</Index>
+		</Menu>
+		<Menu key="HumanList">
+			<Index>110</Index>
+			<Range key="1">
+				<WorkPlace></WorkPlace>
+				<EmploymentContract></EmploymentContract>
+				<Position></Position>
+				<Section></Section>
+				<Employee></Employee>
+			</Range>
+		</Menu>
+		<Menu key="BasicNewCard">
+			<Index>120</Index>
+			<Range key="2">
+			</Range>
+		</Menu>
+		<Menu key="ImportList">
+			<Index>130</Index>
+		</Menu>
+		<Menu key="ExportList">
+			<Index>140</Index>
+		</Menu>
+		<Menu key="WorkPlaceMaster">
+			<Index>210</Index>
+		</Menu>
+		<Menu key="EmploymentMaster">
+			<Index>220</Index>
+		</Menu>
+		<Menu key="SectionMaster">
+			<Index>230</Index>
+		</Menu>
+		<Menu key="PositionMaster">
+			<Index>240</Index>
+		</Menu>
+		<Menu key="AccountMaster">
+			<Index>250</Index>
+		</Menu>
+		<Menu key="UnitList">
+			<Index>310</Index>
+		</Menu>
+		<Menu key="RouteList">
+			<Index>320</Index>
+		</Menu>
+		<Menu key="RouteApplicationList">
+			<Index>330</Index>
+		</Menu>
+		<Menu key="RouteApplicationReference">
+			<Index>340</Index>
+		</Menu>
+		<Menu key="MessageList">
+			<Index>8000</Index>
+		</Menu>
+		<Menu key="PasswordChange">
+			<Index>9000</Index>
+			<Range key="1">
+				<Employee>RangeMyself</Employee>
+			</Range>
+		</Menu>
+	</Role>
+	<Role key="90">
+		<RoleName>スーパーユーザ</RoleName>
+		<RoleExtra>needed,super,approver,calculator</RoleExtra>
+		<ViewIndex>90</ViewIndex>
+		<Menu key="Top">
+			<Index>100</Index>
+		</Menu>
+		<Menu key="HumanList">
+			<Index>110</Index>
+			<Range key="1">
+				<WorkPlace></WorkPlace>
+				<EmploymentContract></EmploymentContract>
+				<Section></Section>
+				<Position></Position>
+				<Employee></Employee>
+			</Range>
+		</Menu>
+		<Menu key="BasicNewCard">
+			<Index>120</Index>
+			<Range key="2">
+			</Range>
+		</Menu>
+		<Menu key="ImportList">
+			<Index>130</Index>
+		</Menu>
+		<Menu key="ExportList">
+			<Index>140</Index>
+		</Menu>
+		<Menu key="WorkPlaceMaster">
+			<Index>210</Index>
+		</Menu>
+		<Menu key="EmploymentMaster">
+			<Index>220</Index>
+		</Menu>
+		<Menu key="SectionMaster">
+			<Index>230</Index>
+		</Menu>
+		<Menu key="PositionMaster">
+			<Index>240</Index>
+		</Menu>
+		<Menu key="AccountMaster">
+			<Index>250</Index>
+		</Menu>
+		<Menu key="SystemManagement">
+			<Index>290</Index>
+		</Menu>
+		<Menu key="UnitList">
+			<Index>310</Index>
+		</Menu>
+		<Menu key="RouteList">
+			<Index>320</Index>
+		</Menu>
+		<Menu key="RouteApplicationList">
+			<Index>330</Index>
+		</Menu>
+		<Menu key="RouteApplicationReference">
+			<Index>340</Index>
+		</Menu>
+		<Menu key="MessageList">
+			<Index>8000</Index>
+		</Menu>
+		<Menu key="PasswordChange">
+			<Index>9000</Index>
+		</Menu>
+	</Role>
+</MosP>
