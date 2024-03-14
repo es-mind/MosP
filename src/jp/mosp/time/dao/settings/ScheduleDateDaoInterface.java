@@ -62,21 +62,8 @@ public interface ScheduleDateDaoInterface extends BaseDaoInterface {
 	List<ScheduleDateDtoInterface> findForList(String scheduleCode, Date startDate, Date endDate) throws MospException;
 	
 	/**
-	 * 有効日マスタ一覧。
-	 * <p>
-	 * 有効日と勤務形態コードからカレンダ日マスタリストを取得する。
-	 * </p>
-	 * @param activateDate 有効日
-	 * @param targetCode 勤務形態コード
-	 * @return カレンダ日マスタリスト
-	 * @throws MospException SQLの作成に失敗した場合、或いはSQL例外が発生した場合
-	 */
-	List<ScheduleDateDtoInterface> findForActivateDate(Date activateDate, String targetCode) throws MospException;
-	
-	/**
 	 * カレンダ日マスタリストを取得する。<br>
-	 * 削除フラグが立っていないものを対象とする。<br>
-	 * 有効日の範囲で検索する。但し、有効日From及び有効日Toは、検索対象に含まれない。<br>
+	 * 有効日の範囲で検索する。但し、有効日Toは検索対象に含まれない。<br>
 	 * マスタ類無効時の確認等に用いる。<br>
 	 * @param fromActivateDate 有効日From
 	 * @param toActivateDate   有効日To

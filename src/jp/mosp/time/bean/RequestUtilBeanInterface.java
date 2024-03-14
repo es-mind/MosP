@@ -31,6 +31,7 @@ import jp.mosp.time.dto.settings.SubstituteDtoInterface;
 import jp.mosp.time.dto.settings.WorkOnHolidayRequestDtoInterface;
 import jp.mosp.time.dto.settings.WorkTypeChangeRequestDtoInterface;
 import jp.mosp.time.entity.RequestEntityInterface;
+import jp.mosp.time.entity.WorkTypeEntityInterface;
 
 /**
  * 申請ユーティリティインターフェース。<br>
@@ -206,6 +207,17 @@ public interface RequestUtilBeanInterface extends BaseBeanInterface {
 	 * @throws MospException インスタンスの取得或いはSQL実行に失敗した場合
 	 */
 	boolean isHolidayAllDay(boolean status) throws MospException;
+	
+	/**
+	 * 勤務形態エンティティを取得する。<br>
+	 * 予定される勤務形態(承認済の申請を考慮)の勤務形態エンティティを取得する。<br>
+	 * 時差出勤申請がある場合は、時差出勤申請の内容を考慮する。<br>
+	 * @param personalId 個人ID
+	 * @param targetDate 対象日
+	 * @return 勤務形態エンティティ
+	 * @throws MospException インスタンスの取得或いはSQL実行に失敗した場合
+	 */
+	WorkTypeEntityInterface getWorkTypeEntity(String personalId, Date targetDate) throws MospException;
 	
 	/**
 	 * カレンダユーティリティに勤怠関連マスタ参照処理を設定する。<br>

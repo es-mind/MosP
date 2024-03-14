@@ -3359,4 +3359,35 @@ public class TimeUtility {
 		return weeklyOverForty - calcWeeklyOverFortyIn(overtimeIn, overtimeInNoWeeklyForty);
 	}
 	
+	/**
+	 * 日の値が月末であるかを確認する。<br>
+	 * @param day 日の値
+	 * @return 確認結果(true：月末である、false：そうでない)
+	 */
+	public static boolean isEndOfMonthDay(int day) {
+		return day == TimeConst.DAY_END_OF_MONTH;
+	}
+	
+	/**
+	 * 期限日を取得する。<br>
+	 * @param date  起算日
+	 * @param month 月の値
+	 * @param day   日の値
+	 * @return 期限日
+	 */
+	public static Date getLimitDate(Date date, int month, int day) {
+		// 期限日を準備(基準日のmonthヶ月後)
+		Date limitDate = DateUtility.addMonth(date, month);
+		// 日の値が月末でない場合
+		if (isEndOfMonthDay(day) == false) {
+			// 期限日に日を設定し取得
+			return DateUtility.addDay(limitDate, day - 1);
+		}
+		// 年月を取得
+		int targetYear = DateUtility.getYear(limitDate);
+		int targetMonth = DateUtility.getMonth(limitDate);
+		// 期限日を取得
+		return MonthUtility.getYearMonthLastDate(targetYear, targetMonth);
+	}
+	
 }

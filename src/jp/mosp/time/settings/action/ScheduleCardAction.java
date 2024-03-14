@@ -691,8 +691,6 @@ public class ScheduleCardAction extends TimeSettingAction {
 		allYearRegist(workList);
 		// 登録結果確認
 		if (mospParams.hasErrorMessage()) {
-			// 登録失敗メッセージを設定
-			PfMessageUtility.addMessageInsertFailed(mospParams);
 			return;
 		}
 		// 登録後の情報をVOに設定(レコード識別ID更新)

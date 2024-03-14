@@ -25,12 +25,19 @@ import java.util.List;
 
 import jp.mosp.framework.base.BaseDtoInterface;
 import jp.mosp.framework.base.MospException;
+import jp.mosp.framework.utils.MospUtility;
 import jp.mosp.platform.base.PlatformBean;
+import jp.mosp.platform.utils.PfMessageUtility;
+import jp.mosp.platform.utils.PlatformUtility;
 import jp.mosp.time.bean.ScheduleDateRegistBeanInterface;
+import jp.mosp.time.bean.TimeMasterBeanInterface;
 import jp.mosp.time.constant.TimeMessageConst;
 import jp.mosp.time.dao.settings.ScheduleDateDaoInterface;
 import jp.mosp.time.dto.settings.ScheduleDateDtoInterface;
 import jp.mosp.time.dto.settings.impl.TmmScheduleDateDto;
+import jp.mosp.time.entity.WorkTypeEntityInterface;
+import jp.mosp.time.utils.TimeNamingUtility;
+import jp.mosp.time.utils.TimeUtility;
 
 /**
  * カレンダ日登録クラス。
@@ -40,7 +47,12 @@ public class ScheduleDateRegistBean extends PlatformBean implements ScheduleDate
 	/**
 	 * カレンダ日マスタDAOクラス。<br>
 	 */
-	protected ScheduleDateDaoInterface dao;
+	protected ScheduleDateDaoInterface	dao;
+	
+	/**
+	 * 勤怠関連マスタ参照処理。<br>
+	 */
+	protected TimeMasterBeanInterface	timeMaster;
 	
 	
 	/**
@@ -52,8 +64,10 @@ public class ScheduleDateRegistBean extends PlatformBean implements ScheduleDate
 	
 	@Override
 	public void initBean() throws MospException {
-		// DAO準備
+		// DAOを準備
 		dao = createDaoInstance(ScheduleDateDaoInterface.class);
+		// Beanを準備
+		timeMaster = createBeanInstance(TimeMasterBeanInterface.class);
 	}
 	
 	@Override
@@ -223,11 +237,14 @@ public class ScheduleDateRegistBean extends PlatformBean implements ScheduleDate
 	/**
 	 * 登録情報の妥当性を確認する。
 	 * @param dto 対象DTO
+	 * @throws MospException インスタンスの取得或いはSQL実行に失敗した場合
 	 */
-	protected void validate(ScheduleDateDtoInterface dto) {
+	protected void validate(ScheduleDateDtoInterface dto) throws MospException {
 		// カレンダコード
 		String scheduleCodeName = mospParams.getName("Calendar", "Code");
 		checkRequired(dto.getScheduleCode(), scheduleCodeName, null);
+		// 勤務形態が有効であるかを確認
+		checkWorkTypeActive(dto.getWorkTypeCode(), dto.getScheduleDate());
 	}
 	
 	@Override
@@ -267,6 +284,34 @@ public class ScheduleDateRegistBean extends PlatformBean implements ScheduleDate
 			dto.setTmmScheduleDateId(dao.nextRecordId());
 			// 登録処理
 			dao.insert(dto);
+		}
+	}
+	
+	/**
+	 * 勤務形態が有効であるかを確認する。<br>
+	 * 有効でない場合には、エラーメッセージを設定する。<br>
+	 * @param workTypeCode  勤務形態コード
+	 * @param scheduleDate 日(カレンダ日情報の日)
+	 * @throws MospException インスタンスの取得或いはSQL実行に失敗した場合
+	 */
+	protected void checkWorkTypeActive(String workTypeCode, Date scheduleDate) throws MospException {
+		// 勤務形態コードが空白である場合
+		if (MospUtility.isEmpty(workTypeCode)) {
+			// 確認不要
+			return;
+		}
+		// 勤務形態コードが法定休日か所定休日である場合
+		if (TimeUtility.isLegalOrPrescribed(workTypeCode)) {
+			// 確認不要
+			return;
+		}
+		// 勤務形態エンティティを取得
+		WorkTypeEntityInterface workType = timeMaster.getWorkTypeEntity(workTypeCode, scheduleDate);
+		// 勤務形態が有効でない場合
+		if (PlatformUtility.isDtoActivate(workType.getWorkType()) == false) {
+			// エラーメッセージを設定
+			String fieldName = TimeNamingUtility.workType(mospParams);
+			PfMessageUtility.addErrorInactive(mospParams, fieldName, workTypeCode, scheduleDate);
 		}
 	}
 	

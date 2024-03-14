@@ -265,11 +265,8 @@ function changeEditTimePulldown() {
 	setDisabled("pltEditStartHour", true);
 	setDisabled("pltEditStartMinute", true);
 	setDisabled("pltEditEndTime", true);
-	// 休暇範囲取得
-	var holidayRange = getFormValue("pltEditHolidayRange1");
-	var holidayRange2 = getFormValue("pltEditHolidayRange2");
-	// 時間休の場合
-	if(holidayRange == 4 || holidayRange2 == 4) {
+ 	// 時間休の場合
+	if (isHourlyHoliday()) {
 		// 時間休有効
 		setDisabled("pltEditStartHour", false);
 		setDisabled("pltEditStartMinute", false);
@@ -449,5 +446,23 @@ function checkStatus(aryMessage, event, status) {
 			return;
 		}
 	}
+}
+
+/**
+ * 時間単位休暇であるかを確認する。
+ * @return 確認結果(true：時間単位休暇である、false：そうでない)
+ */
+function isHourlyHoliday() {
+	// 休暇種別を取得
+	var holidayType = getFormValue("pltEditHolidayType");
+	// 休暇範囲を取得
+	var holidayRange = getFormValue("pltEditHolidayRange2");
+	// 有給休暇である場合
+	if (holidayType == 1 && getFormValue("pltEditStatusWithPay") == 1) {
+		// 休暇範囲を再取得
+		holidayRange = getFormValue("pltEditHolidayRange1");
+	}
+	// 休暇範囲が時間単位休暇であるかを確認
+	return holidayRange == 4;
 }
 

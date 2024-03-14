@@ -59,6 +59,7 @@ import jp.mosp.time.dto.settings.WorkOnHolidayRequestDtoInterface;
 import jp.mosp.time.dto.settings.WorkTypeChangeRequestDtoInterface;
 import jp.mosp.time.dto.settings.impl.TmdSubHolidayRequestDto;
 import jp.mosp.time.utils.TimeNamingUtility;
+import jp.mosp.time.utils.TimeRequestUtility;
 
 /**
  * 代休申請登録クラス。
@@ -523,23 +524,18 @@ public class SubHolidayRequestRegistBean extends TimeBean implements SubHolidayR
 				return;
 			}
 		}
-		// 休暇申請チェック
-		int holidayRange = localRequestUtil.checkHolidayRangeHoliday(localRequestUtil.getHolidayList(false));
-		if (holidayRange == TimeConst.CODE_HOLIDAY_RANGE_ALL
-				|| holidayRange == TimeConst.CODE_HOLIDAY_RANGE_AM + TimeConst.CODE_HOLIDAY_RANGE_PM) {
-			// 全休・前半休及び後半休の場合
-			addOthersRequestErrorMessage(dto.getRequestDate(), mospParams.getName("Holiday"));
+		// 休暇申請情報群を取得
+		List<HolidayRequestDtoInterface> holidays = localRequestUtil.getHolidayList(false);
+		// 休暇申請情報群に全休(前半休+後半休も含む)がある場合
+		if (TimeRequestUtility.isAllRangeHoliday(holidays)) {
+			// エラーメッセージを設定
+			addOthersRequestErrorMessage(dto.getRequestDate(), TimeNamingUtility.holiday(mospParams));
 			return;
-		} else if (holidayRange == TimeConst.CODE_HOLIDAY_RANGE_AM) {
-			// 前半休の場合
-			holidayRangeAm = true;
-		} else if (holidayRange == TimeConst.CODE_HOLIDAY_RANGE_PM) {
-			// 後半休の場合
-			holidayRangePm = true;
-		} else if (holidayRange == TimeConst.CODE_HOLIDAY_RANGE_TIME) {
-			// 時間休の場合
-			holidayRangeTime = true;
 		}
+		// 範囲毎の休暇申請有無を取得
+		holidayRangeAm = TimeRequestUtility.hasHolidayRangeAm(holidays);
+		holidayRangePm = TimeRequestUtility.hasHolidayRangePm(holidays);
+		holidayRangeTime = TimeRequestUtility.hasHolidayRangeHour(holidays);
 		// 振替休日チェック
 		int substituteRange = localRequestUtil.checkHolidayRangeSubstitute(localRequestUtil.getSubstituteList(false));
 		if (substituteRange == TimeConst.CODE_HOLIDAY_RANGE_ALL

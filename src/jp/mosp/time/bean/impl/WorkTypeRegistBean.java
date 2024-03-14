@@ -268,7 +268,7 @@ public class WorkTypeRegistBean extends PlatformBean implements WorkTypeRegistBe
 		// 履歴追加対象コードの履歴情報を取得
 		List<WorkTypeDtoInterface> list = dao.findForHistory(dto.getWorkTypeCode());
 		// 生じる無効期間による履歴追加確認要否を取得
-		if (!needCheckTermForAdd(dto, list)) {
+		if (needCheckTermForAdd(dto, list) == false) {
 			// 無効期間は発生しない
 			return;
 		}
@@ -291,7 +291,7 @@ public class WorkTypeRegistBean extends PlatformBean implements WorkTypeRegistBe
 			return;
 		}
 		// 更新元データの無効フラグ確認
-		if (!isDtoActivate(dao.findForKey(dto.getTmmWorkTypeId(), true))) {
+		if (isDtoActivate(dao.findForKey(dto.getTmmWorkTypeId(), true)) == false) {
 			// 更新元データが更新前から無効であれば無効期間は発生しない
 			return;
 		}
@@ -312,14 +312,14 @@ public class WorkTypeRegistBean extends PlatformBean implements WorkTypeRegistBe
 		// 対象レコード識別IDのデータが削除されていないかを確認
 		checkExclusive(dao, dto.getTmmWorkTypeId());
 		// 対象DTOの無効フラグ確認
-		if (!isDtoActivate(dao.findForKey(dto.getTmmWorkTypeId(), true))) {
+		if (isDtoActivate(dao.findForKey(dto.getTmmWorkTypeId(), true)) == false) {
 			// 削除対象が無効であれば無効期間は発生しない
 			return;
 		}
 		// 削除対象コードの履歴情報を取得
 		List<WorkTypeDtoInterface> list = dao.findForHistory(dto.getWorkTypeCode());
 		// 生じる無効期間による削除確認要否を取得
-		if (!needCheckTermForDelete(dto, list)) {
+		if (needCheckTermForDelete(dto, list) == false) {
 			// 無効期間は発生しない
 			return;
 		}
@@ -401,12 +401,9 @@ public class WorkTypeRegistBean extends PlatformBean implements WorkTypeRegistBe
 			List<? extends PlatformDtoInterface> list) throws MospException {
 		// 設定適用マスタDAO取得
 		ScheduleDateDaoInterface scheduleDateDao = createDaoInstance(ScheduleDateDaoInterface.class);
-		// 削除対象の有効日以前で最新の設定適用マスタリストを取得
-		List<ScheduleDateDtoInterface> scheduleDateList = scheduleDateDao.findForActivateDate(dto.getActivateDate(),
-				code);
 		// 無効期間で設定適用マスタ履歴情報を取得(対象DTOの有効日～次の履歴の有効日)
-		scheduleDateList.addAll(scheduleDateDao.findForTerm(dto.getActivateDate(),
-				getNextActivateDate(dto.getActivateDate(), list), code));
+		List<ScheduleDateDtoInterface> scheduleDateList = scheduleDateDao.findForTerm(dto.getActivateDate(),
+				getNextActivateDate(dto.getActivateDate(), list), code);
 		return scheduleDateList;
 	}
 }

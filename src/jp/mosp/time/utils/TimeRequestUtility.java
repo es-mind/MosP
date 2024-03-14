@@ -22,6 +22,7 @@ import java.util.Date;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
+import jp.mosp.framework.base.MospException;
 import jp.mosp.framework.base.MospParams;
 import jp.mosp.framework.constant.MospConst;
 import jp.mosp.framework.utils.DateUtility;
@@ -35,6 +36,8 @@ import jp.mosp.time.dto.settings.HolidayRequestDtoInterface;
 import jp.mosp.time.dto.settings.SubHolidayRequestDtoInterface;
 import jp.mosp.time.dto.settings.SubstituteDtoInterface;
 import jp.mosp.time.dto.settings.WorkOnHolidayRequestDtoInterface;
+import jp.mosp.time.entity.TimeDuration;
+import jp.mosp.time.entity.WorkTypeEntityInterface;
 
 /**
  * 申請における有用なメソッドを提供する。<br>
@@ -214,7 +217,7 @@ public class TimeRequestUtility {
 	 * @return 確認結果(true：前半休がある、false：前半休がない)
 	 */
 	public static boolean hasHolidayRangeAm(Collection<? extends HolidayRangeDtoInterface> dtos) {
-		// 休暇(範囲)情報が前半休であるかを確認
+		// 休暇(範囲)情報に前半休があるかを確認
 		return hasTheHolidayRange(dtos, TimeConst.CODE_HOLIDAY_RANGE_AM);
 	}
 	
@@ -224,8 +227,49 @@ public class TimeRequestUtility {
 	 * @return 確認結果(true：後半休がある、false：後半休がない)
 	 */
 	public static boolean hasHolidayRangePm(Collection<? extends HolidayRangeDtoInterface> dtos) {
-		// 休暇(範囲)情報が後半休であるかを確認
+		// 休暇(範囲)情報に後半休があるかを確認
 		return hasTheHolidayRange(dtos, TimeConst.CODE_HOLIDAY_RANGE_PM);
+	}
+	
+	/**
+	 * 休暇(範囲)情報群に半休があるかを確認する。<br>
+	 * @param dtos 休暇(範囲)情報群
+	 * @return 確認結果(true：半休がある、false：半休がない)
+	 */
+	public static boolean hasHolidayRangeHalf(Collection<? extends HolidayRangeDtoInterface> dtos) {
+		// 休暇(範囲)情報に半休があるかを確認
+		return hasTheHolidayRange(dtos, TimeConst.CODE_HOLIDAY_RANGE_AM)
+				|| hasTheHolidayRange(dtos, TimeConst.CODE_HOLIDAY_RANGE_PM);
+	}
+	
+	/**
+	 * 休暇(範囲)情報群に時間休があるかを確認する。<br>
+	 * @param dtos 休暇(範囲)情報群
+	 * @return 確認結果(true：時間休がある、false：時間休がない)
+	 */
+	public static boolean hasHolidayRangeHour(Collection<? extends HolidayRangeDtoInterface> dtos) {
+		// 休暇(範囲)情報に時間休があるかを確認
+		return hasTheHolidayRange(dtos, TimeConst.CODE_HOLIDAY_RANGE_TIME);
+	}
+	
+	/**
+	 * 休暇(範囲)情報群に全休(前半休+後半休も含む)があるかを確認する。<br>
+	 * @param dtos 休暇(範囲)情報群
+	 * @return 確認結果(true：全休(前半休+後半休も含む)がある、false：全休(前半休+後半休も含む)がない)
+	 */
+	public static boolean isAllRangeHoliday(Collection<? extends HolidayRangeDtoInterface> dtos) {
+		// 休暇(範囲)情報群に全休がある場合
+		if (hasHolidayRangeAll(dtos)) {
+			// 全休(前半休+後半休も含む)があると判断
+			return true;
+		}
+		// 休暇(範囲)情報群に前半休と後半休がある場合
+		if (hasHolidayRangeAm(dtos) && hasHolidayRangePm(dtos)) {
+			// 全休(前半休+後半休も含む)があると判断
+			return true;
+		}
+		// 全休(前半休+後半休も含む)がないと判断
+		return false;
 	}
 	
 	/**
@@ -750,6 +794,69 @@ public class TimeRequestUtility {
 	}
 	
 	/**
+	 * 時間休時間間隔情報群を取得する。<br>
+	 * @param dtos 休暇申請情報群
+	 * @return 時間休時間間隔情報群
+	 */
+	public static Set<TimeDuration> getHourlyHolidayTimes(Collection<HolidayRequestDtoInterface> dtos) {
+		// 時間休時間間隔情報群を準備
+		Set<TimeDuration> durations = new LinkedHashSet<TimeDuration>();
+		// 休暇申請情報毎に処理
+		for (HolidayRequestDtoInterface dto : dtos) {
+			// 時間休でない場合
+			if (isHolidayRangeHour(dto) == false) {
+				// 次の休暇申請情報へ
+				continue;
+			}
+			// 時間休時間間隔情報群に設定
+			durations.add(getHourlyHolidayTime(dto));
+		}
+		// 時間休時間間隔情報群を取得
+		return durations;
+	}
+	
+	/**
+	 * 時間休時間間隔情報を取得する。<br>
+	 * @param dto 休暇申請情報
+	 * @return 時間休時間間隔情報
+	 */
+	public static TimeDuration getHourlyHolidayTime(HolidayRequestDtoInterface dto) {
+		// 開始時刻及び終了時刻を準備
+		int startTime = TimeUtility.getMinutes(dto.getStartTime(), dto.getRequestStartDate());
+		int endTime = TimeUtility.getMinutes(dto.getEndTime(), dto.getRequestEndDate());
+		// 時間間隔を取得
+		return TimeDuration.getInstance(startTime, endTime);
+	}
+	
+	/**
+	 * 半休時始終業時間間隔情報を取得する。<br>
+	 * @param dto      休暇申請情報
+	 * @param workType 勤務形態エンティティ
+	 * @return 半休時始終業時間間隔情報
+	 * @throws MospException 日付の変換に失敗した場合
+	 */
+	public static TimeDuration getWorkTimeForHalfHoliday(HolidayRequestDtoInterface dto,
+			WorkTypeEntityInterface workType) throws MospException {
+		// 開始時刻及び終了時刻を準備
+		int startTime = 0;
+		int endTime = 0;
+		// 前半休である場合
+		if (isHolidayRangeAm(dto)) {
+			// 開始時刻及び終了時刻を取得
+			startTime = TimeUtility.getMinutes(workType.getBackStartTime());
+			endTime = TimeUtility.getMinutes(workType.getBackEndTime());
+		}
+		// 後半休である場合
+		if (isHolidayRangePm(dto)) {
+			// 開始時刻及び終了時刻を取得
+			startTime = TimeUtility.getMinutes(workType.getFrontStartTime());
+			endTime = TimeUtility.getMinutes(workType.getFrontEndTime());
+		}
+		// 時間間隔を取得
+		return TimeDuration.getInstance(startTime, endTime);
+	}
+	
+	/**
 	 * 代休申請情報がその代休種別であるかを確認する。<br>
 	 * @param dto            代休申請情報
 	 * @param subHolidayType 代休種別
@@ -1047,6 +1154,35 @@ public class TimeRequestUtility {
 		}
 		// 申請開始日が対象日以前である休暇申請情報群を取得
 		return startedRequests;
+	}
+	
+	/**
+	 * 情報群にある同一ワークフロー番号の情報を入れ替える。<br>
+	 * ワークフロー番号を有する情報群に
+	 * ワークフロー番号を有する情報と同じワークフロー番号の情報が存在する場合、
+	 * ワークフロー番号を有する情報群からその情報を除去する。<br>
+	 * ワークフロー番号を有する情報群に、引数の情報を足す。<br>
+	 * 同じワークフロー番号の情報が無い場合でも、引数の情報は足す。<br>
+	 * @param dtos ワークフロー番号を有する情報群
+	 * @param dto  ワークフロー番号を有する情報
+	 */
+	public static <T extends WorkflowNumberDtoInterface> void replaceWorkflowDto(Collection<T> dtos, T dto) {
+		// ワークフロー番号を取得
+		long workflow = dto.getWorkflow();
+		// ワークフロー番号を有する情報毎に処理
+		for (T workflowDto : dtos) {
+			// ワークフロー番号が異なる場合
+			if (workflowDto.getWorkflow() != workflow) {
+				// 次の情報へ
+				continue;
+			}
+			// ワークフロー番号を有する情報群からその情報を除去(ワークフロー番号が同じ場合)
+			dtos.remove(workflowDto);
+			// 処理終了
+			break;
+		}
+		// ワークフロー番号を有する情報群に引数の情報を設定
+		dtos.add(dto);
 	}
 	
 }

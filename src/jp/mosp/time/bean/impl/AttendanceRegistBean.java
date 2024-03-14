@@ -75,7 +75,6 @@ import jp.mosp.time.entity.WorkTypeEntityInterface;
 import jp.mosp.time.utils.TimeMessageUtility;
 import jp.mosp.time.utils.TimeNamingUtility;
 import jp.mosp.time.utils.TimeRequestUtility;
-import jp.mosp.time.utils.TimeUtility;
 
 /**
  * 勤怠データ登録処理。<br>
@@ -832,11 +831,6 @@ public class AttendanceRegistBean extends TimeApplicationBean implements Attenda
 			// エラーメッセージを設定
 			TimeMessageUtility.addErrorWorkTypeChangeNotCompleted(mospParams, requestDate);
 		}
-		// 承認済の休暇申請毎に処理
-		for (HolidayRequestDtoInterface holiday : request.getHolidayRequestList(true)) {
-			// 時間休のチェック
-			checkHolidayRequestTime(holiday, dto, request.getDifferenceRequestDto(true));
-		}
 	}
 	
 	/**
@@ -854,45 +848,6 @@ public class AttendanceRegistBean extends TimeApplicationBean implements Attenda
 		Date requestDate = MospUtility.getFirstValue(overtimeRequests).getRequestDate();
 		// エラーメッセージを設定
 		TimeMessageUtility.addErrorOvertimeNotCompleted(mospParams, requestDate);
-	}
-	
-	/**
-	 * 時間休申請チェック。<br>
-	 * @param holidayRequest    休暇申請情報
-	 * @param dto               勤怠情報
-	 * @param differenceRequest 時差出勤申請情報
-	 * @throws MospException インスタンスの取得、或いはSQL実行に失敗した場合
-	 */
-	protected void checkHolidayRequestTime(HolidayRequestDtoInterface holidayRequest, AttendanceDtoInterface dto,
-			DifferenceRequestDtoInterface differenceRequest) throws MospException {
-		// 時間休でない場合
-		if (TimeRequestUtility.isHolidayRangeHour(holidayRequest) == false) {
-			// 処理終了
-			return;
-		}
-		// 追加業務ロジック処理を行った場合
-		if (doAdditionalLogic(TimeConst.CODE_KEY_ADD_ATTENDANCEREGISTBEAN_CHECKHOLIDAYREQUESTTIME, holidayRequest, dto,
-				differenceRequest)) {
-			// 通常の処理は行わない
-			return;
-		}
-		// 勤怠情報から勤務形態コードと勤務日を取得
-		String workTypeCode = dto.getWorkTypeCode();
-		Date targetDate = dto.getWorkDate();
-		// 勤務形態エンティティを取得
-		WorkTypeEntityInterface workType = timeMaster.getWorkTypeEntity(workTypeCode, targetDate, differenceRequest);
-		// 勤務形態の始終業時刻を取得
-		Date startWorkTime = workType.getStartWorkTime();
-		Date endWorkTime = workType.getEndWorkTime();
-		// 時休開始時刻と時休終了時刻を取得
-		Date requestStartTime = TimeUtility.getDefaultDateTime(holidayRequest.getStartTime(), targetDate);
-		Date requestEndTime = TimeUtility.getDefaultDateTime(holidayRequest.getEndTime(), targetDate);
-		// 勤務形態の勤務開始時間と時間休期間の重複確認
-		if (DateUtility.isTermContain(requestStartTime, startWorkTime, endWorkTime) == false
-				|| DateUtility.isTermContain(requestEndTime, startWorkTime, endWorkTime) == false) {
-			// エラーメッセージを設定
-			TimeMessageUtility.addErrorHorlyHolidayOutOfWorkTypeTime(mospParams, startWorkTime, endWorkTime, null);
-		}
 	}
 	
 	/**
@@ -955,24 +910,17 @@ public class AttendanceRegistBean extends TimeApplicationBean implements Attenda
 		// 振出・休出申請がない又は全日振替申請の場合
 		if (workOnHolidayRequestDto == null
 				|| workOnHolidayRequestDto.getSubstitute() == TimeConst.CODE_WORK_ON_HOLIDAY_SUBSTITUTE_ON) {
-			// 取下、下書以外休暇申請の休暇範囲取得
-			int holidayRange = requestUtil.checkHolidayRangeHoliday(requestUtil.getHolidayList(false));
-			// 全休の場合
-			if (holidayRange == TimeConst.CODE_HOLIDAY_RANGE_ALL) {
-				// エラーメッセージ設定
+			// 休暇申請情報群を取得
+			List<HolidayRequestDtoInterface> holidays = requestUtil.getHolidayList(false);
+			// 休暇申請情報群に全休がある場合
+			if (TimeRequestUtility.hasHolidayRangeAll(holidays)) {
+				// エラーメッセージを設定
 				TimeMessageUtility.addErrorNotApplicableForHoliday(mospParams, dto.getWorkDate(), null);
 				return;
-			} else if (holidayRange == TimeConst.CODE_HOLIDAY_RANGE_AM) {
-				// 午前休の場合
-				holidayAm = true;
-			} else if (holidayRange == TimeConst.CODE_HOLIDAY_RANGE_PM) {
-				// 午後休の場合
-				holidayPm = true;
-			} else if (holidayRange == TimeConst.CODE_HOLIDAY_RANGE_AM + TimeConst.CODE_HOLIDAY_RANGE_PM) {
-				// 午前休且つ午後休の場合
-				holidayAm = true;
-				holidayPm = true;
 			}
+			// 範囲毎の休暇申請有無を取得
+			holidayAm = TimeRequestUtility.hasHolidayRangeAm(holidays);
+			holidayPm = TimeRequestUtility.hasHolidayRangePm(holidays);
 		}
 		// 代休範囲フラグ
 		boolean subHolidayAm = false;
@@ -1499,11 +1447,14 @@ public class AttendanceRegistBean extends TimeApplicationBean implements Attenda
 		
 		// 限度時間
 		int limitTime = getDefferenceMinutes(getDefaultStandardDate(), timeSettingDto.getLateEarlyHalf());
-		// 休暇範囲
-		int holidayRange = requestUtil.checkHolidayRangeHoliday(requestUtil.getHolidayList(false));
+		// 休暇申請情報群を取得
+		List<HolidayRequestDtoInterface> holidays = requestUtil.getHolidayList(false);
+		// 範囲毎の休暇申請有無を取得
+		boolean hasHolidayRangeAm = TimeRequestUtility.hasHolidayRangeAm(holidays);
+		boolean hasHolidayRangePm = TimeRequestUtility.hasHolidayRangePm(holidays);
 		// 代休範囲
 		int subHolidayRange = requestUtil.checkHolidayRangeSubHoliday(requestUtil.getSubHolidayList(false));
-		if (holidayRange != TimeConst.CODE_HOLIDAY_RANGE_AM && subHolidayRange != TimeConst.CODE_HOLIDAY_RANGE_AM
+		if (hasHolidayRangeAm == false && subHolidayRange != TimeConst.CODE_HOLIDAY_RANGE_AM
 				&& dto.getLateTime() <= limitTime) {
 			// 午前休でなく且つ遅刻時間が限度時間以下の場合
 			int time = workStart;
@@ -1545,7 +1496,7 @@ public class AttendanceRegistBean extends TimeApplicationBean implements Attenda
 			}
 		}
 		// 休暇申請が午後休でなく代休が午後休でなく早退時間が限度時間以下の場合
-		if (holidayRange != TimeConst.CODE_HOLIDAY_RANGE_PM && subHolidayRange != TimeConst.CODE_HOLIDAY_RANGE_PM
+		if (hasHolidayRangePm == false && subHolidayRange != TimeConst.CODE_HOLIDAY_RANGE_PM
 				&& dto.getLeaveEarlyTime() <= limitTime) {
 			int time = workEnd;
 			int privateTime = dto.getLeaveEarlyTime();

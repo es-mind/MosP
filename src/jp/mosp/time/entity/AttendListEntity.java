@@ -1000,13 +1000,13 @@ public class AttendListEntity implements AttendListEntityInterface {
 	 * 勤務形態略称を取得する。<br>
 	 * <br>
 	 * 次の順番で確認し、勤務形態略称を確定する。<br>
-	 * ・1.休暇申請(全日)であり勤務形態が設定されていない場合：休暇略称<br>
+	 * ・1.休暇申請(全日)であり連続休暇申請中の休暇でない場合：休暇略称<br>
 	 * ・2.代休申請(全日)である場合                          ：所代休or法代休<br>
 	 * ・3.振替出勤申請(半日振替以外)であり半休でない場合    ：勤務形態略称<br>
 	 * ・4.振替出勤(午前)か振替出勤(午後)である場合          ：以下の処理により確定<br>
 	 *   4-1.振替休日がある場合(半日振替の半日振替である場合)：勤務形態略称<br>
 	 *   4-2.振替休日がない場合                              ：半振出<br>
-	 * ・5.振替休日(全休)である場合                          ：所振休or法振休<br>
+	 * ・5.振替休日(全休)である場合(振替出勤をしていない場合)：所振休or法振休<br>
 	 * ・6.振替休日(前半休+後半休)である場合                 ：振休<br>
 	 * ・7.それ以外の場合                    ：以下の処理により確定<br>
 	 *   7-1.休暇申請(半日)がある場合        ：半日(前後)名称に休暇略称(最初の文字)を設定
@@ -1048,8 +1048,9 @@ public class AttendListEntity implements AttendListEntityInterface {
 		List<SubHolidayRequestDtoInterface> subHolidayRequests = requestEntity.getSubHolidayRequestList(statuses);
 		// 振替休日情報群を取得
 		List<SubstituteDtoInterface> substitutes = requestEntity.getSubstituteList(statuses);
-		// 1.休暇申請(全日)であり勤務形態が設定されていない場合
-		if (TimeRequestUtility.hasHolidayRangeAll(holidayRequests) && MospUtility.isEmpty(workTypeCode)) {
+		// 1.休暇申請(全日)であり連続休暇申請中の休暇でない場合
+		if (TimeRequestUtility.hasHolidayRangeAll(holidayRequests)
+				&& isHolidayInSequenceRequest(holidayRequests, workTypeCode) == false) {
 			// 全休の休暇略称を取得
 			return TimeRequestUtility.getAllHolidayAbbr(holidayRequests, holidays, mospParams);
 		}
@@ -1075,8 +1076,11 @@ public class AttendListEntity implements AttendListEntityInterface {
 		}
 		// 5.振替休日(全休)である場合
 		if (TimeRequestUtility.hasHolidayRangeAll(substitutes)) {
-			// 振替休日(全休)の略称を取得
-			return TimeRequestUtility.getSubstituteAbbr(requestEntity.getSubstituteType(statuses), mospParams);
+			// 振替休日(全休)に振替出勤(半日振替以外)をしていない場合
+			if (requestEntity.hasWorkOnHolidayNotHalf(statuses) == false) {
+				// 振替休日(全休)の略称を取得
+				return TimeRequestUtility.getSubstituteAbbr(requestEntity.getSubstituteType(statuses), mospParams);
+			}
 		}
 		// 6.振替休日(前半休+後半休)である場合
 		if (requestEntity.isAmPmHalfSubstitute(statuses)) {
@@ -1152,6 +1156,22 @@ public class AttendListEntity implements AttendListEntityInterface {
 		}
 		// 半日(前)/半日(後)を取得
 		return MospUtility.concat(PfNameUtility.slash(mospParams).charAt(0), ante, post);
+	}
+	
+	/**
+	 * 連続休暇申請中の休暇であるかを確認する。<br>
+	 * @param holidayRequests 休暇申請群
+	 * @param workType        勤務形態コード
+	 * @return 確認結果(true：連続休暇申請中の休暇である、false：そうでない)
+	 */
+	protected boolean isHolidayInSequenceRequest(List<HolidayRequestDtoInterface> holidayRequests, String workType) {
+		// 連続休暇申請である場合
+		if (TimeUtility.getHolidayUseDays(holidayRequests) > TimeConst.HOLIDAY_TIMES_ALL) {
+			// 勤務形態コードが設定されているかを確認
+			return MospUtility.isEmpty(workType) == false;
+		}
+		// 連続休暇申請中の休暇でないと判断
+		return false;
 	}
 	
 	/**

@@ -2166,6 +2166,11 @@ public final class TimeConst {
 	public static final int		DATE_MONTH_MAX_DAY													= 31;
 	
 	/**
+	 * 月末指定時の日の値。<br>
+	 */
+	public static final int		DAY_END_OF_MONTH													= Integer.MIN_VALUE;
+	
+	/**
 	 * 休暇回数(全休)
 	 */
 	public static final float	HOLIDAY_TIMES_ALL													= 1F;
@@ -2208,7 +2213,7 @@ public final class TimeConst {
 	/**
 	 * 勤務時間（6時間）。<br>
 	 */
-	public static final int		TIME_WORK_TIME_6													=360;
+	public static final int		TIME_WORK_TIME_6													= 360;
 	
 	/**
 	 * MosPアプリケーション設定キー(法定労働時間(分))。<br>
@@ -2331,11 +2336,6 @@ public final class TimeConst {
 	public static final String	CODE_KEY_ADD_TOTALTIMEREGISTBEAN_DELETE2							= "Add_TotalTimeRegistBean_Delete2";
 	
 	/**
-	 * 時間休申請チェックの追加処理用コードキー。<br>
-	 */
-	public static final String	CODE_KEY_ADD_ATTENDANCEREGISTBEAN_CHECKHOLIDAYREQUESTTIME			= "Add_AttendanceRegistBean_CheckHolidayRequestTime";
-	
-	/**
 	 * 申請時確認処理の追加処理用コードキー。<br>
 	 */
 	public static final String	CODE_KEY_ADD_ATTENDANCEREGISTBEAN_CHECKAPPLI						= "Add_AttendanceRegistBean_CheckAppli";
@@ -2346,7 +2346,7 @@ public final class TimeConst {
 	public static final String	CODE_KEY_ADD_HOLIDAYREQUESTREGISTBEAN_CHECKTIMEHOLIDAYLIMIT			= "Add_HolidayRequestRegistBean_CheckTimeHolidayLimit";
 	
 	/**
-	 * 編集時の確認処理の追加処理用コードキー。<br>
+	 * 時間単位休暇確認処理の追加処理用コードキー。<br>
 	 */
 	public static final String	CODE_KEY_ADD_HOLIDAYREQUESTREGISTBEAN_CHECKTIMEHOLIDAY				= "Add_HolidayRequestRegistBean_CheckTimeHoliday";
 	

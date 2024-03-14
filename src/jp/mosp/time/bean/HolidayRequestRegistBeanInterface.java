@@ -124,13 +124,6 @@ public interface HolidayRequestRegistBeanInterface extends BaseBeanInterface {
 	void checkCancel(HolidayRequestDtoInterface dto);
 	
 	/**
-	 * 時間単位休暇申請時の確認処理を行う。<br>
-	 * @param dto 対象DTO
-	 * @throws MospException SQLの作成に失敗した場合、或いはSQL例外が発生した場合
-	 */
-	void checkTimeHoliday(HolidayRequestDtoInterface dto) throws MospException;
-	
-	/**
 	 * 勤怠データを削除する。<br>
 	 * @param dto 対象DTO
 	 * @throws MospException SQLの作成に失敗した場合、或いはSQL例外が発生した場合

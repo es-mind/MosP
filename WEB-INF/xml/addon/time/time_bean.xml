@@ -470,10 +470,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 	<Model key="AfterApplyAttendancesExecute">
 		jp.mosp.time.bean.impl.AfterApplyAttendancesExecuteBean
 	</Model>
+	<Model key="HolidayHourlyWorkTypeCheck">
+		jp.mosp.time.bean.impl.HolidayHourlyWorkTypeCheckBean
+	</Model>
 	
 	<Model key="AttendCalcReference">
 		jp.mosp.time.bean.impl.AttendCalcReferenceBean
 	</Model>
+	
 	<Model key="TotalTimeEntityReference">
 		jp.mosp.time.bean.impl.TotalTimeEntityReferenceBean
 	</Model>
@@ -521,7 +525,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 	<Model key="TimeRecord">
 		jp.mosp.time.bean.impl.TimeRecordBean
 	</Model>
-
+	
 	<!-- export -->
 	<Code key="TimeExportBean">
 		<!-- 出勤簿データ -->
@@ -547,6 +551,23 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 		<!-- 有給休暇取得状況データ -->
 		<CodeItem key="export_used_paid_holiday_data">
 			<ItemName>jp.mosp.time.bean.impl.UsedPaidHolidayDataExportBean</ItemName>
+		</CodeItem>
+	</Code>
+	
+	<!-- 勤怠申請時確認処理 -->
+	<Code key="Add_AttendanceRegistBean_CheckAppli">
+		<CodeItem key="jp.mosp.time.bean.impl.HolidayHourlyWorkTypeCheckBean">
+			<ViewIndex>1000</ViewIndex>
+		</CodeItem>
+	</Code>
+	
+	<!-- 時間単位休暇確認追加処理 -->
+	<Code key="Add_HolidayRequestRegistBean_CheckTimeHoliday">
+		<CodeItem key="jp.mosp.time.bean.impl.HolidayHourlyDuplicateCheckBean">
+			<ViewIndex>1000</ViewIndex>
+		</CodeItem>
+		<CodeItem key="jp.mosp.time.bean.impl.HolidayHourlyWorkTypeCheckBean">
+			<ViewIndex>1010</ViewIndex>
 		</CodeItem>
 	</Code>
 	

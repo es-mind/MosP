@@ -320,6 +320,12 @@ public class TmdSubstituteDao extends PlatformDao implements SubstituteDaoInterf
 			sb.append(and());
 			sb.append(equal(COL_PERSONAL_ID));
 			sb.append(in(COL_WORK_DATE, workDates.size()));
+			sb.append(and());
+			sb.append(COL_WORKFLOW);
+			sb.append(in());
+			sb.append(leftParenthesis());
+			sb.append(workflowDao.getSubQueryForNotEqualWithdrawn());
+			sb.append(rightParenthesis());
 			prepareStatement(sb.toString());
 			setParam(index++, personalId);
 			setParamsDateIn(workDates);

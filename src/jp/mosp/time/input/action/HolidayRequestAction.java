@@ -790,7 +790,7 @@ public class HolidayRequestAction extends TimeAction {
 		// VOから休暇範囲を取得
 		int range = getHolidayRange(type1, type2);
 		// VOから時休開始時刻と時休時間数を取得
-		Date startTime = getEditStartTime();
+		Date startTime = getEditStartTime(range);
 		int hours = MospUtility.getInt(vo.getPltEditEndTime());
 		// VOから申請理由を取得
 		String reason = vo.getTxtEditRequestReason();
@@ -842,7 +842,7 @@ public class HolidayRequestAction extends TimeAction {
 		// VOから休暇範囲を取得
 		int range = getHolidayRange(type1, type2);
 		// VOから時休開始時刻と時休時間数を取得
-		Date startTime = getEditStartTime();
+		Date startTime = getEditStartTime(range);
 		int hours = MospUtility.getInt(vo.getPltEditEndTime());
 		// VOから申請理由を取得
 		String reason = vo.getTxtEditRequestReason();
@@ -1711,12 +1711,18 @@ public class HolidayRequestAction extends TimeAction {
 	
 	/**
 	 * 休暇開始時刻を取得する。<br>
+	 * @param range 休暇範囲
 	 * @return 休暇開始時刻
 	 * @throws MospException インスタンスの取得或いはSQL実行に失敗した場合
 	 */
-	protected Date getEditStartTime() throws MospException {
+	protected Date getEditStartTime(int range) throws MospException {
 		// VOを準備
 		HolidayRequestVo vo = (HolidayRequestVo)mospParams.getVo();
+		// 時間単位休暇でない場合
+		if (range != TimeConst.CODE_HOLIDAY_RANGE_TIME) {
+			// 休暇開始日を取得
+			return getEditStartDate();
+		}
 		// 休暇開始時刻を取得
 		return DateUtility.addMinute(
 				DateUtility.addHour(getEditStartDate(), MospUtility.getInt(vo.getPltEditStartHour())),

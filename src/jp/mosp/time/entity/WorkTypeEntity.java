@@ -827,6 +827,8 @@ public class WorkTypeEntity implements WorkTypeEntityInterface {
 		int overtimeMinutes = requestEntity.getOvertimeMinutesBeforeWork(statuses);
 		// 振出・休出申請(休出申請)の出勤予定時刻を取得
 		Date workOnHolidayStartTime = requestEntity.getWorkOnHolidayStartTime(statuses);
+		// 初回連続時間休時刻(開始時刻及び終了時刻)を取得
+		List<Date> holidayTimeList = requestEntity.getHourlyHolidayFirstSequenceTimes(statuses);
 		// 1.全休の場合
 		if (requestEntity.isAllHoliday(statuses)) {
 			return null;
@@ -843,16 +845,21 @@ public class WorkTypeEntity implements WorkTypeEntityInterface {
 				// 前半休終了時刻を設定(前半休の場合は前半休終了時刻が前残業の限度)
 				startTime = frontEndTime;
 			}
-			// 勤務日時刻に調整
-			return TimeUtility.getDateTime(targetDate, startTime);
+			// 始業時刻を取得(勤務日時刻に調整)
+			Date workDateStartTime = TimeUtility.getDateTime(targetDate, startTime);
+			// 始業時刻と時間単位有給休暇が接する場合
+			if (holidayTimeList.isEmpty() == false && holidayTimeList.get(0).compareTo(workDateStartTime) == 0) {
+				// 時間単位有給休暇の終了時刻を取得
+				workDateStartTime = holidayTimeList.get(1);
+			}
+			// 始業時刻を取得
+			return workDateStartTime;
 		}
 		// 3.振出・休出申請(休出申請)がある場合
 		if (workOnHolidayStartTime != null) {
 			// 勤務日時刻に調整(振出・休出申請(休出申請)の出勤予定時刻)
 			return workOnHolidayStartTime;
 		}
-		// 初回連続時間休時刻(開始時刻及び終了時刻)を取得
-		List<Date> holidayTimeList = requestEntity.getHourlyHolidayFirstSequenceTimes(statuses);
 		// 4.時短時間1が設定されている場合
 		if (isShort1TimeSet()) {
 			// 時短時間1終了時刻(勤務日時刻に調整)を取得
@@ -1179,17 +1186,8 @@ public class WorkTypeEntity implements WorkTypeEntityInterface {
 		return true;
 	}
 	
-	/**
-	 * 時間間隔(0:00からの分)を取得する。<br>
-	 * <br>
-	 * 妥当な時間間隔が取得できなかった場合は、0-0の(妥当でない)時間間隔を返す。<br>
-	 * <br>
-	 * @param startItemCode 勤務形態項目コード(開始時刻)
-	 * @param endItemCode   勤務形態項目コード(終了時刻)
-	 * @return 時間間隔(0:00からの分)
-	 * @throws MospException 日付の変換に失敗した場合
-	 */
-	protected TimeDuration getTimeDuration(String startItemCode, String endItemCode) throws MospException {
+	@Override
+	public TimeDuration getTimeDuration(String startItemCode, String endItemCode) throws MospException {
 		// 時刻(0:00からの分)を取得
 		int startTime = getItemMinutes(startItemCode);
 		int endTime = getItemMinutes(endItemCode);

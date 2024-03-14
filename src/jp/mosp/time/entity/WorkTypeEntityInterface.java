@@ -717,4 +717,16 @@ public interface WorkTypeEntityInterface extends ActivateDtoInterface {
 	 */
 	WorkTypeItemDtoInterface getWorkTypeItem(String workTypeItemCode);
 	
+	/**
+	 * 時間間隔(0:00からの分)を取得する。<br>
+	 * <br>
+	 * 妥当な時間間隔が取得できなかった場合は、0-0の(妥当でない)時間間隔を返す。<br>
+	 * <br>
+	 * @param startItemCode 勤務形態項目コード(開始時刻)
+	 * @param endItemCode   勤務形態項目コード(終了時刻)
+	 * @return 時間間隔(0:00からの分)
+	 * @throws MospException 日付の変換に失敗した場合
+	 */
+	TimeDuration getTimeDuration(String startItemCode, String endItemCode) throws MospException;
+	
 }

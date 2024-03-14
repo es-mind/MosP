@@ -506,23 +506,18 @@ public class SubstituteRegistBean extends TimeBean implements SubstituteRegistBe
 				return;
 			}
 		}
-		// 休暇申請のチェック
-		int holidayRange = requestUtil.checkHolidayRangeHoliday(requestUtil.getHolidayList(false));
-		if (holidayRange == TimeConst.CODE_HOLIDAY_RANGE_ALL
-				|| holidayRange == TimeConst.CODE_HOLIDAY_RANGE_AM + TimeConst.CODE_HOLIDAY_RANGE_PM) {
-			// 全休・前半休及び後半休の場合
-			addOthersRequestErrorMessage(dto.getSubstituteDate(), mospParams.getName("Holiday"));
+		// 休暇申請情報群を取得
+		List<HolidayRequestDtoInterface> holidays = requestUtil.getHolidayList(false);
+		// 休暇申請情報群に全休(前半休+後半休も含む)がある場合
+		if (TimeRequestUtility.isAllRangeHoliday(holidays)) {
+			// エラーメッセージを設定
+			addOthersRequestErrorMessage(dto.getSubstituteDate(), TimeNamingUtility.holiday(mospParams));
 			return;
-		} else if (holidayRange == TimeConst.CODE_HOLIDAY_RANGE_AM) {
-			// 前半休の場合
-			holidayRangeAm = true;
-		} else if (holidayRange == TimeConst.CODE_HOLIDAY_RANGE_PM) {
-			// 後半休の場合
-			holidayRangePm = true;
-		} else if (holidayRange == TimeConst.CODE_HOLIDAY_RANGE_TIME) {
-			// 時間休の場合
-			holidayRangeTime = true;
 		}
+		// 範囲毎の休暇申請有無を取得
+		holidayRangeAm = TimeRequestUtility.hasHolidayRangeAm(holidays);
+		holidayRangePm = TimeRequestUtility.hasHolidayRangePm(holidays);
+		holidayRangeTime = TimeRequestUtility.hasHolidayRangeHour(holidays);
 		// 代休申請のチェック
 		int subHolidayRange = requestUtil.checkHolidayRangeSubHoliday(requestUtil.getSubHolidayList(false));
 		if (subHolidayRange == TimeConst.CODE_HOLIDAY_RANGE_ALL
@@ -871,11 +866,11 @@ public class SubstituteRegistBean extends TimeBean implements SubstituteRegistBe
 		Date beforeDate = DateUtility.addDay(
 				DateUtility.addMonth(workDate, -timeSettingDto.getTransferAheadLimitMonth()),
 				-timeSettingDto.getTransferAheadLimitDate());
-		Date afterDate = DateUtility.addDay(DateUtility.addMonth(workDate, timeSettingDto.getTransferLaterLimitMonth()),
+		Date afterDate = TimeUtility.getLimitDate(workDate, timeSettingDto.getTransferLaterLimitMonth(),
 				timeSettingDto.getTransferLaterLimitDate());
 		// 振替日取得
 		Date substituteDate = dto.getSubstituteDate();
-		if (!substituteDate.after(beforeDate) || !substituteDate.before(afterDate)) {
+		if (!substituteDate.after(beforeDate) || substituteDate.after(afterDate)) {
 			mospParams.addErrorMessage(TimeMessageConst.MSG_TRANSFER_DAY_EXCESS, getStringDate(dto.getSubstituteDate()),
 					null);
 		}
@@ -1298,10 +1293,11 @@ public class SubstituteRegistBean extends TimeBean implements SubstituteRegistBe
 		// 申請ユーティリティクラス準備
 		RequestUtilBeanInterface requestUtil = (RequestUtilBeanInterface)createBean(RequestUtilBeanInterface.class);
 		requestUtil.setRequests(personalId, substituteDate);
-		// 振替日の休暇範囲確認
-		int holidayRange = requestUtil.checkHolidayRangeHoliday(requestUtil.getHolidayList(false));
-		if (holidayRange == TimeConst.CODE_HOLIDAY_RANGE_AM || holidayRange == TimeConst.CODE_HOLIDAY_RANGE_PM) {
-			// 休暇範囲が午前休か午後休の場合、半休判定
+		// 休暇申請情報群を取得
+		List<HolidayRequestDtoInterface> holidays = requestUtil.getHolidayList(false);
+		// 休暇範囲が午前休か午後休の場合
+		if (TimeRequestUtility.hasHolidayRangeHalf(holidays)) {
+			// 半休判定
 			return holidayTimes + TimeConst.HOLIDAY_TIMES_HALF;
 		}
 		// 振替日の代休範囲確認
@@ -1327,7 +1323,7 @@ public class SubstituteRegistBean extends TimeBean implements SubstituteRegistBe
 			// 休暇範囲が午前休か午後休の場合、半休判定
 			return holidayTimes + TimeConst.HOLIDAY_TIMES_HALF;
 		}
-		return holidayRange;
+		return 0;
 	}
 	
 	/**

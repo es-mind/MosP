@@ -22,7 +22,7 @@ import java.util.Comparator;
 import jp.mosp.time.dto.settings.HolidayRequestListDtoInterface;
 
 /**
- *
+ * 休暇申請一覧情報比較クラス(申請日)。<br>
  */
 public class HolidayRequestRequestDateComparator implements Comparator<HolidayRequestListDtoInterface> {
 	
@@ -38,6 +38,7 @@ public class HolidayRequestRequestDateComparator implements Comparator<HolidayRe
 					// 休暇範囲差分
 					return dto1.getHolidayRange() - dto2.getHolidayRange();
 				}
+				return compareEndTime;
 			}
 			return compareEndDate;
 		}

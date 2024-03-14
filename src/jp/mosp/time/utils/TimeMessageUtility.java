@@ -229,13 +229,13 @@ public class TimeMessageUtility {
 	 * メッセージコード（休日出勤時、休憩時間が0時間の場合の入力確認）<br>
 	 * 休憩を入力してください。このまま申請する場合はキャンセルを押してください。<br>
 	 */
-	public static final String	MSG_REST_TIME_CHECK									= "TMW0343";
+	public static final String		MSG_REST_TIME_CHECK					= "TMW0343";
 	
 	/**
 	 * メッセージコード（休日出勤時、休憩時間が0時間の場合）<br>
 	 * 勤務時間が6時間を超えています。休憩を入力してください。<br>
 	 */
-	public static final String	MSG_REST_TIME_CHECK_ERROR							= "TMW0344";
+	public static final String		MSG_REST_TIME_CHECK_ERROR			= "TMW0344";
 	
 	/**
 	 * メッセージコード(有休取得情報出力時に分割付与等の可能性が有る場合。)<br>
@@ -244,9 +244,15 @@ public class TimeMessageUtility {
 	public static final String		MSG_W_PAID_HOLIDAY_SPLIT			= "TMW0342";
 	
 	/**
-	 * メッセージコード(表示設定説明)。<br>
-	 * %1%の「%2%」の表示欄に反映される時間です。<br>
+	 * メッセージコード(半日休暇と時間単位休暇の重複)<br>
+	 * 入力された半休と時間休で重複している箇所があります。半休と時間休を同日に取得する場合、時間休は半休取得時の勤務形態の時間内(%1%)に申請してください。<br>
 	 */
+	public static final String		MSG_W_HALF_AND_HOULY_HOLIDAY		= "TMW0345";
+	
+	/**
+	* メッセージコード(表示設定説明)。<br>
+	* %1%の「%2%」の表示欄に反映される時間です。<br>
+	*/
 	public static final String		MSG_DISPLAY_SETTING_DESCRIPTION		= "TMI0011";
 	
 	/**
@@ -1005,6 +1011,23 @@ public class TimeMessageUtility {
 	}
 	
 	/**
+	 * 入力された半休と時間休で重複している箇所があります。半休と時間休を同日に取得する場合、時間休は半休取得時の勤務形態の時間内(%1%)に申請してください。(TMW0345)<br>
+	 * @param mospParams    MosP処理情報
+	 * @param startWorkTime 始業時刻
+	 * @param endWorkTime   終業時刻
+	 * @param row           対象行インデックス
+	 * @throws MospException 日付の変換に失敗した場合
+	 */
+	public static void addErrorHalfAndHoulyHolidayDuplicate(MospParams mospParams, Date startWorkTime, Date endWorkTime,
+			Integer row) throws MospException {
+		// 置換文字列を準備
+		Date standatdDate = DateUtility.getDefaultTime();
+		String rep = TransStringUtility.getHourColonMinuteTerm(mospParams, startWorkTime, endWorkTime, standatdDate);
+		// エラーメッセージを設定
+		MessageUtility.addErrorMessage(mospParams, MSG_W_HALF_AND_HOULY_HOLIDAY, row, rep);
+	}
+	
+	/**
 	 * 連続休暇申請期間中に振替出勤申請できません。振替出勤申請したい場合は管理者に連絡してください。(TMW0288)<br>
 	 * @param mospParams MosP処理情報
 	 */
@@ -1173,8 +1196,9 @@ public class TimeMessageUtility {
 	/**
 	 * 半休と時間休は同日に申請できません。休暇年月日または休暇範囲を選択し直してください。(TMW0245)<br>
 	 * @param mospParams MosP処理情報
+	 * @param row        対象行インデックス
 	 */
-	public static void addErrorHalfAndHourlyHoliday(MospParams mospParams) {
+	public static void addErrorHalfAndHourlyHoliday(MospParams mospParams, Integer row) {
 		// 半休と時間休文字列を準備
 		StringBuilder range = new StringBuilder(TimeNamingUtility.holidayHalf(mospParams));
 		range.append(TimeNamingUtility.and(mospParams));
@@ -1189,7 +1213,7 @@ public class TimeMessageUtility {
 		correction.append(TimeNamingUtility.or(mospParams));
 		correction.append(TimeNamingUtility.holidayRange(mospParams));
 		// MosP処理情報にエラーメッセージを追加
-		MessageUtility.addErrorMessage(mospParams, MSG_CAN_NOT_REQUEST, range.toString(), application.toString(),
+		MessageUtility.addErrorMessage(mospParams, MSG_CAN_NOT_REQUEST, row, range.toString(), application.toString(),
 				correction.toString());
 	}
 	

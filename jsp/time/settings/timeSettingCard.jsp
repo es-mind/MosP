@@ -131,7 +131,7 @@ TimeSettingCardVo vo = (TimeSettingCardVo)params.getVo();
 				<input type="text" class="Number2RequiredTextBox" id="txtTransferAheadLimitMonth" name="txtTransferAheadLimitMonth" value="<%=HtmlUtility.escapeHTML(vo.getTxtTransferAheadLimitMonth())%>" />&nbsp;<label for="txtTransferAheadLimitMonth"><%=params.getName("Months")%></label>
 				<input type="text" class="Number2RequiredTextBox" id="txtTransferAheadLimitDate" name="txtTransferAheadLimitDate" value="<%=HtmlUtility.escapeHTML(vo.getTxtTransferAheadLimitDate())%>" />&nbsp;<label for="txtTransferAheadLimitDate"><%=params.getName("Day")%></label>
 			</td>
-			<td class="TitleTd"><%=HtmlUtility.getRequiredMark()%><%=params.getName("ClosedVibration", "Acquisition", "TimeLimit", "FrontParentheses", "WorkingHoliday", "Later", "BackParentheses")%></td>
+			<td class="TitleTd"><%=HtmlUtility.getRequiredMark()%><%= TimeNamingUtility.substituteHolidayLaterLimit(params) %></td>
 			<td class="InputTd">
 				<input type="text" class="Number2RequiredTextBox" id="txtTransferLaterLimitMonth" name="txtTransferLaterLimitMonth" value="<%=HtmlUtility.escapeHTML(vo.getTxtTransferLaterLimitMonth())%>" />&nbsp;<label for="txtTransferLaterLimitMonth"><%=params.getName("Months")%></label>
 				<input type="text" class="Number2RequiredTextBox" id="txtTransferLaterLimitDate" name="txtTransferLaterLimitDate" value="<%=HtmlUtility.escapeHTML(vo.getTxtTransferLaterLimitDate())%>" />&nbsp;<label for="txtTransferLaterLimitDate"><%=params.getName("Day")%></label>

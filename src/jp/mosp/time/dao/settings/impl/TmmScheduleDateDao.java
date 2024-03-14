@@ -259,34 +259,6 @@ public class TmmScheduleDateDao extends PlatformDao implements ScheduleDateDaoIn
 	}
 	
 	@Override
-	public List<ScheduleDateDtoInterface> findForActivateDate(Date activateDate, String targetCode)
-			throws MospException {
-		try {
-			index = 1;
-			StringBuffer sb = getSelectQuery(getClass());
-			sb.append(where());
-			sb.append(deleteFlagOff());
-			sb.append(and());
-			sb.append(equal(COL_WORK_TYPE_CODE));
-			sb.append(and());
-			sb.append(equal(COL_INACTIVATE_FLAG, MospConst.INACTIVATE_FLAG_OFF));
-			sb.append(and());
-			sb.append(getQueryForMaxActivateDate());
-			sb.append(getOrderByColumn(COL_SCHEDULE_CODE, COL_SCHEDULE_DATE));
-			prepareStatement(sb.toString());
-			setParam(index++, targetCode);
-			setParam(index++, activateDate);
-			executeQuery();
-			return mappingAll();
-		} catch (Throwable e) {
-			throw new MospException(e);
-		} finally {
-			releaseResultSet();
-			releasePreparedStatement();
-		}
-	}
-	
-	@Override
 	public List<ScheduleDateDtoInterface> findForTerm(Date fromActivateDate, Date toActivateDate, String targetCode)
 			throws MospException {
 		try {
@@ -300,11 +272,11 @@ public class TmmScheduleDateDao extends PlatformDao implements ScheduleDateDaoIn
 			// 有効日範囲による条件
 			if (fromActivateDate != null) {
 				sb.append(and());
-				sb.append(greater(COL_ACTIVATE_DATE));
+				sb.append(greaterEqual(COL_SCHEDULE_DATE));
 			}
 			if (toActivateDate != null) {
 				sb.append(and());
-				sb.append(less(COL_ACTIVATE_DATE));
+				sb.append(less(COL_SCHEDULE_DATE));
 			}
 			// 勤務形態コード
 			sb.append(and());

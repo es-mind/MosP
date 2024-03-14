@@ -329,6 +329,36 @@ public class TimeNamingUtility {
 	
 	/**
 	 * @param mospParams MosP処理情報
+	 * @return 振休取得期限
+	 */
+	public static String substituteHolidayLimit(MospParams mospParams) {
+		return mospParams.getName("ClosedVibration", "Acquisition", "TimeLimit");
+	}
+	
+	/**
+	 * @param mospParams MosP処理情報
+	 * @return 振休取得期限(休出後)
+	 */
+	public static String substituteHolidayLaterLimit(MospParams mospParams) {
+		StringBuilder later = new StringBuilder();
+		later.append(workOnHolidayNotSubstituteAbbr(mospParams));
+		later.append(mospParams.getName("Later"));
+		StringBuilder sb = new StringBuilder();
+		sb.append(substituteHolidayLimit(mospParams));
+		sb.append(PfNameUtility.parentheses(mospParams, later.toString()));
+		return sb.toString();
+	}
+	
+	/**
+	 * @param mospParams MosP処理情報
+	 * @return 月末指定
+	 */
+	public static String specifyEndOfMonth(MospParams mospParams) {
+		return mospParams.getName("Month", "TheEnd", "Given");
+	}
+	
+	/**
+	 * @param mospParams MosP処理情報
 	 * @return 休暇
 	 */
 	public static String holiday(MospParams mospParams) {

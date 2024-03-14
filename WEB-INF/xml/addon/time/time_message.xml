@@ -397,6 +397,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 	<Message key="TMW0344">
 		<MessageBody>勤務時間が6時間を超えています。休憩を入力してください。</MessageBody>
 	</Message>
+	<Message key="TMW0345">
+		<MessageBody>入力された半休と時間休で重複している箇所があります。半休と時間休を同日に取得する場合、時間休は半休取得時の勤務形態の時間内(%1%)に申請してください。</MessageBody>
+	</Message>
 	
 	<!-- Information -->
 	<Message key="TMI0001">

@@ -78,6 +78,7 @@ import jp.mosp.time.portal.bean.impl.PortalTimeCardBean;
 import jp.mosp.time.utils.HolidayUtility;
 import jp.mosp.time.utils.TimeMessageUtility;
 import jp.mosp.time.utils.TimeNamingUtility;
+import jp.mosp.time.utils.TimeRequestUtility;
 import jp.mosp.time.utils.TimeUtility;
 
 /**
@@ -1115,15 +1116,14 @@ public class AttendanceCardAction extends TimeAction {
 				// 処理終了
 				return true;
 			}
+			// 休暇申請情報群を取得
+			List<HolidayRequestDtoInterface> holidays = requestUtil.getHolidayList(true);
 			// 半休＋半休の場合
-			if (requestUtil.checkHolidayRangeHoliday(
-					requestUtil.getHolidayList(true)) == TimeConst.CODE_HOLIDAY_RANGE_HALF_AND_HALF) {
+			if (TimeRequestUtility.hasHolidayRangeAm(holidays) && TimeRequestUtility.hasHolidayRangePm(holidays)) {
 				setWorkTypeForHolidayAllDay();
 				return true;
-				
 			}
 		}
-		
 		return false;
 	}
 	
@@ -1530,19 +1530,19 @@ public class AttendanceCardAction extends TimeAction {
 			holidayAm = substitute == TimeConst.CODE_WORK_ON_HOLIDAY_SUBSTITUTE_PM;
 			holidayPm = substitute == TimeConst.CODE_WORK_ON_HOLIDAY_SUBSTITUTE_AM;
 		}
-		// 承認済休暇申請情報の休暇範囲
-		int rangeHoliday = requestUtil.checkHolidayRangeHoliday(requestUtil.getHolidayList(true));
+		// 休暇申請情報群(承認済)を取得
+		List<HolidayRequestDtoInterface> holidays = requestUtil.getHolidayList(true);
 		// 承認済代休申請情報の休暇範囲
 		int rangeSubHoliday = requestUtil.checkHolidayRangeSubHoliday(requestUtil.getSubHolidayList(true));
 		// 承認済振替休日申請情報の休暇範囲
 		int rangeSubstitute = requestUtil.checkHolidayRangeSubstitute(requestUtil.getSubstituteList(true));
 		// 午前休の場合
-		if (rangeHoliday == TimeConst.CODE_HOLIDAY_RANGE_AM || rangeSubHoliday == TimeConst.CODE_HOLIDAY_RANGE_AM
+		if (TimeRequestUtility.hasHolidayRangeAm(holidays) || rangeSubHoliday == TimeConst.CODE_HOLIDAY_RANGE_AM
 				|| rangeSubstitute == TimeConst.CODE_HOLIDAY_RANGE_AM) {
 			holidayAm = true;
 		}
 		// 午後休の場合
-		if (rangeHoliday == TimeConst.CODE_HOLIDAY_RANGE_PM || rangeSubHoliday == TimeConst.CODE_HOLIDAY_RANGE_PM
+		if (TimeRequestUtility.hasHolidayRangePm(holidays) || rangeSubHoliday == TimeConst.CODE_HOLIDAY_RANGE_PM
 				|| rangeSubstitute == TimeConst.CODE_HOLIDAY_RANGE_PM) {
 			holidayPm = true;
 		}
@@ -1633,44 +1633,48 @@ public class AttendanceCardAction extends TimeAction {
 			setPltWorkType(workTypeCode, timeReference().workType().getParticularWorkTypeName(workTypeCode));
 			// 申請モード設定(休日承認済)
 			vo.setModeCardEdit(MODE_APPLICATION_COMPLETED_HOLIDAY);
-		} else {
-			ScheduleDtoInterface scheduleDto = scheduleUtil.getSchedule(personalId, targetDate);
-			if (mospParams.hasErrorMessage()) {
-				return;
-			}
-			int rangeHoliday = requestUtil.checkHolidayRangeHoliday(requestUtil.getHolidayList(true));
-			int rangeSubHoliday = requestUtil.checkHolidayRangeSubHoliday(requestUtil.getSubHolidayList(true));
-			int rangeSubstitute = requestUtil.checkHolidayRangeSubstitute(requestUtil.getSubstituteList(true));
-			boolean holidayAm = rangeHoliday == TimeConst.CODE_HOLIDAY_RANGE_AM
-					|| rangeSubHoliday == TimeConst.CODE_HOLIDAY_RANGE_AM
-					|| rangeSubstitute == TimeConst.CODE_HOLIDAY_RANGE_AM;
-			boolean holidayPm = rangeHoliday == TimeConst.CODE_HOLIDAY_RANGE_PM
-					|| rangeSubHoliday == TimeConst.CODE_HOLIDAY_RANGE_PM
-					|| rangeSubstitute == TimeConst.CODE_HOLIDAY_RANGE_PM;
-			// 全休の場合
-			if (rangeHoliday == 5 || rangeSubHoliday == 5 || rangeSubstitute == 5 || (holidayAm && holidayPm)) {
-				// 全休に設定
-				setWorkTypeForHolidayAllDay();
-				return;
-			}
-			// 勤務形態プルダウン用配列取得(勤務形態略称【出勤時刻～退勤時刻】)
-			String[][] aryWorkType = getWorkTypeArray(scheduleDto.getPatternCode(), holidayAm, holidayPm);
-			int workTypeChangeFlag = scheduleDto.getWorkTypeChangeFlag();
-			if (workTypeChangeFlag == MospConst.DELETE_FLAG_OFF) {
-				// 勤務形態変更可の場合
-				// VOに勤務形態コードを設定
-				vo.setPltWorkType(workTypeCode);
-				// 勤務形態プルダウン設定(勤務形態略称【出勤時刻～退勤時刻】)
-				vo.setAryPltWorkType(aryWorkType);
-			} else if (workTypeChangeFlag == MospConst.DELETE_FLAG_ON) {
-				// 勤務形態変更不可の場合
-				setPltWorkType(workTypeCode, MospUtility.getCodeName(workTypeCode, aryWorkType));
-			}
-			// 追加業務ロジック処理がある場合
-			doAdditionalLogic(TimeConst.CODE_KEY_CHANGE_WORK_TYPE_PULLDOWN);
-			// 申請モード設定(新規)
-			vo.setModeCardEdit(TimeConst.MODE_APPLICATION_NEW);
+			// 勤怠申請(下書或いは1次戻)が存在する場合、勤務形態、申請モードを設定(上書)
+			setWorkTypeForNotApplicatedAttendance(requestUtil);
+			// 処理終了
+			return;
 		}
+		ScheduleDtoInterface scheduleDto = scheduleUtil.getSchedule(personalId, targetDate);
+		if (mospParams.hasErrorMessage()) {
+			return;
+		}
+		// 休暇申請情報群を取得
+		List<HolidayRequestDtoInterface> holidays = requestUtil.getHolidayList(true);
+		int rangeSubHoliday = requestUtil.checkHolidayRangeSubHoliday(requestUtil.getSubHolidayList(true));
+		int rangeSubstitute = requestUtil.checkHolidayRangeSubstitute(requestUtil.getSubstituteList(true));
+		boolean holidayAm = TimeRequestUtility.hasHolidayRangeAm(holidays)
+				|| rangeSubHoliday == TimeConst.CODE_HOLIDAY_RANGE_AM
+				|| rangeSubstitute == TimeConst.CODE_HOLIDAY_RANGE_AM;
+		boolean holidayPm = TimeRequestUtility.hasHolidayRangePm(holidays)
+				|| rangeSubHoliday == TimeConst.CODE_HOLIDAY_RANGE_PM
+				|| rangeSubstitute == TimeConst.CODE_HOLIDAY_RANGE_PM;
+		// 全休の場合
+		if (rangeSubHoliday == 5 || rangeSubstitute == 5 || (holidayAm && holidayPm)) {
+			// 全休に設定
+			setWorkTypeForHolidayAllDay();
+			return;
+		}
+		// 勤務形態プルダウン用配列取得(勤務形態略称【出勤時刻～退勤時刻】)
+		String[][] aryWorkType = getWorkTypeArray(scheduleDto.getPatternCode(), holidayAm, holidayPm);
+		int workTypeChangeFlag = scheduleDto.getWorkTypeChangeFlag();
+		if (workTypeChangeFlag == MospConst.DELETE_FLAG_OFF) {
+			// 勤務形態変更可の場合
+			// VOに勤務形態コードを設定
+			vo.setPltWorkType(workTypeCode);
+			// 勤務形態プルダウン設定(勤務形態略称【出勤時刻～退勤時刻】)
+			vo.setAryPltWorkType(aryWorkType);
+		} else if (workTypeChangeFlag == MospConst.DELETE_FLAG_ON) {
+			// 勤務形態変更不可の場合
+			setPltWorkType(workTypeCode, MospUtility.getCodeName(workTypeCode, aryWorkType));
+		}
+		// 追加業務ロジック処理がある場合
+		doAdditionalLogic(TimeConst.CODE_KEY_CHANGE_WORK_TYPE_PULLDOWN);
+		// 申請モード設定(新規)
+		vo.setModeCardEdit(TimeConst.MODE_APPLICATION_NEW);
 		// 勤怠申請(下書或いは1次戻)が存在する場合、勤務形態、申請モードを設定(上書)
 		setWorkTypeForNotApplicatedAttendance(requestUtil);
 	}

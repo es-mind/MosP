@@ -20,7 +20,6 @@ package jp.mosp.time.bean.impl;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 import jp.mosp.framework.base.BaseDtoInterface;
 import jp.mosp.framework.base.MospException;
@@ -42,6 +41,7 @@ import jp.mosp.time.bean.AttendanceReferenceBeanInterface;
 import jp.mosp.time.bean.AttendanceRegistBeanInterface;
 import jp.mosp.time.bean.CutoffUtilBeanInterface;
 import jp.mosp.time.bean.DifferenceRequestReferenceBeanInterface;
+import jp.mosp.time.bean.HolidayHourlyWorkTypeCheckBeanInterface;
 import jp.mosp.time.bean.HolidayRequestReferenceBeanInterface;
 import jp.mosp.time.bean.HolidayRequestRegistBeanInterface;
 import jp.mosp.time.bean.PaidHolidayInfoReferenceBeanInterface;
@@ -65,7 +65,6 @@ import jp.mosp.time.dto.settings.SubstituteDtoInterface;
 import jp.mosp.time.dto.settings.WorkOnHolidayRequestDtoInterface;
 import jp.mosp.time.dto.settings.WorkTypeChangeRequestDtoInterface;
 import jp.mosp.time.dto.settings.impl.TmdHolidayRequestDto;
-import jp.mosp.time.entity.RequestEntityInterface;
 import jp.mosp.time.entity.WorkTypeEntityInterface;
 import jp.mosp.time.utils.TimeMessageUtility;
 import jp.mosp.time.utils.TimeNamingUtility;
@@ -180,6 +179,11 @@ public class HolidayRequestRegistBean extends TimeApplicationBean implements Hol
 	protected DifferenceRequestReferenceBeanInterface		differenceRequestReference;
 	
 	/**
+	 * 時間単位休暇と勤務形態の確認処理。<br>
+	 */
+	protected HolidayHourlyWorkTypeCheckBeanInterface		holidayHourlyWorkTypeCheck;
+	
+	/**
 	 * 勤怠関連マスタ参照処理。<br>
 	 */
 	protected TimeMasterBeanInterface						timeMaster;
@@ -215,6 +219,7 @@ public class HolidayRequestRegistBean extends TimeApplicationBean implements Hol
 		attendanceReference = createBeanInstance(AttendanceReferenceBeanInterface.class);
 		workTypeChangeReference = createBeanInstance(WorkTypeChangeRequestReferenceBeanInterface.class);
 		differenceRequestReference = createBeanInstance(DifferenceRequestReferenceBeanInterface.class);
+		holidayHourlyWorkTypeCheck = createBeanInstance(HolidayHourlyWorkTypeCheckBeanInterface.class);
 		// 勤怠関連マスタ参照処理を準備(準備したBeanにも設定するため最後に実施)
 		setTimeMaster(createBeanInstance(TimeMasterBeanInterface.class));
 	}
@@ -414,11 +419,6 @@ public class HolidayRequestRegistBean extends TimeApplicationBean implements Hol
 		checkWorkTypeChange(dto);
 		// 時差出勤申請チェック
 		checkDifference(dto);
-		if (mospParams.hasErrorMessage()) {
-			return;
-		}
-		// 時間休申請範囲チェック
-		checkTimeHoliday(dto, row);
 	}
 	
 	@Override
@@ -438,11 +438,6 @@ public class HolidayRequestRegistBean extends TimeApplicationBean implements Hol
 		checkWorkTypeChange(dto);
 		// 時差出勤申請チェック
 		checkDifference(dto);
-		if (mospParams.hasErrorMessage()) {
-			return;
-		}
-		// 時間休申請範囲チェック
-		checkTimeHoliday(dto);
 	}
 	
 	/**
@@ -493,6 +488,8 @@ public class HolidayRequestRegistBean extends TimeApplicationBean implements Hol
 		}
 		// 日毎のチェック
 		checkDailyForDraft(dto, list, row);
+		// 時間休申請範囲チェック
+		checkTimeHoliday(dto, row);
 	}
 	
 	@Override
@@ -579,6 +576,7 @@ public class HolidayRequestRegistBean extends TimeApplicationBean implements Hol
 	protected void checkDailyForDraft(HolidayRequestDtoInterface dto, List<Date> list, Integer row)
 			throws MospException {
 		for (Date date : list) {
+			// 休暇申請(下書)時の確認
 			checkDailyForDraft(dto, date, row);
 			if (mospParams.hasErrorMessage()) {
 				return;
@@ -594,8 +592,7 @@ public class HolidayRequestRegistBean extends TimeApplicationBean implements Hol
 	 * @throws MospException インスタンスの取得或いはSQL実行に失敗した場合
 	 */
 	protected void checkDailyForDraft(HolidayRequestDtoInterface dto, Date date, Integer row) throws MospException {
-		RequestUtilBeanInterface localRequestUtil = (RequestUtilBeanInterface)createBean(
-				RequestUtilBeanInterface.class);
+		RequestUtilBeanInterface localRequestUtil = createBeanInstance(RequestUtilBeanInterface.class);
 		// 個人IDを取得
 		String personalId = dto.getPersonalId();
 		// 申請ユーティリティを取得
@@ -669,16 +666,6 @@ public class HolidayRequestRegistBean extends TimeApplicationBean implements Hol
 			} else if (holidayRange == TimeConst.CODE_HOLIDAY_RANGE_TIME) {
 				// 時間休の場合
 				holidayRangeTime = true;
-				if (isDraft) {
-					// 下書時・申請時の場合
-					if (dto.getHolidayRange() == TimeConst.CODE_HOLIDAY_RANGE_TIME
-							&& checkDuplicationTimeZone(holidayRequestDto.getStartTime(),
-									holidayRequestDto.getEndTime(), dto.getStartTime(), dto.getEndTime())) {
-						// 期間が重複する場合のメッセージを設定
-						PfMessageUtility.addErrorTermOverlap(mospParams, TimeNamingUtility.hourlyHoliday(mospParams));
-						return;
-					}
-				}
 			}
 		}
 		if (holidayRangeAm && holidayRangePm) {
@@ -702,27 +689,12 @@ public class HolidayRequestRegistBean extends TimeApplicationBean implements Hol
 					// 前半休と重複している場合
 					addHolidayOverlapRange2ErrorMessage();
 					return;
-				} else if (holidayRangeTime) {
-					// 時間休と重複している場合
-					TimeMessageUtility.addErrorHalfAndHourlyHoliday(mospParams);
-					return;
 				}
 			} else if (holidayRange == TimeConst.CODE_HOLIDAY_RANGE_PM) {
 				// 後半休の場合
 				if (holidayRangePm) {
 					// 後半休と重複している場合
 					addHolidayOverlapRange2ErrorMessage();
-					return;
-				} else if (holidayRangeTime) {
-					// 時間休と重複している場合
-					TimeMessageUtility.addErrorHalfAndHourlyHoliday(mospParams);
-					return;
-				}
-			} else if (holidayRange == TimeConst.CODE_HOLIDAY_RANGE_TIME) {
-				// 時間休の場合
-				if (holidayRangeAm || holidayRangePm) {
-					// 前半休・後半休と重複している場合
-					TimeMessageUtility.addErrorHalfAndHourlyHoliday(mospParams);
 					return;
 				}
 			}
@@ -1447,75 +1419,25 @@ public class HolidayRequestRegistBean extends TimeApplicationBean implements Hol
 		String personalId = dto.getPersonalId();
 		Date targetDate = dto.getRequestStartDate();
 		// 勤務形態エンティティを取得
-		WorkTypeEntityInterface workType = getWorkTypeEntity(personalId, targetDate);
+		WorkTypeEntityInterface workType = requestUtil.getWorkTypeEntity(personalId, targetDate);
 		// 勤務時間(分)を取得を取得
 		int workTime = workType.getWorkTime();
 		// 時間(分)から時(時間(分)/60の商)を取得(分は切捨)
 		return TimeUtility.getHours(workTime);
 	}
 	
-	@Override
-	public void checkTimeHoliday(HolidayRequestDtoInterface dto) throws MospException {
-		// 時間休の時間が勤務形態の始終業時刻内であるかを確認(行インデックスの指定無し)
-		checkTimeHoliday(dto, null);
-	}
-	
 	/**
+	 * 時間休を確認する。<br>
 	 * 時間休の時間が勤務形態の始終業時刻内であるかを確認する。<br>
-	 * 始終業時刻内でない場合は、MosP処理情報にエラーメッセージを設定する。<br>
+	 * 時間休が重複していないかを確認する。<br>
+	 * エラーがある場合は、MosP処理情報にエラーメッセージを設定する。<br>
 	 * @param dto 休暇申請情報
 	 * @param row 行インデックス
 	 * @throws MospException インスタンスの取得或いはSQL実行に失敗した場合
 	 */
 	protected void checkTimeHoliday(HolidayRequestDtoInterface dto, Integer row) throws MospException {
-		// 追加業務ロジック処理を行った場合
-		if (doAdditionalLogic(TimeConst.CODE_KEY_ADD_HOLIDAYREQUESTREGISTBEAN_CHECKTIMEHOLIDAY, dto)) {
-			// 通常の処理は行わない
-			return;
-		}
-		// 休暇(範囲)情報が時間休でない場合
-		if (TimeRequestUtility.isHolidayRangeHour(dto) == false) {
-			// 処理終了
-			return;
-		}
-		// 個人IDと対象日(申請開始日)を取得
-		String personalId = dto.getPersonalId();
-		Date targetDate = dto.getRequestStartDate();
-		// 勤務形態エンティティを取得
-		WorkTypeEntityInterface workType = getWorkTypeEntity(personalId, targetDate);
-		// 勤務形態の始終業時刻を取得
-		Date startWorkTime = workType.getStartWorkTime();
-		Date endWorkTime = workType.getEndWorkTime();
-		// 時休開始時刻と時休終了時刻を取得
-		Date requestStartTime = TimeUtility.getDefaultDateTime(dto.getStartTime(), targetDate);
-		Date requestEndTime = TimeUtility.getDefaultDateTime(dto.getEndTime(), targetDate);
-		// 勤務形態の勤務開始時間と時間休期間の重複確認
-		if (DateUtility.isTermContain(requestStartTime, startWorkTime, endWorkTime) == false
-				|| DateUtility.isTermContain(requestEndTime, startWorkTime, endWorkTime) == false) {
-			// エラーメッセージを設定
-			TimeMessageUtility.addErrorHorlyHolidayOutOfWorkTypeTime(mospParams, startWorkTime, endWorkTime, row);
-		}
-	}
-	
-	/**
-	 * 勤務形態エンティティを取得する。<br>
-	 * 時差出勤申請がある場合は、時差出勤申請の内容を考慮する。<br>
-	 * @param personalId 個人ID
-	 * @param targetDate 対象日
-	 * @return 勤務形態エンティティ
-	 * @throws MospException インスタンスの取得或いはSQL実行に失敗した場合
-	 */
-	protected WorkTypeEntityInterface getWorkTypeEntity(String personalId, Date targetDate) throws MospException {
-		// 申請エンティティを取得
-		RequestEntityInterface request = requestUtil.getRequestEntity(personalId, targetDate);
-		// 承認済承認状況群を準備
-		Set<String> statuses = WorkflowUtility.getCompletedStatuses();
-		// 予定される勤務形態を取得(承認済の申請を考慮)
-		String workTypeCode = request.getWorkType(true, statuses);
-		// 時差出勤申請情報を取得(承認済)
-		DifferenceRequestDtoInterface differenceRequest = request.getDifferenceRequestDto(statuses);
-		// 勤務形態エンティティを取得
-		return timeMaster.getWorkTypeEntity(workTypeCode, targetDate, differenceRequest);
+		// 業務ロジックを実行
+		doStoredLogic(TimeConst.CODE_KEY_ADD_HOLIDAYREQUESTREGISTBEAN_CHECKTIMEHOLIDAY, dto, row);
 	}
 	
 	/**

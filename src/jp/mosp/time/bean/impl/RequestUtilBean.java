@@ -22,12 +22,14 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import jp.mosp.framework.base.MospException;
 import jp.mosp.platform.bean.workflow.WorkflowIntegrateBeanInterface;
 import jp.mosp.platform.bean.workflow.WorkflowReferenceBeanInterface;
 import jp.mosp.platform.constant.PlatformConst;
 import jp.mosp.platform.dto.workflow.WorkflowDtoInterface;
+import jp.mosp.platform.utils.WorkflowUtility;
 import jp.mosp.time.base.TimeBean;
 import jp.mosp.time.bean.AttendanceReferenceBeanInterface;
 import jp.mosp.time.bean.DifferenceRequestReferenceBeanInterface;
@@ -51,6 +53,8 @@ import jp.mosp.time.dto.settings.WorkOnHolidayRequestDtoInterface;
 import jp.mosp.time.dto.settings.WorkTypeChangeRequestDtoInterface;
 import jp.mosp.time.entity.RequestEntity;
 import jp.mosp.time.entity.RequestEntityInterface;
+import jp.mosp.time.entity.WorkTypeEntityInterface;
+import jp.mosp.time.utils.TimeRequestUtility;
 
 /**
  * 申請ユーティリティ。<br>
@@ -60,117 +64,122 @@ public class RequestUtilBean extends TimeBean implements RequestUtilBeanInterfac
 	/**
 	 * 休暇申請参照クラス。
 	 */
-	HolidayRequestReferenceBeanInterface			holidayRequestRefer;
+	protected HolidayRequestReferenceBeanInterface			holidayRequestRefer;
 	
 	/**
 	 * 残業申請参照クラス。
 	 */
-	OvertimeRequestReferenceBeanInterface			overtimeRequestRefer;
+	protected OvertimeRequestReferenceBeanInterface			overtimeRequestRefer;
 	
 	/**
 	 * 休日出勤申請参照クラス。
 	 */
-	WorkOnHolidayRequestReferenceBeanInterface		workOnHolidayRefer;
+	protected WorkOnHolidayRequestReferenceBeanInterface	workOnHolidayRefer;
 	
 	/**
 	 * 振替休日申請参照クラス。
 	 */
-	SubstituteReferenceBeanInterface				substituteRefer;
+	protected SubstituteReferenceBeanInterface				substituteRefer;
 	
 	/**
 	 * 代休申請参照クラス。
 	 */
-	SubHolidayRequestReferenceBeanInterface			subHolidayRequestRefer;
+	protected SubHolidayRequestReferenceBeanInterface		subHolidayRequestRefer;
 	
 	/**
 	 * 時差出勤申請参照クラス。
 	 */
-	DifferenceRequestReferenceBeanInterface			differenceRequestRefer;
+	protected DifferenceRequestReferenceBeanInterface		differenceRequestRefer;
 	
 	/**
 	 * 勤務形態変更申請参照クラス。
 	 */
-	WorkTypeChangeRequestReferenceBeanInterface		workTypeChangeRequestRefer;
+	protected WorkTypeChangeRequestReferenceBeanInterface	workTypeChangeRequestRefer;
 	
 	/**
 	 * 勤怠データ参照クラス。<br>
 	 */
-	AttendanceReferenceBeanInterface				attendanceReference;
+	protected AttendanceReferenceBeanInterface				attendanceReference;
 	
 	/**
 	 * ワークフロー情報参照クラス。
 	 */
-	WorkflowReferenceBeanInterface					workflowReference;
+	protected WorkflowReferenceBeanInterface				workflowReference;
 	
 	/**
 	 * ワークフロー統合クラス。
 	 */
-	WorkflowIntegrateBeanInterface					workflowIntegrate;
+	protected WorkflowIntegrateBeanInterface				workflowIntegrate;
 	
 	/**
 	 * カレンダユーティリティクラス。
 	 */
-	ScheduleUtilBeanInterface						scheduleUtil;
+	protected ScheduleUtilBeanInterface						scheduleUtil;
+	
+	/**
+	 * 勤怠関連マスタ参照処理。<br>
+	 */
+	protected TimeMasterBeanInterface						timeMaster;
 	
 	/**
 	 * 休暇申請情報リスト。
 	 */
-	protected List<HolidayRequestDtoInterface>		holidayRequestList;
+	protected List<HolidayRequestDtoInterface>				holidayRequestList;
 	
 	/**
 	 * 残業申請情報リスト。
 	 */
-	protected List<OvertimeRequestDtoInterface>		overTimeRequestList;
+	protected List<OvertimeRequestDtoInterface>				overTimeRequestList;
 	
 	/**
 	 * 振替休日情報リスト。
 	 */
-	protected List<SubstituteDtoInterface>			substituteList;
+	protected List<SubstituteDtoInterface>					substituteList;
 	
 	/**
 	 * 代休申請情報リスト。
 	 */
-	protected List<SubHolidayRequestDtoInterface>	subHolidayRequestList;
+	protected List<SubHolidayRequestDtoInterface>			subHolidayRequestList;
 	
 	/**
 	 * 休日出勤情報。
 	 */
-	protected WorkOnHolidayRequestDtoInterface		workOnHolidayDto;
+	protected WorkOnHolidayRequestDtoInterface				workOnHolidayDto;
 	
 	/**
 	 * 時差出勤情報。
 	 */
-	protected DifferenceRequestDtoInterface			differenceDto;
+	protected DifferenceRequestDtoInterface					differenceDto;
 	
 	/**
 	 * 勤務形態変更情報。
 	 */
-	protected WorkTypeChangeRequestDtoInterface		workTypeChangeDto;
+	protected WorkTypeChangeRequestDtoInterface				workTypeChangeDto;
 	
 	/**
 	 * 勤怠情報。
 	 */
-	protected AttendanceDtoInterface				attendanceDto;
+	protected AttendanceDtoInterface						attendanceDto;
 	
 	/**
 	 * ワークフローマップ
 	 */
-	protected Map<Long, WorkflowDtoInterface>		workflowMap;
+	protected Map<Long, WorkflowDtoInterface>				workflowMap;
 	
 	/**
 	 * 振替日の予定勤務形態。
 	 */
-	protected String								substitutedWorkTypeCode;
+	protected String										substitutedWorkTypeCode;
 	
 	/**
 	 * カレンダの予定勤務形態。
 	 */
-	protected String								scheduledWorkTypeCode;
+	protected String										scheduledWorkTypeCode;
 	
 	/**
 	 * 休暇範囲(午前休かつ午後休)。
 	 */
-	protected static final int						CODE_HOLIDAY_RANGE_AM_PM	= 5;
+	protected static final int								CODE_HOLIDAY_RANGE_AM_PM	= 5;
 	
 	
 	/**
@@ -195,6 +204,7 @@ public class RequestUtilBean extends TimeBean implements RequestUtilBeanInterfac
 		workflowIntegrate = createBeanInstance(WorkflowIntegrateBeanInterface.class);
 		subHolidayRequestRefer = createBeanInstance(SubHolidayRequestReferenceBeanInterface.class);
 		scheduleUtil = createBeanInstance(ScheduleUtilBeanInterface.class);
+		timeMaster = createBeanInstance(TimeMasterBeanInterface.class);
 	}
 	
 	@Override
@@ -529,25 +539,16 @@ public class RequestUtilBean extends TimeBean implements RequestUtilBeanInterfac
 		// 午前休・午後休フラグ準備
 		boolean amFlag = false;
 		boolean pmFlag = false;
-		// 休暇申請休暇範囲取得
-		List<HolidayRequestDtoInterface> statusHolidayList = getHolidayList(status);
-		int rangeHoliday = checkHolidayRangeHoliday(statusHolidayList);
-		// 休暇申請確認
-		if (rangeHoliday != 0) {
-			// 全休又は午前休午後休の場合
-			if (rangeHoliday == TimeConst.CODE_HOLIDAY_RANGE_ALL || rangeHoliday == CODE_HOLIDAY_RANGE_AM_PM) {
-				// 処理終了
-				return true;
-			}
-			// 午前休の場合
-			if (rangeHoliday == TimeConst.CODE_HOLIDAY_RANGE_AM) {
-				amFlag = true;
-			}
-			// 午後休の場合
-			if (rangeHoliday == TimeConst.CODE_HOLIDAY_RANGE_PM) {
-				pmFlag = true;
-			}
+		// 休暇申請情報群を取得
+		List<HolidayRequestDtoInterface> holidays = getHolidayList(status);
+		// 休暇申請情報群に全休(前半休+後半休も含む)がある場合
+		if (TimeRequestUtility.isAllRangeHoliday(holidays)) {
+			// 処理終了
+			return true;
 		}
+		// 範囲毎の休暇申請有無を取得
+		amFlag = TimeRequestUtility.hasHolidayRangeAm(holidays);
+		pmFlag = TimeRequestUtility.hasHolidayRangePm(holidays);
 		// 振替申請休暇範囲取得
 		List<SubstituteDtoInterface> statusSubstituteList = getSubstituteList(status);
 		int rangeSubstitute = checkHolidayRangeSubstitute(statusSubstituteList);
@@ -605,6 +606,10 @@ public class RequestUtilBean extends TimeBean implements RequestUtilBeanInterfac
 		return false;
 	}
 	
+	/**
+	 * 半休と時間単位休暇を同日に取得した場合に時間単位休暇であると判断される。<br>
+	 * そのため、当メソッドは一部のユーザモジュールでのみ用いられる。<br>
+	 */
 	@Override
 	public int checkHolidayRangeHoliday(List<HolidayRequestDtoInterface> holidayRequestList) {
 		// 休暇範囲準備
@@ -969,7 +974,23 @@ public class RequestUtilBean extends TimeBean implements RequestUtilBeanInterfac
 	}
 	
 	@Override
+	public WorkTypeEntityInterface getWorkTypeEntity(String personalId, Date targetDate) throws MospException {
+		// 申請エンティティを取得
+		RequestEntityInterface request = getRequestEntity(personalId, targetDate);
+		// 承認済承認状況群を準備
+		Set<String> statuses = WorkflowUtility.getCompletedStatuses();
+		// 予定される勤務形態を取得(承認済の申請を考慮)
+		String workTypeCode = request.getWorkType(true, statuses);
+		// 時差出勤申請情報を取得(承認済)
+		DifferenceRequestDtoInterface differenceRequest = request.getDifferenceRequestDto(statuses);
+		// 勤務形態エンティティを取得
+		return timeMaster.getWorkTypeEntity(workTypeCode, targetDate, differenceRequest);
+	}
+	
+	@Override
 	public void setTimeMaster(TimeMasterBeanInterface timeMaster) {
+		// 勤怠関連マスタ参照処理を設定
+		timeMaster = this.timeMaster;
 		// カレンダユーティリティに勤怠関連マスタ参照処理を設定
 		scheduleUtil.setTimeMaster(timeMaster);
 	}

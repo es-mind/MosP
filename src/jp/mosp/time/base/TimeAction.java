@@ -53,6 +53,7 @@ import jp.mosp.time.constant.TimeMessageConst;
 import jp.mosp.time.dto.settings.AttendanceDtoInterface;
 import jp.mosp.time.dto.settings.DifferenceRequestDtoInterface;
 import jp.mosp.time.dto.settings.HolidayDtoInterface;
+import jp.mosp.time.dto.settings.HolidayRequestDtoInterface;
 import jp.mosp.time.dto.settings.ManagementRequestListDtoInterface;
 import jp.mosp.time.dto.settings.SubstituteDtoInterface;
 import jp.mosp.time.dto.settings.WorkOnHolidayRequestDtoInterface;
@@ -1266,10 +1267,10 @@ public abstract class TimeAction extends PlatformAction {
 		RequestUtilBeanInterface requestUtil = timeReference().requestUtil();
 		// 申請ユーティリティを設定
 		requestUtil.setRequests(personalId, requestDate);
+		// 休暇申請情報群を取得
+		List<HolidayRequestDtoInterface> holidays = requestUtil.getHolidayList(false);
 		// 休暇範囲確認
-		int holidayRequestRange = requestUtil.checkHolidayRangeHoliday(requestUtil.getHolidayList(false));
-		boolean isHalfHoliday = holidayRequestRange == TimeConst.CODE_HOLIDAY_RANGE_AM
-				|| holidayRequestRange == TimeConst.CODE_HOLIDAY_RANGE_PM;
+		boolean isHalfHoliday = TimeRequestUtility.hasHolidayRangeHalf(holidays);
 		int subHolidayRequestRange = requestUtil.checkHolidayRangeSubHoliday(requestUtil.getSubHolidayList(false));
 		boolean isHalfSubHoliday = subHolidayRequestRange == TimeConst.CODE_HOLIDAY_RANGE_AM
 				|| subHolidayRequestRange == TimeConst.CODE_HOLIDAY_RANGE_PM;

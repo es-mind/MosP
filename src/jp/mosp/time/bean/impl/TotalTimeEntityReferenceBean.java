@@ -23,10 +23,12 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
 import jp.mosp.framework.base.MospException;
 import jp.mosp.framework.utils.DateUtility;
+import jp.mosp.framework.utils.MospUtility;
 import jp.mosp.platform.bean.human.SuspensionReferenceBeanInterface;
 import jp.mosp.platform.bean.system.PlatformMasterBeanInterface;
 import jp.mosp.platform.dao.human.EntranceDaoInterface;
@@ -38,8 +40,8 @@ import jp.mosp.platform.dto.human.RetirementDtoInterface;
 import jp.mosp.platform.dto.workflow.WorkflowDtoInterface;
 import jp.mosp.platform.utils.WorkflowUtility;
 import jp.mosp.time.base.TimeBean;
-import jp.mosp.time.bean.ScheduleDateReferenceBeanInterface;
 import jp.mosp.time.bean.ScheduleUtilBeanInterface;
+import jp.mosp.time.bean.SubstituteReferenceBeanInterface;
 import jp.mosp.time.bean.TimeMasterBeanInterface;
 import jp.mosp.time.bean.TotalTimeEntityReferenceBeanInterface;
 import jp.mosp.time.bean.WorkTypeReferenceBeanInterface;
@@ -52,7 +54,6 @@ import jp.mosp.time.dao.settings.HolidayRequestDaoInterface;
 import jp.mosp.time.dao.settings.OvertimeRequestDaoInterface;
 import jp.mosp.time.dao.settings.SubHolidayDaoInterface;
 import jp.mosp.time.dao.settings.SubHolidayRequestDaoInterface;
-import jp.mosp.time.dao.settings.SubstituteDaoInterface;
 import jp.mosp.time.dao.settings.TimeSettingDaoInterface;
 import jp.mosp.time.dao.settings.WorkOnHolidayRequestDaoInterface;
 import jp.mosp.time.dao.settings.WorkTypeChangeRequestDaoInterface;
@@ -86,112 +87,107 @@ public class TotalTimeEntityReferenceBean extends TimeBean implements TotalTimeE
 	 * 前日が法定休日出勤だった場合に、7日前が必要になる。<br>
 	 * <br>
 	 */
-	public static final int							DAYS_FORMER_ATTENDANCE	= -7;
+	public static final int						DAYS_FORMER_ATTENDANCE	= -7;
 	
 	/**
 	 * 入社情報DAOクラス。<br>
 	 */
-	protected EntranceDaoInterface					entranceDao;
+	protected EntranceDaoInterface				entranceDao;
 	
 	/**
 	 * 休職情報参照クラス。<br>
 	 */
-	protected SuspensionReferenceBeanInterface		suspentionReference;
+	protected SuspensionReferenceBeanInterface	suspentionReference;
 	
 	/**
 	 * 退社情報DAOクラス。<br>
 	 */
-	protected RetirementDaoInterface				retirementDao;
+	protected RetirementDaoInterface			retirementDao;
 	
 	/**
 	 * 休暇種別管理DAOクラス。<br>
 	 */
-	protected HolidayDaoInterface					holidayDao;
+	protected HolidayDaoInterface				holidayDao;
 	
 	/**
 	 * 勤怠データDAOクラス。<br>
 	 */
-	protected AttendanceDaoInterface				attendanceDao;
+	protected AttendanceDaoInterface			attendanceDao;
 	
 	/**
 	 * 残業申請データDAOクラス。<br>
 	 */
-	protected OvertimeRequestDaoInterface			overtimeRequestDao;
+	protected OvertimeRequestDaoInterface		overtimeRequestDao;
 	
 	/**
 	 * 休暇申請データDAOクラス。<br>
 	 */
-	protected HolidayRequestDaoInterface			holidayRequestDao;
+	protected HolidayRequestDaoInterface		holidayRequestDao;
 	
 	/**
 	 * 休日出勤申請データDAOクラス。<br>
 	 */
-	protected WorkOnHolidayRequestDaoInterface		workOnHolidayRequestDao;
+	protected WorkOnHolidayRequestDaoInterface	workOnHolidayRequestDao;
 	
 	/**
 	 * 代休申請データDAOクラス。<br>
 	 */
-	protected SubHolidayRequestDaoInterface			subHolidayRequestDao;
+	protected SubHolidayRequestDaoInterface		subHolidayRequestDao;
 	
 	/**
 	 * 勤務形態変更申請DAOクラス。<br>
 	 */
-	protected WorkTypeChangeRequestDaoInterface		workTypeChangeRequestDao;
+	protected WorkTypeChangeRequestDaoInterface	workTypeChangeRequestDao;
 	
 	/**
 	 * 時差出勤申請データDAOクラス。<br>
 	 */
-	protected DifferenceRequestDaoInterface			differenceRequestDao;
-	
-	/**
-	 * 振替休日データDAOクラス。<br>
-	 */
-	protected SubstituteDaoInterface				substituteDao;
+	protected DifferenceRequestDaoInterface		differenceRequestDao;
 	
 	/**
 	 * 代休データDAOクラス。<br>
 	 */
-	protected SubHolidayDaoInterface				subHolidayDao;
+	protected SubHolidayDaoInterface			subHolidayDao;
 	
 	/**
 	 * ワークフローDAOクラス。<br>
 	 */
-	protected WorkflowDaoInterface					workflowDao;
+	protected WorkflowDaoInterface				workflowDao;
 	
 	/**
 	 * 勤怠トランザクションDAO。<br>
 	 */
-	protected AttendanceTransactionDaoInterface		attendanceTransactionDao;
+	protected AttendanceTransactionDaoInterface	attendanceTransactionDao;
 	
 	/**
 	 * 勤怠設定管理DAOクラス。<br>
 	 */
-	protected TimeSettingDaoInterface				timeSettingDao;
+	protected TimeSettingDaoInterface			timeSettingDao;
 	
 	/**
-	 * カレンダ日管理参照。<br>
+	 * 振替休日参照処理。<br>
 	 */
-	protected ScheduleDateReferenceBeanInterface	scheduleDateReference;
+	protected SubstituteReferenceBeanInterface	substituteRefer;
 	
 	/**
 	 * 勤務形態マスタ参照クラス。<br>
 	 */
-	protected WorkTypeReferenceBeanInterface		workTypeReference;
+	protected WorkTypeReferenceBeanInterface	workTypeReference;
 	
 	/**
 	 * カレンダユーティリティ処理。<br>
 	 */
-	protected ScheduleUtilBeanInterface				scheduleUtil;
+	protected ScheduleUtilBeanInterface			scheduleUtil;
 	
 	/**
 	 * プラットフォームマスタ参照クラス。<br>
 	 */
-	protected PlatformMasterBeanInterface			platformMaster;
+	protected PlatformMasterBeanInterface		platformMaster;
 	
 	/**
 	 * 勤怠関連マスタ参照処理。<br>
 	 */
-	protected TimeMasterBeanInterface				timeMaster;
+	protected TimeMasterBeanInterface			timeMaster;
 	
 	
 	@Override
@@ -209,11 +205,10 @@ public class TotalTimeEntityReferenceBean extends TimeBean implements TotalTimeE
 		differenceRequestDao = createDaoInstance(DifferenceRequestDaoInterface.class);
 		workflowDao = createDaoInstance(WorkflowDaoInterface.class);
 		timeSettingDao = createDaoInstance(TimeSettingDaoInterface.class);
-		substituteDao = createDaoInstance(SubstituteDaoInterface.class);
 		attendanceTransactionDao = createDaoInstance(AttendanceTransactionDaoInterface.class);
 		subHolidayDao = createDaoInstance(SubHolidayDaoInterface.class);
+		substituteRefer = createBeanInstance(SubstituteReferenceBeanInterface.class);
 		suspentionReference = createBeanInstance(SuspensionReferenceBeanInterface.class);
-		scheduleDateReference = createBeanInstance(ScheduleDateReferenceBeanInterface.class);
 		workTypeReference = createBeanInstance(WorkTypeReferenceBeanInterface.class);
 		scheduleUtil = createBeanInstance(ScheduleUtilBeanInterface.class);
 	}
@@ -284,7 +279,7 @@ public class TotalTimeEntityReferenceBean extends TimeBean implements TotalTimeE
 		// 時差出勤申請リスト取得
 		entity.setDifferenceRequestList(differenceRequestDao.findForList(personalId, firstDate, lastDate));
 		// 振替休日データ取得
-		entity.setSubstitubeList(substituteDao.findForTerm(personalId, firstDate, lastDate));
+		entity.setSubstitubeList(substituteRefer.getSubstituteList(personalId, firstDate, lastDate));
 		// 締期間初日(個人)から代休取得期限だけ遡った日付を取得
 		Date subHolidayFirstDate = getDateOnTimeSetteingDto(entity);
 		// 代休データリスト取得
@@ -618,7 +613,7 @@ public class TotalTimeEntityReferenceBean extends TimeBean implements TotalTimeE
 				lastDate);
 		entity.setSubHolidayRequestList(subHolidayRequests);
 		// 振替休日リスト取得
-		List<SubstituteDtoInterface> substitutes = substituteDao.findForTerm(personalId, firstDate, lastDate);
+		List<SubstituteDtoInterface> substitutes = substituteRefer.getSubstituteList(personalId, firstDate, lastDate);
 		entity.setSubstituteList(substitutes);
 		// ワークフロー番号群を取得
 		Set<Long> workflowSet = WorkflowUtility.getWorkflowSet(attendances, overtimeRequests, holidayRequests,
@@ -653,13 +648,20 @@ public class TotalTimeEntityReferenceBean extends TimeBean implements TotalTimeE
 		}
 		// 個人IDを取得
 		String personalId = entity.getPersonalId();
+		// 振出・休出申請情報群(キー：申請日)(承認済)を取得
+		Map<Date, WorkOnHolidayRequestDtoInterface> workOnHolidayRequests = TimeUtility.getRequestDateMap(
+				entity.getWorkOnHolidayRequestList(), entity.getWorkflowMap(), WorkflowUtility.getCompletedStatuses());
+		// 振出・休出申請情報(振替申請(勤務形態変更なし)のみ)(下書及び取下以外)から出勤日群を取得
+		Set<Date> subWorkDates = TimeUtility.getSubstituteWorkDates(workOnHolidayRequests, entity.getWorkflowMap());
+		// 振替日群(キー：出勤日)を取得
+		Map<Date, Date> substituteDates = substituteRefer.getSubstituteDates(personalId, subWorkDates);
+		// 振り替えられたカレンダ日情報群(キー：勤務日)を取得
+		Map<Date, ScheduleDateDtoInterface> substitutedSchedules = scheduleUtil.getSubstitutedSchedules(personalId,
+				substituteDates);
 		// 振出・休出申請毎に処理
-		for (WorkOnHolidayRequestDtoInterface dto : entity.getWorkOnHolidayRequestList()) {
-			// 承認済でない場合
-			if (WorkflowUtility.isCompleted(entity.getWorkflowDto(dto.getWorkflow())) == false) {
-				// 処理無し
-				continue;
-			}
+		for (Entry<Date, WorkOnHolidayRequestDtoInterface> entry : workOnHolidayRequests.entrySet()) {
+			// 振出・休出申請を取得
+			WorkOnHolidayRequestDtoInterface dto = entry.getValue();
 			// 申請日(振出・休出日)を取得
 			Date requestDate = dto.getRequestDate();
 			// 振替申請フラグと休出種別確認を取得
@@ -685,26 +687,15 @@ public class TotalTimeEntityReferenceBean extends TimeBean implements TotalTimeE
 				substitutedMap.put(requestDate, dto.getWorkTypeCode());
 				continue;
 			}
-			// 振替出勤(全休か午前か午後)の場合
-			// 振替休日情報毎に処理
-			for (SubstituteDtoInterface substituteDto : entity.getSubstitubeList()) {
-				// 振替出勤日が異なる場合
-				if (substituteDto.getWorkDate().compareTo(requestDate) != 0) {
-					// 処理無し
-					continue;
-				}
-				// 振替日を取得
-				Date substituteDate = substituteDto.getSubstituteDate();
-				// カレンダ日情報を取得
-				ScheduleDateDtoInterface scheduleDateDto = scheduleUtil.getScheduleDate(personalId, substituteDate);
-				// カレンダ日情報が存在しない場合
-				if (scheduleDateDto == null) {
-					// 処理無し
-					continue;
-				}
-				// 振替日の予定勤務形態を設定
-				substitutedMap.put(requestDate, scheduleDateDto.getWorkTypeCode());
+			// 振り替えられたカレンダ日情報を取得(振替出勤(全休か午前か午後)の場合)
+			ScheduleDateDtoInterface scheduleDateDto = substitutedSchedules.get(requestDate);
+			// カレンダ日情報が存在しない場合
+			if (MospUtility.isEmpty(scheduleDateDto)) {
+				// 処理無し
+				continue;
 			}
+			// 振替日の予定勤務形態を設定
+			substitutedMap.put(requestDate, scheduleDateDto.getWorkTypeCode());
 		}
 		// 振替勤務形態コード群を取得
 		return substitutedMap;
