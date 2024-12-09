@@ -1,6 +1,6 @@
 /*
- * MosP - Mind Open Source Project    http://www.mosp.jp/
- * Copyright (C) MIND Co., Ltd.       http://www.e-mind.co.jp/
+ * MosP - Mind Open Source Project
+ * Copyright (C) esMind, LLC  https://www.e-s-mind.com/
  * 
  * This program is free software: you can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License
@@ -2731,7 +2731,7 @@ public class PfNameUtility {
 	
 	/**
 	 * @param mospParams MosP処理情報
-	 * @return http://bbs.mosp.jp/forum/login_page.php
+	 * @return 空文字
 	 */
 	public static String questionAndAnswerURI(MospParams mospParams) {
 		return mospParams.getName("QuestionAndAnswerURI");
