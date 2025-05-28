@@ -6,9 +6,9 @@
 
 ## 概要
 
-MosP(もすぷ：Mind Open Source Project)は[株式会社マインド](https://e-mind.co.jp/)が立ち上げたオープンソースのシステム開発プロジェクトです。
+MosP(もすぷ：Mind Open Source Project)は株式会社マインドが立ち上げたオープンソースのシステム開発プロジェクトです。
 
-[合同会社エスマインド](https://www.e-s-mind.com/)が[株式会社マインド](https://e-mind.co.jp/)からMosPを引き継ぎ、MosP勤怠管理の開発や保守を行っています。
+[合同会社エスマインド](https://www.e-s-mind.com/)が株式会社マインドからMosPを引き継ぎ、MosP勤怠管理の開発や保守を行っています。
 
 ## MosP勤怠管理でできること
 
